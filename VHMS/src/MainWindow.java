@@ -887,17 +887,23 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 =======
+=======
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
             .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
+<<<<<<< HEAD
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
+=======
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
         );
 
@@ -937,7 +943,11 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(154, 154, 154)
                 .addComponent(jButton4)
 <<<<<<< HEAD
+<<<<<<< HEAD
                 .addContainerGap(2186, Short.MAX_VALUE))
+=======
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
@@ -957,7 +967,11 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel12Layout.setHorizontalGroup(
             jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addGap(0, 2413, Short.MAX_VALUE)
+=======
+            .addGap(0, 0, Short.MAX_VALUE)
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
             .addGap(0, 0, Short.MAX_VALUE)
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
@@ -998,7 +1012,11 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addGap(0, 2413, Short.MAX_VALUE)
+=======
+            .addGap(0, 0, Short.MAX_VALUE)
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
             .addGap(0, 0, Short.MAX_VALUE)
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
@@ -1015,7 +1033,11 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel16Layout.setHorizontalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addGap(0, 2413, Short.MAX_VALUE)
+=======
+            .addGap(0, 0, Short.MAX_VALUE)
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
             .addGap(0, 0, Short.MAX_VALUE)
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
@@ -1032,7 +1054,11 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 <<<<<<< HEAD
+<<<<<<< HEAD
             .addGap(0, 2413, Short.MAX_VALUE)
+=======
+            .addGap(0, 0, Short.MAX_VALUE)
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
             .addGap(0, 0, Short.MAX_VALUE)
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
@@ -1311,7 +1337,11 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(jLabel10)
                                 .addGap(0, 0, Short.MAX_VALUE))
 <<<<<<< HEAD
+<<<<<<< HEAD
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 1775, Short.MAX_VALUE))))
+=======
+                            .addComponent(jScrollPane3))))
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
                             .addComponent(jScrollPane3))))
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac

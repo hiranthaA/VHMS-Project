@@ -1278,7 +1278,11 @@
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   <Component id="jPanel21" alignment="0" max="32767" attributes="0"/>
+=======
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
@@ -1287,7 +1291,11 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
 <<<<<<< HEAD
+<<<<<<< HEAD
                                   <Component id="jPanel21" alignment="0" max="32767" attributes="0"/>
+=======
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+>>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
 =======
                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
 >>>>>>> 3d0a8e44466cee7cc9ea8d5b371a504833eb16ac
