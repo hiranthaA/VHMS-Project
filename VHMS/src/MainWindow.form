@@ -693,7 +693,7 @@
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel16">
                   <Properties>
-                    <Property name="text" type="java.lang.String" value="testing dilankas git"/>
+                    <Property name="text" type="java.lang.String" value="testing dilankas git ok"/>
                   </Properties>
                 </Component>
               </SubComponents>
