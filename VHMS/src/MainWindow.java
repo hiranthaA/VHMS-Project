@@ -55,6 +55,21 @@ public class MainWindow extends javax.swing.JFrame {
         txt_dlgFin_addClient_tele2 = new javax.swing.JTextField();
         btnfin_dlgAddClientAdd = new javax.swing.JButton();
         btnfin_dlgAddClientCancel = new javax.swing.JButton();
+        dlgFin_editClient = new javax.swing.JDialog();
+        jPanel20 = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        txt_dlgFin_addClient_Company1 = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txt_dlgFin_addClient_Address1 = new javax.swing.JTextArea();
+        txt_dlgFin_addClient_tele3 = new javax.swing.JTextField();
+        txt_dlgFin_addClient_email1 = new javax.swing.JTextField();
+        txt_dlgFin_addClient_tele4 = new javax.swing.JTextField();
+        btnfin_dlgAddClientAdd1 = new javax.swing.JButton();
+        btnfin_dlgAddClientCancel1 = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -254,6 +269,127 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        dlgFin_editClient.setTitle("Client Details");
+        dlgFin_editClient.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+
+        jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        jLabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel16.setText("Company Name");
+
+        jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel17.setText("Address");
+
+        jLabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel18.setText("Telephone #1");
+
+        jLabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel19.setText("Telephone #2");
+
+        jLabel20.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel20.setText("Email");
+
+        txt_dlgFin_addClient_Company1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        txt_dlgFin_addClient_Address1.setColumns(20);
+        txt_dlgFin_addClient_Address1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_Address1.setRows(5);
+        jScrollPane5.setViewportView(txt_dlgFin_addClient_Address1);
+
+        txt_dlgFin_addClient_tele3.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        txt_dlgFin_addClient_email1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        txt_dlgFin_addClient_tele4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        btnfin_dlgAddClientAdd1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clientok_x24.png"))); // NOI18N
+        btnfin_dlgAddClientAdd1.setText("Add");
+        btnfin_dlgAddClientAdd1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnfin_dlgAddClientAdd1ActionPerformed(evt);
+            }
+        });
+
+        btnfin_dlgAddClientCancel1.setText("Cancel");
+        btnfin_dlgAddClientCancel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnfin_dlgAddClientCancel1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(btnfin_dlgAddClientCancel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnfin_dlgAddClientAdd1))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel20Layout.createSequentialGroup()
+                                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel16)
+                                    .addComponent(jLabel17)
+                                    .addComponent(jLabel20))
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel20Layout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel20Layout.createSequentialGroup()
+                                .addComponent(txt_dlgFin_addClient_tele3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel19)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_dlgFin_addClient_tele4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane5)
+                            .addComponent(txt_dlgFin_addClient_Company1)
+                            .addComponent(txt_dlgFin_addClient_email1))))
+                .addGap(0, 32, Short.MAX_VALUE))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(txt_dlgFin_addClient_Company1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addClient_tele3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19)
+                    .addComponent(txt_dlgFin_addClient_tele4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addClient_email1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel20))
+                .addGap(35, 35, 35)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnfin_dlgAddClientAdd1)
+                    .addComponent(btnfin_dlgAddClientCancel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(47, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout dlgFin_editClientLayout = new javax.swing.GroupLayout(dlgFin_editClient.getContentPane());
+        dlgFin_editClient.getContentPane().setLayout(dlgFin_editClientLayout);
+        dlgFin_editClientLayout.setHorizontalGroup(
+            dlgFin_editClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgFin_editClientLayout.setVerticalGroup(
+            dlgFin_editClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Veterinary Hospital Management System");
 
@@ -437,7 +573,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(397, Short.MAX_VALUE))
         );
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pharmacy & Shop", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pharmacy & Shop", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -665,7 +801,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hospital Management", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hospital Management", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         jButton4.setText("jButton4");
 
@@ -723,7 +859,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mobile Veterinary Service", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mobile Veterinary Service", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
@@ -786,7 +922,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Shop", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Shop", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -810,7 +946,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet DayCare", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet DayCare", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -834,7 +970,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Health Care Service", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Health Care Service", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
         jPanel10.setLayout(jPanel10Layout);
@@ -858,7 +994,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Employee Management", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel11.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Employee Management", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -882,7 +1018,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Finance Management", 0, 0, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Finance Management", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
         pnlFinanceButtons.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
@@ -1396,6 +1532,14 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_txt_Fin_SearchCompanyKeyReleased
+
+    private void btnfin_dlgAddClientAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientAdd1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnfin_dlgAddClientAdd1ActionPerformed
+
+    private void btnfin_dlgAddClientCancel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientCancel1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnfin_dlgAddClientCancel1ActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -1591,8 +1735,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnPetshop;
     private javax.swing.JButton btnPharmacy;
     private javax.swing.JButton btnfin_dlgAddClientAdd;
+    private javax.swing.JButton btnfin_dlgAddClientAdd1;
     private javax.swing.JButton btnfin_dlgAddClientCancel;
+    private javax.swing.JButton btnfin_dlgAddClientCancel1;
     private javax.swing.JDialog dlgFin_addClient;
+    private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
@@ -1606,7 +1753,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1629,6 +1781,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -1640,6 +1793,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
@@ -1663,9 +1817,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txt_Fin_SearchCompany;
     private javax.swing.JTextArea txt_dlgFin_addClient_Address;
+    private javax.swing.JTextArea txt_dlgFin_addClient_Address1;
     private javax.swing.JTextField txt_dlgFin_addClient_Company;
+    private javax.swing.JTextField txt_dlgFin_addClient_Company1;
     private javax.swing.JTextField txt_dlgFin_addClient_email;
+    private javax.swing.JTextField txt_dlgFin_addClient_email1;
     private javax.swing.JTextField txt_dlgFin_addClient_tele1;
     private javax.swing.JTextField txt_dlgFin_addClient_tele2;
+    private javax.swing.JTextField txt_dlgFin_addClient_tele3;
+    private javax.swing.JTextField txt_dlgFin_addClient_tele4;
     // End of variables declaration//GEN-END:variables
 }
