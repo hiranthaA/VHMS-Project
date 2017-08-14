@@ -62,14 +62,14 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
-        txt_dlgFin_addClient_Company1 = new javax.swing.JTextField();
+        txt_dlgFin_editClient_Company = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
-        txt_dlgFin_addClient_Address1 = new javax.swing.JTextArea();
-        txt_dlgFin_addClient_tele3 = new javax.swing.JTextField();
-        txt_dlgFin_addClient_email1 = new javax.swing.JTextField();
-        txt_dlgFin_addClient_tele4 = new javax.swing.JTextField();
-        btnfin_dlgAddClientAdd1 = new javax.swing.JButton();
-        btnfin_dlgAddClientCancel1 = new javax.swing.JButton();
+        txt_dlgFin_editClient_Address = new javax.swing.JTextArea();
+        txt_dlgFin_editClient_tele1 = new javax.swing.JTextField();
+        txt_dlgFin_editClient_email = new javax.swing.JTextField();
+        txt_dlgFin_editClient_tele2 = new javax.swing.JTextField();
+        btnfin_dlgEditClientUpdate = new javax.swing.JButton();
+        btnfin_dlgEditClientCancel = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -136,7 +136,7 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl_Fin_Client_Details = new javax.swing.JTable();
         btnFin_AddClient = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
+        btnFin_EditClient = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable3 = new javax.swing.JTable();
@@ -289,31 +289,31 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel20.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel20.setText("Email");
 
-        txt_dlgFin_addClient_Company1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_Company.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        txt_dlgFin_addClient_Address1.setColumns(20);
-        txt_dlgFin_addClient_Address1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        txt_dlgFin_addClient_Address1.setRows(5);
-        jScrollPane5.setViewportView(txt_dlgFin_addClient_Address1);
+        txt_dlgFin_editClient_Address.setColumns(20);
+        txt_dlgFin_editClient_Address.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_Address.setRows(5);
+        jScrollPane5.setViewportView(txt_dlgFin_editClient_Address);
 
-        txt_dlgFin_addClient_tele3.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        txt_dlgFin_addClient_email1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_email.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        txt_dlgFin_addClient_tele4.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_tele2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
-        btnfin_dlgAddClientAdd1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clientok_x24.png"))); // NOI18N
-        btnfin_dlgAddClientAdd1.setText("Add");
-        btnfin_dlgAddClientAdd1.addActionListener(new java.awt.event.ActionListener() {
+        btnfin_dlgEditClientUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clientok_x24.png"))); // NOI18N
+        btnfin_dlgEditClientUpdate.setText("Update");
+        btnfin_dlgEditClientUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnfin_dlgAddClientAdd1ActionPerformed(evt);
+                btnfin_dlgEditClientUpdateActionPerformed(evt);
             }
         });
 
-        btnfin_dlgAddClientCancel1.setText("Cancel");
-        btnfin_dlgAddClientCancel1.addActionListener(new java.awt.event.ActionListener() {
+        btnfin_dlgEditClientCancel.setText("Cancel");
+        btnfin_dlgEditClientCancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnfin_dlgAddClientCancel1ActionPerformed(evt);
+                btnfin_dlgEditClientCancelActionPerformed(evt);
             }
         });
 
@@ -322,33 +322,30 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(20, 20, Short.MAX_VALUE)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addComponent(btnfin_dlgAddClientCancel1, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(btnfin_dlgAddClientAdd1))
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel20Layout.createSequentialGroup()
-                                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel17)
-                                    .addComponent(jLabel20))
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel20Layout.createSequentialGroup()
-                                .addComponent(jLabel18)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel20Layout.createSequentialGroup()
-                                .addComponent(txt_dlgFin_addClient_tele3, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel19)
-                                .addGap(18, 18, 18)
-                                .addComponent(txt_dlgFin_addClient_tele4, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane5)
-                            .addComponent(txt_dlgFin_addClient_Company1)
-                            .addComponent(txt_dlgFin_addClient_email1))))
+                        .addComponent(btnfin_dlgEditClientCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnfin_dlgEditClientUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel17)
+                        .addGroup(jPanel20Layout.createSequentialGroup()
+                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel16)
+                                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel20Layout.createSequentialGroup()
+                                    .addComponent(txt_dlgFin_editClient_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel19)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txt_dlgFin_editClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane5)
+                                .addComponent(txt_dlgFin_editClient_Company)
+                                .addComponent(txt_dlgFin_editClient_email)))))
                 .addGap(0, 32, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
@@ -357,25 +354,27 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(txt_dlgFin_addClient_Company1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_dlgFin_editClient_Company, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel17)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_dlgFin_addClient_tele3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dlgFin_editClient_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel19)
-                    .addComponent(txt_dlgFin_addClient_tele4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dlgFin_editClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel18))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_dlgFin_addClient_email1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dlgFin_editClient_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel20))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnfin_dlgAddClientAdd1)
-                    .addComponent(btnfin_dlgAddClientCancel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnfin_dlgEditClientUpdate)
+                    .addComponent(btnfin_dlgEditClientCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(47, Short.MAX_VALUE))
         );
 
@@ -1106,11 +1105,11 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editclient_x24.png"))); // NOI18N
-        jButton12.setToolTipText("Edit Selected Client");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
+        btnFin_EditClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/editclient_x24.png"))); // NOI18N
+        btnFin_EditClient.setToolTipText("Edit Selected Client");
+        btnFin_EditClient.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                btnFin_EditClientActionPerformed(evt);
             }
         });
 
@@ -1148,7 +1147,7 @@ public class MainWindow extends javax.swing.JFrame {
                             .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
                                 .addComponent(btnFin_AddClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnFin_EditClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
@@ -1187,7 +1186,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(11, 11, 11)))
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnFin_AddClient)
-                    .addComponent(jButton12)
+                    .addComponent(btnFin_EditClient)
                     .addComponent(jButton13))
                 .addContainerGap())
         );
@@ -1484,9 +1483,9 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnLogoutActionPerformed
 
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
+    private void btnFin_EditClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFin_EditClientActionPerformed
+        load_dlg_Fin_EditClientDetails();
+    }//GEN-LAST:event_btnFin_EditClientActionPerformed
 
     private void btnfin_dlgAddClientCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientCancelActionPerformed
         this.dlgFin_addClient.dispose();
@@ -1533,13 +1532,39 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_txt_Fin_SearchCompanyKeyReleased
 
-    private void btnfin_dlgAddClientAdd1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientAdd1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnfin_dlgAddClientAdd1ActionPerformed
+    private void btnfin_dlgEditClientUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgEditClientUpdateActionPerformed
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+        System.out.println(ClientID);
+        String company = this.txt_dlgFin_editClient_Company.getText();
+        String address = this.txt_dlgFin_editClient_Address.getText();
+        String tele1 = this.txt_dlgFin_editClient_tele1.getText();
+        String tele2 = this.txt_dlgFin_editClient_tele2.getText();
+        String email = this.txt_dlgFin_editClient_email.getText();
+        
+        try{
+            String updateClientDetailsSQL = "update finance_clients set company_name=?,address=?,tele1=?,tele2=?,email=? where clientID=?";
+            PreparedStatement pst = dbcon.prepareStatement(updateClientDetailsSQL);
+            pst.setString(1, company);
+            pst.setString(2, address);
+            pst.setString(3, tele1);
+            pst.setString(4, tele2);
+            pst.setString(5, email);
+            pst.setString(6, ClientID);
+            pst.execute();
+            JOptionPane.showMessageDialog(dlgFin_editClient, "Client updated successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
+            update_tbl_Fin_Client_Details();
+            this.dlgFin_editClient.dispose();
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(dlgFin_editClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_btnfin_dlgEditClientUpdateActionPerformed
 
-    private void btnfin_dlgAddClientCancel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientCancel1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnfin_dlgAddClientCancel1ActionPerformed
+    private void btnfin_dlgEditClientCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgEditClientCancelActionPerformed
+        this.dlgFin_editClient.dispose();
+    }//GEN-LAST:event_btnfin_dlgEditClientCancelActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -1718,6 +1743,36 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    public void load_dlg_Fin_EditClientDetails(){
+        
+        //----load selected client from table
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a client to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            //----get client details---------------------------
+            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+            String Company = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 1).toString();
+            String Address = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 2).toString();
+            String tele1 = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 3).toString();
+            String tele2 = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 4).toString();
+            String Email = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 5).toString();
+            //----load textfields-------------------------------
+            this.txt_dlgFin_editClient_Company.setText(Company);
+            this.txt_dlgFin_editClient_Address.setText(Address);
+            this.txt_dlgFin_editClient_tele1.setText(tele1);
+            this.txt_dlgFin_editClient_tele2.setText(tele2);
+            this.txt_dlgFin_editClient_email.setText(Email);
+            //----set visible-----------------------------------
+            this.dlgFin_editClient.setSize(650,420);
+            this.dlgFin_editClient.setTitle("Edit Client Details");   
+            this.dlgFin_editClient.setLocationRelativeTo(this);
+            this.dlgFin_editClient.setVisible(true); 
+            //---------------------------------------------------
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
@@ -1725,6 +1780,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnDaycare;
     private javax.swing.JButton btnEmployee;
     private javax.swing.JButton btnFin_AddClient;
+    private javax.swing.JButton btnFin_EditClient;
     private javax.swing.JButton btnFinance;
     private javax.swing.JButton btnFinanceClients;
     private javax.swing.JButton btnFinanceReports;
@@ -1735,13 +1791,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnPetshop;
     private javax.swing.JButton btnPharmacy;
     private javax.swing.JButton btnfin_dlgAddClientAdd;
-    private javax.swing.JButton btnfin_dlgAddClientAdd1;
     private javax.swing.JButton btnfin_dlgAddClientCancel;
-    private javax.swing.JButton btnfin_dlgAddClientCancel1;
+    private javax.swing.JButton btnfin_dlgEditClientCancel;
+    private javax.swing.JButton btnfin_dlgEditClientUpdate;
     private javax.swing.JDialog dlgFin_addClient;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -1817,14 +1872,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txt_Fin_SearchCompany;
     private javax.swing.JTextArea txt_dlgFin_addClient_Address;
-    private javax.swing.JTextArea txt_dlgFin_addClient_Address1;
     private javax.swing.JTextField txt_dlgFin_addClient_Company;
-    private javax.swing.JTextField txt_dlgFin_addClient_Company1;
     private javax.swing.JTextField txt_dlgFin_addClient_email;
-    private javax.swing.JTextField txt_dlgFin_addClient_email1;
     private javax.swing.JTextField txt_dlgFin_addClient_tele1;
     private javax.swing.JTextField txt_dlgFin_addClient_tele2;
-    private javax.swing.JTextField txt_dlgFin_addClient_tele3;
-    private javax.swing.JTextField txt_dlgFin_addClient_tele4;
+    private javax.swing.JTextArea txt_dlgFin_editClient_Address;
+    private javax.swing.JTextField txt_dlgFin_editClient_Company;
+    private javax.swing.JTextField txt_dlgFin_editClient_email;
+    private javax.swing.JTextField txt_dlgFin_editClient_tele1;
+    private javax.swing.JTextField txt_dlgFin_editClient_tele2;
     // End of variables declaration//GEN-END:variables
 }
