@@ -1,4 +1,5 @@
 
+import java.awt.Color;
 import java.awt.event.KeyEvent;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -42,11 +43,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         dlgFin_addClient = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
+        lbl_dlgFin_addClient_Company = new javax.swing.JLabel();
+        lbl_dlgFin_addClient_Address = new javax.swing.JLabel();
+        lbl_dlgFin_addClient_tele1 = new javax.swing.JLabel();
+        lbl_dlgFin_addClient_tele2 = new javax.swing.JLabel();
+        lbl_dlgFin_addClient_Email = new javax.swing.JLabel();
         txt_dlgFin_addClient_Company = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
         txt_dlgFin_addClient_Address = new javax.swing.JTextArea();
@@ -177,20 +178,20 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
 
-        jLabel11.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel11.setText("Company Name");
+        lbl_dlgFin_addClient_Company.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_addClient_Company.setText("Company Name");
 
-        jLabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel12.setText("Address");
+        lbl_dlgFin_addClient_Address.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_addClient_Address.setText("Address");
 
-        jLabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel13.setText("Telephone #1");
+        lbl_dlgFin_addClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_addClient_tele1.setText("Telephone #1");
 
-        jLabel14.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel14.setText("Telephone #2");
+        lbl_dlgFin_addClient_tele2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_addClient_tele2.setText("Telephone #2");
 
-        jLabel15.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel15.setText("Email");
+        lbl_dlgFin_addClient_Email.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_addClient_Email.setText("Email");
 
         txt_dlgFin_addClient_Company.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
@@ -235,56 +236,56 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel19Layout.setHorizontalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addContainerGap(28, Short.MAX_VALUE)
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_dlgFin_addClient_tele1)
+                            .addComponent(lbl_dlgFin_addClient_Email)
+                            .addComponent(lbl_dlgFin_addClient_Address)
+                            .addComponent(lbl_dlgFin_addClient_Company))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
+                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txt_dlgFin_addClient_email, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(jPanel19Layout.createSequentialGroup()
+                                    .addComponent(txt_dlgFin_addClient_tele1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lbl_dlgFin_addClient_tele2)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txt_dlgFin_addClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(txt_dlgFin_addClient_Company, javax.swing.GroupLayout.Alignment.TRAILING))))
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnfin_dlgAddClientCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btnfin_dlgAddClientAdd))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel15))
-                                .addGap(18, 18, 18))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel19Layout.createSequentialGroup()
-                                .addComponent(jLabel13)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)))
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                .addComponent(txt_dlgFin_addClient_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel14)
-                                .addGap(18, 18, 18)
-                                .addComponent(txt_dlgFin_addClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane4)
-                            .addComponent(txt_dlgFin_addClient_Company)
-                            .addComponent(txt_dlgFin_addClient_email))))
-                .addGap(0, 32, Short.MAX_VALUE))
+                        .addComponent(btnfin_dlgAddClientAdd)))
+                .addGap(0, 37, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
             jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel19Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(txt_dlgFin_addClient_Company, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_dlgFin_addClient_Company, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgFin_addClient_Company))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGap(11, 11, 11)
+                        .addComponent(lbl_dlgFin_addClient_Address)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addClient_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
+                    .addComponent(lbl_dlgFin_addClient_tele2)
                     .addComponent(txt_dlgFin_addClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
+                    .addComponent(lbl_dlgFin_addClient_tele1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addClient_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15))
+                    .addComponent(lbl_dlgFin_addClient_Email))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnfin_dlgAddClientAdd)
@@ -1954,19 +1955,19 @@ public class MainWindow extends javax.swing.JFrame {
         this.update_tbl_Fin_Product_Details();
     }//GEN-LAST:event_btn_Fin_RefreshActionPerformed
 
-    private void txt_dlgFin_addClient_tele1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele1KeyTyped
-        char key = evt.getKeyChar();
-        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
-            evt.consume();
-        }
-    }//GEN-LAST:event_txt_dlgFin_addClient_tele1KeyTyped
-
     private void txt_dlgFin_addClient_tele2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele2KeyTyped
         char key = evt.getKeyChar();
         if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
             evt.consume();
         }
     }//GEN-LAST:event_txt_dlgFin_addClient_tele2KeyTyped
+
+    private void txt_dlgFin_addClient_tele1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele1KeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addClient_tele1KeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -2265,6 +2266,48 @@ public class MainWindow extends javax.swing.JFrame {
             }
         }
     }
+    
+    public boolean ck_dlg_txt_CompanyName(){
+        if(this.txt_dlgFin_addClient_Company.getText().equals("")){
+            this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
+            return false;
+        }
+        else{
+            this.lbl_dlgFin_addClient_Company.setForeground(Color.black);
+            return true;
+        }
+    }
+    
+    public boolean ck_dlg_txt_Address(){
+        if(this.txt_dlgFin_addClient_Address.getText().equals("")){
+            this.lbl_dlgFin_addClient_Address.setForeground(Color.red);
+            return false;
+        }
+        else{
+            this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
+            return true;
+        }
+    }
+    
+    public boolean ck_dlg_txt_Tele1(){
+        String tele1 = this.txt_dlgFin_addClient_tele1.getText();
+        if(tele1.equals("")){
+            this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
+            return true;
+        }
+        else if(tele1.charAt(0)=='+'){
+            return true;
+        }
+        else if(tele1.length()==10){
+            this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
+            return true;
+        }
+        else{
+            this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
+            return false;
+        }
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
@@ -2302,11 +2345,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
@@ -2367,6 +2405,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JLabel lbl_dlgFin_AddProduct_Product;
+    private javax.swing.JLabel lbl_dlgFin_addClient_Address;
+    private javax.swing.JLabel lbl_dlgFin_addClient_Company;
+    private javax.swing.JLabel lbl_dlgFin_addClient_Email;
+    private javax.swing.JLabel lbl_dlgFin_addClient_tele1;
+    private javax.swing.JLabel lbl_dlgFin_addClient_tele2;
     private javax.swing.JPanel pnlDaycare;
     private javax.swing.JPanel pnlEmployee;
     private javax.swing.JPanel pnlFinance;
