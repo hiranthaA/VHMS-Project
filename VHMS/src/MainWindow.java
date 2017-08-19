@@ -78,6 +78,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         txt_dlgFin_AddProduct_Product = new javax.swing.JTextField();
         btn_dlgFin_addProduct_Add = new javax.swing.JButton();
+        btn_dlgFin_addProduct_Cancel = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -151,12 +152,15 @@ public class MainWindow extends javax.swing.JFrame {
         btnFin_EditClient = new javax.swing.JButton();
         btnFin_DeleteClient = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tbl_Fin_Product_Details = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         btn_Fin_AddProduct = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        txt_Fin_SearchProduct = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        btn_Fin_Refresh = new javax.swing.JButton();
         pnlFinanceReports = new javax.swing.JPanel();
         pnlFinanceIncExp = new javax.swing.JPanel();
         jTabbedPane5 = new javax.swing.JTabbedPane();
@@ -196,10 +200,20 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane4.setViewportView(txt_dlgFin_addClient_Address);
 
         txt_dlgFin_addClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_tele1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addClient_tele1KeyTyped(evt);
+            }
+        });
 
         txt_dlgFin_addClient_email.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
         txt_dlgFin_addClient_tele2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_tele2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addClient_tele2KeyTyped(evt);
+            }
+        });
 
         btnfin_dlgAddClientAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clientok_x24.png"))); // NOI18N
         btnfin_dlgAddClientAdd.setText("Add");
@@ -432,6 +446,13 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
+        btn_dlgFin_addProduct_Cancel.setText("Cancel");
+        btn_dlgFin_addProduct_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addProduct_CancelActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
@@ -450,6 +471,8 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(txt_dlgFin_AddProduct_Product))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_dlgFin_addProduct_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btn_dlgFin_addProduct_Add)))
                 .addContainerGap())
         );
@@ -469,7 +492,9 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(txt_dlgFin_AddProduct_Product, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addComponent(btn_dlgFin_addProduct_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_dlgFin_addProduct_Add, javax.swing.GroupLayout.DEFAULT_SIZE, 37, Short.MAX_VALUE)
+                    .addComponent(btn_dlgFin_addProduct_Cancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(22, 22, 22))
         );
 
@@ -1202,7 +1227,7 @@ public class MainWindow extends javax.swing.JFrame {
         pnlFinanceClients.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel8.setText("Search");
+        jLabel8.setText("Company");
 
         txt_Fin_SearchCompany.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
         txt_Fin_SearchCompany.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -1228,6 +1253,12 @@ public class MainWindow extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        tbl_Fin_Client_Details.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
+        tbl_Fin_Client_Details.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_Fin_Client_DetailsMouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(tbl_Fin_Client_Details);
@@ -1256,21 +1287,23 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_Fin_Product_Details.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null},
+                {null},
+                {null},
+                {null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Product"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(tbl_Fin_Product_Details);
 
+        jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel9.setText("Client Details");
 
+        jLabel10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel10.setText("Product Details");
 
         btn_Fin_AddProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
@@ -1282,6 +1315,25 @@ public class MainWindow extends javax.swing.JFrame {
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconRemove.png"))); // NOI18N
 
+        txt_Fin_SearchProduct.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Fin_SearchProduct.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_Fin_SearchProductKeyReleased(evt);
+            }
+        });
+
+        jLabel22.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel22.setText("Product");
+
+        btn_Fin_Refresh.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btn_Fin_Refresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/refresh_x16.png"))); // NOI18N
+        btn_Fin_Refresh.setText("Refresh");
+        btn_Fin_Refresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Fin_RefreshActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlFinanceClientsLayout = new javax.swing.GroupLayout(pnlFinanceClients);
         pnlFinanceClients.setLayout(pnlFinanceClientsLayout);
         pnlFinanceClientsLayout.setHorizontalGroup(
@@ -1292,60 +1344,64 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jSeparator1)
                     .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
                         .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
-                                .addComponent(btnFin_AddClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnFin_EditClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btnFin_DeleteClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txt_Fin_SearchCompany, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel9))
+                                .addComponent(jLabel9)
+                                .addGap(0, 679, Short.MAX_VALUE))
+                            .addComponent(jScrollPane1))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinanceClientsLayout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_Fin_AddProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jLabel10)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_Fin_SearchCompany, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txt_Fin_SearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btn_Fin_Refresh))
+                    .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
+                        .addComponent(btnFin_AddClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFin_EditClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnFin_DeleteClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_Fin_AddProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         pnlFinanceClientsLayout.setVerticalGroup(
             pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(txt_Fin_SearchCompany, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_Fin_Refresh, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel8)
+                        .addComponent(txt_Fin_SearchCompany)
+                        .addComponent(txt_Fin_SearchProduct)
+                        .addComponent(jLabel22)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addGap(11, 11, 11))
-                    .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addGap(5, 5, 5)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                            .addComponent(btn_Fin_AddProduct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)))
+                .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(2, 2, 2)
+                .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 383, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(10, 10, 10)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnFin_AddClient)
                     .addComponent(btnFin_EditClient)
-                    .addComponent(btnFin_DeleteClient))
+                    .addComponent(btnFin_DeleteClient)
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_Fin_AddProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -1368,7 +1424,7 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1088, Short.MAX_VALUE)
+            .addGap(0, 1091, Short.MAX_VALUE)
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1397,7 +1453,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(407, Short.MAX_VALUE))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1854,13 +1910,63 @@ public class MainWindow extends javax.swing.JFrame {
             pst.setString(2, cID);
             pst.setString(3,this.txt_dlgFin_AddProduct_Product.getText());
             pst.execute();
-            JOptionPane.showMessageDialog(dlgFin_addProduct, "Product added Successfully!","Product Details",JOptionPane.INFORMATION_MESSAGE);
             this.increaseNoProductsByOne();
+            this.update_tbl_Fin_Product_Details();
+            JOptionPane.showMessageDialog(dlgFin_addProduct, "Product added Successfully!","Product Details",JOptionPane.INFORMATION_MESSAGE);
+            this.txt_dlgFin_AddProduct_Product.setText("");
         }
         catch(Exception e){
             e.printStackTrace();
         }
     }//GEN-LAST:event_btn_dlgFin_addProduct_AddActionPerformed
+
+    private void btn_dlgFin_addProduct_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addProduct_CancelActionPerformed
+        this.dlgFin_addProduct.dispose();
+    }//GEN-LAST:event_btn_dlgFin_addProduct_CancelActionPerformed
+
+    private void tbl_Fin_Client_DetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_Fin_Client_DetailsMouseClicked
+        this.update_tbl_Fin_Product_Details();
+    }//GEN-LAST:event_tbl_Fin_Client_DetailsMouseClicked
+
+    private void txt_Fin_SearchProductKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchProductKeyReleased
+        String product=null;
+        product=this.txt_Fin_SearchProduct.getText();
+        String sql = "select distinct fc.clientID,fc.company_name,fc.address,fc.tele1,fc.tele2,fc.email from client_products cp,finance_clients fc where cp.clientID=fc.clientID and cp.product like '%"+product+"%'";
+        if(product.equals("")){
+            this.update_tbl_Fin_Client_Details();
+        }
+        else{
+            try{
+                Statement stmnt = dbcon.createStatement();
+                ResultSet rs_Product_Details = stmnt.executeQuery(sql);
+                this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs_Product_Details));
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(null, "Cannot Refresh Product Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_txt_Fin_SearchProductKeyReleased
+
+    private void btn_Fin_RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_RefreshActionPerformed
+        this.txt_Fin_SearchCompany.setText("");
+        this.txt_Fin_SearchProduct.setText("");
+        this.update_tbl_Fin_Client_Details();
+        this.update_tbl_Fin_Product_Details();
+    }//GEN-LAST:event_btn_Fin_RefreshActionPerformed
+
+    private void txt_dlgFin_addClient_tele1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele1KeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addClient_tele1KeyTyped
+
+    private void txt_dlgFin_addClient_tele2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele2KeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addClient_tele2KeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -2140,6 +2246,25 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
+    
+    public void update_tbl_Fin_Product_Details(){
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        if(selectedRow==-1){
+            // clear table product details
+        }
+        else{
+            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+            String sql = "select product as 'Product' from client_products where clientID='"+ClientID+"'";
+            try{
+                Statement stmnt = dbcon.createStatement();
+                ResultSet rs_Product_Details = stmnt.executeQuery(sql);
+                this.tbl_Fin_Product_Details.setModel(DbUtils.resultSetToTableModel(rs_Product_Details));
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(this, "Cannot Refresh Product Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
@@ -2160,7 +2285,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnPetshop;
     private javax.swing.JButton btnPharmacy;
     private javax.swing.JButton btn_Fin_AddProduct;
+    private javax.swing.JButton btn_Fin_Refresh;
     private javax.swing.JButton btn_dlgFin_addProduct_Add;
+    private javax.swing.JButton btn_dlgFin_addProduct_Cancel;
     private javax.swing.JButton btnfin_dlgAddClientAdd;
     private javax.swing.JButton btnfin_dlgAddClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientCancel;
@@ -2187,6 +2314,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -2238,7 +2366,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
     private javax.swing.JLabel lbl_dlgFin_AddProduct_Product;
     private javax.swing.JPanel pnlDaycare;
     private javax.swing.JPanel pnlEmployee;
@@ -2254,9 +2381,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPetshop;
     private javax.swing.JPanel pnlPharmacy;
     private javax.swing.JTable tbl_Fin_Client_Details;
+    private javax.swing.JTable tbl_Fin_Product_Details;
     private javax.swing.JTextField txtItemcode;
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txt_Fin_SearchCompany;
+    private javax.swing.JTextField txt_Fin_SearchProduct;
     private javax.swing.JTextField txt_dlgFin_AddProduct_Product;
     private javax.swing.JTextArea txt_dlgFin_addClient_Address;
     private javax.swing.JTextField txt_dlgFin_addClient_Company;
