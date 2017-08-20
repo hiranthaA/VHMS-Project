@@ -58,11 +58,11 @@ public class MainWindow extends javax.swing.JFrame {
         btnfin_dlgAddClientCancel = new javax.swing.JButton();
         dlgFin_editClient = new javax.swing.JDialog();
         jPanel20 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
+        lbl_dlgFin_editClient_Company = new javax.swing.JLabel();
+        lbl_dlgFin_editClient_Address = new javax.swing.JLabel();
+        lbl_dlgFin_editClient_tele1 = new javax.swing.JLabel();
+        lbl_dlgFin_editClient_tele2 = new javax.swing.JLabel();
+        lbl_dlgFin_editClient_Email = new javax.swing.JLabel();
         txt_dlgFin_editClient_Company = new javax.swing.JTextField();
         jScrollPane5 = new javax.swing.JScrollPane();
         txt_dlgFin_editClient_Address = new javax.swing.JTextArea();
@@ -169,6 +169,21 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel25 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jPanel26 = new javax.swing.JPanel();
+        jButton5 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
+        jButton10 = new javax.swing.JButton();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jButton11 = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jDateChooser3 = new com.toedter.calendar.JDateChooser();
+        jDateChooser4 = new com.toedter.calendar.JDateChooser();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -194,13 +209,29 @@ public class MainWindow extends javax.swing.JFrame {
         lbl_dlgFin_addClient_Email.setText("Email");
 
         txt_dlgFin_addClient_Company.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_Company.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_addClient_CompanyFocusLost(evt);
+            }
+        });
 
         txt_dlgFin_addClient_Address.setColumns(20);
         txt_dlgFin_addClient_Address.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         txt_dlgFin_addClient_Address.setRows(5);
+        txt_dlgFin_addClient_Address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_addClient_AddressFocusLost(evt);
+            }
+        });
         jScrollPane4.setViewportView(txt_dlgFin_addClient_Address);
 
         txt_dlgFin_addClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_tele1.setToolTipText("Eg: 0123456789");
+        txt_dlgFin_addClient_tele1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_addClient_tele1FocusLost(evt);
+            }
+        });
         txt_dlgFin_addClient_tele1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_dlgFin_addClient_tele1KeyTyped(evt);
@@ -208,8 +239,27 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         txt_dlgFin_addClient_email.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_addClient_emailFocusLost(evt);
+            }
+        });
+        txt_dlgFin_addClient_email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addClient_emailKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addClient_emailKeyTyped(evt);
+            }
+        });
 
         txt_dlgFin_addClient_tele2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_addClient_tele2.setToolTipText("Eg: 0123456789");
+        txt_dlgFin_addClient_tele2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_addClient_tele2FocusLost(evt);
+            }
+        });
         txt_dlgFin_addClient_tele2.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txt_dlgFin_addClient_tele2KeyTyped(evt);
@@ -247,15 +297,14 @@ public class MainWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txt_dlgFin_addClient_email, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(jPanel19Layout.createSequentialGroup()
-                                    .addComponent(txt_dlgFin_addClient_tele1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(lbl_dlgFin_addClient_tele2)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(txt_dlgFin_addClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txt_dlgFin_addClient_Company, javax.swing.GroupLayout.Alignment.TRAILING))))
+                            .addGroup(jPanel19Layout.createSequentialGroup()
+                                .addComponent(txt_dlgFin_addClient_tele1, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lbl_dlgFin_addClient_tele2)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_dlgFin_addClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(txt_dlgFin_addClient_Company, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(jPanel19Layout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnfin_dlgAddClientCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -309,33 +358,71 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
 
-        jLabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel16.setText("Company Name");
+        lbl_dlgFin_editClient_Company.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_editClient_Company.setText("Company Name");
 
-        jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel17.setText("Address");
+        lbl_dlgFin_editClient_Address.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_editClient_Address.setText("Address");
 
-        jLabel18.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel18.setText("Telephone #1");
+        lbl_dlgFin_editClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_editClient_tele1.setText("Telephone #1");
 
-        jLabel19.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel19.setText("Telephone #2");
+        lbl_dlgFin_editClient_tele2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_editClient_tele2.setText("Telephone #2");
 
-        jLabel20.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel20.setText("Email");
+        lbl_dlgFin_editClient_Email.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_dlgFin_editClient_Email.setText("Email");
 
         txt_dlgFin_editClient_Company.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_Company.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_editClient_CompanyFocusLost(evt);
+            }
+        });
 
         txt_dlgFin_editClient_Address.setColumns(20);
         txt_dlgFin_editClient_Address.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         txt_dlgFin_editClient_Address.setRows(5);
+        txt_dlgFin_editClient_Address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_editClient_AddressFocusLost(evt);
+            }
+        });
         jScrollPane5.setViewportView(txt_dlgFin_editClient_Address);
 
         txt_dlgFin_editClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_tele1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_editClient_tele1FocusLost(evt);
+            }
+        });
+        txt_dlgFin_editClient_tele1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_editClient_tele1KeyTyped(evt);
+            }
+        });
 
         txt_dlgFin_editClient_email.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_editClient_emailKeyReleased(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_editClient_emailKeyTyped(evt);
+            }
+        });
 
         txt_dlgFin_editClient_tele2.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        txt_dlgFin_editClient_tele2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgFin_editClient_tele2FocusLost(evt);
+            }
+        });
+        txt_dlgFin_editClient_tele2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_editClient_tele2KeyTyped(evt);
+            }
+        });
 
         btnfin_dlgEditClientUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clientok_x24.png"))); // NOI18N
         btnfin_dlgEditClientUpdate.setText("Update");
@@ -364,18 +451,18 @@ public class MainWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(btnfin_dlgEditClientUpdate, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel17)
+                        .addComponent(lbl_dlgFin_editClient_Address)
                         .addGroup(jPanel20Layout.createSequentialGroup()
                             .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel16)
-                                .addComponent(jLabel18, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addComponent(lbl_dlgFin_editClient_Company)
+                                .addComponent(lbl_dlgFin_editClient_tele1, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lbl_dlgFin_editClient_Email, javax.swing.GroupLayout.Alignment.LEADING))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                             .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addGroup(jPanel20Layout.createSequentialGroup()
                                     .addComponent(txt_dlgFin_editClient_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jLabel19)
+                                    .addComponent(lbl_dlgFin_editClient_tele2)
                                     .addGap(18, 18, 18)
                                     .addComponent(txt_dlgFin_editClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jScrollPane5)
@@ -388,24 +475,24 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
+                    .addComponent(lbl_dlgFin_editClient_Company)
                     .addComponent(txt_dlgFin_editClient_Company, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(jLabel17)))
+                        .addComponent(lbl_dlgFin_editClient_Address)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_editClient_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19)
+                    .addComponent(lbl_dlgFin_editClient_tele2)
                     .addComponent(txt_dlgFin_editClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel18))
+                    .addComponent(lbl_dlgFin_editClient_tele1))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_editClient_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel20))
+                    .addComponent(lbl_dlgFin_editClient_Email))
                 .addGap(35, 35, 35)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnfin_dlgEditClientUpdate)
@@ -1447,21 +1534,121 @@ public class MainWindow extends javax.swing.JFrame {
         ));
         jScrollPane6.setViewportView(jTable1);
 
+        jPanel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        jButton5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton5.setText("Client Invoice");
+
+        jLabel11.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        jLabel11.setText("Add New");
+
+        jButton7.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton7.setText("Electricity Bill");
+
+        jButton8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton8.setText("Water Bill");
+        jButton8.setToolTipText("");
+
+        jButton9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton9.setText("Telephone Bill");
+
+        jButton10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton10.setText("Employee Salary");
+
+        jButton11.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jButton11.setText("Other");
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jSeparator4)
+                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jButton10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addGroup(jPanel26Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jSeparator5)
+                    .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+
+        jLabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel12.setText("From");
+
+        jLabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel13.setText("To");
+
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 674, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(407, Short.MAX_VALUE))
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(29, 29, 29)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 820, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
-                .addContainerGap(72, Short.MAX_VALUE)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel12)
+                            .addComponent(jLabel13))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jDateChooser4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         jTabbedPane5.addTab("Expenditure", jPanel25);
@@ -1704,8 +1891,12 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlDaycare.setVisible(false);
         this.pnlHealthcare.setVisible(false);
         this.pnlEmployee.setVisible(false);
-        this.pnlFinance.setVisible(true);
         this.pnlHome.setVisible(false);
+        this.pnlFinance.setVisible(true);
+        
+        this.pnlFinanceReports.setVisible(false);
+        this.pnlFinanceIncExp.setVisible(false);
+        this.pnlFinanceClients.setVisible(true);
         
         //---------filling client details table-----------------
             update_tbl_Fin_Client_Details();
@@ -1776,29 +1967,37 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnfin_dlgAddClientCancelActionPerformed
 
     private void btnfin_dlgAddClientAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientAddActionPerformed
-        String company = this.txt_dlgFin_addClient_Company.getText();
-        String address = this.txt_dlgFin_addClient_Address.getText();
-        String tele1 = this.txt_dlgFin_addClient_tele1.getText();
-        String tele2 = this.txt_dlgFin_addClient_tele2.getText();
-        String email = this.txt_dlgFin_addClient_email.getText();
-        
-        try{
-            String SQL = "insert into finance_clients (clientID,company_name,address,tele1,tele2,email) values(?,?,?,?,?,?)";
-            PreparedStatement pst = dbcon.prepareStatement(SQL);
-            pst.setString(1, generateClientID());
-            pst.setString(2, company);
-            pst.setString(3, address);
-            pst.setString(4, tele1);
-            pst.setString(5, tele2);
-            pst.setString(6, email);
-            pst.execute();
-            increaseNoClientsByOne();
-            JOptionPane.showMessageDialog(dlgFin_addClient, "Client added Successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
-            update_tbl_Fin_Client_Details();
-            this.dlgFin_addClient.dispose();
+        if(ck_dlgAddClient_txt_CompanyName() & ck_dlgAddClient_txt_Address() & ck_dlgAddClient_txt_Tele1() & ck_dlgAddClient_txt_Tele2() & ck_dlgAddClient_txt_email()){
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addClient,"Are You sure the details are correct?","Add Client Details",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                String company = this.txt_dlgFin_addClient_Company.getText();
+                String address = this.txt_dlgFin_addClient_Address.getText();
+                String tele1 = this.txt_dlgFin_addClient_tele1.getText();
+                String tele2 = this.txt_dlgFin_addClient_tele2.getText();
+                String email = this.txt_dlgFin_addClient_email.getText();
+
+                try{
+                    String SQL = "insert into finance_clients (clientID,company_name,address,tele1,tele2,email) values(?,?,?,?,?,?)";
+                    PreparedStatement pst = dbcon.prepareStatement(SQL);
+                    pst.setString(1, generateClientID());
+                    pst.setString(2, company);
+                    pst.setString(3, address);
+                    pst.setString(4, tele1);
+                    pst.setString(5, tele2);
+                    pst.setString(6, email);
+                    pst.execute();
+                    increaseNoClientsByOne();
+                    JOptionPane.showMessageDialog(dlgFin_addClient, "Client added Successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
+                    update_tbl_Fin_Client_Details();
+                    this.dlgFin_addClient.dispose();
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(dlgFin_addClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
         }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(dlgFin_addClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        else{
+            getToolkit().beep();
         }
     }//GEN-LAST:event_btnfin_dlgAddClientAddActionPerformed
 
@@ -1817,30 +2016,38 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_Fin_SearchCompanyKeyReleased
 
     private void btnfin_dlgEditClientUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgEditClientUpdateActionPerformed
-        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
-        String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-        String company = this.txt_dlgFin_editClient_Company.getText();
-        String address = this.txt_dlgFin_editClient_Address.getText();
-        String tele1 = this.txt_dlgFin_editClient_tele1.getText();
-        String tele2 = this.txt_dlgFin_editClient_tele2.getText();
-        String email = this.txt_dlgFin_editClient_email.getText();
-        
-        try{
-            String updateClientDetailsSQL = "update finance_clients set company_name=?,address=?,tele1=?,tele2=?,email=? where clientID=?";
-            PreparedStatement pst = dbcon.prepareStatement(updateClientDetailsSQL);
-            pst.setString(1, company);
-            pst.setString(2, address);
-            pst.setString(3, tele1);
-            pst.setString(4, tele2);
-            pst.setString(5, email);
-            pst.setString(6, ClientID);
-            pst.execute();
-            JOptionPane.showMessageDialog(dlgFin_editClient, "Client updated successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
-            update_tbl_Fin_Client_Details();
-            this.dlgFin_editClient.dispose();
+        if(ck_dlgEditClient_txt_CompanyName() & ck_dlgEditClient_txt_Address() & ck_dlgEditClient_txt_Tele1() & ck_dlgEditClient_txt_Tele2() & ck_dlgEditClient_txt_email()){
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_editClient,"Are You sure the details are correct?","Update Client Details",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+                String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+                String company = this.txt_dlgFin_editClient_Company.getText();
+                String address = this.txt_dlgFin_editClient_Address.getText();
+                String tele1 = this.txt_dlgFin_editClient_tele1.getText();
+                String tele2 = this.txt_dlgFin_editClient_tele2.getText();
+                String email = this.txt_dlgFin_editClient_email.getText();
+
+                try{
+                    String updateClientDetailsSQL = "update finance_clients set company_name=?,address=?,tele1=?,tele2=?,email=? where clientID=?";
+                    PreparedStatement pst = dbcon.prepareStatement(updateClientDetailsSQL);
+                    pst.setString(1, company);
+                    pst.setString(2, address);
+                    pst.setString(3, tele1);
+                    pst.setString(4, tele2);
+                    pst.setString(5, email);
+                    pst.setString(6, ClientID);
+                    pst.execute();
+                    JOptionPane.showMessageDialog(dlgFin_editClient, "Client updated successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
+                    update_tbl_Fin_Client_Details();
+                    this.dlgFin_editClient.dispose();
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(dlgFin_editClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }    
         }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(dlgFin_editClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        else{
+            getToolkit().beep();
         }
     }//GEN-LAST:event_btnfin_dlgEditClientUpdateActionPerformed
 
@@ -1968,6 +2175,80 @@ public class MainWindow extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_dlgFin_addClient_tele1KeyTyped
+
+    private void txt_dlgFin_addClient_tele1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele1FocusLost
+        this.ck_dlgAddClient_txt_Tele1();
+    }//GEN-LAST:event_txt_dlgFin_addClient_tele1FocusLost
+
+    private void txt_dlgFin_addClient_tele2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele2FocusLost
+        this.ck_dlgAddClient_txt_Tele2();
+    }//GEN-LAST:event_txt_dlgFin_addClient_tele2FocusLost
+
+    private void txt_dlgFin_addClient_emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_emailFocusLost
+        this.ck_dlgAddClient_txt_email();
+    }//GEN-LAST:event_txt_dlgFin_addClient_emailFocusLost
+
+    private void txt_dlgFin_addClient_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_emailKeyTyped
+        char c = evt.getKeyChar();
+        System.out.println(c);
+        if(!((c>=48 && c<=57) || c==KeyEvent.VK_BACK_SPACE || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD || (c>=64 && c<=90) || (c>=97 && c<=122))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addClient_emailKeyTyped
+
+    private void txt_dlgFin_addClient_emailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_emailKeyReleased
+        this.ck_dlgAddClient_txt_email();
+    }//GEN-LAST:event_txt_dlgFin_addClient_emailKeyReleased
+
+    private void txt_dlgFin_addClient_CompanyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_CompanyFocusLost
+        this.ck_dlgAddClient_txt_CompanyName();
+    }//GEN-LAST:event_txt_dlgFin_addClient_CompanyFocusLost
+
+    private void txt_dlgFin_addClient_AddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_AddressFocusLost
+        this.ck_dlgAddClient_txt_Address();
+    }//GEN-LAST:event_txt_dlgFin_addClient_AddressFocusLost
+
+    private void txt_dlgFin_editClient_CompanyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_CompanyFocusLost
+        this.ck_dlgEditClient_txt_CompanyName();
+    }//GEN-LAST:event_txt_dlgFin_editClient_CompanyFocusLost
+
+    private void txt_dlgFin_editClient_AddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_AddressFocusLost
+        this.ck_dlgEditClient_txt_Address();
+    }//GEN-LAST:event_txt_dlgFin_editClient_AddressFocusLost
+
+    private void txt_dlgFin_editClient_tele1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele1FocusLost
+        this.ck_dlgEditClient_txt_Tele1();
+    }//GEN-LAST:event_txt_dlgFin_editClient_tele1FocusLost
+
+    private void txt_dlgFin_editClient_tele2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele2FocusLost
+        this.ck_dlgEditClient_txt_Tele2();
+    }//GEN-LAST:event_txt_dlgFin_editClient_tele2FocusLost
+
+    private void txt_dlgFin_editClient_emailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_emailKeyReleased
+        this.ck_dlgEditClient_txt_email();
+    }//GEN-LAST:event_txt_dlgFin_editClient_emailKeyReleased
+
+    private void txt_dlgFin_editClient_tele1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele1KeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_editClient_tele1KeyTyped
+
+    private void txt_dlgFin_editClient_tele2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele2KeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_editClient_tele2KeyTyped
+
+    private void txt_dlgFin_editClient_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_emailKeyTyped
+        char c = evt.getKeyChar();
+        System.out.println(c);
+        if(!((c>=48 && c<=57) || c==KeyEvent.VK_BACK_SPACE || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD || (c>=64 && c<=90) || (c>=97 && c<=122))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_editClient_emailKeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -2267,47 +2548,335 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }
     
-    public boolean ck_dlg_txt_CompanyName(){
+    public boolean ck_dlgAddClient_txt_CompanyName(){
         if(this.txt_dlgFin_addClient_Company.getText().equals("")){
             this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Company.setToolTipText("Invalid Company Name");
+            return false;
+        }
+        else if(this.txt_dlgFin_addClient_Company.getText().length()==1){
+            this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Company.setToolTipText("Invalid Company Name");
             return false;
         }
         else{
             this.lbl_dlgFin_addClient_Company.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Company.setToolTipText(null);
             return true;
         }
     }
-    
-    public boolean ck_dlg_txt_Address(){
-        if(this.txt_dlgFin_addClient_Address.getText().equals("")){
+
+    public boolean ck_dlgAddClient_txt_Address(){
+        if(this.txt_dlgFin_addClient_Address.getText()==""){
+            this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Address.setToolTipText(null);
+            return true;
+        }
+        else if(this.txt_dlgFin_addClient_Address.getText().length()==1){
             this.lbl_dlgFin_addClient_Address.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Address.setToolTipText("Invalid Address");
             return false;
         }
         else{
             this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Address.setToolTipText(null);
             return true;
         }
     }
     
-    public boolean ck_dlg_txt_Tele1(){
-        String tele1 = this.txt_dlgFin_addClient_tele1.getText();
-        if(tele1.equals("")){
+    public boolean ck_dlgAddClient_txt_Tele1(){
+        String tele = this.txt_dlgFin_addClient_tele1.getText();
+        if(tele.equals("")){
             this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_tele1.setToolTipText(null);
             return true;
         }
-        else if(tele1.charAt(0)=='+'){
-            return true;
-        }
-        else if(tele1.length()==10){
-            this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
-            return true;
+        else if(tele.length()==10){
+            if(tele.charAt(0)=='0'){
+                this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
+                this.lbl_dlgFin_addClient_tele1.setToolTipText(null);
+                return true;
+            }
+            else{
+                this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_tele1.setToolTipText("Invalid Telephone number");
+                return false;
+            }
         }
         else{
             this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_tele1.setToolTipText("Invalid Telephone number");
             return false;
         }
     }
     
+    public boolean ck_dlgAddClient_txt_Tele2(){
+        String tele = this.txt_dlgFin_addClient_tele2.getText();
+        if(tele.equals("")){
+            this.lbl_dlgFin_addClient_tele2.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_tele2.setToolTipText(null);
+            return true;
+        }
+        else if(tele.length()==10){
+            if(tele.charAt(0)=='0'){
+                this.lbl_dlgFin_addClient_tele2.setForeground(Color.black);
+                this.lbl_dlgFin_addClient_tele2.setToolTipText(null);
+                return true;
+            }
+            else{
+                this.lbl_dlgFin_addClient_tele2.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_tele2.setToolTipText("Invalid Telephone number");
+                return false;
+            }
+        }
+        else{
+            this.lbl_dlgFin_addClient_tele2.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_tele2.setToolTipText("Invalid Telephone number");
+            return false;
+        }
+    }
+    
+    public boolean ck_dlgAddClient_txt_email(){
+        String email=this.txt_dlgFin_addClient_email.getText();
+        if(email.equals("")){
+            this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Email.setToolTipText(null);
+            return true;
+        }
+        else{
+            //---------------------------------------
+            int atIndex=email.indexOf('@');
+            int dotIndex=email.indexOf('.');
+            int lastdotIndex=0;
+            //----------------------------------------
+            if(atIndex==-1){
+                this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                return false;
+            }
+            else{
+                int atCount = 0;
+                for(int x=0; x<email.length(); x++){
+                    if(email.charAt(x)=='@'){
+                        atCount++;
+                    }
+                }
+                if(atCount>1){
+                    this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                    this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                    return false;
+                }
+                else{
+                    if(dotIndex==-1){
+                    this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                    this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                    return false;
+                    }
+                    else{
+                        for(int x=0; x<email.length();x++){
+                            if(email.charAt(x)=='.'){
+                                lastdotIndex=x;
+                            }
+                        }
+                        if(lastdotIndex<atIndex){
+                            //check "@" is before the last "."
+                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else if(email.charAt(email.length()-1)=='.'){
+                            //check last character is not a "."
+                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else if(email.charAt(0)=='.' || email.charAt(0)=='@'){
+                            //check starting characters are not "@" or "."
+                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else if(email.charAt(atIndex-1)=='.' || email.charAt(atIndex+1)=='.'){
+                            //check characters before and after "@" is not a "."
+                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else{
+                            this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
+                            this.lbl_dlgFin_addClient_Email.setToolTipText(null);
+                            return true;
+                        }
+                    }
+                }
+            } 
+        }
+    }
+    
+    public boolean ck_dlgEditClient_txt_CompanyName(){
+        if(this.txt_dlgFin_editClient_Company.getText().equals("")){
+            this.lbl_dlgFin_editClient_Company.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_Company.setToolTipText("Invalid Company Name");
+            return false;
+        }
+        else if(this.txt_dlgFin_editClient_Company.getText().length()==1){
+            this.lbl_dlgFin_editClient_Company.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_Company.setToolTipText("Invalid Company Name");
+            return false;
+        }
+        else{
+            this.lbl_dlgFin_editClient_Company.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Company.setToolTipText(null);
+            return true;
+        }
+    }
+    
+    public boolean ck_dlgEditClient_txt_Address(){
+        if(this.txt_dlgFin_editClient_Address.getText()==""){
+            this.lbl_dlgFin_editClient_Address.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Address.setToolTipText(null);
+            return true;
+        }
+        else if(this.txt_dlgFin_editClient_Address.getText().length()==1){
+            this.lbl_dlgFin_editClient_Address.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_Address.setToolTipText("Invalid Address");
+            return false;
+        }
+        else{
+            this.lbl_dlgFin_editClient_Address.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Address.setToolTipText(null);
+            return true;
+        }
+    }
+    
+    public boolean ck_dlgEditClient_txt_Tele1(){
+        String tele = this.txt_dlgFin_editClient_tele1.getText();
+        if(tele.equals("")){
+            this.lbl_dlgFin_editClient_tele1.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_tele1.setToolTipText(null);
+            return true;
+        }
+        else if(tele.length()==10){
+            if(tele.charAt(0)=='0'){
+                this.lbl_dlgFin_editClient_tele1.setForeground(Color.black);
+                this.lbl_dlgFin_editClient_tele1.setToolTipText(null);
+                return true;
+            }
+            else{
+                this.lbl_dlgFin_editClient_tele1.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_tele1.setToolTipText("Invalid Telephone number");
+                return false;
+            }
+        }
+        else{
+            this.lbl_dlgFin_editClient_tele1.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_tele1.setToolTipText("Invalid Telephone number");
+            return false;
+        }
+    }
+    
+    public boolean ck_dlgEditClient_txt_Tele2(){
+        String tele = this.txt_dlgFin_editClient_tele2.getText();
+        if(tele.equals("")){
+            this.lbl_dlgFin_editClient_tele2.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_tele2.setToolTipText(null);
+            return true;
+        }
+        else if(tele.length()==10){
+            if(tele.charAt(0)=='0'){
+                this.lbl_dlgFin_editClient_tele2.setForeground(Color.black);
+                this.lbl_dlgFin_editClient_tele2.setToolTipText(null);
+                return true;
+            }
+            else{
+                this.lbl_dlgFin_editClient_tele2.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_tele2.setToolTipText("Invalid Telephone number");
+                return false;
+            }
+        }
+        else{
+            this.lbl_dlgFin_editClient_tele2.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_tele2.setToolTipText("Invalid Telephone number");
+            return false;
+        }
+    }
+    
+    public boolean ck_dlgEditClient_txt_email(){
+        String email=this.txt_dlgFin_editClient_email.getText();
+        if(email.equals("")){
+            this.lbl_dlgFin_editClient_Email.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Email.setToolTipText(null);
+            return true;
+        }
+        else{
+            //---------------------------------------
+            int atIndex=email.indexOf('@');
+            int dotIndex=email.indexOf('.');
+            int lastdotIndex=0;
+            //----------------------------------------
+            if(atIndex==-1){
+                this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                return false;
+            }
+            else{
+                int atCount = 0;
+                for(int x=0; x<email.length(); x++){
+                    if(email.charAt(x)=='@'){
+                        atCount++;
+                    }
+                }
+                if(atCount>1){
+                    this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                    this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                    return false;
+                }
+                else{
+                    if(dotIndex==-1){
+                    this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                    this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                    return false;
+                    }
+                    else{
+                        for(int x=0; x<email.length();x++){
+                            if(email.charAt(x)=='.'){
+                                lastdotIndex=x;
+                            }
+                        }
+                        if(lastdotIndex<atIndex){
+                            //check "@" is before the last "."
+                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else if(email.charAt(email.length()-1)=='.'){
+                            //check last character is not a "."
+                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else if(email.charAt(0)=='.' || email.charAt(0)=='@'){
+                            //check starting characters are not "@" or "."
+                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else if(email.charAt(atIndex-1)=='.' || email.charAt(atIndex+1)=='.'){
+                            //check characters before and after "@" is not a "."
+                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
+                            return false;
+                        }
+                        else{
+                            this.lbl_dlgFin_editClient_Email.setForeground(Color.black);
+                            this.lbl_dlgFin_editClient_Email.setToolTipText(null);
+                            return true;
+                        }
+                    }
+                }
+            } 
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
@@ -2339,18 +2908,24 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgFin_addProduct;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
+    private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
+    private com.toedter.calendar.JDateChooser jDateChooser3;
+    private com.toedter.calendar.JDateChooser jDateChooser4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
@@ -2382,6 +2957,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -2397,6 +2973,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -2410,6 +2989,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgFin_addClient_Email;
     private javax.swing.JLabel lbl_dlgFin_addClient_tele1;
     private javax.swing.JLabel lbl_dlgFin_addClient_tele2;
+    private javax.swing.JLabel lbl_dlgFin_editClient_Address;
+    private javax.swing.JLabel lbl_dlgFin_editClient_Company;
+    private javax.swing.JLabel lbl_dlgFin_editClient_Email;
+    private javax.swing.JLabel lbl_dlgFin_editClient_tele1;
+    private javax.swing.JLabel lbl_dlgFin_editClient_tele2;
     private javax.swing.JPanel pnlDaycare;
     private javax.swing.JPanel pnlEmployee;
     private javax.swing.JPanel pnlFinance;
