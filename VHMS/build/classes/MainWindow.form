@@ -3529,19 +3529,19 @@
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="jDateChooser4" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_ClientInvoice" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_EmpSalary" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_Ebill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_waterbill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_telebill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jCheckBox6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_other" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace pref="99" max="32767" attributes="0"/>
-                                              <Component id="jCheckBox14" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_Expense_SelectAll" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -3561,14 +3561,14 @@
                                                                   <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
-                                                          <Component id="jCheckBox14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="ckbx_Fin_Expense_SelectAll" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="3" attributes="0">
-                                                              <Component id="jCheckBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jCheckBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="jCheckBox6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_ClientInvoice" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_EmpSalary" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_Ebill" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_waterbill" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_telebill" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_other" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                       <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
@@ -3601,47 +3601,53 @@
                                     </Component>
                                     <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser4">
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_ClientInvoice">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Client Invoice"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_ClientInvoiceItemStateChanged"/>
+                                      </Events>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_EmpSalary">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Employee Salary"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_Ebill">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Electricity Bill"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_waterbill">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Water Bill"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_telebill">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Telephone Bill"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox6">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_other">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Other"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="jCheckBox14">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_Expense_SelectAll">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="toolTipText" type="java.lang.String" value="Select All"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_Expense_SelectAllItemStateChanged"/>
+                                      </Events>
                                     </Component>
                                   </SubComponents>
                                 </Container>

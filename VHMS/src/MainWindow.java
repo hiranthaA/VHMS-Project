@@ -254,13 +254,13 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jDateChooser4 = new com.toedter.calendar.JDateChooser();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        jCheckBox2 = new javax.swing.JCheckBox();
-        jCheckBox3 = new javax.swing.JCheckBox();
-        jCheckBox4 = new javax.swing.JCheckBox();
-        jCheckBox5 = new javax.swing.JCheckBox();
-        jCheckBox6 = new javax.swing.JCheckBox();
-        jCheckBox14 = new javax.swing.JCheckBox();
+        ckbx_Fin_ClientInvoice = new javax.swing.JCheckBox();
+        ckbx_Fin_EmpSalary = new javax.swing.JCheckBox();
+        ckbx_Fin_Ebill = new javax.swing.JCheckBox();
+        ckbx_Fin_waterbill = new javax.swing.JCheckBox();
+        ckbx_Fin_telebill = new javax.swing.JCheckBox();
+        ckbx_Fin_other = new javax.swing.JCheckBox();
+        ckbx_Fin_Expense_SelectAll = new javax.swing.JCheckBox();
         jPanel28 = new javax.swing.JPanel();
         jScrollPane6 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -2187,26 +2187,36 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel13.setText("To");
 
-        jCheckBox1.setSelected(true);
-        jCheckBox1.setText("Client Invoice");
+        ckbx_Fin_ClientInvoice.setSelected(true);
+        ckbx_Fin_ClientInvoice.setText("Client Invoice");
+        ckbx_Fin_ClientInvoice.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_ClientInvoiceItemStateChanged(evt);
+            }
+        });
 
-        jCheckBox2.setSelected(true);
-        jCheckBox2.setText("Employee Salary");
+        ckbx_Fin_EmpSalary.setSelected(true);
+        ckbx_Fin_EmpSalary.setText("Employee Salary");
 
-        jCheckBox3.setSelected(true);
-        jCheckBox3.setText("Electricity Bill");
+        ckbx_Fin_Ebill.setSelected(true);
+        ckbx_Fin_Ebill.setText("Electricity Bill");
 
-        jCheckBox4.setSelected(true);
-        jCheckBox4.setText("Water Bill");
+        ckbx_Fin_waterbill.setSelected(true);
+        ckbx_Fin_waterbill.setText("Water Bill");
 
-        jCheckBox5.setSelected(true);
-        jCheckBox5.setText("Telephone Bill");
+        ckbx_Fin_telebill.setSelected(true);
+        ckbx_Fin_telebill.setText("Telephone Bill");
 
-        jCheckBox6.setSelected(true);
-        jCheckBox6.setText("Other");
+        ckbx_Fin_other.setSelected(true);
+        ckbx_Fin_other.setText("Other");
 
-        jCheckBox14.setSelected(true);
-        jCheckBox14.setToolTipText("Select All");
+        ckbx_Fin_Expense_SelectAll.setSelected(true);
+        ckbx_Fin_Expense_SelectAll.setToolTipText("Select All");
+        ckbx_Fin_Expense_SelectAll.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_Expense_SelectAllItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -2222,19 +2232,19 @@ public class MainWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jCheckBox1)
+                .addComponent(ckbx_Fin_ClientInvoice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox2)
+                .addComponent(ckbx_Fin_EmpSalary)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox3)
+                .addComponent(ckbx_Fin_Ebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox4)
+                .addComponent(ckbx_Fin_waterbill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox5)
+                .addComponent(ckbx_Fin_telebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox6)
+                .addComponent(ckbx_Fin_other)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                .addComponent(jCheckBox14)
+                .addComponent(ckbx_Fin_Expense_SelectAll)
                 .addContainerGap())
         );
         jPanel27Layout.setVerticalGroup(
@@ -2250,14 +2260,14 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel12)
                                     .addComponent(jLabel13)))
-                            .addComponent(jCheckBox14)
+                            .addComponent(ckbx_Fin_Expense_SelectAll)
                             .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jCheckBox1)
-                                .addComponent(jCheckBox2)
-                                .addComponent(jCheckBox3)
-                                .addComponent(jCheckBox4)
-                                .addComponent(jCheckBox5)
-                                .addComponent(jCheckBox6)))
+                                .addComponent(ckbx_Fin_ClientInvoice)
+                                .addComponent(ckbx_Fin_EmpSalary)
+                                .addComponent(ckbx_Fin_Ebill)
+                                .addComponent(ckbx_Fin_waterbill)
+                                .addComponent(ckbx_Fin_telebill)
+                                .addComponent(ckbx_Fin_other)))
                         .addGap(0, 1, Short.MAX_VALUE))
                     .addComponent(jDateChooser4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -2933,6 +2943,29 @@ public class MainWindow extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_dlgFin_editClient_emailKeyTyped
+
+    private void ckbx_Fin_Expense_SelectAllItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_Expense_SelectAllItemStateChanged
+        if(this.ckbx_Fin_Expense_SelectAll.isSelected()){
+            this.ckbx_Fin_ClientInvoice.setSelected(true);
+            this.ckbx_Fin_Ebill.setSelected(true);
+            this.ckbx_Fin_EmpSalary.setSelected(true);
+            this.ckbx_Fin_other.setSelected(true);
+            this.ckbx_Fin_telebill.setSelected(true);
+            this.ckbx_Fin_waterbill.setSelected(true);
+        }
+        else{
+            this.ckbx_Fin_ClientInvoice.setSelected(false);
+            this.ckbx_Fin_Ebill.setSelected(false);
+            this.ckbx_Fin_EmpSalary.setSelected(false);
+            this.ckbx_Fin_other.setSelected(false);
+            this.ckbx_Fin_telebill.setSelected(false);
+            this.ckbx_Fin_waterbill.setSelected(false);
+        }
+    }//GEN-LAST:event_ckbx_Fin_Expense_SelectAllItemStateChanged
+
+    private void ckbx_Fin_ClientInvoiceItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_ClientInvoiceItemStateChanged
+
+    }//GEN-LAST:event_ckbx_Fin_ClientInvoiceItemStateChanged
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -3588,6 +3621,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnfin_dlgAddClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientUpdate;
+    private javax.swing.JCheckBox ckbx_Fin_ClientInvoice;
+    private javax.swing.JCheckBox ckbx_Fin_Ebill;
+    private javax.swing.JCheckBox ckbx_Fin_EmpSalary;
+    private javax.swing.JCheckBox ckbx_Fin_Expense_SelectAll;
+    private javax.swing.JCheckBox ckbx_Fin_other;
+    private javax.swing.JCheckBox ckbx_Fin_telebill;
+    private javax.swing.JCheckBox ckbx_Fin_waterbill;
     private javax.swing.JDialog dlgFin_addClient;
     private javax.swing.JDialog dlgFin_addProduct;
     private javax.swing.JDialog dlgFin_editClient;
@@ -3608,13 +3648,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox10;
     private javax.swing.JCheckBox jCheckBox11;
     private javax.swing.JCheckBox jCheckBox12;
     private javax.swing.JCheckBox jCheckBox13;
-    private javax.swing.JCheckBox jCheckBox14;
-    private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox22;
     private javax.swing.JCheckBox jCheckBox23;
     private javax.swing.JCheckBox jCheckBox24;
@@ -3622,12 +3659,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox26;
     private javax.swing.JCheckBox jCheckBox27;
     private javax.swing.JCheckBox jCheckBox28;
-    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JCheckBox jCheckBox36;
     private javax.swing.JCheckBox jCheckBox37;
     private javax.swing.JCheckBox jCheckBox38;
     private javax.swing.JCheckBox jCheckBox39;
-    private javax.swing.JCheckBox jCheckBox4;
     private javax.swing.JCheckBox jCheckBox40;
     private javax.swing.JCheckBox jCheckBox41;
     private javax.swing.JCheckBox jCheckBox42;
@@ -3638,8 +3673,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox47;
     private javax.swing.JCheckBox jCheckBox48;
     private javax.swing.JCheckBox jCheckBox49;
-    private javax.swing.JCheckBox jCheckBox5;
-    private javax.swing.JCheckBox jCheckBox6;
     private javax.swing.JCheckBox jCheckBox7;
     private javax.swing.JCheckBox jCheckBox8;
     private javax.swing.JCheckBox jCheckBox9;
