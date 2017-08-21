@@ -2069,7 +2069,7 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/icons/income_x32.png"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Income / Expenditure"/>
+                            <Property name="text" type="java.lang.String" value="Income / Expense"/>
                             <Property name="horizontalTextPosition" type="int" value="0"/>
                             <Property name="verticalTextPosition" type="int" value="3"/>
                           </Properties>
@@ -3332,8 +3332,8 @@
                             <Container class="javax.swing.JPanel" name="jPanel25">
                               <Constraints>
                                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                                  <JTabbedPaneConstraints tabName="Expenditure">
-                                    <Property name="tabTitle" type="java.lang.String" value="Expenditure"/>
+                                  <JTabbedPaneConstraints tabName="Expense">
+                                    <Property name="tabTitle" type="java.lang.String" value="Expense"/>
                                   </JTabbedPaneConstraints>
                                 </Constraint>
                               </Constraints>

@@ -1362,7 +1362,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         btnFinanceIncExp.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         btnFinanceIncExp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/income_x32.png"))); // NOI18N
-        btnFinanceIncExp.setText("Income / Expenditure");
+        btnFinanceIncExp.setText("Income / Expense");
         btnFinanceIncExp.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFinanceIncExp.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnFinanceIncExp.addActionListener(new java.awt.event.ActionListener() {
@@ -2335,7 +2335,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jTabbedPane5.addTab("Expenditure", jPanel25);
+        jTabbedPane5.addTab("Expense", jPanel25);
 
         javax.swing.GroupLayout pnlFinanceIncExpLayout = new javax.swing.GroupLayout(pnlFinanceIncExp);
         pnlFinanceIncExp.setLayout(pnlFinanceIncExpLayout);
