@@ -227,13 +227,13 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jDateChooser5 = new com.toedter.calendar.JDateChooser();
         jDateChooser6 = new com.toedter.calendar.JDateChooser();
-        jCheckBox7 = new javax.swing.JCheckBox();
-        jCheckBox8 = new javax.swing.JCheckBox();
-        jCheckBox9 = new javax.swing.JCheckBox();
-        jCheckBox10 = new javax.swing.JCheckBox();
-        jCheckBox11 = new javax.swing.JCheckBox();
-        jCheckBox12 = new javax.swing.JCheckBox();
-        jCheckBox13 = new javax.swing.JCheckBox();
+        ckbx_Fin_Pharmacy = new javax.swing.JCheckBox();
+        ckbx_Fin_Hospital = new javax.swing.JCheckBox();
+        ckbx_Fin_MobileVet = new javax.swing.JCheckBox();
+        ckbx_Fin_Petshop = new javax.swing.JCheckBox();
+        ckbx_Fin_Daycare = new javax.swing.JCheckBox();
+        ckbx_Fin_Healthcare = new javax.swing.JCheckBox();
+        ckbx_Fin_Income_SelectAll = new javax.swing.JCheckBox();
         jSeparator1 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -1983,7 +1983,7 @@ public class MainWindow extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "PaymentID", "Date", "Service", "Total Amount (Rs.)"
             }
         ));
         jScrollPane7.setViewportView(jTable3);
@@ -1996,26 +1996,31 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel17.setText("To");
 
-        jCheckBox7.setSelected(true);
-        jCheckBox7.setText("Pharmacy");
+        ckbx_Fin_Pharmacy.setSelected(true);
+        ckbx_Fin_Pharmacy.setText("Pharmacy");
 
-        jCheckBox8.setSelected(true);
-        jCheckBox8.setText("Hospital");
+        ckbx_Fin_Hospital.setSelected(true);
+        ckbx_Fin_Hospital.setText("Hospital");
 
-        jCheckBox9.setSelected(true);
-        jCheckBox9.setText("Mobile Veterinary");
+        ckbx_Fin_MobileVet.setSelected(true);
+        ckbx_Fin_MobileVet.setText("Mobile Veterinary");
 
-        jCheckBox10.setSelected(true);
-        jCheckBox10.setText("Pet Shop");
+        ckbx_Fin_Petshop.setSelected(true);
+        ckbx_Fin_Petshop.setText("Pet Shop");
 
-        jCheckBox11.setSelected(true);
-        jCheckBox11.setText("Day Care");
+        ckbx_Fin_Daycare.setSelected(true);
+        ckbx_Fin_Daycare.setText("Day Care");
 
-        jCheckBox12.setSelected(true);
-        jCheckBox12.setText("Health Care");
+        ckbx_Fin_Healthcare.setSelected(true);
+        ckbx_Fin_Healthcare.setText("Health Care");
 
-        jCheckBox13.setSelected(true);
-        jCheckBox13.setToolTipText("Select All");
+        ckbx_Fin_Income_SelectAll.setSelected(true);
+        ckbx_Fin_Income_SelectAll.setToolTipText("Select All");
+        ckbx_Fin_Income_SelectAll.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_Income_SelectAllItemStateChanged(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
         jPanel29.setLayout(jPanel29Layout);
@@ -2031,19 +2036,19 @@ public class MainWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
-                .addComponent(jCheckBox7)
+                .addComponent(ckbx_Fin_Pharmacy)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox8)
+                .addComponent(ckbx_Fin_Hospital)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox9)
+                .addComponent(ckbx_Fin_MobileVet)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox10)
+                .addComponent(ckbx_Fin_Petshop)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox11)
+                .addComponent(ckbx_Fin_Daycare)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jCheckBox12)
+                .addComponent(ckbx_Fin_Healthcare)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
-                .addComponent(jCheckBox13)
+                .addComponent(ckbx_Fin_Income_SelectAll)
                 .addContainerGap())
         );
         jPanel29Layout.setVerticalGroup(
@@ -2059,14 +2064,14 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel16)
                                     .addComponent(jLabel17)))
-                            .addComponent(jCheckBox13)
+                            .addComponent(ckbx_Fin_Income_SelectAll)
                             .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jCheckBox7)
-                                .addComponent(jCheckBox8)
-                                .addComponent(jCheckBox9)
-                                .addComponent(jCheckBox10)
-                                .addComponent(jCheckBox11)
-                                .addComponent(jCheckBox12)))
+                                .addComponent(ckbx_Fin_Pharmacy)
+                                .addComponent(ckbx_Fin_Hospital)
+                                .addComponent(ckbx_Fin_MobileVet)
+                                .addComponent(ckbx_Fin_Petshop)
+                                .addComponent(ckbx_Fin_Daycare)
+                                .addComponent(ckbx_Fin_Healthcare)))
                         .addGap(0, 1, Short.MAX_VALUE))
                     .addComponent(jDateChooser6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -2975,6 +2980,25 @@ public class MainWindow extends javax.swing.JFrame {
     private void ckbx_Fin_ClientInvoiceItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_ClientInvoiceItemStateChanged
 
     }//GEN-LAST:event_ckbx_Fin_ClientInvoiceItemStateChanged
+
+    private void ckbx_Fin_Income_SelectAllItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_Income_SelectAllItemStateChanged
+        if(this.ckbx_Fin_Income_SelectAll.isSelected()){
+            this.ckbx_Fin_Pharmacy.setSelected(true);
+            this.ckbx_Fin_Hospital.setSelected(true);
+            this.ckbx_Fin_MobileVet.setSelected(true);
+            this.ckbx_Fin_Daycare.setSelected(true);
+            this.ckbx_Fin_Healthcare.setSelected(true);
+            this.ckbx_Fin_Petshop.setSelected(true);
+        }
+        else{
+            this.ckbx_Fin_Pharmacy.setSelected(false);
+            this.ckbx_Fin_Hospital.setSelected(false);
+            this.ckbx_Fin_MobileVet.setSelected(false);
+            this.ckbx_Fin_Daycare.setSelected(false);
+            this.ckbx_Fin_Healthcare.setSelected(false);
+            this.ckbx_Fin_Petshop.setSelected(false);
+        }
+    }//GEN-LAST:event_ckbx_Fin_Income_SelectAllItemStateChanged
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -3631,9 +3655,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnfin_dlgEditClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientUpdate;
     private javax.swing.JCheckBox ckbx_Fin_ClientInvoice;
+    private javax.swing.JCheckBox ckbx_Fin_Daycare;
     private javax.swing.JCheckBox ckbx_Fin_Ebill;
     private javax.swing.JCheckBox ckbx_Fin_EmpSalary;
     private javax.swing.JCheckBox ckbx_Fin_Expense_SelectAll;
+    private javax.swing.JCheckBox ckbx_Fin_Healthcare;
+    private javax.swing.JCheckBox ckbx_Fin_Hospital;
+    private javax.swing.JCheckBox ckbx_Fin_Income_SelectAll;
+    private javax.swing.JCheckBox ckbx_Fin_MobileVet;
+    private javax.swing.JCheckBox ckbx_Fin_Petshop;
+    private javax.swing.JCheckBox ckbx_Fin_Pharmacy;
     private javax.swing.JCheckBox ckbx_Fin_other;
     private javax.swing.JCheckBox ckbx_Fin_telebill;
     private javax.swing.JCheckBox ckbx_Fin_waterbill;
@@ -3658,10 +3689,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JCheckBox jCheckBox10;
-    private javax.swing.JCheckBox jCheckBox11;
-    private javax.swing.JCheckBox jCheckBox12;
-    private javax.swing.JCheckBox jCheckBox13;
     private javax.swing.JCheckBox jCheckBox22;
     private javax.swing.JCheckBox jCheckBox23;
     private javax.swing.JCheckBox jCheckBox24;
@@ -3683,9 +3710,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox47;
     private javax.swing.JCheckBox jCheckBox48;
     private javax.swing.JCheckBox jCheckBox49;
-    private javax.swing.JCheckBox jCheckBox7;
-    private javax.swing.JCheckBox jCheckBox8;
-    private javax.swing.JCheckBox jCheckBox9;
     private com.toedter.calendar.JDateChooser jDateChooser11;
     private com.toedter.calendar.JDateChooser jDateChooser12;
     private com.toedter.calendar.JDateChooser jDateChooser3;
