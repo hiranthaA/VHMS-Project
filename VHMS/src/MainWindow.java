@@ -5,6 +5,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import net.proteanit.sql.DbUtils;
 /*
@@ -49,7 +52,7 @@ public class MainWindow extends javax.swing.JFrame {
         lbl_dlgFin_addClient_tele2 = new javax.swing.JLabel();
         lbl_dlgFin_addClient_Email = new javax.swing.JLabel();
         txt_dlgFin_addClient_Company = new javax.swing.JTextField();
-        jScrollPane4 = new javax.swing.JScrollPane();
+        scrlp_txt_dlgFin_addClient_Address = new javax.swing.JScrollPane();
         txt_dlgFin_addClient_Address = new javax.swing.JTextArea();
         txt_dlgFin_addClient_tele1 = new javax.swing.JTextField();
         txt_dlgFin_addClient_email = new javax.swing.JTextField();
@@ -64,7 +67,7 @@ public class MainWindow extends javax.swing.JFrame {
         lbl_dlgFin_editClient_tele2 = new javax.swing.JLabel();
         lbl_dlgFin_editClient_Email = new javax.swing.JLabel();
         txt_dlgFin_editClient_Company = new javax.swing.JTextField();
-        jScrollPane5 = new javax.swing.JScrollPane();
+        scrlp_txt_dlgFin_editClient_Address = new javax.swing.JScrollPane();
         txt_dlgFin_editClient_Address = new javax.swing.JTextArea();
         txt_dlgFin_editClient_tele1 = new javax.swing.JTextField();
         txt_dlgFin_editClient_email = new javax.swing.JTextField();
@@ -73,15 +76,45 @@ public class MainWindow extends javax.swing.JFrame {
         btnfin_dlgEditClientCancel = new javax.swing.JButton();
         dlgFin_addProduct = new javax.swing.JDialog();
         pnlFinAddproduct = new javax.swing.JPanel();
-        jLabel21 = new javax.swing.JLabel();
+        FinjLabel21 = new javax.swing.JLabel();
         lbl_dlgFin_AddProduct_Product = new javax.swing.JLabel();
-        jSeparator2 = new javax.swing.JSeparator();
-        jLabel23 = new javax.swing.JLabel();
+        FinjSeparator2 = new javax.swing.JSeparator();
+        FinjLabel23 = new javax.swing.JLabel();
         txt_dlgFin_AddProduct_Product = new javax.swing.JTextField();
         btn_dlgFin_addProduct_Add = new javax.swing.JButton();
         btn_dlgFin_addProduct_Cancel = new javax.swing.JButton();
         dlgFin_addtelebill = new javax.swing.JDialog();
         pnlFinAddTeleBill = new javax.swing.JPanel();
+        FinjLabel8 = new javax.swing.JLabel();
+        dlgFin_addtelejSeparator1 = new javax.swing.JSeparator();
+        txt_dlgFin_addtelebill_teleNo = new javax.swing.JTextField();
+        FinjLabel8999999 = new javax.swing.JLabel();
+        dc_dlgFin_addtelebill_billdate = new com.toedter.calendar.JDateChooser();
+        FinjLabel999999 = new javax.swing.JLabel();
+        txt_dlgFin_addtelebill_billAmount = new javax.swing.JTextField();
+        FinjLabel10billamount = new javax.swing.JLabel();
+        btn_dlgFin_addtelebill_Add = new javax.swing.JButton();
+        btn_dlgFin_addtelebill_Cancel = new javax.swing.JButton();
+        dlgFin_addwaterbill = new javax.swing.JDialog();
+        pnlFinAddTeleBill1 = new javax.swing.JPanel();
+        FinjLabel9 = new javax.swing.JLabel();
+        dlgFin_addtelejSeparator2 = new javax.swing.JSeparator();
+        dc_dlgFin_addwaterbill_billdate = new com.toedter.calendar.JDateChooser();
+        FinjLabel1000000 = new javax.swing.JLabel();
+        txt_dlgFin_addwaterbill_billAmount = new javax.swing.JTextField();
+        FinjLabel10billamount1 = new javax.swing.JLabel();
+        btn_dlgFin_addwaterbill_Add = new javax.swing.JButton();
+        btn_dlgFin_addwaterbill_Cancel = new javax.swing.JButton();
+        dlgFin_addelecbill = new javax.swing.JDialog();
+        pnlFinAddTeleBill2 = new javax.swing.JPanel();
+        FinjLabel10 = new javax.swing.JLabel();
+        dlgFin_addtelejSeparator3 = new javax.swing.JSeparator();
+        dc_dlgFin_addelecbill_billdate = new com.toedter.calendar.JDateChooser();
+        FinjLabel1000001 = new javax.swing.JLabel();
+        txt_dlgFin_addelecbill_billAmount = new javax.swing.JTextField();
+        FinjLabel10billamount2 = new javax.swing.JLabel();
+        btn_dlgFin_addelecbill_Add = new javax.swing.JButton();
+        btn_dlgFin_addelecbill_Cancel = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -309,7 +342,7 @@ public class MainWindow extends javax.swing.JFrame {
                 txt_dlgFin_addClient_AddressFocusLost(evt);
             }
         });
-        jScrollPane4.setViewportView(txt_dlgFin_addClient_Address);
+        scrlp_txt_dlgFin_addClient_Address.setViewportView(txt_dlgFin_addClient_Address);
 
         txt_dlgFin_addClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         txt_dlgFin_addClient_tele1.setToolTipText("Eg: 0123456789");
@@ -389,7 +422,7 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(lbl_dlgFin_addClient_tele2)
                                 .addGap(18, 18, 18)
                                 .addComponent(txt_dlgFin_addClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scrlp_txt_dlgFin_addClient_Address, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txt_dlgFin_addClient_Company, javax.swing.GroupLayout.Alignment.TRAILING)))
                     .addGroup(pnlFinAddClientLayout.createSequentialGroup()
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -407,7 +440,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(lbl_dlgFin_addClient_Company))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrlp_txt_dlgFin_addClient_Address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlFinAddClientLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(lbl_dlgFin_addClient_Address)))
@@ -474,7 +507,7 @@ public class MainWindow extends javax.swing.JFrame {
                 txt_dlgFin_editClient_AddressFocusLost(evt);
             }
         });
-        jScrollPane5.setViewportView(txt_dlgFin_editClient_Address);
+        scrlp_txt_dlgFin_editClient_Address.setViewportView(txt_dlgFin_editClient_Address);
 
         txt_dlgFin_editClient_tele1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         txt_dlgFin_editClient_tele1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -551,7 +584,7 @@ public class MainWindow extends javax.swing.JFrame {
                                     .addComponent(lbl_dlgFin_editClient_tele2)
                                     .addGap(18, 18, 18)
                                     .addComponent(txt_dlgFin_editClient_tele2, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(jScrollPane5)
+                                .addComponent(scrlp_txt_dlgFin_editClient_Address)
                                 .addComponent(txt_dlgFin_editClient_Company)
                                 .addComponent(txt_dlgFin_editClient_email)))))
                 .addGap(0, 32, Short.MAX_VALUE))
@@ -565,7 +598,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(txt_dlgFin_editClient_Company, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinEditClientLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(scrlp_txt_dlgFin_editClient_Address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnlFinEditClientLayout.createSequentialGroup()
                         .addGap(15, 15, 15)
                         .addComponent(lbl_dlgFin_editClient_Address)))
@@ -602,14 +635,14 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnlFinAddproduct.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
 
-        jLabel21.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel21.setText("Add Products to :");
+        FinjLabel21.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel21.setText("Add Products to :");
 
         lbl_dlgFin_AddProduct_Product.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lbl_dlgFin_AddProduct_Product.setText("Company");
 
-        jLabel23.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel23.setText("Product");
+        FinjLabel23.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        FinjLabel23.setText("Product");
 
         txt_dlgFin_AddProduct_Product.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
 
@@ -631,16 +664,16 @@ public class MainWindow extends javax.swing.JFrame {
         pnlFinAddproduct.setLayout(pnlFinAddproductLayout);
         pnlFinAddproductLayout.setHorizontalGroup(
             pnlFinAddproductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator2)
+            .addComponent(FinjSeparator2)
             .addGroup(pnlFinAddproductLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlFinAddproductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlFinAddproductLayout.createSequentialGroup()
-                        .addComponent(jLabel21)
+                        .addComponent(FinjLabel21)
                         .addGap(18, 18, 18)
                         .addComponent(lbl_dlgFin_AddProduct_Product, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddproductLayout.createSequentialGroup()
-                        .addComponent(jLabel23)
+                        .addComponent(FinjLabel23)
                         .addGap(18, 18, 18)
                         .addComponent(txt_dlgFin_AddProduct_Product))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddproductLayout.createSequentialGroup()
@@ -655,14 +688,14 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlFinAddproductLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlFinAddproductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
+                    .addComponent(FinjLabel21)
                     .addComponent(lbl_dlgFin_AddProduct_Product, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddproductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlFinAddproductLayout.createSequentialGroup()
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FinjLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(txt_dlgFin_AddProduct_Product, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
@@ -683,20 +716,104 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(pnlFinAddproduct, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        dlgFin_addtelebill.setTitle("Add New Telephone Bill");
         dlgFin_addtelebill.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
 
         pnlFinAddTeleBill.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        FinjLabel8.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel8.setText("Telephone Bill");
+
+        txt_dlgFin_addtelebill_teleNo.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addtelebill_teleNo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addtelebill_teleNoKeyTyped(evt);
+            }
+        });
+
+        FinjLabel8999999.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel8999999.setText("Telephone No");
+
+        FinjLabel999999.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel999999.setText("Bill Date");
+
+        txt_dlgFin_addtelebill_billAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        FinjLabel10billamount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel10billamount.setText("Bill Amount");
+
+        btn_dlgFin_addtelebill_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
+        btn_dlgFin_addtelebill_Add.setText("Add");
+        btn_dlgFin_addtelebill_Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addtelebill_AddActionPerformed(evt);
+            }
+        });
+
+        btn_dlgFin_addtelebill_Cancel.setText("Cancel");
+        btn_dlgFin_addtelebill_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addtelebill_CancelActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlFinAddTeleBillLayout = new javax.swing.GroupLayout(pnlFinAddTeleBill);
         pnlFinAddTeleBill.setLayout(pnlFinAddTeleBillLayout);
         pnlFinAddTeleBillLayout.setHorizontalGroup(
             pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 732, Short.MAX_VALUE)
+            .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
+                .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
+                        .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(FinjLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
+                                    .addGap(162, 162, 162)
+                                    .addComponent(btn_dlgFin_addtelebill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btn_dlgFin_addtelebill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBillLayout.createSequentialGroup()
+                                    .addGap(26, 26, 26)
+                                    .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(FinjLabel8999999)
+                                        .addComponent(FinjLabel999999)
+                                        .addComponent(FinjLabel10billamount))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(dc_dlgFin_addtelebill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                                        .addComponent(txt_dlgFin_addtelebill_teleNo)
+                                        .addComponent(txt_dlgFin_addtelebill_billAmount)))))
+                        .addGap(0, 49, Short.MAX_VALUE))
+                    .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dlgFin_addtelejSeparator1)))
+                .addContainerGap())
         );
         pnlFinAddTeleBillLayout.setVerticalGroup(
             pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 424, Short.MAX_VALUE)
+            .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(FinjLabel8)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dlgFin_addtelejSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dc_dlgFin_addtelebill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(FinjLabel999999, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addtelebill_teleNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel8999999))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addtelebill_billAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel10billamount))
+                .addGap(34, 34, 34)
+                .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgFin_addtelebill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgFin_addtelebill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout dlgFin_addtelebillLayout = new javax.swing.GroupLayout(dlgFin_addtelebill.getContentPane());
@@ -708,6 +825,198 @@ public class MainWindow extends javax.swing.JFrame {
         dlgFin_addtelebillLayout.setVerticalGroup(
             dlgFin_addtelebillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlFinAddTeleBill, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        dlgFin_addwaterbill.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+
+        pnlFinAddTeleBill1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        FinjLabel9.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel9.setText("Water Bill");
+
+        FinjLabel1000000.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel1000000.setText("Bill Date");
+
+        txt_dlgFin_addwaterbill_billAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        FinjLabel10billamount1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel10billamount1.setText("Bill Amount");
+
+        btn_dlgFin_addwaterbill_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
+        btn_dlgFin_addwaterbill_Add.setText("Add");
+        btn_dlgFin_addwaterbill_Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addwaterbill_AddActionPerformed(evt);
+            }
+        });
+
+        btn_dlgFin_addwaterbill_Cancel.setText("Cancel");
+        btn_dlgFin_addwaterbill_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addwaterbill_CancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFinAddTeleBill1Layout = new javax.swing.GroupLayout(pnlFinAddTeleBill1);
+        pnlFinAddTeleBill1.setLayout(pnlFinAddTeleBill1Layout);
+        pnlFinAddTeleBill1Layout.setHorizontalGroup(
+            pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
+                .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
+                        .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(FinjLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill1Layout.createSequentialGroup()
+                                        .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(FinjLabel1000000)
+                                            .addComponent(FinjLabel10billamount1))
+                                        .addGap(31, 31, 31)
+                                        .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(dc_dlgFin_addwaterbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                                            .addComponent(txt_dlgFin_addwaterbill_billAmount)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill1Layout.createSequentialGroup()
+                                        .addComponent(btn_dlgFin_addwaterbill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_dlgFin_addwaterbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(4, 4, 4)))))
+                        .addGap(0, 49, Short.MAX_VALUE))
+                    .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dlgFin_addtelejSeparator2)))
+                .addContainerGap())
+        );
+        pnlFinAddTeleBill1Layout.setVerticalGroup(
+            pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(FinjLabel9)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dlgFin_addtelejSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dc_dlgFin_addwaterbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(FinjLabel1000000, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addwaterbill_billAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel10billamount1))
+                .addGap(31, 31, 31)
+                .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgFin_addwaterbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgFin_addwaterbill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout dlgFin_addwaterbillLayout = new javax.swing.GroupLayout(dlgFin_addwaterbill.getContentPane());
+        dlgFin_addwaterbill.getContentPane().setLayout(dlgFin_addwaterbillLayout);
+        dlgFin_addwaterbillLayout.setHorizontalGroup(
+            dlgFin_addwaterbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgFin_addwaterbillLayout.setVerticalGroup(
+            dlgFin_addwaterbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        dlgFin_addelecbill.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+
+        pnlFinAddTeleBill2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        FinjLabel10.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel10.setText("Electricity Bill");
+
+        FinjLabel1000001.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel1000001.setText("Bill Date");
+
+        txt_dlgFin_addelecbill_billAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        FinjLabel10billamount2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel10billamount2.setText("Bill Amount");
+
+        btn_dlgFin_addelecbill_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
+        btn_dlgFin_addelecbill_Add.setText("Add");
+        btn_dlgFin_addelecbill_Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addelecbill_AddActionPerformed(evt);
+            }
+        });
+
+        btn_dlgFin_addelecbill_Cancel.setText("Cancel");
+        btn_dlgFin_addelecbill_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addelecbill_CancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFinAddTeleBill2Layout = new javax.swing.GroupLayout(pnlFinAddTeleBill2);
+        pnlFinAddTeleBill2.setLayout(pnlFinAddTeleBill2Layout);
+        pnlFinAddTeleBill2Layout.setHorizontalGroup(
+            pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
+                .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
+                        .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(FinjLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill2Layout.createSequentialGroup()
+                                        .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(FinjLabel1000001)
+                                            .addComponent(FinjLabel10billamount2))
+                                        .addGap(31, 31, 31)
+                                        .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(dc_dlgFin_addelecbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                                            .addComponent(txt_dlgFin_addelecbill_billAmount)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill2Layout.createSequentialGroup()
+                                        .addComponent(btn_dlgFin_addelecbill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(btn_dlgFin_addelecbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(4, 4, 4)))))
+                        .addGap(0, 49, Short.MAX_VALUE))
+                    .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dlgFin_addtelejSeparator3)))
+                .addContainerGap())
+        );
+        pnlFinAddTeleBill2Layout.setVerticalGroup(
+            pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(FinjLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dlgFin_addtelejSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dc_dlgFin_addelecbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(FinjLabel1000001, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addelecbill_billAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel10billamount2))
+                .addGap(31, 31, 31)
+                .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgFin_addelecbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgFin_addelecbill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(30, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout dlgFin_addelecbillLayout = new javax.swing.GroupLayout(dlgFin_addelecbill.getContentPane());
+        dlgFin_addelecbill.getContentPane().setLayout(dlgFin_addelecbillLayout);
+        dlgFin_addelecbillLayout.setHorizontalGroup(
+            dlgFin_addelecbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgFin_addelecbillLayout.setVerticalGroup(
+            dlgFin_addelecbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2009,6 +2318,12 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnlFinanceIncExp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
+        IncExpTabbedPane.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                IncExpTabbedPaneMouseClicked(evt);
+            }
+        });
+
         tbl_Fin_Income_Details.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -2163,13 +2478,28 @@ public class MainWindow extends javax.swing.JFrame {
 
         btn_Fin_AddElecBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         btn_Fin_AddElecBill.setText("Electricity Bill");
+        btn_Fin_AddElecBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Fin_AddElecBillActionPerformed(evt);
+            }
+        });
 
         btn_Fin_AddWaterBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         btn_Fin_AddWaterBill.setText("Water Bill");
         btn_Fin_AddWaterBill.setToolTipText("");
+        btn_Fin_AddWaterBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Fin_AddWaterBillActionPerformed(evt);
+            }
+        });
 
         btn_Fin_AddTeleBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         btn_Fin_AddTeleBill.setText("Telephone Bill");
+        btn_Fin_AddTeleBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Fin_AddTeleBillActionPerformed(evt);
+            }
+        });
 
         btn_Fin_AddEmpSalary.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         btn_Fin_AddEmpSalary.setText("Employee Salary");
@@ -3037,6 +3367,149 @@ public class MainWindow extends javax.swing.JFrame {
     private void btn_Fin_RemProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_RemProductActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_Fin_RemProductActionPerformed
+
+    private void btn_Fin_AddTeleBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_AddTeleBillActionPerformed
+        //----Clear textfields-------------------------------
+        this.txt_dlgFin_addtelebill_billAmount.setText("");
+        this.txt_dlgFin_addtelebill_teleNo.setText("");
+        //---------------------------------------------------
+        this.dlgFin_addtelebill.setSize(417,320);
+        this.dlgFin_addtelebill.setTitle("Add New");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = new Date();
+        this.dc_dlgFin_addtelebill_billdate.setDate(date);
+        this.dlgFin_addtelebill.setLocationRelativeTo(this);
+        this.dlgFin_addtelebill.setVisible(true); 
+    }//GEN-LAST:event_btn_Fin_AddTeleBillActionPerformed
+
+    private void btn_dlgFin_addtelebill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addtelebill_AddActionPerformed
+
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addtelebill,"Are You sure the details are correct?","Add Telephone Bill",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String date = df.format(this.dc_dlgFin_addtelebill_billdate.getDate());
+                String teleNo = this.txt_dlgFin_addtelebill_teleNo.getText();
+                String desc = "Telephone Bill ["+teleNo+"]";
+                String billAmount = this.txt_dlgFin_addtelebill_billAmount.getText();
+                try{
+                    String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
+                    PreparedStatement pst = dbcon.prepareStatement(SQL);
+                    pst.setString(1, generateExpenseID());
+                    pst.setString(2, date);
+                    pst.setString(3, desc);
+                    pst.setString(4, billAmount);
+                    pst.execute();
+                    increaseNoExpenseByOne();
+                    JOptionPane.showMessageDialog(dlgFin_addtelebill, "Telephone bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+                    update_tbl_Fin_ExpenseDetails();
+                    this.dlgFin_addtelebill.dispose();
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(dlgFin_addtelebill, "Water Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+    }//GEN-LAST:event_btn_dlgFin_addtelebill_AddActionPerformed
+
+    private void IncExpTabbedPaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IncExpTabbedPaneMouseClicked
+        this.update_tbl_Fin_ExpenseDetails();
+    }//GEN-LAST:event_IncExpTabbedPaneMouseClicked
+
+    private void btn_dlgFin_addtelebill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addtelebill_CancelActionPerformed
+        this.dlgFin_addtelebill.dispose();
+    }//GEN-LAST:event_btn_dlgFin_addtelebill_CancelActionPerformed
+
+    private void txt_dlgFin_addtelebill_teleNoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addtelebill_teleNoKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addtelebill_teleNoKeyTyped
+
+    private void btn_dlgFin_addwaterbill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addwaterbill_AddActionPerformed
+        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addwaterbill,"Are You sure the details are correct?","Add Water Bill",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String date = df.format(this.dc_dlgFin_addwaterbill_billdate.getDate());
+                String desc = "Water Bill";
+                String billAmount = this.txt_dlgFin_addwaterbill_billAmount.getText();
+                try{
+                    String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
+                    PreparedStatement pst = dbcon.prepareStatement(SQL);
+                    pst.setString(1, generateExpenseID());
+                    pst.setString(2, date);
+                    pst.setString(3, desc);
+                    pst.setString(4, billAmount);
+                    pst.execute();
+                    increaseNoExpenseByOne();
+                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Water bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+                    update_tbl_Fin_ExpenseDetails();
+                    this.dlgFin_addwaterbill.dispose();
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Water Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+    }//GEN-LAST:event_btn_dlgFin_addwaterbill_AddActionPerformed
+
+    private void btn_dlgFin_addwaterbill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addwaterbill_CancelActionPerformed
+        this.dlgFin_addwaterbill.dispose();
+    }//GEN-LAST:event_btn_dlgFin_addwaterbill_CancelActionPerformed
+
+    private void btn_Fin_AddWaterBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_AddWaterBillActionPerformed
+        //----Clear textfields-------------------------------
+        this.txt_dlgFin_addwaterbill_billAmount.setText("");
+        //---------------------------------------------------
+        this.dlgFin_addwaterbill.setSize(417,320);
+        this.dlgFin_addwaterbill.setTitle("Add New");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = new Date();
+        this.dc_dlgFin_addwaterbill_billdate.setDate(date);
+        this.dlgFin_addwaterbill.setLocationRelativeTo(this);
+        this.dlgFin_addwaterbill.setVisible(true); 
+    }//GEN-LAST:event_btn_Fin_AddWaterBillActionPerformed
+
+    private void btn_dlgFin_addelecbill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addelecbill_AddActionPerformed
+        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addelecbill,"Are You sure the details are correct?","Add Electricity Bill",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String date = df.format(this.dc_dlgFin_addelecbill_billdate.getDate());
+                String desc = "Electricity Bill";
+                String billAmount = this.txt_dlgFin_addelecbill_billAmount.getText();
+                try{
+                    String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
+                    PreparedStatement pst = dbcon.prepareStatement(SQL);
+                    pst.setString(1, generateExpenseID());
+                    pst.setString(2, date);
+                    pst.setString(3, desc);
+                    pst.setString(4, billAmount);
+                    pst.execute();
+                    increaseNoExpenseByOne();
+                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Electricity bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+                    update_tbl_Fin_ExpenseDetails();
+                    this.dlgFin_addwaterbill.dispose();
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Electricity Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+    }//GEN-LAST:event_btn_dlgFin_addelecbill_AddActionPerformed
+
+    private void btn_dlgFin_addelecbill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addelecbill_CancelActionPerformed
+        this.dlgFin_addelecbill.dispose();
+    }//GEN-LAST:event_btn_dlgFin_addelecbill_CancelActionPerformed
+
+    private void btn_Fin_AddElecBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_AddElecBillActionPerformed
+        //----Clear textfields-------------------------------
+        this.txt_dlgFin_addelecbill_billAmount.setText("");
+        //---------------------------------------------------
+        this.dlgFin_addelecbill.setSize(417,320);
+        this.dlgFin_addelecbill.setTitle("Add New");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = new Date();
+        this.dc_dlgFin_addelecbill_billdate.setDate(date);
+        this.dlgFin_addelecbill.setLocationRelativeTo(this);
+        this.dlgFin_addelecbill.setVisible(true); 
+    }//GEN-LAST:event_btn_Fin_AddElecBillActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -3317,6 +3790,77 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }
     
+    public String generateExpenseID(){
+        String prefix="EXP";
+        int noExpense=0;
+        String expenseID=null;
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs = stmnt.executeQuery("select fexpense from count");
+            while(rs.next()){
+                noExpense = rs.getInt("fexpense");
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(dlgFin_addProduct, "Cannot retrive data from the database!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        if(noExpense<9){
+            expenseID=prefix.concat("000000").concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else if(noExpense<99){
+            expenseID=prefix.concat("00000").concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else if(noExpense<999){
+            expenseID=prefix.concat("0000").concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else if(noExpense<9999){
+            expenseID=prefix.concat("000").concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else if(noExpense<99999){
+            expenseID=prefix.concat("00").concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else if(noExpense<999999){
+            expenseID=prefix.concat("0").concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else if(noExpense<9999999){
+            expenseID=prefix.concat(Integer.toString(noExpense+1));
+            return expenseID;
+        }
+        else{
+            JOptionPane.showMessageDialog(dlgFin_addProduct, "Cannot Generate ProductID. Maximum no.of Products Reached","Database Error",JOptionPane.ERROR_MESSAGE);
+            return expenseID;
+        }
+    }
+    
+    public void increaseNoExpenseByOne(){
+        try{
+            int noExpense=0;
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs = stmnt.executeQuery("select fexpense from count");
+            while(rs.next()){
+                noExpense = rs.getInt("fexpense");
+            }
+            try{
+                String SQL = "update count set fexpense="+(noExpense+1)+" where fexpense="+noExpense;
+                Statement stmnt2 = dbcon.createStatement();
+                stmnt2.executeUpdate(SQL);
+            }
+            catch(Exception ex){
+                JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public void update_tbl_Fin_Product_Details(){
         int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
         if(selectedRow==-1){
@@ -3334,6 +3878,18 @@ public class MainWindow extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Cannot Refresh Product Details!","Database Error",JOptionPane.ERROR_MESSAGE);
             }
         }
+    }
+    
+    public void update_tbl_Fin_ExpenseDetails(){
+            String sql = "select expenseID as '#', date as 'Date', description as 'Discription', amount as 'Amount (Rs.)' from finance_expense";
+            try{
+                Statement stmnt = dbcon.createStatement();
+                ResultSet rs_Expense_Details = stmnt.executeQuery(sql);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs_Expense_Details));
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(this, "Cannot Refresh Expense Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
     }
     
     public boolean ck_dlgAddClient_txt_CompanyName(){
@@ -3703,6 +4259,12 @@ public class MainWindow extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser FinjDateChooser6;
     private com.toedter.calendar.JDateChooser FinjDateChooser7;
     private com.toedter.calendar.JDateChooser FinjDateChooser8;
+    private javax.swing.JLabel FinjLabel10;
+    private javax.swing.JLabel FinjLabel1000000;
+    private javax.swing.JLabel FinjLabel1000001;
+    private javax.swing.JLabel FinjLabel10billamount;
+    private javax.swing.JLabel FinjLabel10billamount1;
+    private javax.swing.JLabel FinjLabel10billamount2;
     private javax.swing.JLabel FinjLabel11;
     private javax.swing.JLabel FinjLabel12;
     private javax.swing.JLabel FinjLabel13;
@@ -3711,6 +4273,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel16;
     private javax.swing.JLabel FinjLabel17;
     private javax.swing.JLabel FinjLabel18;
+    private javax.swing.JLabel FinjLabel21;
+    private javax.swing.JLabel FinjLabel23;
     private javax.swing.JLabel FinjLabel24;
     private javax.swing.JLabel FinjLabel25;
     private javax.swing.JLabel FinjLabel26;
@@ -3718,11 +4282,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel31;
     private javax.swing.JLabel FinjLabel32;
     private javax.swing.JLabel FinjLabel35;
+    private javax.swing.JLabel FinjLabel8;
+    private javax.swing.JLabel FinjLabel8999999;
+    private javax.swing.JLabel FinjLabel9;
+    private javax.swing.JLabel FinjLabel999999;
     private javax.swing.JSeparator FinjSeparator1;
     private javax.swing.JSeparator FinjSeparator12;
     private javax.swing.JSeparator FinjSeparator13;
     private javax.swing.JSeparator FinjSeparator14;
     private javax.swing.JSeparator FinjSeparator15;
+    private javax.swing.JSeparator FinjSeparator2;
     private javax.swing.JSeparator FinjSeparator20;
     private javax.swing.JSeparator FinjSeparator21;
     private javax.swing.JSeparator FinjSeparator22;
@@ -3765,6 +4334,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_Fin_RemProduct;
     private javax.swing.JButton btn_dlgFin_addProduct_Add;
     private javax.swing.JButton btn_dlgFin_addProduct_Cancel;
+    private javax.swing.JButton btn_dlgFin_addelecbill_Add;
+    private javax.swing.JButton btn_dlgFin_addelecbill_Cancel;
+    private javax.swing.JButton btn_dlgFin_addtelebill_Add;
+    private javax.swing.JButton btn_dlgFin_addtelebill_Cancel;
+    private javax.swing.JButton btn_dlgFin_addwaterbill_Add;
+    private javax.swing.JButton btn_dlgFin_addwaterbill_Cancel;
     private javax.swing.JButton btnfin_dlgAddClientAdd;
     private javax.swing.JButton btnfin_dlgAddClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientCancel;
@@ -3783,9 +4358,17 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_Fin_other;
     private javax.swing.JCheckBox ckbx_Fin_telebill;
     private javax.swing.JCheckBox ckbx_Fin_waterbill;
+    private com.toedter.calendar.JDateChooser dc_dlgFin_addelecbill_billdate;
+    private com.toedter.calendar.JDateChooser dc_dlgFin_addtelebill_billdate;
+    private com.toedter.calendar.JDateChooser dc_dlgFin_addwaterbill_billdate;
     private javax.swing.JDialog dlgFin_addClient;
     private javax.swing.JDialog dlgFin_addProduct;
+    private javax.swing.JDialog dlgFin_addelecbill;
     private javax.swing.JDialog dlgFin_addtelebill;
+    private javax.swing.JSeparator dlgFin_addtelejSeparator1;
+    private javax.swing.JSeparator dlgFin_addtelejSeparator2;
+    private javax.swing.JSeparator dlgFin_addtelejSeparator3;
+    private javax.swing.JDialog dlgFin_addwaterbill;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
@@ -3794,8 +4377,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -3824,9 +4405,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -3856,6 +4434,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlExpenseTab;
     private javax.swing.JPanel pnlFinAddClient;
     private javax.swing.JPanel pnlFinAddTeleBill;
+    private javax.swing.JPanel pnlFinAddTeleBill1;
+    private javax.swing.JPanel pnlFinAddTeleBill2;
     private javax.swing.JPanel pnlFinAddproduct;
     private javax.swing.JPanel pnlFinEditClient;
     private javax.swing.JPanel pnlFinance;
@@ -3879,6 +4459,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrlp_tbl_Fin_ExpenseDetails;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Income_Details;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Product_Details;
+    private javax.swing.JScrollPane scrlp_txt_dlgFin_addClient_Address;
+    private javax.swing.JScrollPane scrlp_txt_dlgFin_editClient_Address;
     private javax.swing.JTable tbl_Fin_Client_Details;
     private javax.swing.JTable tbl_Fin_ExpenseDetails;
     private javax.swing.JTable tbl_Fin_Income_Details;
@@ -3893,6 +4475,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgFin_addClient_email;
     private javax.swing.JTextField txt_dlgFin_addClient_tele1;
     private javax.swing.JTextField txt_dlgFin_addClient_tele2;
+    private javax.swing.JTextField txt_dlgFin_addelecbill_billAmount;
+    private javax.swing.JTextField txt_dlgFin_addtelebill_billAmount;
+    private javax.swing.JTextField txt_dlgFin_addtelebill_teleNo;
+    private javax.swing.JTextField txt_dlgFin_addwaterbill_billAmount;
     private javax.swing.JTextArea txt_dlgFin_editClient_Address;
     private javax.swing.JTextField txt_dlgFin_editClient_Company;
     private javax.swing.JTextField txt_dlgFin_editClient_email;
