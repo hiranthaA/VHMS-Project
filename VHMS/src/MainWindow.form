@@ -2159,9 +2159,9 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                          <Component id="scrlp_tbl_Fin_Client_Details" max="32767" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane3" min="-2" pref="313" max="-2" attributes="0"/>
+                                          <Component id="scrlp_tbl_Fin_Product_Details" min="-2" pref="313" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="btnFin_AddClient" min="-2" pref="41" max="-2" attributes="0"/>
@@ -2187,8 +2187,8 @@
                                   <Component id="pnlClientSearchBar" max="32767" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane3" pref="402" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane1" pref="402" max="32767" attributes="0"/>
+                                      <Component id="scrlp_tbl_Fin_Product_Details" pref="402" max="32767" attributes="0"/>
+                                      <Component id="scrlp_tbl_Fin_Client_Details" pref="402" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
@@ -2204,7 +2204,7 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                        <Container class="javax.swing.JScrollPane" name="scrlp_tbl_Fin_Client_Details">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
@@ -2289,7 +2289,7 @@
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnFin_DeleteClientActionPerformed"/>
                           </Events>
                         </Component>
-                        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                        <Container class="javax.swing.JScrollPane" name="scrlp_tbl_Fin_Product_Details">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
@@ -2350,7 +2350,7 @@
                                       <Component id="lbl_SearchClientProduct" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="txt_Fin_SearchProduct" min="-2" pref="281" max="-2" attributes="0"/>
-                                      <EmptySpace pref="212" max="32767" attributes="0"/>
+                                      <EmptySpace pref="213" max="32767" attributes="0"/>
                                       <Component id="btn_Fin_Refresh" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2479,50 +2479,50 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator12" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator13" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator15" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator12" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator13" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator15" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel25" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FinjLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FinjLabel25" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jDateChooser8" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jDateChooser7" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser8" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser7" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              <Component id="jButton15" min="-2" pref="87" max="-2" attributes="0"/>
+                                              <Component id="FinjButton15" min="-2" pref="87" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButton14" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjButton14" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jSeparator14" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="FinjSeparator14" alignment="0" max="32767" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjLabel26" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox22" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox22" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jCheckBox25" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox24" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox23" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox25" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox23" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jCheckBox26" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox27" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox28" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox26" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox27" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox28" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -2536,47 +2536,47 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jSeparator12" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator12" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jDateChooser7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel24" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjDateChooser7" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel24" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jDateChooser8" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel25" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjDateChooser8" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel25" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jSeparator13" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator13" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jCheckBox22" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel26" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjCheckBox22" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel26" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jSeparator14" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator14" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox23" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox23" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox26" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox24" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox27" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox25" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox28" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox28" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jSeparator15" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator15" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace pref="217" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jButton15" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jButton14" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjButton15" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjButton14" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2584,7 +2584,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JLabel" name="jLabel24">
+                            <Component class="javax.swing.JLabel" name="FinjLabel24">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2592,11 +2592,11 @@
                                 <Property name="text" type="java.lang.String" value="From"/>
                               </Properties>
                             </Component>
-                            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser7">
+                            <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser7">
                             </Component>
-                            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser8">
+                            <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser8">
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel25">
+                            <Component class="javax.swing.JLabel" name="FinjLabel25">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2604,11 +2604,11 @@
                                 <Property name="text" type="java.lang.String" value="To"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator12">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator12">
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator13">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator13">
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel26">
+                            <Component class="javax.swing.JLabel" name="FinjLabel26">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2616,12 +2616,12 @@
                                 <Property name="text" type="java.lang.String" value="Department"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox22">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox22">
                               <Properties>
                                 <Property name="toolTipText" type="java.lang.String" value="Select All"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox23">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox23">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2629,7 +2629,7 @@
                                 <Property name="text" type="java.lang.String" value="Pharmacy"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox24">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox24">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2637,7 +2637,7 @@
                                 <Property name="text" type="java.lang.String" value="Hospital"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox25">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox25">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2645,7 +2645,7 @@
                                 <Property name="text" type="java.lang.String" value="Mobile Veterinary"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox26">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox26">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2653,7 +2653,7 @@
                                 <Property name="text" type="java.lang.String" value="Pet Shop"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox27">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox27">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2661,7 +2661,7 @@
                                 <Property name="text" type="java.lang.String" value="Day Care"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox28">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox28">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2669,11 +2669,11 @@
                                 <Property name="text" type="java.lang.String" value="Health Care"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator14">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator14">
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator15">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator15">
                             </Component>
-                            <Component class="javax.swing.JButton" name="jButton14">
+                            <Component class="javax.swing.JButton" name="FinjButton14">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2685,7 +2685,7 @@
                                 <Property name="iconTextGap" type="int" value="10"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JButton" name="jButton15">
+                            <Component class="javax.swing.JButton" name="FinjButton15">
                               <Properties>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/icons/save_x24.png"/>
@@ -2708,50 +2708,50 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator20" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator21" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator23" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator20" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator21" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator23" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FinjLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FinjLabel31" alignment="1" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jDateChooser12" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jDateChooser11" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser12" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser11" alignment="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              <Component id="jButton19" min="-2" pref="87" max="-2" attributes="0"/>
+                                              <Component id="FinjButton19" min="-2" pref="87" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButton18" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjButton18" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jSeparator22" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="FinjSeparator22" alignment="0" max="32767" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjLabel32" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox36" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox36" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jCheckBox39" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox38" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox37" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox39" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox38" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox37" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jCheckBox40" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox41" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox42" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox40" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox41" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox42" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
@@ -2765,47 +2765,47 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jSeparator20" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator20" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jDateChooser11" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel30" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjDateChooser11" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel30" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jDateChooser12" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel31" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjDateChooser12" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel31" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jSeparator21" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator21" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jCheckBox36" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel32" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjCheckBox36" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel32" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jSeparator22" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator22" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox37" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox37" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox40" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox38" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox41" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox39" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox42" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jSeparator23" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator23" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace pref="217" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jButton19" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jButton18" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjButton19" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjButton18" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -2813,7 +2813,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JLabel" name="jLabel30">
+                            <Component class="javax.swing.JLabel" name="FinjLabel30">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2821,11 +2821,11 @@
                                 <Property name="text" type="java.lang.String" value="From"/>
                               </Properties>
                             </Component>
-                            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser11">
+                            <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser11">
                             </Component>
-                            <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser12">
+                            <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser12">
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel31">
+                            <Component class="javax.swing.JLabel" name="FinjLabel31">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2833,11 +2833,11 @@
                                 <Property name="text" type="java.lang.String" value="To"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator20">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator20">
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator21">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator21">
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel32">
+                            <Component class="javax.swing.JLabel" name="FinjLabel32">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2845,12 +2845,12 @@
                                 <Property name="text" type="java.lang.String" value="Department"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox36">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox36">
                               <Properties>
                                 <Property name="toolTipText" type="java.lang.String" value="Select All"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox37">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox37">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2858,7 +2858,7 @@
                                 <Property name="text" type="java.lang.String" value="Pharmacy"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox38">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox38">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2866,7 +2866,7 @@
                                 <Property name="text" type="java.lang.String" value="Hospital"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox39">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox39">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2874,7 +2874,7 @@
                                 <Property name="text" type="java.lang.String" value="Mobile Veterinary"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox40">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox40">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2882,7 +2882,7 @@
                                 <Property name="text" type="java.lang.String" value="Pet Shop"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox41">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox41">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2890,7 +2890,7 @@
                                 <Property name="text" type="java.lang.String" value="Day Care"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox42">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox42">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2898,11 +2898,11 @@
                                 <Property name="text" type="java.lang.String" value="Health Care"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator22">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator22">
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator23">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator23">
                             </Component>
-                            <Component class="javax.swing.JButton" name="jButton18">
+                            <Component class="javax.swing.JButton" name="FinjButton18">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -2914,7 +2914,7 @@
                                 <Property name="iconTextGap" type="int" value="10"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JButton" name="jButton19">
+                            <Component class="javax.swing.JButton" name="FinjButton19">
                               <Properties>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/icons/save_x24.png"/>
@@ -2937,45 +2937,45 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jSeparator24" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator25" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="jSeparator27" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator24" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator25" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="FinjSeparator27" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                              <Component id="jButton21" min="-2" pref="87" max="-2" attributes="0"/>
+                                              <Component id="FinjButton21" min="-2" pref="87" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jButton20" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjButton20" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                                      <Component id="jSeparator26" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="FinjSeparator26" alignment="0" max="32767" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
-                                                          <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjLabel35" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox43" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox43" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jCheckBox46" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox45" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox44" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox46" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox45" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox44" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jCheckBox47" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox48" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jCheckBox49" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox47" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox48" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="FinjCheckBox49" alignment="0" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="FinjLabel18" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                      <Component id="jYearChooser1" min="-2" pref="123" max="-2" attributes="0"/>
+                                                      <Component id="FinjYearChooser1" min="-2" pref="123" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="0" pref="77" max="32767" attributes="0"/>
@@ -2988,42 +2988,42 @@
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jSeparator24" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator24" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jYearChooser1" max="32767" attributes="0"/>
-                                          <Component id="jLabel18" max="32767" attributes="0"/>
+                                          <Component id="FinjYearChooser1" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel18" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                      <Component id="jSeparator25" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator25" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jCheckBox43" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jLabel35" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjCheckBox43" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjLabel35" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jSeparator26" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator26" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox44" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox47" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox47" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox45" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox48" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox45" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox48" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jCheckBox46" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jCheckBox49" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="FinjCheckBox49" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jSeparator27" min="-2" pref="10" max="-2" attributes="0"/>
+                                      <Component id="FinjSeparator27" min="-2" pref="10" max="-2" attributes="0"/>
                                       <EmptySpace pref="217" max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jButton21" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jButton20" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjButton21" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="FinjButton20" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                   </Group>
@@ -3031,11 +3031,11 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JSeparator" name="jSeparator24">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator24">
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator25">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator25">
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel35">
+                            <Component class="javax.swing.JLabel" name="FinjLabel35">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3043,12 +3043,12 @@
                                 <Property name="text" type="java.lang.String" value="Department"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox43">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox43">
                               <Properties>
                                 <Property name="toolTipText" type="java.lang.String" value="Select All"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox44">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox44">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3056,7 +3056,7 @@
                                 <Property name="text" type="java.lang.String" value="Pharmacy"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox45">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox45">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3064,7 +3064,7 @@
                                 <Property name="text" type="java.lang.String" value="Hospital"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox46">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox46">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3072,7 +3072,7 @@
                                 <Property name="text" type="java.lang.String" value="Mobile Veterinary"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox47">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox47">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3080,7 +3080,7 @@
                                 <Property name="text" type="java.lang.String" value="Pet Shop"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox48">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox48">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3088,7 +3088,7 @@
                                 <Property name="text" type="java.lang.String" value="Day Care"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JCheckBox" name="jCheckBox49">
+                            <Component class="javax.swing.JCheckBox" name="FinjCheckBox49">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3096,11 +3096,11 @@
                                 <Property name="text" type="java.lang.String" value="Health Care"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator26">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator26">
                             </Component>
-                            <Component class="javax.swing.JSeparator" name="jSeparator27">
+                            <Component class="javax.swing.JSeparator" name="FinjSeparator27">
                             </Component>
-                            <Component class="javax.swing.JButton" name="jButton20">
+                            <Component class="javax.swing.JButton" name="FinjButton20">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3112,7 +3112,7 @@
                                 <Property name="iconTextGap" type="int" value="10"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JButton" name="jButton21">
+                            <Component class="javax.swing.JButton" name="FinjButton21">
                               <Properties>
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/icons/save_x24.png"/>
@@ -3121,9 +3121,9 @@
                                 <Property name="iconTextGap" type="int" value="10"/>
                               </Properties>
                             </Component>
-                            <Component class="com.toedter.calendar.JYearChooser" name="jYearChooser1">
+                            <Component class="com.toedter.calendar.JYearChooser" name="FinjYearChooser1">
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel18">
+                            <Component class="javax.swing.JLabel" name="FinjLabel18">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Tahoma" size="12" style="0"/>
@@ -3149,17 +3149,17 @@
                       <Layout>
                         <DimensionLayout dim="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTabbedPane5" alignment="0" max="32767" attributes="0"/>
+                              <Component id="IncExpTabbedPane" alignment="0" max="32767" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                         <DimensionLayout dim="1">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTabbedPane5" min="-2" pref="523" max="-2" attributes="0"/>
+                              <Component id="IncExpTabbedPane" min="-2" pref="523" max="-2" attributes="0"/>
                           </Group>
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="javax.swing.JTabbedPane" name="jTabbedPane5">
+                        <Container class="javax.swing.JTabbedPane" name="IncExpTabbedPane">
 
                           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                           <SubComponents>
@@ -3179,8 +3179,8 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="pnlIncomeSearch" max="32767" attributes="0"/>
-                                              <Component id="jScrollPane7" max="32767" attributes="0"/>
-                                              <Component id="jSeparator1" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="scrlp_tbl_Fin_Income_Details" max="32767" attributes="0"/>
+                                              <Component id="FinjSeparator1" alignment="0" max="32767" attributes="0"/>
                                               <Group type="102" alignment="1" attributes="0">
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   <Component id="lbl_IncomeTotalLabel" min="-2" max="-2" attributes="0"/>
@@ -3199,9 +3199,9 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Component id="pnlIncomeSearch" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jScrollPane7" min="-2" pref="362" max="-2" attributes="0"/>
+                                          <Component id="scrlp_tbl_Fin_Income_Details" min="-2" pref="362" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
+                                          <Component id="FinjSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="lbl_IncomeTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -3213,14 +3213,14 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                                <Container class="javax.swing.JScrollPane" name="scrlp_tbl_Fin_Income_Details">
                                   <AuxValues>
                                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                   </AuxValues>
 
                                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                   <SubComponents>
-                                    <Component class="javax.swing.JTable" name="jTable3">
+                                    <Component class="javax.swing.JTable" name="tbl_Fin_Income_Details">
                                       <Properties>
                                         <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                           <Table columnCount="4" rowCount="4">
@@ -3250,13 +3250,13 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel16" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jDateChooser5" min="-2" pref="159" max="-2" attributes="0"/>
+                                              <Component id="FinjDateChooser5" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel17" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jDateChooser6" min="-2" pref="159" max="-2" attributes="0"/>
+                                              <Component id="FinjDateChooser6" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_Pharmacy" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -3269,7 +3269,7 @@
                                               <Component id="ckbx_Fin_Daycare" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_Healthcare" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="128" max="32767" attributes="0"/>
+                                              <EmptySpace pref="129" max="32767" attributes="0"/>
                                               <Component id="ckbx_Fin_Income_SelectAll" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -3280,14 +3280,14 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jDateChooser5" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser5" alignment="0" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                                  <Component id="jLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="jLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="FinjLabel16" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="FinjLabel17" alignment="1" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Component id="ckbx_Fin_Income_SelectAll" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -3302,7 +3302,7 @@
                                                       </Group>
                                                       <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser6" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser6" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -3310,7 +3310,7 @@
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JLabel" name="jLabel16">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel16">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3318,7 +3318,7 @@
                                         <Property name="text" type="java.lang.String" value="From"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel17">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel17">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3326,9 +3326,9 @@
                                         <Property name="text" type="java.lang.String" value="To"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser5">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser5">
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser6">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser6">
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_Pharmacy">
                                       <Properties>
@@ -3377,7 +3377,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="javax.swing.JSeparator" name="jSeparator1">
+                                <Component class="javax.swing.JSeparator" name="FinjSeparator1">
                                 </Component>
                                 <Component class="javax.swing.JLabel" name="lbl_IncomeTotal">
                                   <Properties>
@@ -3414,7 +3414,7 @@
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="pnlExpenseSearch" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
-                                                  <Component id="pnlDisplayExpenseTotal" max="32767" attributes="0"/>
+                                                  <Component id="pnltableExpense" max="32767" attributes="0"/>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Component id="pnl_ExpenseAddnew" min="-2" max="-2" attributes="0"/>
                                               </Group>
@@ -3430,7 +3430,7 @@
                                           <Component id="pnlExpenseSearch" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="pnlDisplayExpenseTotal" max="32767" attributes="0"/>
+                                              <Component id="pnltableExpense" max="32767" attributes="0"/>
                                               <Component id="pnl_ExpenseAddnew" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -3456,20 +3456,20 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jSeparator3" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="jSeparator4" alignment="0" max="32767" attributes="0"/>
-                                                  <Component id="jButton5" alignment="1" max="32767" attributes="0"/>
-                                                  <Component id="jButton7" alignment="0" pref="200" max="32767" attributes="0"/>
-                                                  <Component id="jButton8" alignment="1" pref="200" max="32767" attributes="0"/>
-                                                  <Component id="jButton9" alignment="1" pref="200" max="32767" attributes="0"/>
-                                                  <Component id="jButton10" alignment="1" pref="200" max="32767" attributes="0"/>
-                                                  <Component id="jSeparator5" max="32767" attributes="0"/>
-                                                  <Component id="jButton11" alignment="1" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="FinjSeparator3" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="FinjSeparator4" alignment="0" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddClientInvoice" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddElecBill" alignment="0" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddWaterBill" alignment="1" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddTeleBill" alignment="1" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddEmpSalary" alignment="1" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="FinjSeparator5" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddOther" alignment="1" pref="200" max="32767" attributes="0"/>
                                                   <Group type="102" attributes="0">
-                                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="FinjLabel11" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jSeparator6" max="32767" attributes="0"/>
+                                                  <Component id="FinjSeparator6" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -3479,34 +3479,34 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel11" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Component id="FinjSeparator3" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton5" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddClientInvoice" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Component id="FinjSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton10" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddEmpSalary" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Component id="FinjSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton7" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddElecBill" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jButton8" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddWaterBill" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jButton9" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddTeleBill" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Component id="FinjSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jButton11" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddOther" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace pref="32" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JButton" name="jButton5">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddClientInvoice">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3514,7 +3514,7 @@
                                         <Property name="text" type="java.lang.String" value="Client Invoice"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel11">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel11">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="16" style="0"/>
@@ -3522,7 +3522,7 @@
                                         <Property name="text" type="java.lang.String" value="Add New"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton7">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddElecBill">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3530,7 +3530,7 @@
                                         <Property name="text" type="java.lang.String" value="Electricity Bill"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton8">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddWaterBill">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3539,7 +3539,7 @@
                                         <Property name="toolTipText" type="java.lang.String" value=""/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton9">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddTeleBill">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3547,7 +3547,7 @@
                                         <Property name="text" type="java.lang.String" value="Telephone Bill"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton10">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddEmpSalary">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3555,13 +3555,13 @@
                                         <Property name="text" type="java.lang.String" value="Employee Salary"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JSeparator" name="jSeparator3">
+                                    <Component class="javax.swing.JSeparator" name="FinjSeparator3">
                                     </Component>
-                                    <Component class="javax.swing.JSeparator" name="jSeparator4">
+                                    <Component class="javax.swing.JSeparator" name="FinjSeparator4">
                                     </Component>
-                                    <Component class="javax.swing.JSeparator" name="jSeparator5">
+                                    <Component class="javax.swing.JSeparator" name="FinjSeparator5">
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton11">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddOther">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3569,7 +3569,7 @@
                                         <Property name="text" type="java.lang.String" value="Other"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JSeparator" name="jSeparator6">
+                                    <Component class="javax.swing.JSeparator" name="FinjSeparator6">
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -3589,13 +3589,13 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel12" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jDateChooser3" min="-2" pref="159" max="-2" attributes="0"/>
+                                              <Component id="FinjDateChooser3" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel13" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jDateChooser4" min="-2" pref="159" max="-2" attributes="0"/>
+                                              <Component id="FinjDateChooser4" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_ClientInvoice" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -3608,7 +3608,7 @@
                                               <Component id="ckbx_Fin_telebill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_other" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="98" max="32767" attributes="0"/>
+                                              <EmptySpace pref="99" max="32767" attributes="0"/>
                                               <Component id="ckbx_Fin_Expense_SelectAll" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -3619,14 +3619,14 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jDateChooser3" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser3" max="32767" attributes="0"/>
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
                                                               <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="1" attributes="0">
-                                                                  <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="jLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="FinjLabel12" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="FinjLabel13" alignment="1" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                           </Group>
                                                           <Component id="ckbx_Fin_Expense_SelectAll" alignment="0" min="-2" max="-2" attributes="0"/>
@@ -3641,7 +3641,7 @@
                                                       </Group>
                                                       <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <Component id="jDateChooser4" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="FinjDateChooser4" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -3649,7 +3649,7 @@
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JLabel" name="jLabel12">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel12">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3657,7 +3657,7 @@
                                         <Property name="text" type="java.lang.String" value="From"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel13">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel13">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
@@ -3665,9 +3665,9 @@
                                         <Property name="text" type="java.lang.String" value="To"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser3">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser3">
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="jDateChooser4">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser4">
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_ClientInvoice">
                                       <Properties>
@@ -3719,33 +3719,33 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="pnlDisplayExpenseTotal">
+                                <Container class="javax.swing.JPanel" name="pnltableExpense">
 
                                   <Layout>
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jScrollPane6" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="scrlp_tbl_Fin_ExpenseDetails" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel14" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jLabel15" min="-2" pref="96" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel15" min="-2" pref="96" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jSeparator7" alignment="1" max="32767" attributes="0"/>
+                                          <Component id="FinjSeparator7" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                     </DimensionLayout>
                                     <DimensionLayout dim="1">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jScrollPane6" pref="0" max="32767" attributes="0"/>
+                                              <Component id="scrlp_tbl_Fin_ExpenseDetails" pref="0" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
+                                              <Component id="FinjSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="FinjLabel14" min="-2" max="-2" attributes="0"/>
                                                   <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="FinjLabel15" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -3754,14 +3754,14 @@
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+                                    <Container class="javax.swing.JScrollPane" name="scrlp_tbl_Fin_ExpenseDetails">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                       <SubComponents>
-                                        <Component class="javax.swing.JTable" name="jTable1">
+                                        <Component class="javax.swing.JTable" name="tbl_Fin_ExpenseDetails">
                                           <Properties>
                                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                               <Table columnCount="4" rowCount="4">
@@ -3775,7 +3775,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JLabel" name="jLabel14">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel14">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="16" style="0"/>
@@ -3783,7 +3783,7 @@
                                         <Property name="text" type="java.lang.String" value="Total : Rs."/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel15">
+                                    <Component class="javax.swing.JLabel" name="FinjLabel15">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="16" style="0"/>
@@ -3791,7 +3791,7 @@
                                         <Property name="text" type="java.lang.String" value="00000000.00"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JSeparator" name="jSeparator7">
+                                    <Component class="javax.swing.JSeparator" name="FinjSeparator7">
                                     </Component>
                                   </SubComponents>
                                 </Container>

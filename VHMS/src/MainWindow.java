@@ -148,12 +148,12 @@ public class MainWindow extends javax.swing.JFrame {
         btnFinanceReports = new javax.swing.JButton();
         btnFinanceIncExp = new javax.swing.JButton();
         pnlFinanceClients = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        scrlp_tbl_Fin_Client_Details = new javax.swing.JScrollPane();
         tbl_Fin_Client_Details = new javax.swing.JTable();
         btnFin_AddClient = new javax.swing.JButton();
         btnFin_EditClient = new javax.swing.JButton();
         btnFin_DeleteClient = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        scrlp_tbl_Fin_Product_Details = new javax.swing.JScrollPane();
         tbl_Fin_Product_Details = new javax.swing.JTable();
         btn_Fin_AddProduct = new javax.swing.JButton();
         btn_Fin_RemProduct = new javax.swing.JButton();
@@ -165,70 +165,70 @@ public class MainWindow extends javax.swing.JFrame {
         txt_Fin_SearchProduct = new javax.swing.JTextField();
         pnlFinanceReports = new javax.swing.JPanel();
         pnlIncomeReport = new javax.swing.JPanel();
-        jLabel24 = new javax.swing.JLabel();
-        jDateChooser7 = new com.toedter.calendar.JDateChooser();
-        jDateChooser8 = new com.toedter.calendar.JDateChooser();
-        jLabel25 = new javax.swing.JLabel();
-        jSeparator12 = new javax.swing.JSeparator();
-        jSeparator13 = new javax.swing.JSeparator();
-        jLabel26 = new javax.swing.JLabel();
-        jCheckBox22 = new javax.swing.JCheckBox();
-        jCheckBox23 = new javax.swing.JCheckBox();
-        jCheckBox24 = new javax.swing.JCheckBox();
-        jCheckBox25 = new javax.swing.JCheckBox();
-        jCheckBox26 = new javax.swing.JCheckBox();
-        jCheckBox27 = new javax.swing.JCheckBox();
-        jCheckBox28 = new javax.swing.JCheckBox();
-        jSeparator14 = new javax.swing.JSeparator();
-        jSeparator15 = new javax.swing.JSeparator();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        FinjLabel24 = new javax.swing.JLabel();
+        FinjDateChooser7 = new com.toedter.calendar.JDateChooser();
+        FinjDateChooser8 = new com.toedter.calendar.JDateChooser();
+        FinjLabel25 = new javax.swing.JLabel();
+        FinjSeparator12 = new javax.swing.JSeparator();
+        FinjSeparator13 = new javax.swing.JSeparator();
+        FinjLabel26 = new javax.swing.JLabel();
+        FinjCheckBox22 = new javax.swing.JCheckBox();
+        FinjCheckBox23 = new javax.swing.JCheckBox();
+        FinjCheckBox24 = new javax.swing.JCheckBox();
+        FinjCheckBox25 = new javax.swing.JCheckBox();
+        FinjCheckBox26 = new javax.swing.JCheckBox();
+        FinjCheckBox27 = new javax.swing.JCheckBox();
+        FinjCheckBox28 = new javax.swing.JCheckBox();
+        FinjSeparator14 = new javax.swing.JSeparator();
+        FinjSeparator15 = new javax.swing.JSeparator();
+        FinjButton14 = new javax.swing.JButton();
+        FinjButton15 = new javax.swing.JButton();
         pnlExpenseReport = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
-        jDateChooser11 = new com.toedter.calendar.JDateChooser();
-        jDateChooser12 = new com.toedter.calendar.JDateChooser();
-        jLabel31 = new javax.swing.JLabel();
-        jSeparator20 = new javax.swing.JSeparator();
-        jSeparator21 = new javax.swing.JSeparator();
-        jLabel32 = new javax.swing.JLabel();
-        jCheckBox36 = new javax.swing.JCheckBox();
-        jCheckBox37 = new javax.swing.JCheckBox();
-        jCheckBox38 = new javax.swing.JCheckBox();
-        jCheckBox39 = new javax.swing.JCheckBox();
-        jCheckBox40 = new javax.swing.JCheckBox();
-        jCheckBox41 = new javax.swing.JCheckBox();
-        jCheckBox42 = new javax.swing.JCheckBox();
-        jSeparator22 = new javax.swing.JSeparator();
-        jSeparator23 = new javax.swing.JSeparator();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
+        FinjLabel30 = new javax.swing.JLabel();
+        FinjDateChooser11 = new com.toedter.calendar.JDateChooser();
+        FinjDateChooser12 = new com.toedter.calendar.JDateChooser();
+        FinjLabel31 = new javax.swing.JLabel();
+        FinjSeparator20 = new javax.swing.JSeparator();
+        FinjSeparator21 = new javax.swing.JSeparator();
+        FinjLabel32 = new javax.swing.JLabel();
+        FinjCheckBox36 = new javax.swing.JCheckBox();
+        FinjCheckBox37 = new javax.swing.JCheckBox();
+        FinjCheckBox38 = new javax.swing.JCheckBox();
+        FinjCheckBox39 = new javax.swing.JCheckBox();
+        FinjCheckBox40 = new javax.swing.JCheckBox();
+        FinjCheckBox41 = new javax.swing.JCheckBox();
+        FinjCheckBox42 = new javax.swing.JCheckBox();
+        FinjSeparator22 = new javax.swing.JSeparator();
+        FinjSeparator23 = new javax.swing.JSeparator();
+        FinjButton18 = new javax.swing.JButton();
+        FinjButton19 = new javax.swing.JButton();
         pnlAnualReport = new javax.swing.JPanel();
-        jSeparator24 = new javax.swing.JSeparator();
-        jSeparator25 = new javax.swing.JSeparator();
-        jLabel35 = new javax.swing.JLabel();
-        jCheckBox43 = new javax.swing.JCheckBox();
-        jCheckBox44 = new javax.swing.JCheckBox();
-        jCheckBox45 = new javax.swing.JCheckBox();
-        jCheckBox46 = new javax.swing.JCheckBox();
-        jCheckBox47 = new javax.swing.JCheckBox();
-        jCheckBox48 = new javax.swing.JCheckBox();
-        jCheckBox49 = new javax.swing.JCheckBox();
-        jSeparator26 = new javax.swing.JSeparator();
-        jSeparator27 = new javax.swing.JSeparator();
-        jButton20 = new javax.swing.JButton();
-        jButton21 = new javax.swing.JButton();
-        jYearChooser1 = new com.toedter.calendar.JYearChooser();
-        jLabel18 = new javax.swing.JLabel();
+        FinjSeparator24 = new javax.swing.JSeparator();
+        FinjSeparator25 = new javax.swing.JSeparator();
+        FinjLabel35 = new javax.swing.JLabel();
+        FinjCheckBox43 = new javax.swing.JCheckBox();
+        FinjCheckBox44 = new javax.swing.JCheckBox();
+        FinjCheckBox45 = new javax.swing.JCheckBox();
+        FinjCheckBox46 = new javax.swing.JCheckBox();
+        FinjCheckBox47 = new javax.swing.JCheckBox();
+        FinjCheckBox48 = new javax.swing.JCheckBox();
+        FinjCheckBox49 = new javax.swing.JCheckBox();
+        FinjSeparator26 = new javax.swing.JSeparator();
+        FinjSeparator27 = new javax.swing.JSeparator();
+        FinjButton20 = new javax.swing.JButton();
+        FinjButton21 = new javax.swing.JButton();
+        FinjYearChooser1 = new com.toedter.calendar.JYearChooser();
+        FinjLabel18 = new javax.swing.JLabel();
         pnlFinanceIncExp = new javax.swing.JPanel();
-        jTabbedPane5 = new javax.swing.JTabbedPane();
+        IncExpTabbedPane = new javax.swing.JTabbedPane();
         pnlIncomeTab = new javax.swing.JPanel();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        scrlp_tbl_Fin_Income_Details = new javax.swing.JScrollPane();
+        tbl_Fin_Income_Details = new javax.swing.JTable();
         pnlIncomeSearch = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jDateChooser5 = new com.toedter.calendar.JDateChooser();
-        jDateChooser6 = new com.toedter.calendar.JDateChooser();
+        FinjLabel16 = new javax.swing.JLabel();
+        FinjLabel17 = new javax.swing.JLabel();
+        FinjDateChooser5 = new com.toedter.calendar.JDateChooser();
+        FinjDateChooser6 = new com.toedter.calendar.JDateChooser();
         ckbx_Fin_Pharmacy = new javax.swing.JCheckBox();
         ckbx_Fin_Hospital = new javax.swing.JCheckBox();
         ckbx_Fin_MobileVet = new javax.swing.JCheckBox();
@@ -236,27 +236,27 @@ public class MainWindow extends javax.swing.JFrame {
         ckbx_Fin_Daycare = new javax.swing.JCheckBox();
         ckbx_Fin_Healthcare = new javax.swing.JCheckBox();
         ckbx_Fin_Income_SelectAll = new javax.swing.JCheckBox();
-        jSeparator1 = new javax.swing.JSeparator();
+        FinjSeparator1 = new javax.swing.JSeparator();
         lbl_IncomeTotal = new javax.swing.JLabel();
         lbl_IncomeTotalLabel = new javax.swing.JLabel();
         pnlExpenseTab = new javax.swing.JPanel();
         pnl_ExpenseAddnew = new javax.swing.JPanel();
-        jButton5 = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jSeparator3 = new javax.swing.JSeparator();
-        jSeparator4 = new javax.swing.JSeparator();
-        jSeparator5 = new javax.swing.JSeparator();
-        jButton11 = new javax.swing.JButton();
-        jSeparator6 = new javax.swing.JSeparator();
+        btn_Fin_AddClientInvoice = new javax.swing.JButton();
+        FinjLabel11 = new javax.swing.JLabel();
+        btn_Fin_AddElecBill = new javax.swing.JButton();
+        btn_Fin_AddWaterBill = new javax.swing.JButton();
+        btn_Fin_AddTeleBill = new javax.swing.JButton();
+        btn_Fin_AddEmpSalary = new javax.swing.JButton();
+        FinjSeparator3 = new javax.swing.JSeparator();
+        FinjSeparator4 = new javax.swing.JSeparator();
+        FinjSeparator5 = new javax.swing.JSeparator();
+        btn_Fin_AddOther = new javax.swing.JButton();
+        FinjSeparator6 = new javax.swing.JSeparator();
         pnlExpenseSearch = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
-        jDateChooser4 = new com.toedter.calendar.JDateChooser();
+        FinjLabel12 = new javax.swing.JLabel();
+        FinjLabel13 = new javax.swing.JLabel();
+        FinjDateChooser3 = new com.toedter.calendar.JDateChooser();
+        FinjDateChooser4 = new com.toedter.calendar.JDateChooser();
         ckbx_Fin_ClientInvoice = new javax.swing.JCheckBox();
         ckbx_Fin_EmpSalary = new javax.swing.JCheckBox();
         ckbx_Fin_Ebill = new javax.swing.JCheckBox();
@@ -264,12 +264,12 @@ public class MainWindow extends javax.swing.JFrame {
         ckbx_Fin_telebill = new javax.swing.JCheckBox();
         ckbx_Fin_other = new javax.swing.JCheckBox();
         ckbx_Fin_Expense_SelectAll = new javax.swing.JCheckBox();
-        pnlDisplayExpenseTotal = new javax.swing.JPanel();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jSeparator7 = new javax.swing.JSeparator();
+        pnltableExpense = new javax.swing.JPanel();
+        scrlp_tbl_Fin_ExpenseDetails = new javax.swing.JScrollPane();
+        tbl_Fin_ExpenseDetails = new javax.swing.JTable();
+        FinjLabel14 = new javax.swing.JLabel();
+        FinjLabel15 = new javax.swing.JLabel();
+        FinjSeparator7 = new javax.swing.JSeparator();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -1460,7 +1460,7 @@ public class MainWindow extends javax.swing.JFrame {
                 tbl_Fin_Client_DetailsMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(tbl_Fin_Client_Details);
+        scrlp_tbl_Fin_Client_Details.setViewportView(tbl_Fin_Client_Details);
 
         btnFin_AddClient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addclient_x24.png"))); // NOI18N
         btnFin_AddClient.setToolTipText("Add New Client");
@@ -1497,7 +1497,7 @@ public class MainWindow extends javax.swing.JFrame {
                 "Product"
             }
         ));
-        jScrollPane3.setViewportView(tbl_Fin_Product_Details);
+        scrlp_tbl_Fin_Product_Details.setViewportView(tbl_Fin_Product_Details);
 
         btn_Fin_AddProduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_Fin_AddProduct.addActionListener(new java.awt.event.ActionListener() {
@@ -1557,7 +1557,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(lbl_SearchClientProduct)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txt_Fin_SearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 212, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
                 .addComponent(btn_Fin_Refresh)
                 .addContainerGap())
         );
@@ -1582,9 +1582,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
-                        .addComponent(jScrollPane1)
+                        .addComponent(scrlp_tbl_Fin_Client_Details)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(scrlp_tbl_Fin_Product_Details, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlFinanceClientsLayout.createSequentialGroup()
                         .addComponent(btnFin_AddClient, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1605,8 +1605,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(pnlClientSearchBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE))
+                    .addComponent(scrlp_tbl_Fin_Product_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
+                    .addComponent(scrlp_tbl_Fin_Client_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnFin_AddClient)
@@ -1621,365 +1621,365 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnlIncomeReport.setBorder(javax.swing.BorderFactory.createTitledBorder("Income Report"));
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel24.setText("From");
+        FinjLabel24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel24.setText("From");
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel25.setText("To");
+        FinjLabel25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel25.setText("To");
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel26.setText("Department");
+        FinjLabel26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel26.setText("Department");
 
-        jCheckBox22.setToolTipText("Select All");
+        FinjCheckBox22.setToolTipText("Select All");
 
-        jCheckBox23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox23.setText("Pharmacy");
+        FinjCheckBox23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox23.setText("Pharmacy");
 
-        jCheckBox24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox24.setText("Hospital");
+        FinjCheckBox24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox24.setText("Hospital");
 
-        jCheckBox25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox25.setText("Mobile Veterinary");
+        FinjCheckBox25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox25.setText("Mobile Veterinary");
 
-        jCheckBox26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox26.setText("Pet Shop");
+        FinjCheckBox26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox26.setText("Pet Shop");
 
-        jCheckBox27.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox27.setText("Day Care");
+        FinjCheckBox27.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox27.setText("Day Care");
 
-        jCheckBox28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox28.setText("Health Care");
+        FinjCheckBox28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox28.setText("Health Care");
 
-        jButton14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/printreport_x24.png"))); // NOI18N
-        jButton14.setText("Print");
-        jButton14.setIconTextGap(10);
+        FinjButton14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/printreport_x24.png"))); // NOI18N
+        FinjButton14.setText("Print");
+        FinjButton14.setIconTextGap(10);
 
-        jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_x24.png"))); // NOI18N
-        jButton15.setText("Save");
-        jButton15.setIconTextGap(10);
+        FinjButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_x24.png"))); // NOI18N
+        FinjButton15.setText("Save");
+        FinjButton15.setIconTextGap(10);
 
         javax.swing.GroupLayout pnlIncomeReportLayout = new javax.swing.GroupLayout(pnlIncomeReport);
         pnlIncomeReport.setLayout(pnlIncomeReportLayout);
         pnlIncomeReportLayout.setHorizontalGroup(
             pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator12)
-            .addComponent(jSeparator13)
-            .addComponent(jSeparator15)
+            .addComponent(FinjSeparator12)
+            .addComponent(FinjSeparator13)
+            .addComponent(FinjSeparator15)
             .addGroup(pnlIncomeReportLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlIncomeReportLayout.createSequentialGroup()
                         .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel24)
-                            .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(FinjLabel24)
+                            .addComponent(FinjLabel25, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateChooser8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jDateChooser7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(FinjDateChooser8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FinjDateChooser7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlIncomeReportLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FinjButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton14))
+                        .addComponent(FinjButton14))
                     .addGroup(pnlIncomeReportLayout.createSequentialGroup()
                         .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator14, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(FinjSeparator14, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlIncomeReportLayout.createSequentialGroup()
-                                    .addComponent(jLabel26)
+                                    .addComponent(FinjLabel26)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox22)))
+                                    .addComponent(FinjCheckBox22)))
                             .addGroup(pnlIncomeReportLayout.createSequentialGroup()
                                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox25)
-                                    .addComponent(jCheckBox24)
-                                    .addComponent(jCheckBox23))
+                                    .addComponent(FinjCheckBox25)
+                                    .addComponent(FinjCheckBox24)
+                                    .addComponent(FinjCheckBox23))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox26)
-                                    .addComponent(jCheckBox27)
-                                    .addComponent(jCheckBox28))))
+                                    .addComponent(FinjCheckBox26)
+                                    .addComponent(FinjCheckBox27)
+                                    .addComponent(FinjCheckBox28))))
                         .addGap(0, 77, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnlIncomeReportLayout.setVerticalGroup(
             pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlIncomeReportLayout.createSequentialGroup()
-                .addComponent(jSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator12, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDateChooser7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjDateChooser7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDateChooser8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjDateChooser8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjCheckBox22, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox23)
-                    .addComponent(jCheckBox26))
+                    .addComponent(FinjCheckBox23)
+                    .addComponent(FinjCheckBox26))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox24)
-                    .addComponent(jCheckBox27))
+                    .addComponent(FinjCheckBox24)
+                    .addComponent(FinjCheckBox27))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox25)
-                    .addComponent(jCheckBox28))
+                    .addComponent(FinjCheckBox25)
+                    .addComponent(FinjCheckBox28))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addGroup(pnlIncomeReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         pnlExpenseReport.setBorder(javax.swing.BorderFactory.createTitledBorder("Expense Report"));
 
-        jLabel30.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel30.setText("From");
+        FinjLabel30.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel30.setText("From");
 
-        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel31.setText("To");
+        FinjLabel31.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel31.setText("To");
 
-        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel32.setText("Department");
+        FinjLabel32.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel32.setText("Department");
 
-        jCheckBox36.setToolTipText("Select All");
+        FinjCheckBox36.setToolTipText("Select All");
 
-        jCheckBox37.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox37.setText("Pharmacy");
+        FinjCheckBox37.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox37.setText("Pharmacy");
 
-        jCheckBox38.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox38.setText("Hospital");
+        FinjCheckBox38.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox38.setText("Hospital");
 
-        jCheckBox39.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox39.setText("Mobile Veterinary");
+        FinjCheckBox39.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox39.setText("Mobile Veterinary");
 
-        jCheckBox40.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox40.setText("Pet Shop");
+        FinjCheckBox40.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox40.setText("Pet Shop");
 
-        jCheckBox41.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox41.setText("Day Care");
+        FinjCheckBox41.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox41.setText("Day Care");
 
-        jCheckBox42.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox42.setText("Health Care");
+        FinjCheckBox42.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox42.setText("Health Care");
 
-        jButton18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/printreport_x24.png"))); // NOI18N
-        jButton18.setText("Print");
-        jButton18.setIconTextGap(10);
+        FinjButton18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/printreport_x24.png"))); // NOI18N
+        FinjButton18.setText("Print");
+        FinjButton18.setIconTextGap(10);
 
-        jButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_x24.png"))); // NOI18N
-        jButton19.setText("Save");
-        jButton19.setIconTextGap(10);
+        FinjButton19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_x24.png"))); // NOI18N
+        FinjButton19.setText("Save");
+        FinjButton19.setIconTextGap(10);
 
         javax.swing.GroupLayout pnlExpenseReportLayout = new javax.swing.GroupLayout(pnlExpenseReport);
         pnlExpenseReport.setLayout(pnlExpenseReportLayout);
         pnlExpenseReportLayout.setHorizontalGroup(
             pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator20)
-            .addComponent(jSeparator21)
-            .addComponent(jSeparator23)
+            .addComponent(FinjSeparator20)
+            .addComponent(FinjSeparator21)
+            .addComponent(FinjSeparator23)
             .addGroup(pnlExpenseReportLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlExpenseReportLayout.createSequentialGroup()
                         .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel30)
-                            .addComponent(jLabel31, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addComponent(FinjLabel30)
+                            .addComponent(FinjLabel31, javax.swing.GroupLayout.Alignment.TRAILING))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jDateChooser12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jDateChooser11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(FinjDateChooser12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(FinjDateChooser11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlExpenseReportLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FinjButton19, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton18))
+                        .addComponent(FinjButton18))
                     .addGroup(pnlExpenseReportLayout.createSequentialGroup()
                         .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator22, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(FinjSeparator22, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlExpenseReportLayout.createSequentialGroup()
-                                    .addComponent(jLabel32)
+                                    .addComponent(FinjLabel32)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox36)))
+                                    .addComponent(FinjCheckBox36)))
                             .addGroup(pnlExpenseReportLayout.createSequentialGroup()
                                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox39)
-                                    .addComponent(jCheckBox38)
-                                    .addComponent(jCheckBox37))
+                                    .addComponent(FinjCheckBox39)
+                                    .addComponent(FinjCheckBox38)
+                                    .addComponent(FinjCheckBox37))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox40)
-                                    .addComponent(jCheckBox41)
-                                    .addComponent(jCheckBox42))))
+                                    .addComponent(FinjCheckBox40)
+                                    .addComponent(FinjCheckBox41)
+                                    .addComponent(FinjCheckBox42))))
                         .addGap(0, 77, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnlExpenseReportLayout.setVerticalGroup(
             pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlExpenseReportLayout.createSequentialGroup()
-                .addComponent(jSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator20, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(1, 1, 1)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDateChooser11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjDateChooser11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jDateChooser12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjDateChooser12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator21, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjCheckBox36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator22, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox37)
-                    .addComponent(jCheckBox40))
+                    .addComponent(FinjCheckBox37)
+                    .addComponent(FinjCheckBox40))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox38)
-                    .addComponent(jCheckBox41))
+                    .addComponent(FinjCheckBox38)
+                    .addComponent(FinjCheckBox41))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox39)
-                    .addComponent(jCheckBox42))
+                    .addComponent(FinjCheckBox39)
+                    .addComponent(FinjCheckBox42))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator23, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addGroup(pnlExpenseReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjButton19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         pnlAnualReport.setBorder(javax.swing.BorderFactory.createTitledBorder("Anual Finance Report"));
 
-        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel35.setText("Department");
+        FinjLabel35.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel35.setText("Department");
 
-        jCheckBox43.setToolTipText("Select All");
+        FinjCheckBox43.setToolTipText("Select All");
 
-        jCheckBox44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox44.setText("Pharmacy");
+        FinjCheckBox44.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox44.setText("Pharmacy");
 
-        jCheckBox45.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox45.setText("Hospital");
+        FinjCheckBox45.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox45.setText("Hospital");
 
-        jCheckBox46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox46.setText("Mobile Veterinary");
+        FinjCheckBox46.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox46.setText("Mobile Veterinary");
 
-        jCheckBox47.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox47.setText("Pet Shop");
+        FinjCheckBox47.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox47.setText("Pet Shop");
 
-        jCheckBox48.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox48.setText("Day Care");
+        FinjCheckBox48.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox48.setText("Day Care");
 
-        jCheckBox49.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jCheckBox49.setText("Health Care");
+        FinjCheckBox49.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjCheckBox49.setText("Health Care");
 
-        jButton20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/printreport_x24.png"))); // NOI18N
-        jButton20.setText("Print");
-        jButton20.setIconTextGap(10);
+        FinjButton20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjButton20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/printreport_x24.png"))); // NOI18N
+        FinjButton20.setText("Print");
+        FinjButton20.setIconTextGap(10);
 
-        jButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_x24.png"))); // NOI18N
-        jButton21.setText("Save");
-        jButton21.setIconTextGap(10);
+        FinjButton21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/save_x24.png"))); // NOI18N
+        FinjButton21.setText("Save");
+        FinjButton21.setIconTextGap(10);
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel18.setText("Year");
+        FinjLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        FinjLabel18.setText("Year");
 
         javax.swing.GroupLayout pnlAnualReportLayout = new javax.swing.GroupLayout(pnlAnualReport);
         pnlAnualReport.setLayout(pnlAnualReportLayout);
         pnlAnualReportLayout.setHorizontalGroup(
             pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jSeparator24)
-            .addComponent(jSeparator25)
-            .addComponent(jSeparator27)
+            .addComponent(FinjSeparator24)
+            .addComponent(FinjSeparator25)
+            .addComponent(FinjSeparator27)
             .addGroup(pnlAnualReportLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlAnualReportLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(FinjButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton20))
+                        .addComponent(FinjButton20))
                     .addGroup(pnlAnualReportLayout.createSequentialGroup()
                         .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator26, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(FinjSeparator26, javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlAnualReportLayout.createSequentialGroup()
-                                    .addComponent(jLabel35)
+                                    .addComponent(FinjLabel35)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jCheckBox43)))
+                                    .addComponent(FinjCheckBox43)))
                             .addGroup(pnlAnualReportLayout.createSequentialGroup()
                                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox46)
-                                    .addComponent(jCheckBox45)
-                                    .addComponent(jCheckBox44))
+                                    .addComponent(FinjCheckBox46)
+                                    .addComponent(FinjCheckBox45)
+                                    .addComponent(FinjCheckBox44))
                                 .addGap(18, 18, 18)
                                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jCheckBox47)
-                                    .addComponent(jCheckBox48)
-                                    .addComponent(jCheckBox49)))
+                                    .addComponent(FinjCheckBox47)
+                                    .addComponent(FinjCheckBox48)
+                                    .addComponent(FinjCheckBox49)))
                             .addGroup(pnlAnualReportLayout.createSequentialGroup()
-                                .addComponent(jLabel18)
+                                .addComponent(FinjLabel18)
                                 .addGap(18, 18, 18)
-                                .addComponent(jYearChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(FinjYearChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 77, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnlAnualReportLayout.setVerticalGroup(
             pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlAnualReportLayout.createSequentialGroup()
-                .addComponent(jSeparator24, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator24, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jYearChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjYearChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(39, 39, 39)
-                .addComponent(jSeparator25, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator25, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jCheckBox43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjCheckBox43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator26, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator26, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox44)
-                    .addComponent(jCheckBox47))
+                    .addComponent(FinjCheckBox44)
+                    .addComponent(FinjCheckBox47))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox45)
-                    .addComponent(jCheckBox48))
+                    .addComponent(FinjCheckBox45)
+                    .addComponent(FinjCheckBox48))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jCheckBox46)
-                    .addComponent(jCheckBox49))
+                    .addComponent(FinjCheckBox46)
+                    .addComponent(FinjCheckBox49))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator27, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator27, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 217, Short.MAX_VALUE)
                 .addGroup(pnlAnualReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjButton21, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjButton20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2009,7 +2009,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnlFinanceIncExp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_Fin_Income_Details.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -2020,15 +2020,15 @@ public class MainWindow extends javax.swing.JFrame {
                 "PaymentID", "Date", "Service", "Total Amount (Rs.)"
             }
         ));
-        jScrollPane7.setViewportView(jTable3);
+        scrlp_tbl_Fin_Income_Details.setViewportView(tbl_Fin_Income_Details);
 
         pnlIncomeSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
-        jLabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel16.setText("From");
+        FinjLabel16.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        FinjLabel16.setText("From");
 
-        jLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel17.setText("To");
+        FinjLabel17.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        FinjLabel17.setText("To");
 
         ckbx_Fin_Pharmacy.setSelected(true);
         ckbx_Fin_Pharmacy.setText("Pharmacy");
@@ -2062,13 +2062,13 @@ public class MainWindow extends javax.swing.JFrame {
             pnlIncomeSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlIncomeSearchLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel16)
+                .addComponent(FinjLabel16)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjDateChooser5, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel17)
+                .addComponent(FinjLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjDateChooser6, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(ckbx_Fin_Pharmacy)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2081,7 +2081,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(ckbx_Fin_Daycare)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_Healthcare)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 128, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addComponent(ckbx_Fin_Income_SelectAll)
                 .addContainerGap())
         );
@@ -2090,14 +2090,14 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlIncomeSearchLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlIncomeSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDateChooser5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjDateChooser5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlIncomeSearchLayout.createSequentialGroup()
                         .addGroup(pnlIncomeSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlIncomeSearchLayout.createSequentialGroup()
                                 .addGap(3, 3, 3)
                                 .addGroup(pnlIncomeSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel16)
-                                    .addComponent(jLabel17)))
+                                    .addComponent(FinjLabel16)
+                                    .addComponent(FinjLabel17)))
                             .addComponent(ckbx_Fin_Income_SelectAll)
                             .addGroup(pnlIncomeSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(ckbx_Fin_Pharmacy)
@@ -2107,7 +2107,7 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(ckbx_Fin_Daycare)
                                 .addComponent(ckbx_Fin_Healthcare)))
                         .addGap(0, 1, Short.MAX_VALUE))
-                    .addComponent(jDateChooser6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjDateChooser6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -2125,8 +2125,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlIncomeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlIncomeSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane7)
-                    .addComponent(jSeparator1)
+                    .addComponent(scrlp_tbl_Fin_Income_Details)
+                    .addComponent(FinjSeparator1)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlIncomeTabLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lbl_IncomeTotalLabel)
@@ -2141,9 +2141,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(pnlIncomeSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrlp_tbl_Fin_Income_Details, javax.swing.GroupLayout.PREFERRED_SIZE, 362, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlIncomeTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_IncomeTotalLabel)
@@ -2151,31 +2151,31 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jTabbedPane5.addTab("Income", pnlIncomeTab);
+        IncExpTabbedPane.addTab("Income", pnlIncomeTab);
 
         pnl_ExpenseAddnew.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
-        jButton5.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jButton5.setText("Client Invoice");
+        btn_Fin_AddClientInvoice.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddClientInvoice.setText("Client Invoice");
 
-        jLabel11.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel11.setText("Add New");
+        FinjLabel11.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel11.setText("Add New");
 
-        jButton7.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jButton7.setText("Electricity Bill");
+        btn_Fin_AddElecBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddElecBill.setText("Electricity Bill");
 
-        jButton8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jButton8.setText("Water Bill");
-        jButton8.setToolTipText("");
+        btn_Fin_AddWaterBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddWaterBill.setText("Water Bill");
+        btn_Fin_AddWaterBill.setToolTipText("");
 
-        jButton9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jButton9.setText("Telephone Bill");
+        btn_Fin_AddTeleBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddTeleBill.setText("Telephone Bill");
 
-        jButton10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jButton10.setText("Employee Salary");
+        btn_Fin_AddEmpSalary.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddEmpSalary.setText("Employee Salary");
 
-        jButton11.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jButton11.setText("Other");
+        btn_Fin_AddOther.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddOther.setText("Other");
 
         javax.swing.GroupLayout pnl_ExpenseAddnewLayout = new javax.swing.GroupLayout(pnl_ExpenseAddnew);
         pnl_ExpenseAddnew.setLayout(pnl_ExpenseAddnewLayout);
@@ -2184,56 +2184,56 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnl_ExpenseAddnewLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_ExpenseAddnewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jSeparator4)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jButton10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(jSeparator5)
-                    .addComponent(jButton11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(FinjSeparator3, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(FinjSeparator4)
+                    .addComponent(btn_Fin_AddClientInvoice, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_Fin_AddElecBill, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(btn_Fin_AddWaterBill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(btn_Fin_AddTeleBill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(btn_Fin_AddEmpSalary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(FinjSeparator5)
+                    .addComponent(btn_Fin_AddOther, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addGroup(pnl_ExpenseAddnewLayout.createSequentialGroup()
-                        .addComponent(jLabel11)
+                        .addComponent(FinjLabel11)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jSeparator6))
+                    .addComponent(FinjSeparator6))
                 .addContainerGap())
         );
         pnl_ExpenseAddnewLayout.setVerticalGroup(
             pnl_ExpenseAddnewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_ExpenseAddnewLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11)
+                .addComponent(FinjLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddClientInvoice, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddEmpSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddElecBill, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddWaterBill, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddTeleBill, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddOther, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(32, Short.MAX_VALUE))
         );
 
         pnlExpenseSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
-        jLabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel12.setText("From");
+        FinjLabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        FinjLabel12.setText("From");
 
-        jLabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel13.setText("To");
+        FinjLabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        FinjLabel13.setText("To");
 
         ckbx_Fin_ClientInvoice.setSelected(true);
         ckbx_Fin_ClientInvoice.setText("Client Invoice");
@@ -2272,13 +2272,13 @@ public class MainWindow extends javax.swing.JFrame {
             pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel12)
+                .addComponent(FinjLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel13)
+                .addComponent(FinjLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(ckbx_Fin_ClientInvoice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2291,7 +2291,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(ckbx_Fin_telebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_other)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addComponent(ckbx_Fin_Expense_SelectAll)
                 .addContainerGap())
         );
@@ -2300,14 +2300,14 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(FinjDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
                         .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
                                 .addGap(3, 3, 3)
                                 .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel12)
-                                    .addComponent(jLabel13)))
+                                    .addComponent(FinjLabel12)
+                                    .addComponent(FinjLabel13)))
                             .addComponent(ckbx_Fin_Expense_SelectAll)
                             .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(ckbx_Fin_ClientInvoice)
@@ -2317,11 +2317,11 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(ckbx_Fin_telebill)
                                 .addComponent(ckbx_Fin_other)))
                         .addGap(0, 1, Short.MAX_VALUE))
-                    .addComponent(jDateChooser4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(FinjDateChooser4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_Fin_ExpenseDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -2332,38 +2332,38 @@ public class MainWindow extends javax.swing.JFrame {
                 "#", "Date", "Description", "Amount"
             }
         ));
-        jScrollPane6.setViewportView(jTable1);
+        scrlp_tbl_Fin_ExpenseDetails.setViewportView(tbl_Fin_ExpenseDetails);
 
-        jLabel14.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel14.setText("Total : Rs.");
+        FinjLabel14.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel14.setText("Total : Rs.");
 
-        jLabel15.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        jLabel15.setText("00000000.00");
+        FinjLabel15.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel15.setText("00000000.00");
 
-        javax.swing.GroupLayout pnlDisplayExpenseTotalLayout = new javax.swing.GroupLayout(pnlDisplayExpenseTotal);
-        pnlDisplayExpenseTotal.setLayout(pnlDisplayExpenseTotalLayout);
-        pnlDisplayExpenseTotalLayout.setHorizontalGroup(
-            pnlDisplayExpenseTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane6)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDisplayExpenseTotalLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnltableExpenseLayout = new javax.swing.GroupLayout(pnltableExpense);
+        pnltableExpense.setLayout(pnltableExpenseLayout);
+        pnltableExpenseLayout.setHorizontalGroup(
+            pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(scrlp_tbl_Fin_ExpenseDetails)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltableExpenseLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel14)
+                .addComponent(FinjLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(FinjSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
-        pnlDisplayExpenseTotalLayout.setVerticalGroup(
-            pnlDisplayExpenseTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDisplayExpenseTotalLayout.createSequentialGroup()
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+        pnltableExpenseLayout.setVerticalGroup(
+            pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnltableExpenseLayout.createSequentialGroup()
+                .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(FinjSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnlDisplayExpenseTotalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDisplayExpenseTotalLayout.createSequentialGroup()
-                        .addComponent(jLabel15)
+                .addGroup(pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(FinjLabel14)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltableExpenseLayout.createSequentialGroup()
+                        .addComponent(FinjLabel15)
                         .addContainerGap())))
         );
 
@@ -2376,7 +2376,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(pnlExpenseTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlExpenseSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlExpenseTabLayout.createSequentialGroup()
-                        .addComponent(pnlDisplayExpenseTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(pnltableExpense, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pnl_ExpenseAddnew, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -2388,22 +2388,22 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(pnlExpenseSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlExpenseTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlDisplayExpenseTotal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnltableExpense, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_ExpenseAddnew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jTabbedPane5.addTab("Expense", pnlExpenseTab);
+        IncExpTabbedPane.addTab("Expense", pnlExpenseTab);
 
         javax.swing.GroupLayout pnlFinanceIncExpLayout = new javax.swing.GroupLayout(pnlFinanceIncExp);
         pnlFinanceIncExp.setLayout(pnlFinanceIncExpLayout);
         pnlFinanceIncExpLayout.setHorizontalGroup(
             pnlFinanceIncExpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane5)
+            .addComponent(IncExpTabbedPane)
         );
         pnlFinanceIncExpLayout.setVerticalGroup(
             pnlFinanceIncExpLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(IncExpTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout pnlFinanceMainContainerLayout = new javax.swing.GroupLayout(pnlFinanceMainContainer);
@@ -3668,6 +3668,76 @@ public class MainWindow extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
+    private javax.swing.JButton FinjButton14;
+    private javax.swing.JButton FinjButton15;
+    private javax.swing.JButton FinjButton18;
+    private javax.swing.JButton FinjButton19;
+    private javax.swing.JButton FinjButton20;
+    private javax.swing.JButton FinjButton21;
+    private javax.swing.JCheckBox FinjCheckBox22;
+    private javax.swing.JCheckBox FinjCheckBox23;
+    private javax.swing.JCheckBox FinjCheckBox24;
+    private javax.swing.JCheckBox FinjCheckBox25;
+    private javax.swing.JCheckBox FinjCheckBox26;
+    private javax.swing.JCheckBox FinjCheckBox27;
+    private javax.swing.JCheckBox FinjCheckBox28;
+    private javax.swing.JCheckBox FinjCheckBox36;
+    private javax.swing.JCheckBox FinjCheckBox37;
+    private javax.swing.JCheckBox FinjCheckBox38;
+    private javax.swing.JCheckBox FinjCheckBox39;
+    private javax.swing.JCheckBox FinjCheckBox40;
+    private javax.swing.JCheckBox FinjCheckBox41;
+    private javax.swing.JCheckBox FinjCheckBox42;
+    private javax.swing.JCheckBox FinjCheckBox43;
+    private javax.swing.JCheckBox FinjCheckBox44;
+    private javax.swing.JCheckBox FinjCheckBox45;
+    private javax.swing.JCheckBox FinjCheckBox46;
+    private javax.swing.JCheckBox FinjCheckBox47;
+    private javax.swing.JCheckBox FinjCheckBox48;
+    private javax.swing.JCheckBox FinjCheckBox49;
+    private com.toedter.calendar.JDateChooser FinjDateChooser11;
+    private com.toedter.calendar.JDateChooser FinjDateChooser12;
+    private com.toedter.calendar.JDateChooser FinjDateChooser3;
+    private com.toedter.calendar.JDateChooser FinjDateChooser4;
+    private com.toedter.calendar.JDateChooser FinjDateChooser5;
+    private com.toedter.calendar.JDateChooser FinjDateChooser6;
+    private com.toedter.calendar.JDateChooser FinjDateChooser7;
+    private com.toedter.calendar.JDateChooser FinjDateChooser8;
+    private javax.swing.JLabel FinjLabel11;
+    private javax.swing.JLabel FinjLabel12;
+    private javax.swing.JLabel FinjLabel13;
+    private javax.swing.JLabel FinjLabel14;
+    private javax.swing.JLabel FinjLabel15;
+    private javax.swing.JLabel FinjLabel16;
+    private javax.swing.JLabel FinjLabel17;
+    private javax.swing.JLabel FinjLabel18;
+    private javax.swing.JLabel FinjLabel24;
+    private javax.swing.JLabel FinjLabel25;
+    private javax.swing.JLabel FinjLabel26;
+    private javax.swing.JLabel FinjLabel30;
+    private javax.swing.JLabel FinjLabel31;
+    private javax.swing.JLabel FinjLabel32;
+    private javax.swing.JLabel FinjLabel35;
+    private javax.swing.JSeparator FinjSeparator1;
+    private javax.swing.JSeparator FinjSeparator12;
+    private javax.swing.JSeparator FinjSeparator13;
+    private javax.swing.JSeparator FinjSeparator14;
+    private javax.swing.JSeparator FinjSeparator15;
+    private javax.swing.JSeparator FinjSeparator20;
+    private javax.swing.JSeparator FinjSeparator21;
+    private javax.swing.JSeparator FinjSeparator22;
+    private javax.swing.JSeparator FinjSeparator23;
+    private javax.swing.JSeparator FinjSeparator24;
+    private javax.swing.JSeparator FinjSeparator25;
+    private javax.swing.JSeparator FinjSeparator26;
+    private javax.swing.JSeparator FinjSeparator27;
+    private javax.swing.JSeparator FinjSeparator3;
+    private javax.swing.JSeparator FinjSeparator4;
+    private javax.swing.JSeparator FinjSeparator5;
+    private javax.swing.JSeparator FinjSeparator6;
+    private javax.swing.JSeparator FinjSeparator7;
+    private com.toedter.calendar.JYearChooser FinjYearChooser1;
+    private javax.swing.JTabbedPane IncExpTabbedPane;
     private javax.swing.JPanel Main;
     private javax.swing.JButton btnDaycare;
     private javax.swing.JButton btnEmployee;
@@ -3684,7 +3754,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnMobileService;
     private javax.swing.JButton btnPetshop;
     private javax.swing.JButton btnPharmacy;
+    private javax.swing.JButton btn_Fin_AddClientInvoice;
+    private javax.swing.JButton btn_Fin_AddElecBill;
+    private javax.swing.JButton btn_Fin_AddEmpSalary;
+    private javax.swing.JButton btn_Fin_AddOther;
     private javax.swing.JButton btn_Fin_AddProduct;
+    private javax.swing.JButton btn_Fin_AddTeleBill;
+    private javax.swing.JButton btn_Fin_AddWaterBill;
     private javax.swing.JButton btn_Fin_Refresh;
     private javax.swing.JButton btn_Fin_RemProduct;
     private javax.swing.JButton btn_dlgFin_addProduct_Add;
@@ -3712,71 +3788,15 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgFin_addtelebill;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
-    private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JCheckBox jCheckBox22;
-    private javax.swing.JCheckBox jCheckBox23;
-    private javax.swing.JCheckBox jCheckBox24;
-    private javax.swing.JCheckBox jCheckBox25;
-    private javax.swing.JCheckBox jCheckBox26;
-    private javax.swing.JCheckBox jCheckBox27;
-    private javax.swing.JCheckBox jCheckBox28;
-    private javax.swing.JCheckBox jCheckBox36;
-    private javax.swing.JCheckBox jCheckBox37;
-    private javax.swing.JCheckBox jCheckBox38;
-    private javax.swing.JCheckBox jCheckBox39;
-    private javax.swing.JCheckBox jCheckBox40;
-    private javax.swing.JCheckBox jCheckBox41;
-    private javax.swing.JCheckBox jCheckBox42;
-    private javax.swing.JCheckBox jCheckBox43;
-    private javax.swing.JCheckBox jCheckBox44;
-    private javax.swing.JCheckBox jCheckBox45;
-    private javax.swing.JCheckBox jCheckBox46;
-    private javax.swing.JCheckBox jCheckBox47;
-    private javax.swing.JCheckBox jCheckBox48;
-    private javax.swing.JCheckBox jCheckBox49;
-    private com.toedter.calendar.JDateChooser jDateChooser11;
-    private com.toedter.calendar.JDateChooser jDateChooser12;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
-    private com.toedter.calendar.JDateChooser jDateChooser4;
-    private com.toedter.calendar.JDateChooser jDateChooser5;
-    private com.toedter.calendar.JDateChooser jDateChooser6;
-    private com.toedter.calendar.JDateChooser jDateChooser7;
-    private com.toedter.calendar.JDateChooser jDateChooser8;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -3803,41 +3823,15 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSeparator jSeparator12;
-    private javax.swing.JSeparator jSeparator13;
-    private javax.swing.JSeparator jSeparator14;
-    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator20;
-    private javax.swing.JSeparator jSeparator21;
-    private javax.swing.JSeparator jSeparator22;
-    private javax.swing.JSeparator jSeparator23;
-    private javax.swing.JSeparator jSeparator24;
-    private javax.swing.JSeparator jSeparator25;
-    private javax.swing.JSeparator jSeparator26;
-    private javax.swing.JSeparator jSeparator27;
-    private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private com.toedter.calendar.JYearChooser jYearChooser1;
     private javax.swing.JLabel lbl_IncomeTotal;
     private javax.swing.JLabel lbl_IncomeTotalLabel;
     private javax.swing.JLabel lbl_SearchClientCompany;
@@ -3856,7 +3850,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
     private javax.swing.JPanel pnlDaycare;
-    private javax.swing.JPanel pnlDisplayExpenseTotal;
     private javax.swing.JPanel pnlEmployee;
     private javax.swing.JPanel pnlExpenseReport;
     private javax.swing.JPanel pnlExpenseSearch;
@@ -3881,7 +3874,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPetshop;
     private javax.swing.JPanel pnlPharmacy;
     private javax.swing.JPanel pnl_ExpenseAddnew;
+    private javax.swing.JPanel pnltableExpense;
+    private javax.swing.JScrollPane scrlp_tbl_Fin_Client_Details;
+    private javax.swing.JScrollPane scrlp_tbl_Fin_ExpenseDetails;
+    private javax.swing.JScrollPane scrlp_tbl_Fin_Income_Details;
+    private javax.swing.JScrollPane scrlp_tbl_Fin_Product_Details;
     private javax.swing.JTable tbl_Fin_Client_Details;
+    private javax.swing.JTable tbl_Fin_ExpenseDetails;
+    private javax.swing.JTable tbl_Fin_Income_Details;
     private javax.swing.JTable tbl_Fin_Product_Details;
     private javax.swing.JTextField txtItemcode;
     private javax.swing.JTextField txtQuantity;
