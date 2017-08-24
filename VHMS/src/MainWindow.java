@@ -115,6 +115,18 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel10billamount2 = new javax.swing.JLabel();
         btn_dlgFin_addelecbill_Add = new javax.swing.JButton();
         btn_dlgFin_addelecbill_Cancel = new javax.swing.JButton();
+        dlgFin_addSalaryPayment = new javax.swing.JDialog();
+        pnlFinAddTeleBill3 = new javax.swing.JPanel();
+        FinjLabel19 = new javax.swing.JLabel();
+        dlgFin_addtelejSeparator4 = new javax.swing.JSeparator();
+        txt_dlgFin_addSalPay_RefNo = new javax.swing.JTextField();
+        FinjLabel9000000 = new javax.swing.JLabel();
+        dc_dlgFin_addSalPay_paymentDate = new com.toedter.calendar.JDateChooser();
+        FinjLabel1000002 = new javax.swing.JLabel();
+        txt_dlgFin_addSalPay_TAmount = new javax.swing.JTextField();
+        FinjLabel10billamount3 = new javax.swing.JLabel();
+        btn_dlgFin_addSalPay_Add = new javax.swing.JButton();
+        btn_dlgFin_addSalPay_Cancel = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -279,7 +291,7 @@ public class MainWindow extends javax.swing.JFrame {
         btn_Fin_AddElecBill = new javax.swing.JButton();
         btn_Fin_AddWaterBill = new javax.swing.JButton();
         btn_Fin_AddTeleBill = new javax.swing.JButton();
-        btn_Fin_AddEmpSalary = new javax.swing.JButton();
+        btn_Fin_AddSalaryPayment = new javax.swing.JButton();
         FinjSeparator3 = new javax.swing.JSeparator();
         FinjSeparator4 = new javax.swing.JSeparator();
         FinjSeparator5 = new javax.swing.JSeparator();
@@ -291,7 +303,7 @@ public class MainWindow extends javax.swing.JFrame {
         FinjDateChooser3 = new com.toedter.calendar.JDateChooser();
         FinjDateChooser4 = new com.toedter.calendar.JDateChooser();
         ckbx_Fin_ClientInvoice = new javax.swing.JCheckBox();
-        ckbx_Fin_EmpSalary = new javax.swing.JCheckBox();
+        ckbx_Fin_SalaryPayment = new javax.swing.JCheckBox();
         ckbx_Fin_Ebill = new javax.swing.JCheckBox();
         ckbx_Fin_waterbill = new javax.swing.JCheckBox();
         ckbx_Fin_telebill = new javax.swing.JCheckBox();
@@ -302,7 +314,7 @@ public class MainWindow extends javax.swing.JFrame {
         tbl_Fin_ExpenseDetails = new javax.swing.JTable();
         FinjLabel14 = new javax.swing.JLabel();
         FinjLabel15 = new javax.swing.JLabel();
-        FinjSeparator7 = new javax.swing.JSeparator();
+        jButton6 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -1017,6 +1029,117 @@ public class MainWindow extends javax.swing.JFrame {
         dlgFin_addelecbillLayout.setVerticalGroup(
             dlgFin_addelecbillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlFinAddTeleBill2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        dlgFin_addSalaryPayment.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+
+        pnlFinAddTeleBill3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        FinjLabel19.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel19.setText("Salary Payment");
+
+        txt_dlgFin_addSalPay_RefNo.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addSalPay_RefNo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addSalPay_RefNoKeyTyped(evt);
+            }
+        });
+
+        FinjLabel9000000.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel9000000.setText("Reference No");
+
+        FinjLabel1000002.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel1000002.setText("Payment Date");
+
+        txt_dlgFin_addSalPay_TAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        FinjLabel10billamount3.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel10billamount3.setText("Total Amount");
+
+        btn_dlgFin_addSalPay_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
+        btn_dlgFin_addSalPay_Add.setText("Add");
+        btn_dlgFin_addSalPay_Add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addSalPay_AddActionPerformed(evt);
+            }
+        });
+
+        btn_dlgFin_addSalPay_Cancel.setText("Cancel");
+        btn_dlgFin_addSalPay_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addSalPay_CancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFinAddTeleBill3Layout = new javax.swing.GroupLayout(pnlFinAddTeleBill3);
+        pnlFinAddTeleBill3.setLayout(pnlFinAddTeleBill3Layout);
+        pnlFinAddTeleBill3Layout.setHorizontalGroup(
+            pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
+                .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
+                        .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(FinjLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
+                                    .addGap(162, 162, 162)
+                                    .addComponent(btn_dlgFin_addSalPay_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btn_dlgFin_addSalPay_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill3Layout.createSequentialGroup()
+                                    .addGap(26, 26, 26)
+                                    .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(FinjLabel9000000)
+                                        .addComponent(FinjLabel1000002)
+                                        .addComponent(FinjLabel10billamount3))
+                                    .addGap(18, 18, 18)
+                                    .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(dc_dlgFin_addSalPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
+                                        .addComponent(txt_dlgFin_addSalPay_RefNo)
+                                        .addComponent(txt_dlgFin_addSalPay_TAmount)))))
+                        .addGap(0, 48, Short.MAX_VALUE))
+                    .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dlgFin_addtelejSeparator4)))
+                .addContainerGap())
+        );
+        pnlFinAddTeleBill3Layout.setVerticalGroup(
+            pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(FinjLabel19)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dlgFin_addtelejSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dc_dlgFin_addSalPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(FinjLabel1000002, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addSalPay_RefNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel9000000))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addSalPay_TAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel10billamount3))
+                .addGap(34, 34, 34)
+                .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgFin_addSalPay_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgFin_addSalPay_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout dlgFin_addSalaryPaymentLayout = new javax.swing.GroupLayout(dlgFin_addSalaryPayment.getContentPane());
+        dlgFin_addSalaryPayment.getContentPane().setLayout(dlgFin_addSalaryPaymentLayout);
+        dlgFin_addSalaryPaymentLayout.setHorizontalGroup(
+            dlgFin_addSalaryPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgFin_addSalaryPaymentLayout.setVerticalGroup(
+            dlgFin_addSalaryPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2501,8 +2624,13 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        btn_Fin_AddEmpSalary.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        btn_Fin_AddEmpSalary.setText("Employee Salary");
+        btn_Fin_AddSalaryPayment.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        btn_Fin_AddSalaryPayment.setText("Salary Payment");
+        btn_Fin_AddSalaryPayment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Fin_AddSalaryPaymentActionPerformed(evt);
+            }
+        });
 
         btn_Fin_AddOther.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         btn_Fin_AddOther.setText("Other");
@@ -2520,7 +2648,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(btn_Fin_AddElecBill, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(btn_Fin_AddWaterBill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(btn_Fin_AddTeleBill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
-                    .addComponent(btn_Fin_AddEmpSalary, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(btn_Fin_AddSalaryPayment, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addComponent(FinjSeparator5)
                     .addComponent(btn_Fin_AddOther, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
                     .addGroup(pnl_ExpenseAddnewLayout.createSequentialGroup()
@@ -2541,7 +2669,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FinjSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btn_Fin_AddEmpSalary, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_Fin_AddSalaryPayment, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FinjSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -2554,7 +2682,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(FinjSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btn_Fin_AddOther, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(32, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pnlExpenseSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
@@ -2573,8 +2701,8 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        ckbx_Fin_EmpSalary.setSelected(true);
-        ckbx_Fin_EmpSalary.setText("Employee Salary");
+        ckbx_Fin_SalaryPayment.setSelected(true);
+        ckbx_Fin_SalaryPayment.setText("Salary Payment");
 
         ckbx_Fin_Ebill.setSelected(true);
         ckbx_Fin_Ebill.setText("Electricity Bill");
@@ -2612,7 +2740,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(26, 26, 26)
                 .addComponent(ckbx_Fin_ClientInvoice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ckbx_Fin_EmpSalary)
+                .addComponent(ckbx_Fin_SalaryPayment)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_Ebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -2621,7 +2749,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(ckbx_Fin_telebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_other)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
                 .addComponent(ckbx_Fin_Expense_SelectAll)
                 .addContainerGap())
         );
@@ -2641,7 +2769,7 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(ckbx_Fin_Expense_SelectAll)
                             .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(ckbx_Fin_ClientInvoice)
-                                .addComponent(ckbx_Fin_EmpSalary)
+                                .addComponent(ckbx_Fin_SalaryPayment)
                                 .addComponent(ckbx_Fin_Ebill)
                                 .addComponent(ckbx_Fin_waterbill)
                                 .addComponent(ckbx_Fin_telebill)
@@ -2670,31 +2798,33 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel15.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
         FinjLabel15.setText("00000000.00");
 
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconRemove.png"))); // NOI18N
+
         javax.swing.GroupLayout pnltableExpenseLayout = new javax.swing.GroupLayout(pnltableExpense);
         pnltableExpense.setLayout(pnltableExpenseLayout);
         pnltableExpenseLayout.setHorizontalGroup(
             pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrlp_tbl_Fin_ExpenseDetails)
+            .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltableExpenseLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(FinjLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(FinjLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
-            .addComponent(FinjSeparator7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
         pnltableExpenseLayout.setVerticalGroup(
             pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnltableExpenseLayout.createSequentialGroup()
-                .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FinjSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FinjLabel14)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltableExpenseLayout.createSequentialGroup()
-                        .addComponent(FinjLabel15)
-                        .addContainerGap())))
+                .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(FinjLabel14)
+                        .addComponent(FinjLabel15))
+                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlExpenseTabLayout = new javax.swing.GroupLayout(pnlExpenseTab);
@@ -2718,8 +2848,10 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(pnlExpenseSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlExpenseTabLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnltableExpense, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_ExpenseAddnew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnl_ExpenseAddnew, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlExpenseTabLayout.createSequentialGroup()
+                        .addComponent(pnltableExpense, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -3326,7 +3458,7 @@ public class MainWindow extends javax.swing.JFrame {
         if(this.ckbx_Fin_Expense_SelectAll.isSelected()){
             this.ckbx_Fin_ClientInvoice.setSelected(true);
             this.ckbx_Fin_Ebill.setSelected(true);
-            this.ckbx_Fin_EmpSalary.setSelected(true);
+            this.ckbx_Fin_SalaryPayment.setSelected(true);
             this.ckbx_Fin_other.setSelected(true);
             this.ckbx_Fin_telebill.setSelected(true);
             this.ckbx_Fin_waterbill.setSelected(true);
@@ -3334,7 +3466,7 @@ public class MainWindow extends javax.swing.JFrame {
         else{
             this.ckbx_Fin_ClientInvoice.setSelected(false);
             this.ckbx_Fin_Ebill.setSelected(false);
-            this.ckbx_Fin_EmpSalary.setSelected(false);
+            this.ckbx_Fin_SalaryPayment.setSelected(false);
             this.ckbx_Fin_other.setSelected(false);
             this.ckbx_Fin_telebill.setSelected(false);
             this.ckbx_Fin_waterbill.setSelected(false);
@@ -3459,7 +3591,7 @@ public class MainWindow extends javax.swing.JFrame {
         //----Clear textfields-------------------------------
         this.txt_dlgFin_addwaterbill_billAmount.setText("");
         //---------------------------------------------------
-        this.dlgFin_addwaterbill.setSize(417,320);
+        this.dlgFin_addwaterbill.setSize(417,280);
         this.dlgFin_addwaterbill.setTitle("Add New");
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date = new Date();
@@ -3484,12 +3616,12 @@ public class MainWindow extends javax.swing.JFrame {
                     pst.setString(4, billAmount);
                     pst.execute();
                     increaseNoExpenseByOne();
-                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Electricity bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(dlgFin_addelecbill, "Electricity bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
                     update_tbl_Fin_ExpenseDetails();
-                    this.dlgFin_addwaterbill.dispose();
+                    this.dlgFin_addelecbill.dispose();
                 }
                 catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Electricity Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    JOptionPane.showMessageDialog(dlgFin_addelecbill, "Electricity Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
                 }
             }
     }//GEN-LAST:event_btn_dlgFin_addelecbill_AddActionPerformed
@@ -3502,7 +3634,7 @@ public class MainWindow extends javax.swing.JFrame {
         //----Clear textfields-------------------------------
         this.txt_dlgFin_addelecbill_billAmount.setText("");
         //---------------------------------------------------
-        this.dlgFin_addelecbill.setSize(417,320);
+        this.dlgFin_addelecbill.setSize(417,280);
         this.dlgFin_addelecbill.setTitle("Add New");
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date = new Date();
@@ -3510,6 +3642,54 @@ public class MainWindow extends javax.swing.JFrame {
         this.dlgFin_addelecbill.setLocationRelativeTo(this);
         this.dlgFin_addelecbill.setVisible(true); 
     }//GEN-LAST:event_btn_Fin_AddElecBillActionPerformed
+
+    private void txt_dlgFin_addSalPay_RefNoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addSalPay_RefNoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dlgFin_addSalPay_RefNoKeyTyped
+
+    private void btn_dlgFin_addSalPay_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addSalPay_AddActionPerformed
+        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addSalaryPayment,"Are You sure the details are correct?","Add Salary Payment",JOptionPane.YES_NO_OPTION);
+        if(userChoice==0){
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String date = df.format(this.dc_dlgFin_addSalPay_paymentDate.getDate());
+            String desc = "Salary Payment | Reference No. "+this.txt_dlgFin_addSalPay_RefNo.getText();
+            String TAmount = this.txt_dlgFin_addSalPay_TAmount.getText();
+            try{
+                String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
+                PreparedStatement pst = dbcon.prepareStatement(SQL);
+                pst.setString(1, generateExpenseID());
+                pst.setString(2, date);
+                pst.setString(3, desc);
+                pst.setString(4, TAmount);
+                pst.execute();
+                increaseNoExpenseByOne();
+                JOptionPane.showMessageDialog(dlgFin_addSalaryPayment, "Salary Payment added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+                update_tbl_Fin_ExpenseDetails();
+                this.dlgFin_addSalaryPayment.dispose();
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(dlgFin_addSalaryPayment, "Salary Payment adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_btn_dlgFin_addSalPay_AddActionPerformed
+
+    private void btn_dlgFin_addSalPay_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addSalPay_CancelActionPerformed
+        this.dlgFin_addSalaryPayment.dispose();
+    }//GEN-LAST:event_btn_dlgFin_addSalPay_CancelActionPerformed
+
+    private void btn_Fin_AddSalaryPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_AddSalaryPaymentActionPerformed
+        //----Clear textfields-------------------------------
+        this.txt_dlgFin_addSalPay_RefNo.setText("");
+        this.txt_dlgFin_addSalPay_TAmount.setText("");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+        Date date = new Date();
+        this.dc_dlgFin_addSalPay_paymentDate.setDate(date);
+        //---------------------------------------------------
+        this.dlgFin_addSalaryPayment.setSize(417,320);
+        this.dlgFin_addSalaryPayment.setTitle("Add New");
+        this.dlgFin_addSalaryPayment.setLocationRelativeTo(this);
+        this.dlgFin_addSalaryPayment.setVisible(true); 
+    }//GEN-LAST:event_btn_Fin_AddSalaryPaymentActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -4262,9 +4442,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel10;
     private javax.swing.JLabel FinjLabel1000000;
     private javax.swing.JLabel FinjLabel1000001;
+    private javax.swing.JLabel FinjLabel1000002;
     private javax.swing.JLabel FinjLabel10billamount;
     private javax.swing.JLabel FinjLabel10billamount1;
     private javax.swing.JLabel FinjLabel10billamount2;
+    private javax.swing.JLabel FinjLabel10billamount3;
     private javax.swing.JLabel FinjLabel11;
     private javax.swing.JLabel FinjLabel12;
     private javax.swing.JLabel FinjLabel13;
@@ -4273,6 +4455,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel16;
     private javax.swing.JLabel FinjLabel17;
     private javax.swing.JLabel FinjLabel18;
+    private javax.swing.JLabel FinjLabel19;
     private javax.swing.JLabel FinjLabel21;
     private javax.swing.JLabel FinjLabel23;
     private javax.swing.JLabel FinjLabel24;
@@ -4285,6 +4468,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel8;
     private javax.swing.JLabel FinjLabel8999999;
     private javax.swing.JLabel FinjLabel9;
+    private javax.swing.JLabel FinjLabel9000000;
     private javax.swing.JLabel FinjLabel999999;
     private javax.swing.JSeparator FinjSeparator1;
     private javax.swing.JSeparator FinjSeparator12;
@@ -4304,7 +4488,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSeparator FinjSeparator4;
     private javax.swing.JSeparator FinjSeparator5;
     private javax.swing.JSeparator FinjSeparator6;
-    private javax.swing.JSeparator FinjSeparator7;
     private com.toedter.calendar.JYearChooser FinjYearChooser1;
     private javax.swing.JTabbedPane IncExpTabbedPane;
     private javax.swing.JPanel Main;
@@ -4325,15 +4508,17 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnPharmacy;
     private javax.swing.JButton btn_Fin_AddClientInvoice;
     private javax.swing.JButton btn_Fin_AddElecBill;
-    private javax.swing.JButton btn_Fin_AddEmpSalary;
     private javax.swing.JButton btn_Fin_AddOther;
     private javax.swing.JButton btn_Fin_AddProduct;
+    private javax.swing.JButton btn_Fin_AddSalaryPayment;
     private javax.swing.JButton btn_Fin_AddTeleBill;
     private javax.swing.JButton btn_Fin_AddWaterBill;
     private javax.swing.JButton btn_Fin_Refresh;
     private javax.swing.JButton btn_Fin_RemProduct;
     private javax.swing.JButton btn_dlgFin_addProduct_Add;
     private javax.swing.JButton btn_dlgFin_addProduct_Cancel;
+    private javax.swing.JButton btn_dlgFin_addSalPay_Add;
+    private javax.swing.JButton btn_dlgFin_addSalPay_Cancel;
     private javax.swing.JButton btn_dlgFin_addelecbill_Add;
     private javax.swing.JButton btn_dlgFin_addelecbill_Cancel;
     private javax.swing.JButton btn_dlgFin_addtelebill_Add;
@@ -4347,7 +4532,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_Fin_ClientInvoice;
     private javax.swing.JCheckBox ckbx_Fin_Daycare;
     private javax.swing.JCheckBox ckbx_Fin_Ebill;
-    private javax.swing.JCheckBox ckbx_Fin_EmpSalary;
     private javax.swing.JCheckBox ckbx_Fin_Expense_SelectAll;
     private javax.swing.JCheckBox ckbx_Fin_Healthcare;
     private javax.swing.JCheckBox ckbx_Fin_Hospital;
@@ -4355,19 +4539,23 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_Fin_MobileVet;
     private javax.swing.JCheckBox ckbx_Fin_Petshop;
     private javax.swing.JCheckBox ckbx_Fin_Pharmacy;
+    private javax.swing.JCheckBox ckbx_Fin_SalaryPayment;
     private javax.swing.JCheckBox ckbx_Fin_other;
     private javax.swing.JCheckBox ckbx_Fin_telebill;
     private javax.swing.JCheckBox ckbx_Fin_waterbill;
+    private com.toedter.calendar.JDateChooser dc_dlgFin_addSalPay_paymentDate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addelecbill_billdate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addtelebill_billdate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addwaterbill_billdate;
     private javax.swing.JDialog dlgFin_addClient;
     private javax.swing.JDialog dlgFin_addProduct;
+    private javax.swing.JDialog dlgFin_addSalaryPayment;
     private javax.swing.JDialog dlgFin_addelecbill;
     private javax.swing.JDialog dlgFin_addtelebill;
     private javax.swing.JSeparator dlgFin_addtelejSeparator1;
     private javax.swing.JSeparator dlgFin_addtelejSeparator2;
     private javax.swing.JSeparator dlgFin_addtelejSeparator3;
+    private javax.swing.JSeparator dlgFin_addtelejSeparator4;
     private javax.swing.JDialog dlgFin_addwaterbill;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
@@ -4375,6 +4563,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -4436,6 +4625,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFinAddTeleBill;
     private javax.swing.JPanel pnlFinAddTeleBill1;
     private javax.swing.JPanel pnlFinAddTeleBill2;
+    private javax.swing.JPanel pnlFinAddTeleBill3;
     private javax.swing.JPanel pnlFinAddproduct;
     private javax.swing.JPanel pnlFinEditClient;
     private javax.swing.JPanel pnlFinance;
@@ -4475,6 +4665,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgFin_addClient_email;
     private javax.swing.JTextField txt_dlgFin_addClient_tele1;
     private javax.swing.JTextField txt_dlgFin_addClient_tele2;
+    private javax.swing.JTextField txt_dlgFin_addSalPay_RefNo;
+    private javax.swing.JTextField txt_dlgFin_addSalPay_TAmount;
     private javax.swing.JTextField txt_dlgFin_addelecbill_billAmount;
     private javax.swing.JTextField txt_dlgFin_addtelebill_billAmount;
     private javax.swing.JTextField txt_dlgFin_addtelebill_teleNo;

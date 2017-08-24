@@ -1129,6 +1129,191 @@
         </Container>
       </SubComponents>
     </Container>
+    <Container class="javax.swing.JDialog" name="dlgFin_addSalaryPayment">
+      <Properties>
+        <Property name="modalityType" type="java.awt.Dialog$ModalityType" editor="org.netbeans.modules.form.editors.EnumEditor">
+          <Value id="TOOLKIT_MODAL"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="pnlFinAddTeleBill3" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="pnlFinAddTeleBill3" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Container class="javax.swing.JPanel" name="pnlFinAddTeleBill3">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                <LineBorder thickness="5">
+                  <Color PropertyName="color" blue="78" green="5d" red="39" type="rgb"/>
+                </LineBorder>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="FinjLabel19" min="-2" pref="195" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
+                                          <Component id="btn_dlgFin_addSalPay_Cancel" min="-2" pref="84" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="btn_dlgFin_addSalPay_Add" min="-2" pref="84" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="FinjLabel9000000" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel1000002" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="FinjLabel10billamount3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="dc_dlgFin_addSalPay_paymentDate" alignment="0" pref="214" max="32767" attributes="0"/>
+                                              <Component id="txt_dlgFin_addSalPay_RefNo" alignment="0" max="32767" attributes="0"/>
+                                              <Component id="txt_dlgFin_addSalPay_TAmount" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="dlgFin_addtelejSeparator4" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="FinjLabel19" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="dlgFin_addtelejSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="dc_dlgFin_addSalPay_paymentDate" alignment="0" pref="28" max="32767" attributes="0"/>
+                          <Component id="FinjLabel1000002" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txt_dlgFin_addSalPay_RefNo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="FinjLabel9000000" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txt_dlgFin_addSalPay_TAmount" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="FinjLabel10billamount3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="btn_dlgFin_addSalPay_Cancel" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                          <Component id="btn_dlgFin_addSalPay_Add" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="42" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JLabel" name="FinjLabel19">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="16" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Salary Payment"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JSeparator" name="dlgFin_addtelejSeparator4">
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_dlgFin_addSalPay_RefNo">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="16" style="0"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addSalPay_RefNoKeyTyped"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="FinjLabel9000000">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="16" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Reference No"/>
+              </Properties>
+            </Component>
+            <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addSalPay_paymentDate">
+            </Component>
+            <Component class="javax.swing.JLabel" name="FinjLabel1000002">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="16" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Payment Date"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JTextField" name="txt_dlgFin_addSalPay_TAmount">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="16" style="0"/>
+                </Property>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JLabel" name="FinjLabel10billamount3">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Calibri" size="16" style="0"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Total Amount"/>
+              </Properties>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_dlgFin_addSalPay_Add">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/icons/IconAdd.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Add"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_dlgFin_addSalPay_AddActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JButton" name="btn_dlgFin_addSalPay_Cancel">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Cancel"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_dlgFin_addSalPay_CancelActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">
@@ -3895,8 +4080,11 @@
                                           <Component id="pnlExpenseSearch" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="pnltableExpense" max="32767" attributes="0"/>
                                               <Component id="pnl_ExpenseAddnew" max="32767" attributes="0"/>
+                                              <Group type="102" attributes="0">
+                                                  <Component id="pnltableExpense" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -3927,7 +4115,7 @@
                                                   <Component id="btn_Fin_AddElecBill" alignment="0" pref="200" max="32767" attributes="0"/>
                                                   <Component id="btn_Fin_AddWaterBill" alignment="1" pref="200" max="32767" attributes="0"/>
                                                   <Component id="btn_Fin_AddTeleBill" alignment="1" pref="200" max="32767" attributes="0"/>
-                                                  <Component id="btn_Fin_AddEmpSalary" alignment="1" pref="200" max="32767" attributes="0"/>
+                                                  <Component id="btn_Fin_AddSalaryPayment" alignment="1" pref="200" max="32767" attributes="0"/>
                                                   <Component id="FinjSeparator5" max="32767" attributes="0"/>
                                                   <Component id="btn_Fin_AddOther" alignment="1" pref="200" max="32767" attributes="0"/>
                                                   <Group type="102" attributes="0">
@@ -3952,7 +4140,7 @@
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="FinjSeparator4" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="btn_Fin_AddEmpSalary" min="-2" pref="35" max="-2" attributes="0"/>
+                                              <Component id="btn_Fin_AddSalaryPayment" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="FinjSeparator5" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -3965,7 +4153,7 @@
                                               <Component id="FinjSeparator6" min="-2" pref="10" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="btn_Fin_AddOther" min="-2" pref="35" max="-2" attributes="0"/>
-                                              <EmptySpace pref="32" max="32767" attributes="0"/>
+                                              <EmptySpace max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -4021,13 +4209,16 @@
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Fin_AddTeleBillActionPerformed"/>
                                       </Events>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="btn_Fin_AddEmpSalary">
+                                    <Component class="javax.swing.JButton" name="btn_Fin_AddSalaryPayment">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="14" style="0"/>
                                         </Property>
-                                        <Property name="text" type="java.lang.String" value="Employee Salary"/>
+                                        <Property name="text" type="java.lang.String" value="Salary Payment"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Fin_AddSalaryPaymentActionPerformed"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JSeparator" name="FinjSeparator3">
                                     </Component>
@@ -4073,7 +4264,7 @@
                                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_ClientInvoice" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="ckbx_Fin_EmpSalary" min="-2" max="-2" attributes="0"/>
+                                              <Component id="ckbx_Fin_SalaryPayment" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_Ebill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -4082,7 +4273,7 @@
                                               <Component id="ckbx_Fin_telebill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_other" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="99" max="32767" attributes="0"/>
+                                              <EmptySpace pref="103" max="32767" attributes="0"/>
                                               <Component id="ckbx_Fin_Expense_SelectAll" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -4106,7 +4297,7 @@
                                                           <Component id="ckbx_Fin_Expense_SelectAll" alignment="0" min="-2" max="-2" attributes="0"/>
                                                           <Group type="103" groupAlignment="3" attributes="0">
                                                               <Component id="ckbx_Fin_ClientInvoice" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              <Component id="ckbx_Fin_EmpSalary" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="ckbx_Fin_SalaryPayment" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="ckbx_Fin_Ebill" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="ckbx_Fin_waterbill" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               <Component id="ckbx_Fin_telebill" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -4152,10 +4343,10 @@
                                         <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_ClientInvoiceItemStateChanged"/>
                                       </Events>
                                     </Component>
-                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_EmpSalary">
+                                    <Component class="javax.swing.JCheckBox" name="ckbx_Fin_SalaryPayment">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
-                                        <Property name="text" type="java.lang.String" value="Employee Salary"/>
+                                        <Property name="text" type="java.lang.String" value="Salary Payment"/>
                                       </Properties>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_Ebill">
@@ -4198,31 +4389,31 @@
                                   <Layout>
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="scrlp_tbl_Fin_ExpenseDetails" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="scrlp_tbl_Fin_ExpenseDetails" alignment="0" pref="843" max="32767" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jButton6" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
                                               <Component id="FinjLabel14" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="FinjLabel15" min="-2" pref="96" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="FinjSeparator7" alignment="1" max="32767" attributes="0"/>
                                       </Group>
                                     </DimensionLayout>
                                     <DimensionLayout dim="1">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <Component id="scrlp_tbl_Fin_ExpenseDetails" pref="0" max="32767" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="FinjSeparator7" min="-2" pref="10" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="FinjLabel14" min="-2" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="FinjLabel15" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="scrlp_tbl_Fin_ExpenseDetails" min="-2" pref="365" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="FinjLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="FinjLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
+                                                  <Component id="jButton6" min="-2" pref="32" max="-2" attributes="0"/>
                                               </Group>
+                                              <EmptySpace max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -4265,7 +4456,12 @@
                                         <Property name="text" type="java.lang.String" value="00000000.00"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JSeparator" name="FinjSeparator7">
+                                    <Component class="javax.swing.JButton" name="jButton6">
+                                      <Properties>
+                                        <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                                          <Image iconType="3" name="/icons/IconRemove.png"/>
+                                        </Property>
+                                      </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
