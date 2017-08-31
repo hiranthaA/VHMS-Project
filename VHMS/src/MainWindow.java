@@ -163,11 +163,34 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         pnlHospital = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jTabbedPane2 = new javax.swing.JTabbedPane();
-        jPanel4 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jPanel12 = new javax.swing.JPanel();
+        pnlHospitalMainContainer = new javax.swing.JPanel();
+        pnlHosButton = new javax.swing.JPanel();
+        btnHospitalRegister = new javax.swing.JButton();
+        btnHospitalClinic = new javax.swing.JButton();
+        btnHospitalPayments = new javax.swing.JButton();
+        pnlHosRegister = new javax.swing.JLayeredPane();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jButton11 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        jButton14 = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        pnlClientSearchBar1 = new javax.swing.JPanel();
+        txt_Fin_SearchCompany1 = new javax.swing.JTextField();
+        lbl_SearchClientProduct1 = new javax.swing.JLabel();
+        lbl_SearchClientCompany1 = new javax.swing.JLabel();
+        txt_Fin_SearchProduct1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jButton16 = new javax.swing.JButton();
+        pnlHosClinic = new javax.swing.JLayeredPane();
+        pnlHosPayments = new javax.swing.JLayeredPane();
         pnlMobile = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -318,6 +341,14 @@ public class MainWindow extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu3 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         dlgFin_addClient.setTitle("Client Details");
         dlgFin_addClient.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
@@ -1298,7 +1329,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(btnFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         btnHospital.getAccessibleContext().setAccessibleName("Hospital");
@@ -1416,7 +1447,7 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 511, Short.MAX_VALUE)
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 516, Short.MAX_VALUE)
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1551,62 +1582,323 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hospital Management", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        pnlHospitalMainContainer.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Hospital Management", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
-        jButton4.setText("jButton4");
+        pnlHosButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addComponent(jButton4)
+        btnHospitalRegister.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnHospitalRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clients_x32.png"))); // NOI18N
+        btnHospitalRegister.setText("Register");
+        btnHospitalRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHospitalRegister.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnHospitalRegister.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHospitalRegisterActionPerformed(evt);
+            }
+        });
+
+        btnHospitalClinic.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnHospitalClinic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clients_x32.png"))); // NOI18N
+        btnHospitalClinic.setText("Clinic");
+        btnHospitalClinic.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHospitalClinic.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnHospitalClinic.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHospitalClinicActionPerformed(evt);
+            }
+        });
+
+        btnHospitalPayments.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
+        btnHospitalPayments.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clients_x32.png"))); // NOI18N
+        btnHospitalPayments.setText("Payments");
+        btnHospitalPayments.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnHospitalPayments.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnHospitalPayments.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHospitalPaymentsActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlHosButtonLayout = new javax.swing.GroupLayout(pnlHosButton);
+        pnlHosButton.setLayout(pnlHosButtonLayout);
+        pnlHosButtonLayout.setHorizontalGroup(
+            pnlHosButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHosButtonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnHospitalRegister)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHospitalClinic, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnHospitalPayments)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(181, 181, 181)
-                .addComponent(jButton4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        pnlHosButtonLayout.setVerticalGroup(
+            pnlHosButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHosButtonLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlHosButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnHospitalClinic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnHospitalRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnHospitalPayments, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
-        jTabbedPane2.addTab("Customer", jPanel4);
+        pnlHosRegister.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel8.setText("Customer");
+
+        jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel9.setText("Pets");
+
+        jButton11.setText("Add");
+
+        jButton13.setText("Edit");
+
+        jButton14.setText("Add");
+
+        jButton15.setText("Edit");
+
+        pnlClientSearchBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
+
+        txt_Fin_SearchCompany1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Fin_SearchCompany1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_Fin_SearchCompany1KeyReleased(evt);
+            }
+        });
+
+        lbl_SearchClientProduct1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_SearchClientProduct1.setText("Cust ID");
+
+        lbl_SearchClientCompany1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_SearchClientCompany1.setText("Name");
+
+        txt_Fin_SearchProduct1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Fin_SearchProduct1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_Fin_SearchProduct1KeyReleased(evt);
+            }
+        });
+
+        jLabel10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel10.setText("Pet Name");
+        jLabel10.setToolTipText("");
+
+        jTextField1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        jLabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        jLabel12.setText("Pet ID");
+        jLabel12.setToolTipText("");
+
+        jTextField2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        javax.swing.GroupLayout pnlClientSearchBar1Layout = new javax.swing.GroupLayout(pnlClientSearchBar1);
+        pnlClientSearchBar1.setLayout(pnlClientSearchBar1Layout);
+        pnlClientSearchBar1Layout.setHorizontalGroup(
+            pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlClientSearchBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_SearchClientCompany1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_Fin_SearchCompany1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33)
+                .addComponent(lbl_SearchClientProduct1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txt_Fin_SearchProduct1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel10)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(74, Short.MAX_VALUE))
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        pnlClientSearchBar1Layout.setVerticalGroup(
+            pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlClientSearchBar1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel12)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                    .addGroup(pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_SearchClientCompany1)
+                        .addComponent(txt_Fin_SearchCompany1)
+                        .addComponent(txt_Fin_SearchProduct1)
+                        .addComponent(lbl_SearchClientProduct1)
+                        .addComponent(jLabel10)
+                        .addComponent(jTextField1)))
+                .addContainerGap())
         );
 
-        jTabbedPane2.addTab("tab2", jPanel12);
+        jButton16.setText("View Clinic");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2)
+        pnlHosRegister.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jScrollPane3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jButton11, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jButton13, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jButton14, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jButton15, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(pnlClientSearchBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(jButton16, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout pnlHosRegisterLayout = new javax.swing.GroupLayout(pnlHosRegister);
+        pnlHosRegister.setLayout(pnlHosRegisterLayout);
+        pnlHosRegisterLayout.setHorizontalGroup(
+            pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHosRegisterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlClientSearchBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHosRegisterLayout.createSequentialGroup()
+                        .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(pnlHosRegisterLayout.createSequentialGroup()
+                                .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnlHosRegisterLayout.createSequentialGroup()
+                                        .addComponent(jButton11)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel8))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel9)
+                            .addGroup(pnlHosRegisterLayout.createSequentialGroup()
+                                .addComponent(jButton16)
+                                .addGap(192, 192, 192)
+                                .addComponent(jButton14)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton15))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane2)
+        pnlHosRegisterLayout.setVerticalGroup(
+            pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHosRegisterLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlClientSearchBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9)
+                    .addComponent(jLabel8))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3))
+                .addGap(18, 18, 18)
+                .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                    .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pnlHosClinic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        javax.swing.GroupLayout pnlHosClinicLayout = new javax.swing.GroupLayout(pnlHosClinic);
+        pnlHosClinic.setLayout(pnlHosClinicLayout);
+        pnlHosClinicLayout.setHorizontalGroup(
+            pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1100, Short.MAX_VALUE)
+        );
+        pnlHosClinicLayout.setVerticalGroup(
+            pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 528, Short.MAX_VALUE)
+        );
+
+        pnlHosPayments.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        javax.swing.GroupLayout pnlHosPaymentsLayout = new javax.swing.GroupLayout(pnlHosPayments);
+        pnlHosPayments.setLayout(pnlHosPaymentsLayout);
+        pnlHosPaymentsLayout.setHorizontalGroup(
+            pnlHosPaymentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1100, Short.MAX_VALUE)
+        );
+        pnlHosPaymentsLayout.setVerticalGroup(
+            pnlHosPaymentsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 527, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout pnlHospitalMainContainerLayout = new javax.swing.GroupLayout(pnlHospitalMainContainer);
+        pnlHospitalMainContainer.setLayout(pnlHospitalMainContainerLayout);
+        pnlHospitalMainContainerLayout.setHorizontalGroup(
+            pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHospitalMainContainerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlHosButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlHosRegister))
+                .addContainerGap())
+            .addGroup(pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlHospitalMainContainerLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(pnlHosClinic)
+                    .addContainerGap()))
+            .addGroup(pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlHospitalMainContainerLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(pnlHosPayments)
+                    .addContainerGap()))
+        );
+        pnlHospitalMainContainerLayout.setVerticalGroup(
+            pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlHospitalMainContainerLayout.createSequentialGroup()
+                .addComponent(pnlHosButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlHosRegister))
+            .addGroup(pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHospitalMainContainerLayout.createSequentialGroup()
+                    .addGap(0, 101, Short.MAX_VALUE)
+                    .addComponent(pnlHosClinic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(pnlHospitalMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHospitalMainContainerLayout.createSequentialGroup()
+                    .addGap(0, 100, Short.MAX_VALUE)
+                    .addComponent(pnlHosPayments, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
         javax.swing.GroupLayout pnlHospitalLayout = new javax.swing.GroupLayout(pnlHospital);
         pnlHospital.setLayout(pnlHospitalLayout);
         pnlHospitalLayout.setHorizontalGroup(
             pnlHospitalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlHospitalMainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlHospitalLayout.setVerticalGroup(
             pnlHospitalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlHospitalMainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Mobile Veterinary Service", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
@@ -1758,11 +2050,11 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel21.setLayout(jPanel21Layout);
         jPanel21Layout.setHorizontalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 981, Short.MAX_VALUE)
+            .addGap(0, 1107, Short.MAX_VALUE)
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGap(0, 603, Short.MAX_VALUE)
         );
 
         jTabbedPane4.addTab("tab1", jPanel21);
@@ -1771,11 +2063,11 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 981, Short.MAX_VALUE)
+            .addGap(0, 1107, Short.MAX_VALUE)
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 595, Short.MAX_VALUE)
+            .addGap(0, 603, Short.MAX_VALUE)
         );
 
         jTabbedPane4.addTab("tab2", jPanel22);
@@ -1989,7 +2281,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(lbl_SearchClientProduct)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txt_Fin_SearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 213, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 215, Short.MAX_VALUE)
                 .addComponent(btn_Fin_Refresh)
                 .addContainerGap())
         );
@@ -2037,8 +2329,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(pnlClientSearchBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrlp_tbl_Fin_Product_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE)
-                    .addComponent(scrlp_tbl_Fin_Client_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 402, Short.MAX_VALUE))
+                    .addComponent(scrlp_tbl_Fin_Product_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
+                    .addComponent(scrlp_tbl_Fin_Client_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnFin_AddClient)
@@ -2519,7 +2811,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(ckbx_Fin_Daycare)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_Healthcare)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                 .addComponent(ckbx_Fin_Income_SelectAll)
                 .addContainerGap())
         );
@@ -2749,7 +3041,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(ckbx_Fin_telebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_other)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
                 .addComponent(ckbx_Fin_Expense_SelectAll)
                 .addContainerGap())
         );
@@ -2804,7 +3096,7 @@ public class MainWindow extends javax.swing.JFrame {
         pnltableExpense.setLayout(pnltableExpenseLayout);
         pnltableExpenseLayout.setHorizontalGroup(
             pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 843, Short.MAX_VALUE)
+            .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltableExpenseLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2983,8 +3275,45 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Edit");
+        jMenu2.setText("Settings");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
+        jMenuItem1.setText("User Accounts");
+        jMenuItem1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenuItem1MouseClicked(evt);
+            }
+        });
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem1);
+
+        jMenuItem7.setText("Printers and Devices");
+        jMenu2.add(jMenuItem7);
+
+        jMenuItem2.setText("Database Connection");
+        jMenu2.add(jMenuItem2);
+
         jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Help");
+
+        jMenuItem4.setText("Help Contents");
+        jMenu3.add(jMenuItem4);
+
+        jMenuItem5.setText("KeyBoard Shortcuts");
+        jMenu3.add(jMenuItem5);
+
+        jMenuItem6.setText("Start Page");
+        jMenu3.add(jMenuItem6);
+
+        jMenuItem3.setText("About");
+        jMenu3.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
 
@@ -3025,6 +3354,10 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlEmployee.setVisible(false);
         this.pnlFinance.setVisible(false);
         this.pnlHome.setVisible(false);
+        
+        this.pnlHosClinic.setVisible(false);
+        this.pnlHosPayments.setVisible(false);
+        this.pnlHosRegister.setVisible(true);
     }//GEN-LAST:event_btnHospitalActionPerformed
 
     private void btnMobileServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMobileServiceActionPerformed
@@ -3103,7 +3436,15 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlFinanceClients.setVisible(true);
         
         //---------filling client details table-----------------
-            update_tbl_Fin_Client_Details();
+        ResultSet rs;
+        Client c = new Client();
+        rs = c.updateClientTable();
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+        }
         //------------------------------------------------------
     }//GEN-LAST:event_btnFinanceActionPerformed
 
@@ -3129,7 +3470,17 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlFinanceClients.setVisible(true);
         this.pnlFinanceReports.setVisible(false);
         this.pnlFinanceIncExp.setVisible(false);
-        update_tbl_Fin_Client_Details();
+        //-update client table----------------------------------------
+        ResultSet rs;
+        Client c = new Client();
+        rs = c.updateClientTable();
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+        }
+        //-----------------------------------------
     }//GEN-LAST:event_btnFinanceClientsActionPerformed
 
     private void btnFinanceReportsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinanceReportsActionPerformed
@@ -3171,87 +3522,155 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnfin_dlgAddClientCancelActionPerformed
 
     private void btnfin_dlgAddClientAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientAddActionPerformed
-        if(ck_dlgAddClient_txt_CompanyName() & ck_dlgAddClient_txt_Address() & ck_dlgAddClient_txt_Tele1() & ck_dlgAddClient_txt_Tele2() & ck_dlgAddClient_txt_email()){
+        Client c = new Client();
+        String company = this.txt_dlgFin_addClient_Company.getText();
+        String address = this.txt_dlgFin_addClient_Address.getText();
+        String tele1 = this.txt_dlgFin_addClient_tele1.getText();
+        String tele2 = this.txt_dlgFin_addClient_tele2.getText();
+        String email = this.txt_dlgFin_addClient_email.getText();
+        
+        if(c.validateCompanyName(company) & c.validateCompanyAddress(address) & c.validateTelephone(tele1) & c.validateTelephone(tele2) & c.validateEmail(email)){
             int userChoice = JOptionPane.showConfirmDialog(dlgFin_addClient,"Are You sure the details are correct?","Add Client Details",JOptionPane.YES_NO_OPTION);
             if(userChoice==0){
-                String company = this.txt_dlgFin_addClient_Company.getText();
-                String address = this.txt_dlgFin_addClient_Address.getText();
-                String tele1 = this.txt_dlgFin_addClient_tele1.getText();
-                String tele2 = this.txt_dlgFin_addClient_tele2.getText();
-                String email = this.txt_dlgFin_addClient_email.getText();
-
-                try{
-                    String SQL = "insert into finance_clients (clientID,company_name,address,tele1,tele2,email) values(?,?,?,?,?,?)";
-                    PreparedStatement pst = dbcon.prepareStatement(SQL);
-                    pst.setString(1, generateClientID());
-                    pst.setString(2, company);
-                    pst.setString(3, address);
-                    pst.setString(4, tele1);
-                    pst.setString(5, tele2);
-                    pst.setString(6, email);
-                    pst.execute();
-                    increaseNoClientsByOne();
-                    JOptionPane.showMessageDialog(dlgFin_addClient, "Client added Successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
-                    update_tbl_Fin_Client_Details();
+                    c.addNewClient(company,address,tele1,tele2,email,dlgFin_addClient);
+                    //-update client table--------------------------------------
+                    ResultSet rs;
+                    rs = c.updateClientTable();
+                    if(rs==null){
+                        JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    else{
+                        this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+                    }
+                    //----------------------------------------------------------
                     this.dlgFin_addClient.dispose();
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgFin_addClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-                }
             }
         }
         else{
             getToolkit().beep();
+            if(c.validateCompanyName(company)){
+            this.lbl_dlgFin_addClient_Company.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Company.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_Company.setToolTipText("Invalid Company Name");
+            }
+            if(c.validateCompanyAddress(address)){
+                this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
+                this.lbl_dlgFin_addClient_Address.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addClient_Address.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_Address.setToolTipText("Invalid Company Address");
+            }
+            if(c.validateTelephone(tele1)){
+                this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
+                this.lbl_dlgFin_addClient_tele1.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_tele1.setToolTipText("Invalid Telephone Number");
+            }
+            if(c.validateTelephone(tele2)){
+                this.lbl_dlgFin_addClient_tele2.setForeground(Color.black);
+                this.lbl_dlgFin_addClient_tele2.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addClient_tele2.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_tele2.setToolTipText("Invalid Telephone Number");
+            }
+            if(c.validateEmail(email)){
+                this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
+                this.lbl_dlgFin_addClient_Email.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+                this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email Address");
+            }
         }
     }//GEN-LAST:event_btnfin_dlgAddClientAddActionPerformed
 
     private void txt_Fin_SearchCompanyKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchCompanyKeyReleased
-        String company=null;
-        company=this.txt_Fin_SearchCompany.getText();
-        String sql = "select clientID as 'ClientID',company_name as 'Company', address as 'Address', tele1 as 'Telephone #1', tele2 as 'Telephone #2', email as 'Email' from finance_clients where company_name like '%"+company+"%'";
-        try{
-            Statement stmnt = dbcon.createStatement();
-            ResultSet rs_Client_Details = stmnt.executeQuery(sql);
-            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs_Client_Details));
+        ResultSet rs;
+        Client c = new Client();
+        rs = c.searchByCompany(this.txt_Fin_SearchCompany.getText());
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        else{
+            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
         }
     }//GEN-LAST:event_txt_Fin_SearchCompanyKeyReleased
 
     private void btnfin_dlgEditClientUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgEditClientUpdateActionPerformed
-        if(ck_dlgEditClient_txt_CompanyName() & ck_dlgEditClient_txt_Address() & ck_dlgEditClient_txt_Tele1() & ck_dlgEditClient_txt_Tele2() & ck_dlgEditClient_txt_email()){
-            int userChoice = JOptionPane.showConfirmDialog(dlgFin_editClient,"Are You sure the details are correct?","Update Client Details",JOptionPane.YES_NO_OPTION);
+        Client c = new Client();
+        String company = this.txt_dlgFin_editClient_Company.getText();
+        String address = this.txt_dlgFin_editClient_Address.getText();
+        String tele1 = this.txt_dlgFin_editClient_tele1.getText();
+        String tele2 = this.txt_dlgFin_editClient_tele2.getText();
+        String email = this.txt_dlgFin_editClient_email.getText();
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        String clientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+        if(c.validateCompanyName(company) & c.validateCompanyAddress(address) & c.validateTelephone(tele1) & c.validateTelephone(tele2) & c.validateEmail(email)){
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_editClient,"Are You sure the details are correct?","Add Client Details",JOptionPane.YES_NO_OPTION);
             if(userChoice==0){
-                int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
-                String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-                String company = this.txt_dlgFin_editClient_Company.getText();
-                String address = this.txt_dlgFin_editClient_Address.getText();
-                String tele1 = this.txt_dlgFin_editClient_tele1.getText();
-                String tele2 = this.txt_dlgFin_editClient_tele2.getText();
-                String email = this.txt_dlgFin_editClient_email.getText();
-
-                try{
-                    String updateClientDetailsSQL = "update finance_clients set company_name=?,address=?,tele1=?,tele2=?,email=? where clientID=?";
-                    PreparedStatement pst = dbcon.prepareStatement(updateClientDetailsSQL);
-                    pst.setString(1, company);
-                    pst.setString(2, address);
-                    pst.setString(3, tele1);
-                    pst.setString(4, tele2);
-                    pst.setString(5, email);
-                    pst.setString(6, ClientID);
-                    pst.execute();
-                    JOptionPane.showMessageDialog(dlgFin_editClient, "Client updated successfully!","Client Details",JOptionPane.INFORMATION_MESSAGE);
-                    update_tbl_Fin_Client_Details();
+                    c.editClient(company,address,tele1,tele2,email,clientID,dlgFin_editClient);
+                    //-update client table--------------------------------------
+                    ResultSet rs;
+                    rs = c.updateClientTable();
+                    if(rs==null){
+                        JOptionPane.showMessageDialog(dlgFin_editClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    else{
+                        this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+                    }
+                    //----------------------------------------------------------
                     this.dlgFin_editClient.dispose();
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgFin_editClient, "Client adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-                }
-            }    
+            }
         }
         else{
             getToolkit().beep();
+            if(c.validateCompanyName(company)){
+            this.lbl_dlgFin_editClient_Company.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Company.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_editClient_Company.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_Company.setToolTipText("Invalid Company Name");
+            }
+            if(c.validateCompanyAddress(address)){
+                this.lbl_dlgFin_editClient_Address.setForeground(Color.black);
+                this.lbl_dlgFin_editClient_Address.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_editClient_Address.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_Address.setToolTipText("Invalid Company Address");
+            }
+            if(c.validateTelephone(tele1)){
+                this.lbl_dlgFin_editClient_tele1.setForeground(Color.black);
+                this.lbl_dlgFin_editClient_tele1.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_editClient_tele1.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_tele1.setToolTipText("Invalid Telephone Number");
+            }
+            if(c.validateTelephone(tele2)){
+                this.lbl_dlgFin_editClient_tele2.setForeground(Color.black);
+                this.lbl_dlgFin_editClient_tele2.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_editClient_tele2.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_tele2.setToolTipText("Invalid Telephone Number");
+            }
+            if(c.validateEmail(email)){
+                this.lbl_dlgFin_editClient_Email.setForeground(Color.black);
+                this.lbl_dlgFin_editClient_Email.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+                this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email Address");
+            }
         }
     }//GEN-LAST:event_btnfin_dlgEditClientUpdateActionPerformed
 
@@ -3266,18 +3685,15 @@ public class MainWindow extends javax.swing.JFrame {
         }
         else{
             String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-            String deleteSelectedClientSQL = "delete from finance_clients where clientID='"+ClientID+"'";
-            int userChoice = JOptionPane.showConfirmDialog(this,"Delete selected client?", "Delete Client Details", JOptionPane.YES_NO_OPTION);
-            if(userChoice==0){
-                try{
-                    Statement stmnt = dbcon.createStatement();
-                    stmnt.executeUpdate(deleteSelectedClientSQL);
-                    JOptionPane.showMessageDialog(this, "Client details deleted successfully", "Delete Client Details", JOptionPane.INFORMATION_MESSAGE);
-                    update_tbl_Fin_Client_Details();
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(this, "Deleting client details failed", "Delete Client Details", JOptionPane.ERROR_MESSAGE);
-                }
+            Client c = new Client();
+            c.deleteClient(ClientID, this);
+            ResultSet rs;
+            rs = c.updateClientTable();
+            if(rs==null){
+                JOptionPane.showMessageDialog(dlgFin_editClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
             }
         }
     }//GEN-LAST:event_btnFin_DeleteClientActionPerformed
@@ -3323,7 +3739,23 @@ public class MainWindow extends javax.swing.JFrame {
             pst.setString(3,this.txt_dlgFin_AddProduct_Product.getText());
             pst.execute();
             this.increaseNoProductsByOne();
-            this.update_tbl_Fin_Product_Details();
+            //-update product table----------------------------------------------
+            if(selectedRow==-1){
+                // clear table product details
+            }
+            else{
+                String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+                ResultSet rs;
+                Client c = new Client();
+                rs = c.updateProductTable(ClientID);
+                if(rs==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    this.tbl_Fin_Product_Details.setModel(DbUtils.resultSetToTableModel(rs));
+                }
+            }
+            //------------------------------------------------------------------
             JOptionPane.showMessageDialog(dlgFin_addProduct, "Product added Successfully!","Product Details",JOptionPane.INFORMATION_MESSAGE);
             this.txt_dlgFin_AddProduct_Product.setText("");
         }
@@ -3337,33 +3769,68 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_dlgFin_addProduct_CancelActionPerformed
 
     private void tbl_Fin_Client_DetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_Fin_Client_DetailsMouseClicked
-        this.update_tbl_Fin_Product_Details();
+        //-update product table----------------------------------------------
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        if(selectedRow==-1){
+        // clear table product details
+        }
+        else{
+            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+            ResultSet rs;
+            Client c = new Client();
+            rs = c.updateProductTable(ClientID);
+            if(rs==null){
+                JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                this.tbl_Fin_Product_Details.setModel(DbUtils.resultSetToTableModel(rs));
+            }
+        }
+        //------------------------------------------------------------------
     }//GEN-LAST:event_tbl_Fin_Client_DetailsMouseClicked
 
     private void txt_Fin_SearchProductKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchProductKeyReleased
-        String product=null;
-        product=this.txt_Fin_SearchProduct.getText();
-        String sql = "select distinct fc.clientID,fc.company_name,fc.address,fc.tele1,fc.tele2,fc.email from client_products cp,finance_clients fc where cp.clientID=fc.clientID and cp.product like '%"+product+"%'";
-        if(product.equals("")){
-            this.update_tbl_Fin_Client_Details();
+        ResultSet rs;
+        Client c = new Client();
+        rs = c.searchByProduct(this.txt_Fin_SearchProduct.getText());
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Product Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
         else{
-            try{
-                Statement stmnt = dbcon.createStatement();
-                ResultSet rs_Product_Details = stmnt.executeQuery(sql);
-                this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs_Product_Details));
-            }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(null, "Cannot Refresh Product Details!","Database Error",JOptionPane.ERROR_MESSAGE);
-            }
+            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
         }
     }//GEN-LAST:event_txt_Fin_SearchProductKeyReleased
 
     private void btn_Fin_RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_RefreshActionPerformed
         this.txt_Fin_SearchCompany.setText("");
         this.txt_Fin_SearchProduct.setText("");
-        this.update_tbl_Fin_Client_Details();
-        this.update_tbl_Fin_Product_Details();
+        //-update client table--------------------------------------
+        ResultSet rs;
+        Client c = new Client();
+        rs = c.updateClientTable();
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+        }
+        //----------------------------------------------------------
+        //-update product table----------------------------------------------
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        if(selectedRow==-1){
+        // clear table product details
+        }
+        else{
+            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+            rs = c.updateProductTable(ClientID);
+            if(rs==null){
+                JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                this.tbl_Fin_Product_Details.setModel(DbUtils.resultSetToTableModel(rs));
+            }
+        }
+        //------------------------------------------------------------------
     }//GEN-LAST:event_btn_Fin_RefreshActionPerformed
 
     private void txt_dlgFin_addClient_tele2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele2KeyTyped
@@ -3381,15 +3848,42 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_dlgFin_addClient_tele1KeyTyped
 
     private void txt_dlgFin_addClient_tele1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele1FocusLost
-        this.ck_dlgAddClient_txt_Tele1();
+        Client c = new Client();
+        String tele1 = this.txt_dlgFin_addClient_tele1.getText();
+        if(c.validateTelephone(tele1)){
+            this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_tele1.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_tele1.setToolTipText("Invalid Telephone Number");
+        }
     }//GEN-LAST:event_txt_dlgFin_addClient_tele1FocusLost
 
     private void txt_dlgFin_addClient_tele2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_tele2FocusLost
-        this.ck_dlgAddClient_txt_Tele2();
+        Client c = new Client();
+        String tele2 = this.txt_dlgFin_addClient_tele2.getText();
+        if(c.validateTelephone(tele2)){
+            this.lbl_dlgFin_addClient_tele2.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_tele2.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_addClient_tele2.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_tele2.setToolTipText("Invalid Telephone Number");
+        }
     }//GEN-LAST:event_txt_dlgFin_addClient_tele2FocusLost
 
     private void txt_dlgFin_addClient_emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_emailFocusLost
-        this.ck_dlgAddClient_txt_email();
+        Client c = new Client();
+        String email = this.txt_dlgFin_addClient_email.getText();
+        if(c.validateEmail(email)){
+            this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Email.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email Address");
+        }
     }//GEN-LAST:event_txt_dlgFin_addClient_emailFocusLost
 
     private void txt_dlgFin_addClient_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_emailKeyTyped
@@ -3401,35 +3895,107 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_dlgFin_addClient_emailKeyTyped
 
     private void txt_dlgFin_addClient_emailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_emailKeyReleased
-        this.ck_dlgAddClient_txt_email();
+        Client c = new Client();
+        String email = this.txt_dlgFin_addClient_email.getText();
+        if(c.validateEmail(email)){
+            this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Email.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email Address");
+        }
     }//GEN-LAST:event_txt_dlgFin_addClient_emailKeyReleased
 
     private void txt_dlgFin_addClient_CompanyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_CompanyFocusLost
-        this.ck_dlgAddClient_txt_CompanyName();
+        Client c = new Client();
+        String company = this.txt_dlgFin_addClient_Company.getText();
+        if(c.validateCompanyName(company)){
+            this.lbl_dlgFin_addClient_Company.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Company.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Company.setToolTipText("Invalid Company Name");
+        }
     }//GEN-LAST:event_txt_dlgFin_addClient_CompanyFocusLost
 
     private void txt_dlgFin_addClient_AddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_addClient_AddressFocusLost
-        this.ck_dlgAddClient_txt_Address();
+        Client c = new Client();
+        String address = this.txt_dlgFin_addClient_Address.getText();
+        if(c.validateCompanyAddress(address)){
+            this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
+            this.lbl_dlgFin_addClient_Address.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_addClient_Address.setForeground(Color.red);
+            this.lbl_dlgFin_addClient_Address.setToolTipText("Invalid Company Address");
+        }
     }//GEN-LAST:event_txt_dlgFin_addClient_AddressFocusLost
 
     private void txt_dlgFin_editClient_CompanyFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_CompanyFocusLost
-        this.ck_dlgEditClient_txt_CompanyName();
+        Client c = new Client();
+        String company = this.txt_dlgFin_editClient_Company.getText();
+        if(c.validateCompanyName(company)){
+            this.lbl_dlgFin_editClient_Company.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Company.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_editClient_Company.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_Company.setToolTipText("Invalid Company Name");
+        }
     }//GEN-LAST:event_txt_dlgFin_editClient_CompanyFocusLost
 
     private void txt_dlgFin_editClient_AddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_AddressFocusLost
-        this.ck_dlgEditClient_txt_Address();
+        Client c = new Client();
+        String address = this.txt_dlgFin_editClient_Address.getText();
+        if(c.validateCompanyAddress(address)){
+            this.lbl_dlgFin_editClient_Address.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Address.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_editClient_Address.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_Address.setToolTipText("Invalid Company Address");
+        }
     }//GEN-LAST:event_txt_dlgFin_editClient_AddressFocusLost
 
     private void txt_dlgFin_editClient_tele1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele1FocusLost
-        this.ck_dlgEditClient_txt_Tele1();
+        Client c = new Client();
+        String tele1 = this.txt_dlgFin_editClient_tele1.getText();
+        if(c.validateTelephone(tele1)){
+            this.lbl_dlgFin_editClient_tele1.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_tele1.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_editClient_tele1.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_tele1.setToolTipText("Invalid Telephone Number");
+        }
     }//GEN-LAST:event_txt_dlgFin_editClient_tele1FocusLost
 
     private void txt_dlgFin_editClient_tele2FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele2FocusLost
-        this.ck_dlgEditClient_txt_Tele2();
+        Client c = new Client();
+        String tele2 = this.txt_dlgFin_editClient_tele2.getText();
+        if(c.validateTelephone(tele2)){
+            this.lbl_dlgFin_editClient_tele2.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_tele2.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_editClient_tele2.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_tele2.setToolTipText("Invalid Telephone Number");
+        }
     }//GEN-LAST:event_txt_dlgFin_editClient_tele2FocusLost
 
     private void txt_dlgFin_editClient_emailKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_emailKeyReleased
-        this.ck_dlgEditClient_txt_email();
+        Client c = new Client();
+        String email = this.txt_dlgFin_editClient_email.getText();
+        if(c.validateEmail(email)){
+            this.lbl_dlgFin_editClient_Email.setForeground(Color.black);
+            this.lbl_dlgFin_editClient_Email.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
+            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email Address");
+        }
     }//GEN-LAST:event_txt_dlgFin_editClient_emailKeyReleased
 
     private void txt_dlgFin_editClient_tele1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_editClient_tele1KeyTyped
@@ -3690,6 +4256,41 @@ public class MainWindow extends javax.swing.JFrame {
         this.dlgFin_addSalaryPayment.setLocationRelativeTo(this);
         this.dlgFin_addSalaryPayment.setVisible(true); 
     }//GEN-LAST:event_btn_Fin_AddSalaryPaymentActionPerformed
+
+    private void btnHospitalRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalRegisterActionPerformed
+        this.pnlHosClinic.setVisible(false);
+        this.pnlHosPayments.setVisible(false);
+        this.pnlHosRegister.setVisible(true);
+    }//GEN-LAST:event_btnHospitalRegisterActionPerformed
+
+    private void btnHospitalClinicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalClinicActionPerformed
+        this.pnlHosRegister.setVisible(false);
+        this.pnlHosPayments.setVisible(false);
+        this.pnlHosClinic.setVisible(true); 
+    }//GEN-LAST:event_btnHospitalClinicActionPerformed
+
+    private void btnHospitalPaymentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalPaymentsActionPerformed
+        this.pnlHosClinic.setVisible(false);
+        this.pnlHosRegister.setVisible(false);
+        this.pnlHosPayments.setVisible(true);
+    }//GEN-LAST:event_btnHospitalPaymentsActionPerformed
+
+    private void txt_Fin_SearchCompany1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchCompany1KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_Fin_SearchCompany1KeyReleased
+
+    private void txt_Fin_SearchProduct1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchProduct1KeyReleased
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_Fin_SearchProduct1KeyReleased
+
+    private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
+        
+    }//GEN-LAST:event_jMenuItem1MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        UserAccWindow uaw = new UserAccWindow();
+        uaw.setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -3797,78 +4398,7 @@ public class MainWindow extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    
-    public String generateClientID(){
-        String prefix="CL";
-        int noClients=0;
-        String clientID=null;
-        try{
-            Statement stmnt = dbcon.createStatement();
-            ResultSet rs = stmnt.executeQuery("select fclients from count");
-            while(rs.next()){
-                noClients = rs.getInt("fclients");
-            }
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot retrive data from the database!","Database Error",JOptionPane.ERROR_MESSAGE);
-        }
-        
-        if(noClients<9){
-            clientID=prefix.concat("000").concat(Integer.toString(noClients+1));
-            return clientID;
-        }
-        else if(noClients<99){
-            clientID=prefix.concat("00").concat(Integer.toString(noClients+1));
-            return clientID;
-        }
-        else if(noClients<999){
-            clientID=prefix.concat("0").concat(Integer.toString(noClients+1));
-            return clientID;
-        }
-        else if(noClients<9999){
-            clientID=prefix.concat(Integer.toString(noClients+1));
-            return clientID;
-        }
-        else{
-            JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot Generate ClientID. Maximum no.of Clients Reached","Database Error",JOptionPane.ERROR_MESSAGE);
-            return clientID;
-        }
-    }
-    
-    public void increaseNoClientsByOne(){
-        try{
-            int noClients=0;
-            Statement stmnt = dbcon.createStatement();
-            ResultSet rs = stmnt.executeQuery("select fclients from count");
-            while(rs.next()){
-                noClients = rs.getInt("fclients");
-            }
-            try{
-                String SQL = "update count set fclients="+(noClients+1)+" where fclients="+noClients;
-                Statement stmnt2 = dbcon.createStatement();
-                stmnt2.executeUpdate(SQL);
-            }
-            catch(Exception ex){
-                ex.printStackTrace();
-            }
-        }
-        catch(Exception e){
-            e.printStackTrace();
-        }
-    }
-    
-    public void update_tbl_Fin_Client_Details(){
-        String sql = "select clientID as 'ClientID',company_name as 'Company', address as 'Address', tele1 as 'Telephone #1', tele2 as 'Telephone #2', email as 'Email' from finance_clients";
-        try{
-            Statement stmnt = dbcon.createStatement();
-            ResultSet rs_Client_Details = stmnt.executeQuery(sql);
-            this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs_Client_Details));
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    
+     
     public void load_dlg_Fin_EditClientDetails(){
         
         //----load selected client from table
@@ -4039,29 +4569,10 @@ public class MainWindow extends javax.swing.JFrame {
         catch(Exception e){
             JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
-    }
-    
-    public void update_tbl_Fin_Product_Details(){
-        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
-        if(selectedRow==-1){
-            // clear table product details
-        }
-        else{
-            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-            String sql = "select product as 'Product' from client_products where clientID='"+ClientID+"'";
-            try{
-                Statement stmnt = dbcon.createStatement();
-                ResultSet rs_Product_Details = stmnt.executeQuery(sql);
-                this.tbl_Fin_Product_Details.setModel(DbUtils.resultSetToTableModel(rs_Product_Details));
-            }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(this, "Cannot Refresh Product Details!","Database Error",JOptionPane.ERROR_MESSAGE);
-            }
-        }
-    }
+    } 
     
     public void update_tbl_Fin_ExpenseDetails(){
-            String sql = "select expenseID as '#', date as 'Date', description as 'Discription', amount as 'Amount (Rs.)' from finance_expense";
+            String sql = "select expenseID as '#', date as 'Date', description as 'Description', amount as 'Amount (Rs.)' from finance_expense";
             try{
                 Statement stmnt = dbcon.createStatement();
                 ResultSet rs_Expense_Details = stmnt.executeQuery(sql);
@@ -4070,337 +4581,8 @@ public class MainWindow extends javax.swing.JFrame {
             catch(Exception e){
                 JOptionPane.showMessageDialog(this, "Cannot Refresh Expense Details!","Database Error",JOptionPane.ERROR_MESSAGE);
             }
-    }
-    
-    public boolean ck_dlgAddClient_txt_CompanyName(){
-        if(this.txt_dlgFin_addClient_Company.getText().equals("")){
-            this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
-            this.lbl_dlgFin_addClient_Company.setToolTipText("Invalid Company Name");
-            return false;
-        }
-        else if(this.txt_dlgFin_addClient_Company.getText().length()==1){
-            this.lbl_dlgFin_addClient_Company.setForeground(Color.red);
-            this.lbl_dlgFin_addClient_Company.setToolTipText("Invalid Company Name");
-            return false;
-        }
-        else{
-            this.lbl_dlgFin_addClient_Company.setForeground(Color.black);
-            this.lbl_dlgFin_addClient_Company.setToolTipText(null);
-            return true;
-        }
-    }
+    } 
 
-    public boolean ck_dlgAddClient_txt_Address(){
-        if(this.txt_dlgFin_addClient_Address.getText()==""){
-            this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
-            this.lbl_dlgFin_addClient_Address.setToolTipText(null);
-            return true;
-        }
-        else if(this.txt_dlgFin_addClient_Address.getText().length()==1){
-            this.lbl_dlgFin_addClient_Address.setForeground(Color.red);
-            this.lbl_dlgFin_addClient_Address.setToolTipText("Invalid Address");
-            return false;
-        }
-        else{
-            this.lbl_dlgFin_addClient_Address.setForeground(Color.black);
-            this.lbl_dlgFin_addClient_Address.setToolTipText(null);
-            return true;
-        }
-    }
-    
-    public boolean ck_dlgAddClient_txt_Tele1(){
-        String tele = this.txt_dlgFin_addClient_tele1.getText();
-        if(tele.equals("")){
-            this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
-            this.lbl_dlgFin_addClient_tele1.setToolTipText(null);
-            return true;
-        }
-        else if(tele.length()==10){
-            if(tele.charAt(0)=='0'){
-                this.lbl_dlgFin_addClient_tele1.setForeground(Color.black);
-                this.lbl_dlgFin_addClient_tele1.setToolTipText(null);
-                return true;
-            }
-            else{
-                this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
-                this.lbl_dlgFin_addClient_tele1.setToolTipText("Invalid Telephone number");
-                return false;
-            }
-        }
-        else{
-            this.lbl_dlgFin_addClient_tele1.setForeground(Color.red);
-            this.lbl_dlgFin_addClient_tele1.setToolTipText("Invalid Telephone number");
-            return false;
-        }
-    }
-    
-    public boolean ck_dlgAddClient_txt_Tele2(){
-        String tele = this.txt_dlgFin_addClient_tele2.getText();
-        if(tele.equals("")){
-            this.lbl_dlgFin_addClient_tele2.setForeground(Color.black);
-            this.lbl_dlgFin_addClient_tele2.setToolTipText(null);
-            return true;
-        }
-        else if(tele.length()==10){
-            if(tele.charAt(0)=='0'){
-                this.lbl_dlgFin_addClient_tele2.setForeground(Color.black);
-                this.lbl_dlgFin_addClient_tele2.setToolTipText(null);
-                return true;
-            }
-            else{
-                this.lbl_dlgFin_addClient_tele2.setForeground(Color.red);
-                this.lbl_dlgFin_addClient_tele2.setToolTipText("Invalid Telephone number");
-                return false;
-            }
-        }
-        else{
-            this.lbl_dlgFin_addClient_tele2.setForeground(Color.red);
-            this.lbl_dlgFin_addClient_tele2.setToolTipText("Invalid Telephone number");
-            return false;
-        }
-    }
-    
-    public boolean ck_dlgAddClient_txt_email(){
-        String email=this.txt_dlgFin_addClient_email.getText();
-        if(email.equals("")){
-            this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
-            this.lbl_dlgFin_addClient_Email.setToolTipText(null);
-            return true;
-        }
-        else{
-            //---------------------------------------
-            int atIndex=email.indexOf('@');
-            int dotIndex=email.indexOf('.');
-            int lastdotIndex=0;
-            //----------------------------------------
-            if(atIndex==-1){
-                this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                return false;
-            }
-            else{
-                int atCount = 0;
-                for(int x=0; x<email.length(); x++){
-                    if(email.charAt(x)=='@'){
-                        atCount++;
-                    }
-                }
-                if(atCount>1){
-                    this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                    this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                    return false;
-                }
-                else{
-                    if(dotIndex==-1){
-                    this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                    this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                    return false;
-                    }
-                    else{
-                        for(int x=0; x<email.length();x++){
-                            if(email.charAt(x)=='.'){
-                                lastdotIndex=x;
-                            }
-                        }
-                        if(lastdotIndex<atIndex){
-                            //check "@" is before the last "."
-                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else if(email.charAt(email.length()-1)=='.'){
-                            //check last character is not a "."
-                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else if(email.charAt(0)=='.' || email.charAt(0)=='@'){
-                            //check starting characters are not "@" or "."
-                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else if(email.charAt(atIndex-1)=='.' || email.charAt(atIndex+1)=='.'){
-                            //check characters before and after "@" is not a "."
-                            this.lbl_dlgFin_addClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_addClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else{
-                            this.lbl_dlgFin_addClient_Email.setForeground(Color.black);
-                            this.lbl_dlgFin_addClient_Email.setToolTipText(null);
-                            return true;
-                        }
-                    }
-                }
-            } 
-        }
-    }
-    
-    public boolean ck_dlgEditClient_txt_CompanyName(){
-        if(this.txt_dlgFin_editClient_Company.getText().equals("")){
-            this.lbl_dlgFin_editClient_Company.setForeground(Color.red);
-            this.lbl_dlgFin_editClient_Company.setToolTipText("Invalid Company Name");
-            return false;
-        }
-        else if(this.txt_dlgFin_editClient_Company.getText().length()==1){
-            this.lbl_dlgFin_editClient_Company.setForeground(Color.red);
-            this.lbl_dlgFin_editClient_Company.setToolTipText("Invalid Company Name");
-            return false;
-        }
-        else{
-            this.lbl_dlgFin_editClient_Company.setForeground(Color.black);
-            this.lbl_dlgFin_editClient_Company.setToolTipText(null);
-            return true;
-        }
-    }
-    
-    public boolean ck_dlgEditClient_txt_Address(){
-        if(this.txt_dlgFin_editClient_Address.getText()==""){
-            this.lbl_dlgFin_editClient_Address.setForeground(Color.black);
-            this.lbl_dlgFin_editClient_Address.setToolTipText(null);
-            return true;
-        }
-        else if(this.txt_dlgFin_editClient_Address.getText().length()==1){
-            this.lbl_dlgFin_editClient_Address.setForeground(Color.red);
-            this.lbl_dlgFin_editClient_Address.setToolTipText("Invalid Address");
-            return false;
-        }
-        else{
-            this.lbl_dlgFin_editClient_Address.setForeground(Color.black);
-            this.lbl_dlgFin_editClient_Address.setToolTipText(null);
-            return true;
-        }
-    }
-    
-    public boolean ck_dlgEditClient_txt_Tele1(){
-        String tele = this.txt_dlgFin_editClient_tele1.getText();
-        if(tele.equals("")){
-            this.lbl_dlgFin_editClient_tele1.setForeground(Color.black);
-            this.lbl_dlgFin_editClient_tele1.setToolTipText(null);
-            return true;
-        }
-        else if(tele.length()==10){
-            if(tele.charAt(0)=='0'){
-                this.lbl_dlgFin_editClient_tele1.setForeground(Color.black);
-                this.lbl_dlgFin_editClient_tele1.setToolTipText(null);
-                return true;
-            }
-            else{
-                this.lbl_dlgFin_editClient_tele1.setForeground(Color.red);
-                this.lbl_dlgFin_editClient_tele1.setToolTipText("Invalid Telephone number");
-                return false;
-            }
-        }
-        else{
-            this.lbl_dlgFin_editClient_tele1.setForeground(Color.red);
-            this.lbl_dlgFin_editClient_tele1.setToolTipText("Invalid Telephone number");
-            return false;
-        }
-    }
-    
-    public boolean ck_dlgEditClient_txt_Tele2(){
-        String tele = this.txt_dlgFin_editClient_tele2.getText();
-        if(tele.equals("")){
-            this.lbl_dlgFin_editClient_tele2.setForeground(Color.black);
-            this.lbl_dlgFin_editClient_tele2.setToolTipText(null);
-            return true;
-        }
-        else if(tele.length()==10){
-            if(tele.charAt(0)=='0'){
-                this.lbl_dlgFin_editClient_tele2.setForeground(Color.black);
-                this.lbl_dlgFin_editClient_tele2.setToolTipText(null);
-                return true;
-            }
-            else{
-                this.lbl_dlgFin_editClient_tele2.setForeground(Color.red);
-                this.lbl_dlgFin_editClient_tele2.setToolTipText("Invalid Telephone number");
-                return false;
-            }
-        }
-        else{
-            this.lbl_dlgFin_editClient_tele2.setForeground(Color.red);
-            this.lbl_dlgFin_editClient_tele2.setToolTipText("Invalid Telephone number");
-            return false;
-        }
-    }
-    
-    public boolean ck_dlgEditClient_txt_email(){
-        String email=this.txt_dlgFin_editClient_email.getText();
-        if(email.equals("")){
-            this.lbl_dlgFin_editClient_Email.setForeground(Color.black);
-            this.lbl_dlgFin_editClient_Email.setToolTipText(null);
-            return true;
-        }
-        else{
-            //---------------------------------------
-            int atIndex=email.indexOf('@');
-            int dotIndex=email.indexOf('.');
-            int lastdotIndex=0;
-            //----------------------------------------
-            if(atIndex==-1){
-                this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                return false;
-            }
-            else{
-                int atCount = 0;
-                for(int x=0; x<email.length(); x++){
-                    if(email.charAt(x)=='@'){
-                        atCount++;
-                    }
-                }
-                if(atCount>1){
-                    this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                    this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                    return false;
-                }
-                else{
-                    if(dotIndex==-1){
-                    this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                    this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                    return false;
-                    }
-                    else{
-                        for(int x=0; x<email.length();x++){
-                            if(email.charAt(x)=='.'){
-                                lastdotIndex=x;
-                            }
-                        }
-                        if(lastdotIndex<atIndex){
-                            //check "@" is before the last "."
-                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else if(email.charAt(email.length()-1)=='.'){
-                            //check last character is not a "."
-                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else if(email.charAt(0)=='.' || email.charAt(0)=='@'){
-                            //check starting characters are not "@" or "."
-                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else if(email.charAt(atIndex-1)=='.' || email.charAt(atIndex+1)=='.'){
-                            //check characters before and after "@" is not a "."
-                            this.lbl_dlgFin_editClient_Email.setForeground(Color.red);
-                            this.lbl_dlgFin_editClient_Email.setToolTipText("Invalid Email!");
-                            return false;
-                        }
-                        else{
-                            this.lbl_dlgFin_editClient_Email.setForeground(Color.black);
-                            this.lbl_dlgFin_editClient_Email.setToolTipText(null);
-                            return true;
-                        }
-                    }
-                }
-            } 
-        }
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
@@ -4502,6 +4684,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnFinanceReports;
     private javax.swing.JButton btnHealthcare;
     private javax.swing.JButton btnHospital;
+    private javax.swing.JButton btnHospitalClinic;
+    private javax.swing.JButton btnHospitalPayments;
+    private javax.swing.JButton btnHospitalRegister;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMobileService;
     private javax.swing.JButton btnPetshop;
@@ -4559,25 +4744,40 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgFin_addwaterbill;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
+    private javax.swing.JButton jButton15;
+    private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -4588,21 +4788,26 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lbl_IncomeTotal;
     private javax.swing.JLabel lbl_IncomeTotalLabel;
     private javax.swing.JLabel lbl_SearchClientCompany;
+    private javax.swing.JLabel lbl_SearchClientCompany1;
     private javax.swing.JLabel lbl_SearchClientProduct;
+    private javax.swing.JLabel lbl_SearchClientProduct1;
     private javax.swing.JLabel lbl_dlgFin_AddProduct_Product;
     private javax.swing.JLabel lbl_dlgFin_addClient_Address;
     private javax.swing.JLabel lbl_dlgFin_addClient_Company;
@@ -4616,6 +4821,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgFin_editClient_tele2;
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
+    private javax.swing.JPanel pnlClientSearchBar1;
     private javax.swing.JPanel pnlDaycare;
     private javax.swing.JPanel pnlEmployee;
     private javax.swing.JPanel pnlExpenseReport;
@@ -4636,7 +4842,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFinanceReports;
     private javax.swing.JPanel pnlHealthcare;
     private javax.swing.JPanel pnlHome;
+    private javax.swing.JPanel pnlHosButton;
+    private javax.swing.JLayeredPane pnlHosClinic;
+    private javax.swing.JLayeredPane pnlHosPayments;
+    private javax.swing.JLayeredPane pnlHosRegister;
     private javax.swing.JPanel pnlHospital;
+    private javax.swing.JPanel pnlHospitalMainContainer;
     private javax.swing.JPanel pnlIncomeReport;
     private javax.swing.JPanel pnlIncomeSearch;
     private javax.swing.JPanel pnlIncomeTab;
@@ -4658,7 +4869,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txtItemcode;
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txt_Fin_SearchCompany;
+    private javax.swing.JTextField txt_Fin_SearchCompany1;
     private javax.swing.JTextField txt_Fin_SearchProduct;
+    private javax.swing.JTextField txt_Fin_SearchProduct1;
     private javax.swing.JTextField txt_dlgFin_AddProduct_Product;
     private javax.swing.JTextArea txt_dlgFin_addClient_Address;
     private javax.swing.JTextField txt_dlgFin_addClient_Company;
