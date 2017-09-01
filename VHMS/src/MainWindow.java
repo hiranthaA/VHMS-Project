@@ -2901,7 +2901,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         btn_Fin_AddWaterBill.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         btn_Fin_AddWaterBill.setText("Water Bill");
-        btn_Fin_AddWaterBill.setToolTipText("");
         btn_Fin_AddWaterBill.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_Fin_AddWaterBillActionPerformed(evt);
@@ -3514,7 +3513,39 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnFin_EditClientActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFin_EditClientActionPerformed
-        load_dlg_Fin_EditClientDetails();
+        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
+        if(selectedRow==-1){
+                JOptionPane.showMessageDialog(this, "Select a client to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+                String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+                String Company,Address,tele1,tele2,Email;
+                Client c = new Client();
+                try{
+                    ResultSet rs = c.getClientDetails(ClientID);
+                    while(rs.next()){
+                        Company = rs.getString("company_name");
+                        Address = rs.getString("address");
+                        tele1 = rs.getString("tele1");
+                        tele2 = rs.getString("tele2");
+                        Email = rs.getString("email");
+                        
+                        this.txt_dlgFin_editClient_Company.setText(Company);
+                        this.txt_dlgFin_editClient_Address.setText(Address);
+                        this.txt_dlgFin_editClient_tele1.setText(tele1);
+                        this.txt_dlgFin_editClient_tele2.setText(tele2);
+                        this.txt_dlgFin_editClient_email.setText(Email);
+                    } 
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                    JOptionPane.showMessageDialog(this, "Cannot Set Client Details!","Error",JOptionPane.ERROR_MESSAGE);
+                }
+                this.dlgFin_editClient.setSize(650,420);
+                this.dlgFin_editClient.setTitle("Edit Client Details");   
+                this.dlgFin_editClient.setLocationRelativeTo(this);
+                this.dlgFin_editClient.setVisible(true); 
+        }
     }//GEN-LAST:event_btnFin_EditClientActionPerformed
 
     private void btnfin_dlgAddClientCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnfin_dlgAddClientCancelActionPerformed
@@ -3534,8 +3565,7 @@ public class MainWindow extends javax.swing.JFrame {
             if(userChoice==0){
                     c.addNewClient(company,address,tele1,tele2,email,dlgFin_addClient);
                     //-update client table--------------------------------------
-                    ResultSet rs;
-                    rs = c.updateClientTable();
+                    ResultSet rs = c.updateClientTable();
                     if(rs==null){
                         JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
                     }
@@ -3615,7 +3645,7 @@ public class MainWindow extends javax.swing.JFrame {
         if(c.validateCompanyName(company) & c.validateCompanyAddress(address) & c.validateTelephone(tele1) & c.validateTelephone(tele2) & c.validateEmail(email)){
             int userChoice = JOptionPane.showConfirmDialog(dlgFin_editClient,"Are You sure the details are correct?","Add Client Details",JOptionPane.YES_NO_OPTION);
             if(userChoice==0){
-                    c.editClient(company,address,tele1,tele2,email,clientID,dlgFin_editClient);
+                    c.updateClient(company,address,tele1,tele2,email,clientID,dlgFin_editClient);
                     //-update client table--------------------------------------
                     ResultSet rs;
                     rs = c.updateClientTable();
@@ -4089,27 +4119,23 @@ public class MainWindow extends javax.swing.JFrame {
                 String teleNo = this.txt_dlgFin_addtelebill_teleNo.getText();
                 String desc = "Telephone Bill ["+teleNo+"]";
                 String billAmount = this.txt_dlgFin_addtelebill_billAmount.getText();
-                try{
-                    String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
-                    PreparedStatement pst = dbcon.prepareStatement(SQL);
-                    pst.setString(1, generateExpenseID());
-                    pst.setString(2, date);
-                    pst.setString(3, desc);
-                    pst.setString(4, billAmount);
-                    pst.execute();
-                    increaseNoExpenseByOne();
-                    JOptionPane.showMessageDialog(dlgFin_addtelebill, "Telephone bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
-                    update_tbl_Fin_ExpenseDetails();
-                    this.dlgFin_addtelebill.dispose();
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgFin_addtelebill, "Water Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-                }
+                Expense ex = new Expense();
+                //-add a telephone bill-----------------------------------------
+                ex.addTelephoneBill(date, desc, billAmount, dlgFin_addtelebill);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(dlgFin_addtelebill);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                this.dlgFin_addtelebill.dispose();
+                //--------------------------------------------------------------
             }
     }//GEN-LAST:event_btn_dlgFin_addtelebill_AddActionPerformed
 
     private void IncExpTabbedPaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IncExpTabbedPaneMouseClicked
-        this.update_tbl_Fin_ExpenseDetails();
+        //-update expense table-------------------------------------
+        Expense ex = new Expense();
+        ResultSet rs = ex.updateExpenseTable(this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //----------------------------------------------------------
     }//GEN-LAST:event_IncExpTabbedPaneMouseClicked
 
     private void btn_dlgFin_addtelebill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addtelebill_CancelActionPerformed
@@ -4130,22 +4156,14 @@ public class MainWindow extends javax.swing.JFrame {
                 String date = df.format(this.dc_dlgFin_addwaterbill_billdate.getDate());
                 String desc = "Water Bill";
                 String billAmount = this.txt_dlgFin_addwaterbill_billAmount.getText();
-                try{
-                    String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
-                    PreparedStatement pst = dbcon.prepareStatement(SQL);
-                    pst.setString(1, generateExpenseID());
-                    pst.setString(2, date);
-                    pst.setString(3, desc);
-                    pst.setString(4, billAmount);
-                    pst.execute();
-                    increaseNoExpenseByOne();
-                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Water bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
-                    update_tbl_Fin_ExpenseDetails();
-                    this.dlgFin_addwaterbill.dispose();
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgFin_addwaterbill, "Water Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-                }
+                Expense ex = new Expense();
+                //-add a water bill-----------------------------------------
+                ex.addWaterBill(date, desc, billAmount, dlgFin_addwaterbill);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(dlgFin_addwaterbill);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                this.dlgFin_addwaterbill.dispose();
+                //--------------------------------------------------------------
             }
     }//GEN-LAST:event_btn_dlgFin_addwaterbill_AddActionPerformed
 
@@ -4173,22 +4191,14 @@ public class MainWindow extends javax.swing.JFrame {
                 String date = df.format(this.dc_dlgFin_addelecbill_billdate.getDate());
                 String desc = "Electricity Bill";
                 String billAmount = this.txt_dlgFin_addelecbill_billAmount.getText();
-                try{
-                    String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
-                    PreparedStatement pst = dbcon.prepareStatement(SQL);
-                    pst.setString(1, generateExpenseID());
-                    pst.setString(2, date);
-                    pst.setString(3, desc);
-                    pst.setString(4, billAmount);
-                    pst.execute();
-                    increaseNoExpenseByOne();
-                    JOptionPane.showMessageDialog(dlgFin_addelecbill, "Electricity bill added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
-                    update_tbl_Fin_ExpenseDetails();
-                    this.dlgFin_addelecbill.dispose();
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgFin_addelecbill, "Electricity Bill adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-                }
+                Expense ex = new Expense();
+                //-add a water bill-----------------------------------------
+                ex.addElectricityBill(date, desc, billAmount, dlgFin_addelecbill);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(dlgFin_addelecbill);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                this.dlgFin_addelecbill.dispose();
+                //--------------------------------------------------------------
             }
     }//GEN-LAST:event_btn_dlgFin_addelecbill_AddActionPerformed
 
@@ -4220,22 +4230,14 @@ public class MainWindow extends javax.swing.JFrame {
             String date = df.format(this.dc_dlgFin_addSalPay_paymentDate.getDate());
             String desc = "Salary Payment | Reference No. "+this.txt_dlgFin_addSalPay_RefNo.getText();
             String TAmount = this.txt_dlgFin_addSalPay_TAmount.getText();
-            try{
-                String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
-                PreparedStatement pst = dbcon.prepareStatement(SQL);
-                pst.setString(1, generateExpenseID());
-                pst.setString(2, date);
-                pst.setString(3, desc);
-                pst.setString(4, TAmount);
-                pst.execute();
-                increaseNoExpenseByOne();
-                JOptionPane.showMessageDialog(dlgFin_addSalaryPayment, "Salary Payment added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
-                update_tbl_Fin_ExpenseDetails();
-                this.dlgFin_addSalaryPayment.dispose();
-            }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(dlgFin_addSalaryPayment, "Salary Payment adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-            }
+            Expense ex = new Expense();
+            //-add a Salary Payment---------------------------------------------
+            ex.addSalaryPayment(date, desc, TAmount, dlgFin_addSalaryPayment);
+            //-update expense table-----------------------------------------
+            ResultSet rs = ex.updateExpenseTable(dlgFin_addSalaryPayment);
+            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+            this.dlgFin_addSalaryPayment.dispose();
+            //--------------------------------------------------------------
         }
     }//GEN-LAST:event_btn_dlgFin_addSalPay_AddActionPerformed
 
@@ -4398,36 +4400,6 @@ public class MainWindow extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-     
-    public void load_dlg_Fin_EditClientDetails(){
-        
-        //----load selected client from table
-        int selectedRow = this.tbl_Fin_Client_Details.getSelectedRow();
-        if(selectedRow==-1){
-            JOptionPane.showMessageDialog(this, "Select a client to edit details!","Error",JOptionPane.ERROR_MESSAGE);
-        }
-        else{
-            //----get client details---------------------------
-            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-            String Company = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 1).toString();
-            String Address = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 2).toString();
-            String tele1 = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 3).toString();
-            String tele2 = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 4).toString();
-            String Email = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 5).toString();
-            //----load textfields-------------------------------
-            this.txt_dlgFin_editClient_Company.setText(Company);
-            this.txt_dlgFin_editClient_Address.setText(Address);
-            this.txt_dlgFin_editClient_tele1.setText(tele1);
-            this.txt_dlgFin_editClient_tele2.setText(tele2);
-            this.txt_dlgFin_editClient_email.setText(Email);
-            //----set visible-----------------------------------
-            this.dlgFin_editClient.setSize(650,420);
-            this.dlgFin_editClient.setTitle("Edit Client Details");   
-            this.dlgFin_editClient.setLocationRelativeTo(this);
-            this.dlgFin_editClient.setVisible(true); 
-            //---------------------------------------------------
-        }
-    }
     
     public String generateProductID(){
         String prefix="CLPD";
@@ -4499,89 +4471,6 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
-    
-    public String generateExpenseID(){
-        String prefix="EXP";
-        int noExpense=0;
-        String expenseID=null;
-        try{
-            Statement stmnt = dbcon.createStatement();
-            ResultSet rs = stmnt.executeQuery("select fexpense from count");
-            while(rs.next()){
-                noExpense = rs.getInt("fexpense");
-            }
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(dlgFin_addProduct, "Cannot retrive data from the database!","Database Error",JOptionPane.ERROR_MESSAGE);
-        }
-        
-        if(noExpense<9){
-            expenseID=prefix.concat("000000").concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else if(noExpense<99){
-            expenseID=prefix.concat("00000").concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else if(noExpense<999){
-            expenseID=prefix.concat("0000").concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else if(noExpense<9999){
-            expenseID=prefix.concat("000").concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else if(noExpense<99999){
-            expenseID=prefix.concat("00").concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else if(noExpense<999999){
-            expenseID=prefix.concat("0").concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else if(noExpense<9999999){
-            expenseID=prefix.concat(Integer.toString(noExpense+1));
-            return expenseID;
-        }
-        else{
-            JOptionPane.showMessageDialog(dlgFin_addProduct, "Cannot Generate ProductID. Maximum no.of Products Reached","Database Error",JOptionPane.ERROR_MESSAGE);
-            return expenseID;
-        }
-    }
-    
-    public void increaseNoExpenseByOne(){
-        try{
-            int noExpense=0;
-            Statement stmnt = dbcon.createStatement();
-            ResultSet rs = stmnt.executeQuery("select fexpense from count");
-            while(rs.next()){
-                noExpense = rs.getInt("fexpense");
-            }
-            try{
-                String SQL = "update count set fexpense="+(noExpense+1)+" where fexpense="+noExpense;
-                Statement stmnt2 = dbcon.createStatement();
-                stmnt2.executeUpdate(SQL);
-            }
-            catch(Exception ex){
-                JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
-            }
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
-        }
-    } 
-    
-    public void update_tbl_Fin_ExpenseDetails(){
-            String sql = "select expenseID as '#', date as 'Date', description as 'Description', amount as 'Amount (Rs.)' from finance_expense";
-            try{
-                Statement stmnt = dbcon.createStatement();
-                ResultSet rs_Expense_Details = stmnt.executeQuery(sql);
-                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs_Expense_Details));
-            }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(this, "Cannot Refresh Expense Details!","Database Error",JOptionPane.ERROR_MESSAGE);
-            }
-    } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
