@@ -30,7 +30,7 @@ public class Expense {
         try{
             String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
             PreparedStatement pst = dbcon.prepareStatement(SQL);
-            pst.setString(1, generateExpenseID(comp));
+            pst.setString(1, generateExpenseID("EXP/TP/",comp));
             pst.setString(2, date);
             pst.setString(3, desc);
             pst.setString(4, billAmount);
@@ -47,7 +47,7 @@ public class Expense {
         try{
             String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
             PreparedStatement pst = dbcon.prepareStatement(SQL);
-            pst.setString(1, generateExpenseID(comp));
+            pst.setString(1, generateExpenseID("EXP/WB/",comp));
             pst.setString(2, date);
             pst.setString(3, desc);
             pst.setString(4, billAmount);
@@ -64,7 +64,7 @@ public class Expense {
         try{
             String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
             PreparedStatement pst = dbcon.prepareStatement(SQL);
-            pst.setString(1, generateExpenseID(comp));
+            pst.setString(1, generateExpenseID("EXP/EB/",comp));
             pst.setString(2, date);
             pst.setString(3, desc);
             pst.setString(4, billAmount);
@@ -81,7 +81,7 @@ public class Expense {
         try{
             String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
             PreparedStatement pst = dbcon.prepareStatement(SQL);
-            pst.setString(1, generateExpenseID(comp));
+            pst.setString(1, generateExpenseID("EXP/SP/",comp));
             pst.setString(2, date);
             pst.setString(3, desc);
             pst.setString(4, TAmount);
@@ -94,11 +94,186 @@ public class Expense {
         }
     }
     
-    public ResultSet updateExpenseTable(Component comp){
-            String sql = "select expenseID as '#', date as 'Date', description as 'Description', amount as 'Amount (Rs.)' from finance_expense";
+    public double calcNetExp(String from,String to,boolean CI, boolean SP, boolean EB, boolean WB, boolean TP, boolean OB, Component comp){
+        String sql = "select sum(amount) from finance_expense where date between ? and ? and (expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ?)";
+        String CInvoice,ElecBill,SalPay,WaterBill,TPBill,OtherBill;
+        double net_expense=0;
+        //----------------------------------------
+        if(CI){
+            CInvoice="EXP/CI/%";
+        }
+        else{
+            CInvoice=null;
+        }
+        if(SP){
+            SalPay="EXP/SP/%";
+        }
+        else{
+            SalPay=null;
+        }
+        if(EB){
+            ElecBill="EXP/EB/%";
+        }
+        else{
+            ElecBill=null;
+        }
+        if(WB){
+            WaterBill="EXP/WB/%";
+        }
+        else{
+            WaterBill=null;
+        }
+        if(TP){
+            TPBill="EXP/TP/%";
+        }
+        else{
+            TPBill=null;
+        }
+        if(OB){
+            OtherBill="EXP/OB/%";
+        }
+        else{
+            OtherBill=null;
+        }
+        //----------------------------------------
+        try{
+            PreparedStatement pst = dbcon.prepareStatement(sql);
+            pst.setString(1, from);
+            pst.setString(2, to);
+            pst.setString(3, CInvoice);
+            pst.setString(4, SalPay);
+            pst.setString(5, WaterBill);
+            pst.setString(6, ElecBill);
+            pst.setString(7, TPBill);
+            pst.setString(8, OtherBill);
+            ResultSet rs_Net_Expense = pst.executeQuery();
+            while(rs_Net_Expense.next()){
+                net_expense=rs_Net_Expense.getDouble("sum(amount)");
+            }
+            return net_expense;
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Cannot Refresh Expense Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            return 0;
+        }
+    }
+    
+    public int countNoExp(String from, String to,boolean CI, boolean SP, boolean EB, boolean WB, boolean TP, boolean OB, Component comp){
+        String sql = "select count(amount) from finance_expense where date between ? and ? and (expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ?)";
+        String CInvoice,ElecBill,SalPay,WaterBill,TPBill,OtherBill;
+        int no_exp=0;
+        //----------------------------------------
+        if(CI){
+            CInvoice="EXP/CI/%";
+        }
+        else{
+            CInvoice=null;
+        }
+        if(SP){
+            SalPay="EXP/SP/%";
+        }
+        else{
+            SalPay=null;
+        }
+        if(EB){
+            ElecBill="EXP/EB/%";
+        }
+        else{
+            ElecBill=null;
+        }
+        if(WB){
+            WaterBill="EXP/WB/%";
+        }
+        else{
+            WaterBill=null;
+        }
+        if(TP){
+            TPBill="EXP/TP/%";
+        }
+        else{
+            TPBill=null;
+        }
+        if(OB){
+            OtherBill="EXP/OB/%";
+        }
+        else{
+            OtherBill=null;
+        }
+        //----------------------------------------
+        try{
+            PreparedStatement pst = dbcon.prepareStatement(sql);
+            pst.setString(1, from);
+            pst.setString(2, to);
+            pst.setString(3, CInvoice);
+            pst.setString(4, SalPay);
+            pst.setString(5, WaterBill);
+            pst.setString(6, ElecBill);
+            pst.setString(7, TPBill);
+            pst.setString(8, OtherBill);
+            ResultSet rs_Net_Expense = pst.executeQuery();
+            while(rs_Net_Expense.next()){
+                no_exp=rs_Net_Expense.getInt("count(amount)");
+            }
+            return no_exp;
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Cannot Refresh Expense Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            return 0;
+        }
+    }
+    
+    public ResultSet updateExpenseTable(String from, String to,boolean CI, boolean SP, boolean EB, boolean WB, boolean TP, boolean OB, Component comp){
+            String sql = "select expenseID as '#', date as 'Date', description as 'Description', amount as 'Amount (Rs.)' from finance_expense where date between ? and ? and (expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ?)";
+            String CInvoice,ElecBill,SalPay,WaterBill,TPBill,OtherBill;
+            //----------------------------------------
+            if(CI){
+                CInvoice="EXP/CI/%";
+            }
+            else{
+                CInvoice=null;
+            }
+            if(SP){
+                SalPay="EXP/SP/%";
+            }
+            else{
+                SalPay=null;
+            }
+            if(EB){
+                ElecBill="EXP/EB/%";
+            }
+            else{
+                ElecBill=null;
+            }
+            if(WB){
+                WaterBill="EXP/WB/%";
+            }
+            else{
+                WaterBill=null;
+            }
+            if(TP){
+                TPBill="EXP/TP/%";
+            }
+            else{
+                TPBill=null;
+            }
+            if(OB){
+                OtherBill="EXP/OB/%";
+            }
+            else{
+                OtherBill=null;
+            }
+            //----------------------------------------
             try{
-                Statement stmnt = dbcon.createStatement();
-                ResultSet rs_Expense_Details = stmnt.executeQuery(sql);
+                PreparedStatement pst = dbcon.prepareStatement(sql);
+                pst.setString(1, from);
+                pst.setString(2, to);
+                pst.setString(3, CInvoice);
+                pst.setString(4, SalPay);
+                pst.setString(5, WaterBill);
+                pst.setString(6, ElecBill);
+                pst.setString(7, TPBill);
+                pst.setString(8, OtherBill);
+                ResultSet rs_Expense_Details = pst.executeQuery();
                 return rs_Expense_Details;
             }
             catch(Exception e){
@@ -129,8 +304,7 @@ public class Expense {
         }
     }
     
-    public String generateExpenseID(Component comp){
-        String prefix="EXP";
+    public String generateExpenseID(String prefix,Component comp){
         int noExpense=0;
         String expenseID=null;
         try{
@@ -177,4 +351,5 @@ public class Expense {
             return expenseID;
         }
     }
+    
 }

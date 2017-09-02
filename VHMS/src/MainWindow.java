@@ -1,6 +1,9 @@
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.event.KeyEvent;
+import java.beans.PropertyChangeEvent;
+import java.beans.PropertyChangeListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -32,6 +35,16 @@ public class MainWindow extends javax.swing.JFrame {
         dbConnectr conn = new dbConnectr();
         dbcon = conn.Connect();
         System.out.println(accessedUser);
+        //Setting initial dates-------------------------------------------------
+        try{
+            Date initdate = new SimpleDateFormat("yyyy-mm-dd").parse("2017-01-01");
+            Date date = new Date();
+            this.dc_Fin_Expense_From.setDate(initdate);
+            this.dc_Fin_Expense_to.setDate(date);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(this, "Some error occured!", "Error", JOptionPane.ERROR_MESSAGE);
+        }
         grantAccess();
     }
 
@@ -323,8 +336,8 @@ public class MainWindow extends javax.swing.JFrame {
         pnlExpenseSearch = new javax.swing.JPanel();
         FinjLabel12 = new javax.swing.JLabel();
         FinjLabel13 = new javax.swing.JLabel();
-        FinjDateChooser3 = new com.toedter.calendar.JDateChooser();
-        FinjDateChooser4 = new com.toedter.calendar.JDateChooser();
+        dc_Fin_Expense_From = new com.toedter.calendar.JDateChooser();
+        dc_Fin_Expense_to = new com.toedter.calendar.JDateChooser();
         ckbx_Fin_ClientInvoice = new javax.swing.JCheckBox();
         ckbx_Fin_SalaryPayment = new javax.swing.JCheckBox();
         ckbx_Fin_Ebill = new javax.swing.JCheckBox();
@@ -336,8 +349,11 @@ public class MainWindow extends javax.swing.JFrame {
         scrlp_tbl_Fin_ExpenseDetails = new javax.swing.JScrollPane();
         tbl_Fin_ExpenseDetails = new javax.swing.JTable();
         FinjLabel14 = new javax.swing.JLabel();
-        FinjLabel15 = new javax.swing.JLabel();
+        lbl_Fin_NetExpense = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
+        lbl_Fin_Expenses_noExp = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -2984,6 +3000,20 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel13.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         FinjLabel13.setText("To");
 
+        dc_Fin_Expense_From.setDateFormatString("dd-MM-yyyy");
+        dc_Fin_Expense_From.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                dc_Fin_Expense_FromPropertyChange(evt);
+            }
+        });
+
+        dc_Fin_Expense_to.setDateFormatString("dd-MM-yyyy");
+        dc_Fin_Expense_to.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                dc_Fin_Expense_toPropertyChange(evt);
+            }
+        });
+
         ckbx_Fin_ClientInvoice.setSelected(true);
         ckbx_Fin_ClientInvoice.setText("Client Invoice");
         ckbx_Fin_ClientInvoice.addItemListener(new java.awt.event.ItemListener() {
@@ -2994,18 +3024,43 @@ public class MainWindow extends javax.swing.JFrame {
 
         ckbx_Fin_SalaryPayment.setSelected(true);
         ckbx_Fin_SalaryPayment.setText("Salary Payment");
+        ckbx_Fin_SalaryPayment.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_SalaryPaymentItemStateChanged(evt);
+            }
+        });
 
         ckbx_Fin_Ebill.setSelected(true);
         ckbx_Fin_Ebill.setText("Electricity Bill");
+        ckbx_Fin_Ebill.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_EbillItemStateChanged(evt);
+            }
+        });
 
         ckbx_Fin_waterbill.setSelected(true);
         ckbx_Fin_waterbill.setText("Water Bill");
+        ckbx_Fin_waterbill.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_waterbillItemStateChanged(evt);
+            }
+        });
 
         ckbx_Fin_telebill.setSelected(true);
         ckbx_Fin_telebill.setText("Telephone Bill");
+        ckbx_Fin_telebill.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_telebillItemStateChanged(evt);
+            }
+        });
 
         ckbx_Fin_other.setSelected(true);
         ckbx_Fin_other.setText("Other");
+        ckbx_Fin_other.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                ckbx_Fin_otherItemStateChanged(evt);
+            }
+        });
 
         ckbx_Fin_Expense_SelectAll.setSelected(true);
         ckbx_Fin_Expense_SelectAll.setToolTipText("Select All");
@@ -3023,11 +3078,11 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(FinjLabel12)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FinjDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dc_Fin_Expense_From, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(FinjLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FinjDateChooser4, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dc_Fin_Expense_to, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(ckbx_Fin_ClientInvoice)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -3040,7 +3095,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(ckbx_Fin_telebill)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(ckbx_Fin_other)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 105, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 107, Short.MAX_VALUE)
                 .addComponent(ckbx_Fin_Expense_SelectAll)
                 .addContainerGap())
         );
@@ -3049,7 +3104,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(FinjDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dc_Fin_Expense_From, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
                         .addGroup(pnlExpenseSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlExpenseSearchLayout.createSequentialGroup()
@@ -3066,7 +3121,7 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(ckbx_Fin_telebill)
                                 .addComponent(ckbx_Fin_other)))
                         .addGap(0, 1, Short.MAX_VALUE))
-                    .addComponent(FinjDateChooser4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(dc_Fin_Expense_to, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -3086,23 +3141,41 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel14.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
         FinjLabel14.setText("Total : Rs.");
 
-        FinjLabel15.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel15.setText("00000000.00");
+        lbl_Fin_NetExpense.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_Fin_NetExpense.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lbl_Fin_NetExpense.setText("00000000.00");
 
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconRemove.png"))); // NOI18N
+
+        lbl_Fin_Expenses_noExp.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_Fin_Expenses_noExp.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lbl_Fin_Expenses_noExp.setText("000");
+        lbl_Fin_Expenses_noExp.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+
+        jLabel13.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        jLabel13.setText("#Expenses :");
+
+        jLabel11.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        jLabel11.setText("|");
 
         javax.swing.GroupLayout pnltableExpenseLayout = new javax.swing.GroupLayout(pnltableExpense);
         pnltableExpense.setLayout(pnltableExpenseLayout);
         pnltableExpenseLayout.setHorizontalGroup(
             pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 845, Short.MAX_VALUE)
+            .addComponent(scrlp_tbl_Fin_ExpenseDetails, javax.swing.GroupLayout.DEFAULT_SIZE, 847, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnltableExpenseLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbl_Fin_Expenses_noExp, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel11)
+                .addGap(18, 18, 18)
                 .addComponent(FinjLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FinjLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_Fin_NetExpense, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         pnltableExpenseLayout.setVerticalGroup(
@@ -3113,7 +3186,10 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pnltableExpenseLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(FinjLabel14)
-                        .addComponent(FinjLabel15))
+                        .addComponent(lbl_Fin_NetExpense)
+                        .addComponent(lbl_Fin_Expenses_noExp)
+                        .addComponent(jLabel13)
+                        .addComponent(jLabel11))
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -3307,6 +3383,11 @@ public class MainWindow extends javax.swing.JFrame {
         jMenu3.add(jMenuItem5);
 
         jMenuItem6.setText("Start Page");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem6);
 
         jMenuItem3.setText("About");
@@ -4070,7 +4151,20 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_ckbx_Fin_Expense_SelectAllItemStateChanged
 
     private void ckbx_Fin_ClientInvoiceItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_ClientInvoiceItemStateChanged
-
+        Expense ex = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        //-update expense table-----------------------------------------
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //-update net expense-------------------------------------------
+        double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+        int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
     }//GEN-LAST:event_ckbx_Fin_ClientInvoiceItemStateChanged
 
     private void ckbx_Fin_Income_SelectAllItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_Income_SelectAllItemStateChanged
@@ -4111,31 +4205,49 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Fin_AddTeleBillActionPerformed
 
     private void btn_dlgFin_addtelebill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addtelebill_AddActionPerformed
-
-            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addtelebill,"Are You sure the details are correct?","Add Telephone Bill",JOptionPane.YES_NO_OPTION);
-            if(userChoice==0){
-                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-                String date = df.format(this.dc_dlgFin_addtelebill_billdate.getDate());
-                String teleNo = this.txt_dlgFin_addtelebill_teleNo.getText();
-                String desc = "Telephone Bill ["+teleNo+"]";
-                String billAmount = this.txt_dlgFin_addtelebill_billAmount.getText();
-                Expense ex = new Expense();
-                //-add a telephone bill-----------------------------------------
-                ex.addTelephoneBill(date, desc, billAmount, dlgFin_addtelebill);
-                //-update expense table-----------------------------------------
-                ResultSet rs = ex.updateExpenseTable(dlgFin_addtelebill);
-                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-                this.dlgFin_addtelebill.dispose();
-                //--------------------------------------------------------------
-            }
+        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addtelebill,"Are You sure the details are correct?","Add Telephone Bill",JOptionPane.YES_NO_OPTION);
+        if(userChoice==0){
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String date = df.format(this.dc_dlgFin_addtelebill_billdate.getDate());
+            String from = df.format(this.dc_Fin_Expense_From.getDate());
+            String to = df.format(this.dc_Fin_Expense_to.getDate());
+            String teleNo = this.txt_dlgFin_addtelebill_teleNo.getText();
+            String desc = "Telephone Bill | "+teleNo;
+            String billAmount = this.txt_dlgFin_addtelebill_billAmount.getText();
+            Expense ex = new Expense();
+            //-add a telephone bill-----------------------------------------
+            ex.addTelephoneBill(date, desc, billAmount, dlgFin_addtelebill);
+            //-update expense table-----------------------------------------
+            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
+            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+            //--------------------------------------------------------------
+            //-update net expense-------------------------------------------
+            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
+            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+            //--------------------------------------------------------------
+            //-update #expenses-------------------------------------------
+            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
+            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+            //--------------------------------------------------------------
+            this.dlgFin_addtelebill.dispose();
+        }
     }//GEN-LAST:event_btn_dlgFin_addtelebill_AddActionPerformed
 
     private void IncExpTabbedPaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IncExpTabbedPaneMouseClicked
         //-update expense table-------------------------------------
         Expense ex = new Expense();
-        ResultSet rs = ex.updateExpenseTable(this);
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
         this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-        //----------------------------------------------------------
+        //-update net expense-------------------------------------------
+            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
     }//GEN-LAST:event_IncExpTabbedPaneMouseClicked
 
     private void btn_dlgFin_addtelebill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addtelebill_CancelActionPerformed
@@ -4154,16 +4266,25 @@ public class MainWindow extends javax.swing.JFrame {
             if(userChoice==0){
                 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                 String date = df.format(this.dc_dlgFin_addwaterbill_billdate.getDate());
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
                 String desc = "Water Bill";
                 String billAmount = this.txt_dlgFin_addwaterbill_billAmount.getText();
                 Expense ex = new Expense();
                 //-add a water bill-----------------------------------------
                 ex.addWaterBill(date, desc, billAmount, dlgFin_addwaterbill);
                 //-update expense table-----------------------------------------
-                ResultSet rs = ex.updateExpenseTable(dlgFin_addwaterbill);
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
                 this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-                this.dlgFin_addwaterbill.dispose();
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
                 //--------------------------------------------------------------
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+                this.dlgFin_addwaterbill.dispose();
             }
     }//GEN-LAST:event_btn_dlgFin_addwaterbill_AddActionPerformed
 
@@ -4189,16 +4310,24 @@ public class MainWindow extends javax.swing.JFrame {
             if(userChoice==0){
                 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                 String date = df.format(this.dc_dlgFin_addelecbill_billdate.getDate());
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
                 String desc = "Electricity Bill";
                 String billAmount = this.txt_dlgFin_addelecbill_billAmount.getText();
                 Expense ex = new Expense();
                 //-add a water bill-----------------------------------------
                 ex.addElectricityBill(date, desc, billAmount, dlgFin_addelecbill);
                 //-update expense table-----------------------------------------
-                ResultSet rs = ex.updateExpenseTable(dlgFin_addelecbill);
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addelecbill);
                 this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-                this.dlgFin_addelecbill.dispose();
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addelecbill);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addelecbill);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
                 //--------------------------------------------------------------
+                this.dlgFin_addelecbill.dispose();
             }
     }//GEN-LAST:event_btn_dlgFin_addelecbill_AddActionPerformed
 
@@ -4228,16 +4357,24 @@ public class MainWindow extends javax.swing.JFrame {
         if(userChoice==0){
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
             String date = df.format(this.dc_dlgFin_addSalPay_paymentDate.getDate());
+            String from = df.format(this.dc_Fin_Expense_From.getDate());
+            String to = df.format(this.dc_Fin_Expense_to.getDate());
             String desc = "Salary Payment | Reference No. "+this.txt_dlgFin_addSalPay_RefNo.getText();
             String TAmount = this.txt_dlgFin_addSalPay_TAmount.getText();
             Expense ex = new Expense();
             //-add a Salary Payment---------------------------------------------
             ex.addSalaryPayment(date, desc, TAmount, dlgFin_addSalaryPayment);
             //-update expense table-----------------------------------------
-            ResultSet rs = ex.updateExpenseTable(dlgFin_addSalaryPayment);
+            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
             this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-            this.dlgFin_addSalaryPayment.dispose();
+            //-update net expense-------------------------------------------
+            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+            //-update #expenses-------------------------------------------
+            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
             //--------------------------------------------------------------
+            this.dlgFin_addSalaryPayment.dispose();
         }
     }//GEN-LAST:event_btn_dlgFin_addSalPay_AddActionPerformed
 
@@ -4293,6 +4430,151 @@ public class MainWindow extends javax.swing.JFrame {
         UserAccWindow uaw = new UserAccWindow();
         uaw.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void ckbx_Fin_SalaryPaymentItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_SalaryPaymentItemStateChanged
+        Expense ex = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        //-update expense table-----------------------------------------
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //-update net expense-------------------------------------------
+        double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+        int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
+    }//GEN-LAST:event_ckbx_Fin_SalaryPaymentItemStateChanged
+
+    private void ckbx_Fin_EbillItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_EbillItemStateChanged
+        Expense ex = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        //-update expense table-----------------------------------------
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //-update net expense-------------------------------------------
+        double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+        int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
+    }//GEN-LAST:event_ckbx_Fin_EbillItemStateChanged
+
+    private void ckbx_Fin_waterbillItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_waterbillItemStateChanged
+        Expense ex = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        //-update expense table-----------------------------------------
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //-update net expense-------------------------------------------
+        double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+        int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
+    }//GEN-LAST:event_ckbx_Fin_waterbillItemStateChanged
+
+    private void ckbx_Fin_telebillItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_telebillItemStateChanged
+        Expense ex = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        //-update expense table-----------------------------------------
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //-update net expense-------------------------------------------
+        double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+        int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
+    }//GEN-LAST:event_ckbx_Fin_telebillItemStateChanged
+
+    private void ckbx_Fin_otherItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_otherItemStateChanged
+        Expense ex = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String from = df.format(this.dc_Fin_Expense_From.getDate());
+        String to = df.format(this.dc_Fin_Expense_to.getDate());
+        //-update expense table-----------------------------------------
+        ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+        //-update net expense-------------------------------------------
+        double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+        //-update #expenses-------------------------------------------
+        int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+        this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+        //--------------------------------------------------------------
+    }//GEN-LAST:event_ckbx_Fin_otherItemStateChanged
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        this.pnlPharmacy.setVisible(false);
+        this.pnlHospital.setVisible(false);
+        this.pnlMobile.setVisible(false);
+        this.pnlPetshop.setVisible(false);
+        this.pnlDaycare.setVisible(false);
+        this.pnlHealthcare.setVisible(false);
+        this.pnlEmployee.setVisible(false);
+        this.pnlFinance.setVisible(false);
+        this.pnlHome.setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void dc_Fin_Expense_toPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_dc_Fin_Expense_toPropertyChange
+        try{
+            if ("date".equals(evt.getPropertyName())) {
+                Expense ex = new Expense();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+            }
+        }
+        catch(NullPointerException ne){
+            System.out.println("null pointer");
+        }
+    }//GEN-LAST:event_dc_Fin_Expense_toPropertyChange
+
+    private void dc_Fin_Expense_FromPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_dc_Fin_Expense_FromPropertyChange
+        try{    
+            if ("date".equals(evt.getPropertyName())) {
+                Expense ex = new Expense();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),this);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+            }
+        }
+        catch(NullPointerException ne){
+            System.out.println("null pointer from fin_expense_from dc");
+        }
+    }//GEN-LAST:event_dc_Fin_Expense_FromPropertyChange
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -4471,7 +4753,7 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(dlgFin_addProduct, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel ButtonMenu;
     private javax.swing.JPanel Container;
@@ -4504,8 +4786,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox FinjCheckBox49;
     private com.toedter.calendar.JDateChooser FinjDateChooser11;
     private com.toedter.calendar.JDateChooser FinjDateChooser12;
-    private com.toedter.calendar.JDateChooser FinjDateChooser3;
-    private com.toedter.calendar.JDateChooser FinjDateChooser4;
     private com.toedter.calendar.JDateChooser FinjDateChooser5;
     private com.toedter.calendar.JDateChooser FinjDateChooser6;
     private com.toedter.calendar.JDateChooser FinjDateChooser7;
@@ -4522,7 +4802,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel12;
     private javax.swing.JLabel FinjLabel13;
     private javax.swing.JLabel FinjLabel14;
-    private javax.swing.JLabel FinjLabel15;
     private javax.swing.JLabel FinjLabel16;
     private javax.swing.JLabel FinjLabel17;
     private javax.swing.JLabel FinjLabel18;
@@ -4617,6 +4896,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_Fin_other;
     private javax.swing.JCheckBox ckbx_Fin_telebill;
     private javax.swing.JCheckBox ckbx_Fin_waterbill;
+    private com.toedter.calendar.JDateChooser dc_Fin_Expense_From;
+    private com.toedter.calendar.JDateChooser dc_Fin_Expense_to;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addSalPay_paymentDate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addelecbill_billdate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addtelebill_billdate;
@@ -4644,7 +4925,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -4691,6 +4974,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lbl_Fin_Expenses_noExp;
+    private javax.swing.JLabel lbl_Fin_NetExpense;
     private javax.swing.JLabel lbl_IncomeTotal;
     private javax.swing.JLabel lbl_IncomeTotalLabel;
     private javax.swing.JLabel lbl_SearchClientCompany;

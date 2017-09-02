@@ -1369,6 +1369,9 @@
               <Properties>
                 <Property name="text" type="java.lang.String" value="Start Page"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem6ActionPerformed"/>
+              </Events>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
@@ -4710,11 +4713,11 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="FinjLabel12" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="FinjDateChooser3" min="-2" pref="159" max="-2" attributes="0"/>
+                                              <Component id="dc_Fin_Expense_From" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="FinjLabel13" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="FinjDateChooser4" min="-2" pref="159" max="-2" attributes="0"/>
+                                              <Component id="dc_Fin_Expense_to" min="-2" pref="159" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_ClientInvoice" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -4727,7 +4730,7 @@
                                               <Component id="ckbx_Fin_telebill" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                               <Component id="ckbx_Fin_other" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="105" max="32767" attributes="0"/>
+                                              <EmptySpace pref="107" max="32767" attributes="0"/>
                                               <Component id="ckbx_Fin_Expense_SelectAll" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -4738,7 +4741,7 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="FinjDateChooser3" max="32767" attributes="0"/>
+                                                  <Component id="dc_Fin_Expense_From" max="32767" attributes="0"/>
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
@@ -4760,7 +4763,7 @@
                                                       </Group>
                                                       <EmptySpace min="0" pref="1" max="32767" attributes="0"/>
                                                   </Group>
-                                                  <Component id="FinjDateChooser4" alignment="1" max="32767" attributes="0"/>
+                                                  <Component id="dc_Fin_Expense_to" alignment="1" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -4784,9 +4787,21 @@
                                         <Property name="text" type="java.lang.String" value="To"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser3">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="dc_Fin_Expense_From">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd-MM-yyyy"/>
+                                      </Properties>
+                                      <Events>
+                                        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="dc_Fin_Expense_FromPropertyChange"/>
+                                      </Events>
                                     </Component>
-                                    <Component class="com.toedter.calendar.JDateChooser" name="FinjDateChooser4">
+                                    <Component class="com.toedter.calendar.JDateChooser" name="dc_Fin_Expense_to">
+                                      <Properties>
+                                        <Property name="dateFormatString" type="java.lang.String" value="dd-MM-yyyy"/>
+                                      </Properties>
+                                      <Events>
+                                        <EventHandler event="propertyChange" listener="java.beans.PropertyChangeListener" parameters="java.beans.PropertyChangeEvent" handler="dc_Fin_Expense_toPropertyChange"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_ClientInvoice">
                                       <Properties>
@@ -4802,30 +4817,45 @@
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Salary Payment"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_SalaryPaymentItemStateChanged"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_Ebill">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Electricity Bill"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_EbillItemStateChanged"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_waterbill">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Water Bill"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_waterbillItemStateChanged"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_telebill">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Telephone Bill"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_telebillItemStateChanged"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_other">
                                       <Properties>
                                         <Property name="selected" type="boolean" value="true"/>
                                         <Property name="text" type="java.lang.String" value="Other"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="itemStateChanged" listener="java.awt.event.ItemListener" parameters="java.awt.event.ItemEvent" handler="ckbx_Fin_otherItemStateChanged"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JCheckBox" name="ckbx_Fin_Expense_SelectAll">
                                       <Properties>
@@ -4843,14 +4873,20 @@
                                   <Layout>
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="scrlp_tbl_Fin_ExpenseDetails" alignment="0" pref="845" max="32767" attributes="0"/>
+                                          <Component id="scrlp_tbl_Fin_ExpenseDetails" alignment="0" pref="847" max="32767" attributes="0"/>
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jButton6" min="-2" pref="35" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
+                                              <Component id="jLabel13" min="-2" pref="77" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="lbl_Fin_Expenses_noExp" min="-2" pref="38" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Component id="FinjLabel14" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="FinjLabel15" min="-2" pref="96" max="-2" attributes="0"/>
+                                              <Component id="lbl_Fin_NetExpense" min="-2" pref="96" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -4863,7 +4899,10 @@
                                               <Group type="103" groupAlignment="1" attributes="0">
                                                   <Group type="103" groupAlignment="3" attributes="0">
                                                       <Component id="FinjLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="FinjLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_Fin_NetExpense" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_Fin_Expenses_noExp" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Component id="jButton6" min="-2" pref="32" max="-2" attributes="0"/>
                                               </Group>
@@ -4902,11 +4941,12 @@
                                         <Property name="text" type="java.lang.String" value="Total : Rs."/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="FinjLabel15">
+                                    <Component class="javax.swing.JLabel" name="lbl_Fin_NetExpense">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Calibri" size="16" style="0"/>
                                         </Property>
+                                        <Property name="horizontalAlignment" type="int" value="4"/>
                                         <Property name="text" type="java.lang.String" value="00000000.00"/>
                                       </Properties>
                                     </Component>
@@ -4915,6 +4955,32 @@
                                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                           <Image iconType="3" name="/icons/IconRemove.png"/>
                                         </Property>
+                                      </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JLabel" name="lbl_Fin_Expenses_noExp">
+                                      <Properties>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Calibri" size="16" style="0"/>
+                                        </Property>
+                                        <Property name="horizontalAlignment" type="int" value="2"/>
+                                        <Property name="text" type="java.lang.String" value="000"/>
+                                        <Property name="horizontalTextPosition" type="int" value="4"/>
+                                      </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JLabel" name="jLabel13">
+                                      <Properties>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Calibri" size="16" style="0"/>
+                                        </Property>
+                                        <Property name="text" type="java.lang.String" value="#Expenses :"/>
+                                      </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JLabel" name="jLabel11">
+                                      <Properties>
+                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                          <Font name="Calibri" size="18" style="0"/>
+                                        </Property>
+                                        <Property name="text" type="java.lang.String" value="|"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
