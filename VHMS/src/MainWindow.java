@@ -37,14 +37,19 @@ public class MainWindow extends javax.swing.JFrame {
         System.out.println(accessedUser);
         //Setting initial dates-------------------------------------------------
         try{
-            Date initdate = new SimpleDateFormat("yyyy-mm-dd").parse("2017-01-01");
             Date date = new Date();
-            this.dc_Fin_Expense_From.setDate(initdate);
+            //-setting first day of current month-----------------------
+            DateFormat df = new SimpleDateFormat("yyyy-MM");
+            String firstday = df.format(date)+"-01";
+            Date firstofmonth=new SimpleDateFormat("yyyy-MM-dd").parse(firstday);
+            this.dc_Fin_Expense_From.setDate(firstofmonth);
+            //----------------------------------------------------------
             this.dc_Fin_Expense_to.setDate(date);
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(this, "Some error occured!", "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Cannot Retrieve Date", "Error", JOptionPane.ERROR_MESSAGE);
         }
+        //----------------------------------------------------------------------
         grantAccess();
     }
 
@@ -140,6 +145,37 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel10billamount3 = new javax.swing.JLabel();
         btn_dlgFin_addSalPay_Add = new javax.swing.JButton();
         btn_dlgFin_addSalPay_Cancel = new javax.swing.JButton();
+        dlgUserAccounts = new javax.swing.JDialog();
+        pnl_usrAcc_Container = new javax.swing.JPanel();
+        lblUsrAcc01 = new javax.swing.JLabel();
+        lblUsrAcc02 = new javax.swing.JLabel();
+        btn_usrAcc_addAccount = new javax.swing.JButton();
+        btn_usrAcc_delete = new javax.swing.JButton();
+        btn_usrAcc_apply = new javax.swing.JButton();
+        btn_usrAcc_cancel = new javax.swing.JButton();
+        scrl_usrAcc_usrAccounts = new javax.swing.JScrollPane();
+        lstUserAccounts = new javax.swing.JList<>();
+        pnl_usrAcc_LoginPrivileges = new javax.swing.JPanel();
+        lblUsrAcc04 = new javax.swing.JLabel();
+        sprtl_usrAcc_login = new javax.swing.JSeparator();
+        sprt_usrAcc_Privileges = new javax.swing.JSeparator();
+        lblUsrAcc03 = new javax.swing.JLabel();
+        pnl_usrAcc_Login = new javax.swing.JPanel();
+        txt_usrAcc_LoginName = new javax.swing.JTextField();
+        txt_usrAcc_Password = new javax.swing.JPasswordField();
+        lblUsrAcc05 = new javax.swing.JLabel();
+        lblUsrAcc06 = new javax.swing.JLabel();
+        txt_usrAcc_cPassword = new javax.swing.JPasswordField();
+        lblUsrAcc07 = new javax.swing.JLabel();
+        pnl_usrAcc_Privileges = new javax.swing.JPanel();
+        ckbx_usrAcc_Ph = new javax.swing.JCheckBox();
+        ckbx_usrAcc_Hos = new javax.swing.JCheckBox();
+        ckbx_usrAcc_MobVet = new javax.swing.JCheckBox();
+        ckbx_usrAcc_PS = new javax.swing.JCheckBox();
+        ckbx_usrAcc_DC = new javax.swing.JCheckBox();
+        ckbx_usrAcc_HC = new javax.swing.JCheckBox();
+        ckbx_usrAcc_Emp = new javax.swing.JCheckBox();
+        ckbx_usrAcc_Fin = new javax.swing.JCheckBox();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -1187,6 +1223,256 @@ public class MainWindow extends javax.swing.JFrame {
         dlgFin_addSalaryPaymentLayout.setVerticalGroup(
             dlgFin_addSalaryPaymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlFinAddTeleBill3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        dlgUserAccounts.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+        dlgUserAccounts.setResizable(false);
+
+        pnl_usrAcc_Container.setBackground(new java.awt.Color(255, 255, 255));
+        pnl_usrAcc_Container.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        lblUsrAcc01.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        lblUsrAcc01.setText("Users and Privileges");
+
+        lblUsrAcc02.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lblUsrAcc02.setText("User Accounts");
+
+        btn_usrAcc_addAccount.setText("Add Account");
+
+        btn_usrAcc_delete.setText("Delete");
+
+        btn_usrAcc_apply.setText("Apply");
+
+        btn_usrAcc_cancel.setText("Cancel");
+
+        lstUserAccounts.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        lstUserAccounts.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lstUserAccounts.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        scrl_usrAcc_usrAccounts.setViewportView(lstUserAccounts);
+
+        pnl_usrAcc_LoginPrivileges.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        lblUsrAcc04.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lblUsrAcc04.setText("Login");
+
+        lblUsrAcc03.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lblUsrAcc03.setText("Privileges");
+
+        pnl_usrAcc_Login.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        txt_usrAcc_LoginName.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        txt_usrAcc_Password.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        lblUsrAcc05.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lblUsrAcc05.setText("Login Name");
+
+        lblUsrAcc06.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lblUsrAcc06.setText("Password");
+
+        txt_usrAcc_cPassword.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+
+        lblUsrAcc07.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lblUsrAcc07.setText("Confim Password");
+
+        javax.swing.GroupLayout pnl_usrAcc_LoginLayout = new javax.swing.GroupLayout(pnl_usrAcc_Login);
+        pnl_usrAcc_Login.setLayout(pnl_usrAcc_LoginLayout);
+        pnl_usrAcc_LoginLayout.setHorizontalGroup(
+            pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_LoginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblUsrAcc07)
+                    .addComponent(lblUsrAcc06)
+                    .addComponent(lblUsrAcc05))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txt_usrAcc_LoginName)
+                    .addComponent(txt_usrAcc_Password)
+                    .addComponent(txt_usrAcc_cPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+        pnl_usrAcc_LoginLayout.setVerticalGroup(
+            pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_LoginLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblUsrAcc05)
+                    .addComponent(txt_usrAcc_LoginName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUsrAcc06)
+                    .addComponent(txt_usrAcc_Password, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_usrAcc_LoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUsrAcc07)
+                    .addComponent(txt_usrAcc_cPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        pnl_usrAcc_Privileges.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        ckbx_usrAcc_Ph.setText("Pharmacy and Shop");
+
+        ckbx_usrAcc_Hos.setText("Hospital");
+
+        ckbx_usrAcc_MobVet.setText("Mobile Vet");
+
+        ckbx_usrAcc_PS.setText("Pet Shop");
+
+        ckbx_usrAcc_DC.setText("Day Care");
+
+        ckbx_usrAcc_HC.setText("Health Care");
+
+        ckbx_usrAcc_Emp.setText("Employee");
+
+        ckbx_usrAcc_Fin.setText("Finance");
+
+        javax.swing.GroupLayout pnl_usrAcc_PrivilegesLayout = new javax.swing.GroupLayout(pnl_usrAcc_Privileges);
+        pnl_usrAcc_Privileges.setLayout(pnl_usrAcc_PrivilegesLayout);
+        pnl_usrAcc_PrivilegesLayout.setHorizontalGroup(
+            pnl_usrAcc_PrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_PrivilegesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_usrAcc_PrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ckbx_usrAcc_Ph)
+                    .addComponent(ckbx_usrAcc_Hos)
+                    .addComponent(ckbx_usrAcc_MobVet)
+                    .addComponent(ckbx_usrAcc_PS)
+                    .addComponent(ckbx_usrAcc_DC)
+                    .addComponent(ckbx_usrAcc_HC)
+                    .addComponent(ckbx_usrAcc_Emp)
+                    .addComponent(ckbx_usrAcc_Fin))
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+        pnl_usrAcc_PrivilegesLayout.setVerticalGroup(
+            pnl_usrAcc_PrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_PrivilegesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(ckbx_usrAcc_Ph)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_Hos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_MobVet)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_PS)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_DC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_HC)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_Emp)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ckbx_usrAcc_Fin)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnl_usrAcc_LoginPrivilegesLayout = new javax.swing.GroupLayout(pnl_usrAcc_LoginPrivileges);
+        pnl_usrAcc_LoginPrivileges.setLayout(pnl_usrAcc_LoginPrivilegesLayout);
+        pnl_usrAcc_LoginPrivilegesLayout.setHorizontalGroup(
+            pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                        .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                                .addComponent(lblUsrAcc04)
+                                .addGap(334, 334, 334))
+                            .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                                .addComponent(sprtl_usrAcc_login)
+                                .addGap(18, 18, 18)))
+                        .addGap(4, 4, 4)
+                        .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                                .addComponent(lblUsrAcc03)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                                .addComponent(sprt_usrAcc_Privileges)
+                                .addContainerGap())))
+                    .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                        .addComponent(pnl_usrAcc_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(pnl_usrAcc_Privileges, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())))
+        );
+        pnl_usrAcc_LoginPrivilegesLayout.setVerticalGroup(
+            pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUsrAcc04)
+                    .addComponent(lblUsrAcc03))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(sprtl_usrAcc_login, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sprt_usrAcc_Privileges, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_usrAcc_LoginPrivilegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_usrAcc_Login, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_usrAcc_Privileges, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout pnl_usrAcc_ContainerLayout = new javax.swing.GroupLayout(pnl_usrAcc_Container);
+        pnl_usrAcc_Container.setLayout(pnl_usrAcc_ContainerLayout);
+        pnl_usrAcc_ContainerLayout.setHorizontalGroup(
+            pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_ContainerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrl_usrAcc_usrAccounts)
+                    .addGroup(pnl_usrAcc_ContainerLayout.createSequentialGroup()
+                        .addGroup(pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblUsrAcc01)
+                            .addComponent(lblUsrAcc02)
+                            .addGroup(pnl_usrAcc_ContainerLayout.createSequentialGroup()
+                                .addComponent(btn_usrAcc_addAccount)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_usrAcc_delete)))
+                        .addGap(0, 63, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_usrAcc_LoginPrivileges, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_usrAcc_ContainerLayout.createSequentialGroup()
+                        .addComponent(btn_usrAcc_cancel)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_usrAcc_apply)))
+                .addContainerGap())
+        );
+        pnl_usrAcc_ContainerLayout.setVerticalGroup(
+            pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_usrAcc_ContainerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblUsrAcc01)
+                .addGap(10, 10, 10)
+                .addComponent(lblUsrAcc02)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_usrAcc_LoginPrivileges, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(scrl_usrAcc_usrAccounts))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(pnl_usrAcc_ContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_usrAcc_delete, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_usrAcc_apply, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_usrAcc_addAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_usrAcc_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(21, 21, 21))
+        );
+
+        javax.swing.GroupLayout dlgUserAccountsLayout = new javax.swing.GroupLayout(dlgUserAccounts.getContentPane());
+        dlgUserAccounts.getContentPane().setLayout(dlgUserAccountsLayout);
+        dlgUserAccountsLayout.setHorizontalGroup(
+            dlgUserAccountsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_usrAcc_Container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgUserAccountsLayout.setVerticalGroup(
+            dlgUserAccountsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_usrAcc_Container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -4427,8 +4713,10 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1MouseClicked
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        UserAccWindow uaw = new UserAccWindow();
-        uaw.setVisible(true);
+        this.dlgUserAccounts.setSize(874,475);
+        this.dlgUserAccounts.setTitle("Account Settings");   
+        this.dlgUserAccounts.setLocationRelativeTo(this);
+        this.dlgUserAccounts.setVisible(true); 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void ckbx_Fin_SalaryPaymentItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ckbx_Fin_SalaryPaymentItemStateChanged
@@ -4878,6 +5166,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgFin_addtelebill_Cancel;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Add;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Cancel;
+    private javax.swing.JButton btn_usrAcc_addAccount;
+    private javax.swing.JButton btn_usrAcc_apply;
+    private javax.swing.JButton btn_usrAcc_cancel;
+    private javax.swing.JButton btn_usrAcc_delete;
     private javax.swing.JButton btnfin_dlgAddClientAdd;
     private javax.swing.JButton btnfin_dlgAddClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientCancel;
@@ -4896,6 +5188,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_Fin_other;
     private javax.swing.JCheckBox ckbx_Fin_telebill;
     private javax.swing.JCheckBox ckbx_Fin_waterbill;
+    private javax.swing.JCheckBox ckbx_usrAcc_DC;
+    private javax.swing.JCheckBox ckbx_usrAcc_Emp;
+    private javax.swing.JCheckBox ckbx_usrAcc_Fin;
+    private javax.swing.JCheckBox ckbx_usrAcc_HC;
+    private javax.swing.JCheckBox ckbx_usrAcc_Hos;
+    private javax.swing.JCheckBox ckbx_usrAcc_MobVet;
+    private javax.swing.JCheckBox ckbx_usrAcc_PS;
+    private javax.swing.JCheckBox ckbx_usrAcc_Ph;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_From;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_to;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addSalPay_paymentDate;
@@ -4913,6 +5213,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSeparator dlgFin_addtelejSeparator4;
     private javax.swing.JDialog dlgFin_addwaterbill;
     private javax.swing.JDialog dlgFin_editClient;
+    private javax.swing.JDialog dlgUserAccounts;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
@@ -4974,6 +5275,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable jTable3;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
+    private javax.swing.JLabel lblUsrAcc01;
+    private javax.swing.JLabel lblUsrAcc02;
+    private javax.swing.JLabel lblUsrAcc03;
+    private javax.swing.JLabel lblUsrAcc04;
+    private javax.swing.JLabel lblUsrAcc05;
+    private javax.swing.JLabel lblUsrAcc06;
+    private javax.swing.JLabel lblUsrAcc07;
     private javax.swing.JLabel lbl_Fin_Expenses_noExp;
     private javax.swing.JLabel lbl_Fin_NetExpense;
     private javax.swing.JLabel lbl_IncomeTotal;
@@ -4993,6 +5301,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgFin_editClient_Email;
     private javax.swing.JLabel lbl_dlgFin_editClient_tele1;
     private javax.swing.JLabel lbl_dlgFin_editClient_tele2;
+    private javax.swing.JList<String> lstUserAccounts;
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
     private javax.swing.JPanel pnlClientSearchBar1;
@@ -5029,13 +5338,20 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPetshop;
     private javax.swing.JPanel pnlPharmacy;
     private javax.swing.JPanel pnl_ExpenseAddnew;
+    private javax.swing.JPanel pnl_usrAcc_Container;
+    private javax.swing.JPanel pnl_usrAcc_Login;
+    private javax.swing.JPanel pnl_usrAcc_LoginPrivileges;
+    private javax.swing.JPanel pnl_usrAcc_Privileges;
     private javax.swing.JPanel pnltableExpense;
+    private javax.swing.JScrollPane scrl_usrAcc_usrAccounts;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Client_Details;
     private javax.swing.JScrollPane scrlp_tbl_Fin_ExpenseDetails;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Income_Details;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Product_Details;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_addClient_Address;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_editClient_Address;
+    private javax.swing.JSeparator sprt_usrAcc_Privileges;
+    private javax.swing.JSeparator sprtl_usrAcc_login;
     private javax.swing.JTable tbl_Fin_Client_Details;
     private javax.swing.JTable tbl_Fin_ExpenseDetails;
     private javax.swing.JTable tbl_Fin_Income_Details;
@@ -5063,5 +5379,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgFin_editClient_email;
     private javax.swing.JTextField txt_dlgFin_editClient_tele1;
     private javax.swing.JTextField txt_dlgFin_editClient_tele2;
+    private javax.swing.JTextField txt_usrAcc_LoginName;
+    private javax.swing.JPasswordField txt_usrAcc_Password;
+    private javax.swing.JPasswordField txt_usrAcc_cPassword;
     // End of variables declaration//GEN-END:variables
 }
