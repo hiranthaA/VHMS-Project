@@ -173,7 +173,16 @@ public class LoginWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnSignInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSignInActionPerformed
-        checkAccess();
+        User usr = new User();
+        boolean accessOK=usr.validateLoginDetails(this.txtUN.getText(), this.txtPW.getText(), this);
+        if(accessOK){
+            MainWindow mw = new MainWindow();
+            mw.setVisible(true);
+            this.dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Incorrect Username or Password !","Sign In Failed",JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_btnSignInActionPerformed
 
     private void txtPWKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPWKeyPressed
