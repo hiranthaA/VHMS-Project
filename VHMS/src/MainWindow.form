@@ -3828,10 +3828,10 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="pnlClientSearchBar1" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="pnl_Hos_CustomersSearchBar" alignment="0" max="32767" attributes="0"/>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
+                                              <Component id="scrl_Hos_Customers" alignment="1" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" attributes="0">
@@ -3839,7 +3839,7 @@
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="btn_Hos_editCustomer" min="-2" pref="52" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_Hos_CustomersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                               </Group>
@@ -3848,19 +3848,19 @@
                                               <Group type="102" attributes="0">
                                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="lbl_Hos_PetsLabel" min="-2" max="-2" attributes="0"/>
                                                       <Group type="102" attributes="0">
                                                           <Component id="btn_Hos_ViewClinic" min="-2" pref="255" max="-2" attributes="0"/>
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                                           <Component id="btn_Hos_addPet" min="-2" max="-2" attributes="0"/>
                                                           <EmptySpace max="-2" attributes="0"/>
-                                                          <Component id="jButton15" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="btn_Hos_editPet" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                               </Group>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                                  <Component id="jScrollPane3" min="-2" pref="387" max="-2" attributes="0"/>
+                                                  <Component id="scrl_Hos_Pets" min="-2" pref="387" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -3873,22 +3873,22 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="pnlClientSearchBar1" max="32767" attributes="0"/>
+                                  <Component id="pnl_Hos_CustomersSearchBar" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Hos_PetsLabel" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Hos_CustomersLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane1" pref="432" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane3" max="32767" attributes="0"/>
+                                      <Component id="scrl_Hos_Customers" pref="432" max="32767" attributes="0"/>
+                                      <Component id="scrl_Hos_Pets" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Component id="btn_Hos_editCustomer" pref="36" max="32767" attributes="0"/>
                                       <Component id="btn_Hos_addCustomer" max="32767" attributes="0"/>
-                                      <Component id="jButton15" max="32767" attributes="0"/>
+                                      <Component id="btn_Hos_editPet" max="32767" attributes="0"/>
                                       <Component id="btn_Hos_addPet" max="32767" attributes="0"/>
                                       <Component id="btn_Hos_ViewClinic" max="32767" attributes="0"/>
                                   </Group>
@@ -3898,7 +3898,7 @@
                         </DimensionLayout>
                       </Layout>
                       <SubComponents>
-                        <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                        <Container class="javax.swing.JScrollPane" name="scrl_Hos_Customers">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
@@ -3919,7 +3919,7 @@
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                        <Container class="javax.swing.JScrollPane" name="scrl_Hos_Pets">
                           <AuxValues>
                             <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                           </AuxValues>
@@ -3940,7 +3940,7 @@
                             </Component>
                           </SubComponents>
                         </Container>
-                        <Component class="javax.swing.JLabel" name="jLabel8">
+                        <Component class="javax.swing.JLabel" name="lbl_Hos_CustomersLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Calibri" size="14" style="0"/>
@@ -3948,7 +3948,7 @@
                             <Property name="text" type="java.lang.String" value="Customers"/>
                           </Properties>
                         </Component>
-                        <Component class="javax.swing.JLabel" name="jLabel9">
+                        <Component class="javax.swing.JLabel" name="lbl_Hos_PetsLabel">
                           <Properties>
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Calibri" size="14" style="0"/>
@@ -3980,12 +3980,12 @@
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_Hos_addPetActionPerformed"/>
                           </Events>
                         </Component>
-                        <Component class="javax.swing.JButton" name="jButton15">
+                        <Component class="javax.swing.JButton" name="btn_Hos_editPet">
                           <Properties>
                             <Property name="text" type="java.lang.String" value="Edit"/>
                           </Properties>
                         </Component>
-                        <Container class="javax.swing.JPanel" name="pnlClientSearchBar1">
+                        <Container class="javax.swing.JPanel" name="pnl_Hos_CustomersSearchBar">
                           <Properties>
                             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -4001,21 +4001,21 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="lbl_SearchClientCompany1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Hos_SearchCustName" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_Fin_SearchCompany1" min="-2" pref="262" max="-2" attributes="0"/>
+                                      <Component id="txt_Hos_SearchCustomer" min="-2" pref="262" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
-                                      <Component id="lbl_SearchClientProduct1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Hos_SearchCustID" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="txt_Fin_SearchProduct1" min="-2" pref="117" max="-2" attributes="0"/>
+                                      <Component id="txt_Hos_SearchCustID" min="-2" pref="117" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Hos_SearchPetName" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField1" min="-2" pref="162" max="-2" attributes="0"/>
+                                      <Component id="txt_Hos_SearchPetName" min="-2" pref="162" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                                      <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_Hos_SearchPetID" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTextField2" min="-2" pref="162" max="-2" attributes="0"/>
+                                      <Component id="txt_Hos_SearchPetID" min="-2" pref="162" max="-2" attributes="0"/>
                                       <EmptySpace pref="74" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
@@ -4026,16 +4026,16 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="103" alignment="0" groupAlignment="3" attributes="0">
-                                              <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField2" alignment="3" pref="27" max="32767" attributes="0"/>
+                                              <Component id="lbl_Hos_SearchPetID" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_Hos_SearchPetID" alignment="3" pref="27" max="32767" attributes="0"/>
                                           </Group>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="lbl_SearchClientCompany1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="txt_Fin_SearchCompany1" alignment="3" max="32767" attributes="0"/>
-                                              <Component id="txt_Fin_SearchProduct1" alignment="3" max="32767" attributes="0"/>
-                                              <Component id="lbl_SearchClientProduct1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField1" max="32767" attributes="0"/>
+                                              <Component id="lbl_Hos_SearchCustName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_Hos_SearchCustomer" alignment="3" max="32767" attributes="0"/>
+                                              <Component id="txt_Hos_SearchCustID" alignment="3" max="32767" attributes="0"/>
+                                              <Component id="lbl_Hos_SearchCustID" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_Hos_SearchPetName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="txt_Hos_SearchPetName" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
@@ -4044,17 +4044,17 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Component class="javax.swing.JTextField" name="txt_Fin_SearchCompany1">
+                            <Component class="javax.swing.JTextField" name="txt_Hos_SearchCustomer">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="16" style="0"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Fin_SearchCompany1KeyReleased"/>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Hos_SearchCustomerKeyReleased"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="lbl_SearchClientProduct1">
+                            <Component class="javax.swing.JLabel" name="lbl_Hos_SearchCustID">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="14" style="0"/>
@@ -4062,7 +4062,7 @@
                                 <Property name="text" type="java.lang.String" value="Cust ID"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="lbl_SearchClientCompany1">
+                            <Component class="javax.swing.JLabel" name="lbl_Hos_SearchCustName">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="14" style="0"/>
@@ -4070,17 +4070,17 @@
                                 <Property name="text" type="java.lang.String" value="Name"/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="txt_Fin_SearchProduct1">
+                            <Component class="javax.swing.JTextField" name="txt_Hos_SearchCustID">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="16" style="0"/>
                                 </Property>
                               </Properties>
                               <Events>
-                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Fin_SearchProduct1KeyReleased"/>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Hos_SearchCustIDKeyReleased"/>
                               </Events>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel10">
+                            <Component class="javax.swing.JLabel" name="lbl_Hos_SearchPetName">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="14" style="0"/>
@@ -4089,14 +4089,14 @@
                                 <Property name="toolTipText" type="java.lang.String" value=""/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="jTextField1">
+                            <Component class="javax.swing.JTextField" name="txt_Hos_SearchPetName">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="16" style="0"/>
                                 </Property>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JLabel" name="jLabel12">
+                            <Component class="javax.swing.JLabel" name="lbl_Hos_SearchPetID">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="14" style="0"/>
@@ -4105,7 +4105,7 @@
                                 <Property name="toolTipText" type="java.lang.String" value=""/>
                               </Properties>
                             </Component>
-                            <Component class="javax.swing.JTextField" name="jTextField2">
+                            <Component class="javax.swing.JTextField" name="txt_Hos_SearchPetID">
                               <Properties>
                                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                   <Font name="Calibri" size="16" style="0"/>

@@ -286,25 +286,25 @@ public class MainWindow extends javax.swing.JFrame {
         btnHospitalClinic = new javax.swing.JButton();
         btnHospitalPayments = new javax.swing.JButton();
         pnlHosRegister = new javax.swing.JLayeredPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        scrl_Hos_Customers = new javax.swing.JScrollPane();
         tbl_Hos_Customers = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        scrl_Hos_Pets = new javax.swing.JScrollPane();
         tbl_Hos_Pets = new javax.swing.JTable();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        lbl_Hos_CustomersLabel = new javax.swing.JLabel();
+        lbl_Hos_PetsLabel = new javax.swing.JLabel();
         btn_Hos_addCustomer = new javax.swing.JButton();
         btn_Hos_editCustomer = new javax.swing.JButton();
         btn_Hos_addPet = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        pnlClientSearchBar1 = new javax.swing.JPanel();
-        txt_Fin_SearchCompany1 = new javax.swing.JTextField();
-        lbl_SearchClientProduct1 = new javax.swing.JLabel();
-        lbl_SearchClientCompany1 = new javax.swing.JLabel();
-        txt_Fin_SearchProduct1 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel12 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        btn_Hos_editPet = new javax.swing.JButton();
+        pnl_Hos_CustomersSearchBar = new javax.swing.JPanel();
+        txt_Hos_SearchCustomer = new javax.swing.JTextField();
+        lbl_Hos_SearchCustID = new javax.swing.JLabel();
+        lbl_Hos_SearchCustName = new javax.swing.JLabel();
+        txt_Hos_SearchCustID = new javax.swing.JTextField();
+        lbl_Hos_SearchPetName = new javax.swing.JLabel();
+        txt_Hos_SearchPetName = new javax.swing.JTextField();
+        lbl_Hos_SearchPetID = new javax.swing.JLabel();
+        txt_Hos_SearchPetID = new javax.swing.JTextField();
         btn_Hos_ViewClinic = new javax.swing.JButton();
         pnlMobile = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -2542,7 +2542,7 @@ public class MainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(tbl_Hos_Customers);
+        scrl_Hos_Customers.setViewportView(tbl_Hos_Customers);
 
         tbl_Hos_Pets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -2555,13 +2555,13 @@ public class MainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(tbl_Hos_Pets);
+        scrl_Hos_Pets.setViewportView(tbl_Hos_Pets);
 
-        jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel8.setText("Customers");
+        lbl_Hos_CustomersLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_Hos_CustomersLabel.setText("Customers");
 
-        jLabel9.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel9.setText("Pets");
+        lbl_Hos_PetsLabel.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_Hos_PetsLabel.setText("Pets");
 
         btn_Hos_addCustomer.setText("Add");
         btn_Hos_addCustomer.addActionListener(new java.awt.event.ActionListener() {
@@ -2584,80 +2584,80 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jButton15.setText("Edit");
+        btn_Hos_editPet.setText("Edit");
 
-        pnlClientSearchBar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
+        pnl_Hos_CustomersSearchBar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
-        txt_Fin_SearchCompany1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        txt_Fin_SearchCompany1.addKeyListener(new java.awt.event.KeyAdapter() {
+        txt_Hos_SearchCustomer.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Hos_SearchCustomer.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txt_Fin_SearchCompany1KeyReleased(evt);
+                txt_Hos_SearchCustomerKeyReleased(evt);
             }
         });
 
-        lbl_SearchClientProduct1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        lbl_SearchClientProduct1.setText("Cust ID");
+        lbl_Hos_SearchCustID.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_Hos_SearchCustID.setText("Cust ID");
 
-        lbl_SearchClientCompany1.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        lbl_SearchClientCompany1.setText("Name");
+        lbl_Hos_SearchCustName.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_Hos_SearchCustName.setText("Name");
 
-        txt_Fin_SearchProduct1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        txt_Fin_SearchProduct1.addKeyListener(new java.awt.event.KeyAdapter() {
+        txt_Hos_SearchCustID.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Hos_SearchCustID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
-                txt_Fin_SearchProduct1KeyReleased(evt);
+                txt_Hos_SearchCustIDKeyReleased(evt);
             }
         });
 
-        jLabel10.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel10.setText("Pet Name");
-        jLabel10.setToolTipText("");
+        lbl_Hos_SearchPetName.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_Hos_SearchPetName.setText("Pet Name");
+        lbl_Hos_SearchPetName.setToolTipText("");
 
-        jTextField1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Hos_SearchPetName.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        jLabel12.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
-        jLabel12.setText("Pet ID");
-        jLabel12.setToolTipText("");
+        lbl_Hos_SearchPetID.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
+        lbl_Hos_SearchPetID.setText("Pet ID");
+        lbl_Hos_SearchPetID.setToolTipText("");
 
-        jTextField2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Hos_SearchPetID.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        javax.swing.GroupLayout pnlClientSearchBar1Layout = new javax.swing.GroupLayout(pnlClientSearchBar1);
-        pnlClientSearchBar1.setLayout(pnlClientSearchBar1Layout);
-        pnlClientSearchBar1Layout.setHorizontalGroup(
-            pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlClientSearchBar1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_Hos_CustomersSearchBarLayout = new javax.swing.GroupLayout(pnl_Hos_CustomersSearchBar);
+        pnl_Hos_CustomersSearchBar.setLayout(pnl_Hos_CustomersSearchBarLayout);
+        pnl_Hos_CustomersSearchBarLayout.setHorizontalGroup(
+            pnl_Hos_CustomersSearchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_Hos_CustomersSearchBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lbl_SearchClientCompany1)
+                .addComponent(lbl_Hos_SearchCustName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_Fin_SearchCompany1, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_Hos_SearchCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
-                .addComponent(lbl_SearchClientProduct1)
+                .addComponent(lbl_Hos_SearchCustID)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txt_Fin_SearchProduct1, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_Hos_SearchCustID, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(42, 42, 42)
-                .addComponent(jLabel10)
+                .addComponent(lbl_Hos_SearchPetName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_Hos_SearchPetName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(35, 35, 35)
-                .addComponent(jLabel12)
+                .addComponent(lbl_Hos_SearchPetID)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txt_Hos_SearchPetID, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(74, Short.MAX_VALUE))
         );
-        pnlClientSearchBar1Layout.setVerticalGroup(
-            pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlClientSearchBar1Layout.createSequentialGroup()
+        pnl_Hos_CustomersSearchBarLayout.setVerticalGroup(
+            pnl_Hos_CustomersSearchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Hos_CustomersSearchBarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel12)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
-                    .addGroup(pnlClientSearchBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lbl_SearchClientCompany1)
-                        .addComponent(txt_Fin_SearchCompany1)
-                        .addComponent(txt_Fin_SearchProduct1)
-                        .addComponent(lbl_SearchClientProduct1)
-                        .addComponent(jLabel10)
-                        .addComponent(jTextField1)))
+                .addGroup(pnl_Hos_CustomersSearchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_Hos_CustomersSearchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_Hos_SearchPetID)
+                        .addComponent(txt_Hos_SearchPetID, javax.swing.GroupLayout.DEFAULT_SIZE, 27, Short.MAX_VALUE))
+                    .addGroup(pnl_Hos_CustomersSearchBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbl_Hos_SearchCustName)
+                        .addComponent(txt_Hos_SearchCustomer)
+                        .addComponent(txt_Hos_SearchCustID)
+                        .addComponent(lbl_Hos_SearchCustID)
+                        .addComponent(lbl_Hos_SearchPetName)
+                        .addComponent(txt_Hos_SearchPetName)))
                 .addContainerGap())
         );
 
@@ -2668,15 +2668,15 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        pnlHosRegister.setLayer(jScrollPane1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlHosRegister.setLayer(jScrollPane3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlHosRegister.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlHosRegister.setLayer(jLabel9, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(scrl_Hos_Customers, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(scrl_Hos_Pets, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(lbl_Hos_CustomersLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(lbl_Hos_PetsLabel, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlHosRegister.setLayer(btn_Hos_addCustomer, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlHosRegister.setLayer(btn_Hos_editCustomer, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlHosRegister.setLayer(btn_Hos_addPet, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlHosRegister.setLayer(jButton15, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        pnlHosRegister.setLayer(pnlClientSearchBar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(btn_Hos_editPet, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        pnlHosRegister.setLayer(pnl_Hos_CustomersSearchBar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         pnlHosRegister.setLayer(btn_Hos_ViewClinic, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout pnlHosRegisterLayout = new javax.swing.GroupLayout(pnlHosRegister);
@@ -2686,52 +2686,52 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pnlClientSearchBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_Hos_CustomersSearchBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHosRegisterLayout.createSequentialGroup()
                         .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(scrl_Hos_Customers, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                                         .addComponent(btn_Hos_addCustomer)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btn_Hos_editCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel8))
+                                    .addComponent(lbl_Hos_CustomersLabel))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
+                                    .addComponent(lbl_Hos_PetsLabel)
                                     .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                                         .addComponent(btn_Hos_ViewClinic, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(btn_Hos_addPet)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton15))))
+                                        .addComponent(btn_Hos_editPet))))
                             .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                                 .addGap(2, 2, 2)
-                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(scrl_Hos_Pets, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         pnlHosRegisterLayout.setVerticalGroup(
             pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlHosRegisterLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnlClientSearchBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_Hos_CustomersSearchBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addComponent(jLabel8))
+                    .addComponent(lbl_Hos_PetsLabel)
+                    .addComponent(lbl_Hos_CustomersLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
-                    .addComponent(jScrollPane3))
+                    .addComponent(scrl_Hos_Customers, javax.swing.GroupLayout.DEFAULT_SIZE, 432, Short.MAX_VALUE)
+                    .addComponent(scrl_Hos_Pets))
                 .addGap(18, 18, 18)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_Hos_editCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                     .addComponent(btn_Hos_addCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btn_Hos_editPet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_Hos_addPet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btn_Hos_ViewClinic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -5343,13 +5343,13 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlHosRegister.setVisible(false);
     }//GEN-LAST:event_btnHospitalPaymentsActionPerformed
 
-    private void txt_Fin_SearchCompany1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchCompany1KeyReleased
+    private void txt_Hos_SearchCustomerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Hos_SearchCustomerKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_Fin_SearchCompany1KeyReleased
+    }//GEN-LAST:event_txt_Hos_SearchCustomerKeyReleased
 
-    private void txt_Fin_SearchProduct1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Fin_SearchProduct1KeyReleased
+    private void txt_Hos_SearchCustIDKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Hos_SearchCustIDKeyReleased
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_Fin_SearchProduct1KeyReleased
+    }//GEN-LAST:event_txt_Hos_SearchCustIDKeyReleased
 
     private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
         
@@ -6110,6 +6110,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_Hos_addCustomer;
     private javax.swing.JButton btn_Hos_addPet;
     private javax.swing.JButton btn_Hos_editCustomer;
+    private javax.swing.JButton btn_Hos_editPet;
     private javax.swing.JButton btn_dlgFin_addProduct_Add;
     private javax.swing.JButton btn_dlgFin_addProduct_Cancel;
     private javax.swing.JButton btn_dlgFin_addSalPay_Add;
@@ -6182,21 +6183,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgUserAccounts;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -6224,15 +6220,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JLabel lblUsrAcc01;
     private javax.swing.JLabel lblUsrAcc02;
     private javax.swing.JLabel lblUsrAcc03;
@@ -6246,11 +6238,15 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_Fin_Income_noIncomeLabel;
     private javax.swing.JLabel lbl_Fin_NetExpense;
     private javax.swing.JLabel lbl_Fin_NetIncome;
+    private javax.swing.JLabel lbl_Hos_CustomersLabel;
+    private javax.swing.JLabel lbl_Hos_PetsLabel;
+    private javax.swing.JLabel lbl_Hos_SearchCustID;
+    private javax.swing.JLabel lbl_Hos_SearchCustName;
+    private javax.swing.JLabel lbl_Hos_SearchPetID;
+    private javax.swing.JLabel lbl_Hos_SearchPetName;
     private javax.swing.JLabel lbl_IncomeTotalLabel;
     private javax.swing.JLabel lbl_SearchClientCompany;
-    private javax.swing.JLabel lbl_SearchClientCompany1;
     private javax.swing.JLabel lbl_SearchClientProduct;
-    private javax.swing.JLabel lbl_SearchClientProduct1;
     private javax.swing.JLabel lbl_dlgFin_AddProduct_Product;
     private javax.swing.JLabel lbl_dlgFin_addClient_Address;
     private javax.swing.JLabel lbl_dlgFin_addClient_Company;
@@ -6292,7 +6288,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnHosClinic;
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
-    private javax.swing.JPanel pnlClientSearchBar1;
     private javax.swing.JPanel pnlDaycare;
     private javax.swing.JPanel pnlEmployee;
     private javax.swing.JPanel pnlExpenseReport;
@@ -6324,6 +6319,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPetshop;
     private javax.swing.JPanel pnlPharmacy;
     private javax.swing.JPanel pnl_ExpenseAddnew;
+    private javax.swing.JPanel pnl_Hos_CustomersSearchBar;
     private javax.swing.JPanel pnl_dlgHos_Clinic_Details;
     private javax.swing.JPanel pnl_dlgHos_Clinic_List;
     private javax.swing.JLabel pnl_dlgHos_Clinic_Ownername;
@@ -6337,6 +6333,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnltableExpense;
     private javax.swing.JRadioButton rb_dlgHos_addPet_female;
     private javax.swing.JRadioButton rb_dlgHos_addPet_male;
+    private javax.swing.JScrollPane scrl_Hos_Customers;
+    private javax.swing.JScrollPane scrl_Hos_Pets;
     private javax.swing.JScrollPane scrl_dlgHos_Address;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Complaint;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Diagnosis;
@@ -6364,9 +6362,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txtItemcode;
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txt_Fin_SearchCompany;
-    private javax.swing.JTextField txt_Fin_SearchCompany1;
     private javax.swing.JTextField txt_Fin_SearchProduct;
-    private javax.swing.JTextField txt_Fin_SearchProduct1;
+    private javax.swing.JTextField txt_Hos_SearchCustID;
+    private javax.swing.JTextField txt_Hos_SearchCustomer;
+    private javax.swing.JTextField txt_Hos_SearchPetID;
+    private javax.swing.JTextField txt_Hos_SearchPetName;
     private javax.swing.JTextField txt_dlgFin_AddProduct_Product;
     private javax.swing.JTextArea txt_dlgFin_addClient_Address;
     private javax.swing.JTextField txt_dlgFin_addClient_Company;
