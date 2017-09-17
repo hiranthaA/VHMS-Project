@@ -1,4 +1,3 @@
-
 import java.awt.Component;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -25,6 +24,28 @@ public class User {
     
     public void createNewUser(String userName, String password, String cPassword){
         
+    }
+    
+    public ResultSet getSelectedUserDetails(String usr){
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rsUserDetails = stmnt.executeQuery("select * from access_info where username='"+usr+"'");
+            return rsUserDetails; 
+        }
+        catch(Exception e){
+            return null;
+        }
+    }
+    
+    public ResultSet getExistingUsers(){
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rsUsers = stmnt.executeQuery("select username from access_info");
+            return rsUsers; 
+        }
+        catch(Exception e){
+            return null;
+        }
     }
     
     public boolean validateLoginDetails(String usrn, String pw, Component comp){
