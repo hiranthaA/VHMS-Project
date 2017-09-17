@@ -27,14 +27,16 @@ public class Customer {
     public void addCustomer(String name, String address, String tele, String email,Component comp){
         try{
             String SQL = "insert into customer(custID,name,address,telephone,email) values(?,?,?,?,?)";
+            String custID = generateCustomerID(comp);
             PreparedStatement pst = dbcon.prepareStatement(SQL);
-            pst.setString(1, generateCustomerID(comp));
+            pst.setString(1, custID);
             pst.setString(2, name);
             pst.setString(3, address);
             pst.setString(4, tele);
             pst.setString(5, email);
             pst.execute();
             increaseNoCustomersByOne();
+            addReg_Service(custID, "ho");
             JOptionPane.showMessageDialog(comp, "Customer added Successfully!","Customer Details",JOptionPane.INFORMATION_MESSAGE);
         }
         catch(Exception e){
@@ -130,6 +132,49 @@ public class Customer {
         }
         catch(Exception e){
             return null;
+        }
+    }
+    
+    public void addReg_Service(String custID, String service){
+        String sql=null;
+        if(service.equals("ho")){
+            sql = "insert into reg_services(custID,ho) values(?,?)";
+        }
+        else if(service.equals("mv")){
+            sql = "insert into reg_services(custID,mv) values(?,?)";
+        }
+        else if(service.equals("ps")){
+            sql = "insert into reg_services(custID,ps) values(?,?)";
+        }
+        else if(service.equals("dc")){
+            sql = "insert into reg_services(custID,dc) values(?,?)";
+        }
+        else if(service.equals("hc")){
+            sql = "insert into reg_services(custID,hc) values(?,?)";
+        }
+        
+        try{
+            PreparedStatement pst = dbcon.prepareStatement(sql);
+            pst.setString(1, custID);
+            pst.setBoolean(2, true);
+            pst.execute();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void updateReg_Service(String custID, String service){
+        String sql = "update reg_services set "+service+"=? where custID=?";
+        
+        try{
+            PreparedStatement pst = dbcon.prepareStatement(sql);
+            pst.setBoolean(1, true);
+            pst.setString(2, custID);
+            pst.execute();
+        }
+        catch(Exception e){
+            e.printStackTrace();
         }
     }
 }

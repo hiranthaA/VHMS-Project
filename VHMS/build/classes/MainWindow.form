@@ -1808,9 +1808,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPanel4" max="32767" attributes="0"/>
+                          <Component id="pnl_dlgHos_content" max="32767" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addnew" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -1822,16 +1822,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel13" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="lbl_dlgHos_addnew" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel4" max="32767" attributes="0"/>
+                      <Component id="pnl_dlgHos_content" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel13">
+            <Component class="javax.swing.JLabel" name="lbl_dlgHos_addnew">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="18" style="0"/>
@@ -1839,7 +1839,7 @@
                 <Property name="text" type="java.lang.String" value="Add New"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel4">
+            <Container class="javax.swing.JPanel" name="pnl_dlgHos_content">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -1854,15 +1854,15 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel17" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Ownername" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_address" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_telephone" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_email" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="txt_dlgHos_addCustomer_name" max="32767" attributes="0"/>
-                              <Component id="jScrollPane4" alignment="0" pref="367" max="32767" attributes="0"/>
+                              <Component id="scrl_dlgHos_Address" alignment="0" pref="367" max="32767" attributes="0"/>
                               <Component id="txt_dlgHos_addCustomer_tele" alignment="0" max="32767" attributes="0"/>
                               <Component id="txt_dlgHos_addCustomer_email" alignment="0" max="32767" attributes="0"/>
                           </Group>
@@ -1880,20 +1880,20 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Ownername" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="txt_dlgHos_addCustomer_name" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                              <Component id="jScrollPane4" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_address" min="-2" max="-2" attributes="0"/>
+                              <Component id="scrl_dlgHos_Address" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="btn_dlgHos_addCustomer_add" min="-2" pref="31" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_telephone" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="txt_dlgHos_addCustomer_tele" alignment="1" min="-2" max="-2" attributes="0"/>
@@ -1902,7 +1902,7 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="txt_dlgHos_addCustomer_email" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_email" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="btn_dlgHos_addCustomer_cancel" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="34" max="32767" attributes="0"/>
@@ -1911,7 +1911,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel14">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Ownername">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1926,7 +1926,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel15">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_address">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1934,7 +1934,7 @@
                     <Property name="text" type="java.lang.String" value="Address"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel16">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_telephone">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -1949,7 +1949,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Address">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
@@ -1964,7 +1964,7 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Component class="javax.swing.JLabel" name="jLabel17">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_email">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2012,17 +2012,17 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pnHosAddCustomer1" alignment="0" max="32767" attributes="0"/>
+              <Component id="pnHosAddPet" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pnHosAddCustomer1" alignment="0" max="32767" attributes="0"/>
+              <Component id="pnHosAddPet" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="pnHosAddCustomer1">
+        <Container class="javax.swing.JPanel" name="pnHosAddPet">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2040,10 +2040,10 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_topic" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="0" pref="285" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jPanel5" max="32767" attributes="0"/>
+                          <Component id="pnl_dlgHos_addPet_container" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -2053,16 +2053,16 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel18" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="lbl_dlgHos_addPet_topic" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel5" max="32767" attributes="0"/>
+                      <Component id="pnl_dlgHos_addPet_container" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel18">
+            <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_topic">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="18" style="0"/>
@@ -2070,7 +2070,7 @@
                 <Property name="text" type="java.lang.String" value="Add New Pet"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel5">
+            <Container class="javax.swing.JPanel" name="pnl_dlgHos_addPet_container">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.EtchedBorderInfo">
@@ -2086,39 +2086,39 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgHos_addPet_age" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                                  <Component id="jSpinner1" min="-2" pref="47" max="-2" attributes="0"/>
+                                  <Component id="spnr_dlgHos_addPet_years" min="-2" pref="47" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgHos_addPet_years" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jSpinner2" min="-2" pref="49" max="-2" attributes="0"/>
+                                  <Component id="spnr_dlgHos_addPet_months" min="-2" pref="49" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgHos_addPet_months" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel23" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel19" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel25" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel24" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_addPet_name" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_addPet_Species" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_addPet_breed" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_addPet_sex" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rb_dlgHos_addPet_male" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
-                                          <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="rb_dlgHos_addPet_female" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn_dlgHos_addPet_cancel" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                                              <Component id="btn_dlgHos_addPet_add" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jComboBox1" alignment="0" pref="252" max="32767" attributes="0"/>
-                                          <Component id="jTextField7" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="jTextField6" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cmb_dlgHos_addPet_Species" alignment="0" pref="252" max="32767" attributes="0"/>
+                                          <Component id="txt_dlgHos_addPet_breed" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txt_dlgHos_addPet_name" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -2132,37 +2132,37 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_name" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_dlgHos_addPet_name" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="cmb_dlgHos_addPet_Species" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_Species" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_age" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spnr_dlgHos_addPet_years" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_years" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="spnr_dlgHos_addPet_months" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_months" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txt_dlgHos_addPet_breed" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_breed" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_addPet_sex" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_dlgHos_addPet_male" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="rb_dlgHos_addPet_female" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="61" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton6" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                              <Component id="jButton7" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="btn_dlgHos_addPet_add" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                              <Component id="btn_dlgHos_addPet_cancel" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -2170,7 +2170,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel23">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_name">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2178,14 +2178,14 @@
                     <Property name="text" type="java.lang.String" value="Name of Animal"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField6">
+                <Component class="javax.swing.JTextField" name="txt_dlgHos_addPet_name">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel19">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_Species">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2193,7 +2193,7 @@
                     <Property name="text" type="java.lang.String" value="Species"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                <Component class="javax.swing.JComboBox" name="cmb_dlgHos_addPet_Species">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2212,7 +2212,7 @@
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                   </AuxValues>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel20">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_age">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2220,7 +2220,7 @@
                     <Property name="text" type="java.lang.String" value="Age"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="jSpinner1">
+                <Component class="javax.swing.JSpinner" name="spnr_dlgHos_addPet_years">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2230,7 +2230,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel21">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_years">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2238,7 +2238,7 @@
                     <Property name="text" type="java.lang.String" value="Years -"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JSpinner" name="jSpinner2">
+                <Component class="javax.swing.JSpinner" name="spnr_dlgHos_addPet_months">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2248,7 +2248,7 @@
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel22">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_months">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2256,7 +2256,7 @@
                     <Property name="text" type="java.lang.String" value="Months"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel24">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_sex">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2264,10 +2264,10 @@
                     <Property name="text" type="java.lang.String" value="Sex"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                <Component class="javax.swing.JRadioButton" name="rb_dlgHos_addPet_male">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="buttonGroup1"/>
+                      <ComponentRef name="btngp_dlgHos_addPet_Sex"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2275,10 +2275,10 @@
                     <Property name="text" type="java.lang.String" value="Male"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+                <Component class="javax.swing.JRadioButton" name="rb_dlgHos_addPet_female">
                   <Properties>
                     <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
-                      <ComponentRef name="buttonGroup1"/>
+                      <ComponentRef name="btngp_dlgHos_addPet_Sex"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2287,7 +2287,7 @@
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel25">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_addPet_breed">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2295,14 +2295,14 @@
                     <Property name="text" type="java.lang.String" value="Breed"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JTextField" name="jTextField7">
+                <Component class="javax.swing.JTextField" name="txt_dlgHos_addPet_breed">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
                     </Property>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton6">
+                <Component class="javax.swing.JButton" name="btn_dlgHos_addPet_add">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2310,7 +2310,7 @@
                     <Property name="text" type="java.lang.String" value="Add"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="jButton7">
+                <Component class="javax.swing.JButton" name="btn_dlgHos_addPet_cancel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2324,7 +2324,7 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.ButtonGroup" name="buttonGroup1">
+    <Component class="javax.swing.ButtonGroup" name="btngp_dlgHos_addPet_Sex">
     </Component>
     <Container class="javax.swing.JDialog" name="dlgHos_Clinic">
       <Properties>
@@ -2337,17 +2337,17 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pnHosAddCustomer2" alignment="0" max="32767" attributes="0"/>
+              <Component id="pnHosClinic" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pnHosAddCustomer2" alignment="0" max="32767" attributes="0"/>
+              <Component id="pnHosClinic" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Container class="javax.swing.JPanel" name="pnHosAddCustomer2">
+        <Container class="javax.swing.JPanel" name="pnHosClinic">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2364,14 +2364,14 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPanel9" max="32767" attributes="0"/>
+                          <Component id="pnl_dlgHos_Clinic_Details" max="32767" attributes="0"/>
                           <Group type="102" alignment="0" attributes="0">
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="jButton8" min="-2" pref="97" max="-2" attributes="0"/>
-                                  <Component id="jPanel12" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btn_dlgHos_Clinic_new" min="-2" pref="97" max="-2" attributes="0"/>
+                                  <Component id="pnl_dlgHos_Clinic_List" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jPanel19" max="32767" attributes="0"/>
+                              <Component id="pnl_dlgHos_Clinic_Report" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -2382,21 +2382,21 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+                      <Component id="pnl_dlgHos_Clinic_Details" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jPanel19" max="32767" attributes="0"/>
-                          <Component id="jPanel12" max="32767" attributes="0"/>
+                          <Component id="pnl_dlgHos_Clinic_Report" max="32767" attributes="0"/>
+                          <Component id="pnl_dlgHos_Clinic_List" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton8" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="btn_dlgHos_Clinic_new" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JPanel" name="jPanel9">
+            <Container class="javax.swing.JPanel" name="pnl_dlgHos_Clinic_Details">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2412,11 +2412,11 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgHos_Clinic_ReportOf" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel26" min="-2" pref="184" max="-2" attributes="0"/>
+                          <Component id="lbll_dlgHos_Clinic_petName" min="-2" pref="184" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="jLabel27" min="-2" pref="508" max="-2" attributes="0"/>
+                          <Component id="pnl_dlgHos_Clinic_Ownername" min="-2" pref="508" max="-2" attributes="0"/>
                           <EmptySpace pref="264" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -2426,9 +2426,9 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_ReportOf" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbll_dlgHos_Clinic_petName" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="pnl_dlgHos_Clinic_Ownername" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -2436,7 +2436,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel26">
+                <Component class="javax.swing.JLabel" name="lbll_dlgHos_Clinic_petName">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="16" style="0"/>
@@ -2444,7 +2444,7 @@
                     <Property name="text" type="java.lang.String" value="Pet Name"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel31">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_ReportOf">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -2452,7 +2452,7 @@
                     <Property name="text" type="java.lang.String" value="Clinical Reports of :"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel27">
+                <Component class="javax.swing.JLabel" name="pnl_dlgHos_Clinic_Ownername">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="14" style="0"/>
@@ -2462,7 +2462,7 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="javax.swing.JButton" name="jButton8">
+            <Component class="javax.swing.JButton" name="btn_dlgHos_Clinic_new">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="12" style="0"/>
@@ -2470,7 +2470,7 @@
                 <Property name="text" type="java.lang.String" value="New"/>
               </Properties>
             </Component>
-            <Container class="javax.swing.JPanel" name="jPanel12">
+            <Container class="javax.swing.JPanel" name="pnl_dlgHos_Clinic_List">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2484,24 +2484,24 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane5" min="-2" pref="160" max="-2" attributes="0"/>
+                      <Component id="scrl_dlgHos_Clinic_list" min="-2" pref="160" max="-2" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jScrollPane5" alignment="0" max="32767" attributes="0"/>
+                      <Component id="scrl_dlgHos_Clinic_list" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Clinic_list">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JList" name="jList1">
+                    <Component class="javax.swing.JList" name="lst_dlgHos_Clinic_list">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="14" style="0"/>
@@ -2524,7 +2524,7 @@
                 </Container>
               </SubComponents>
             </Container>
-            <Container class="javax.swing.JPanel" name="jPanel19">
+            <Container class="javax.swing.JPanel" name="pnl_dlgHos_Clinic_Report">
               <Properties>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -2541,29 +2541,29 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel30" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel34" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_Complaint" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_LabFindings" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_DateLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_Observations" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_ReportDate" min="-2" max="-2" attributes="0"/>
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jScrollPane6" alignment="0" pref="392" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane9" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane10" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_LabFindings" alignment="0" pref="392" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Complaint" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Observation" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jLabel32" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel33" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_Clinic_Diagnosis" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lbl_dlgHos_Clinic_Remarks" alignment="0" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jScrollPane7" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane8" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Diagnosis" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Remarks" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -2575,52 +2575,52 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
-                          <Component id="jLabel32" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgHos_Clinic_Diagnosis" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
-                          <Component id="jLabel33" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgHos_Clinic_Remarks" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_DateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_dlgHos_Clinic_ReportDate" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                                  <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgHos_Clinic_Complaint" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jScrollPane7" pref="133" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane9" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Diagnosis" pref="133" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Complaint" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                  <Component id="jLabel29" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgHos_Clinic_Observations" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="jScrollPane8" max="32767" attributes="0"/>
-                                      <Component id="jScrollPane10" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Remarks" max="32767" attributes="0"/>
+                                      <Component id="scrl_dlgHos_Clinic_Observation" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jScrollPane6" pref="132" max="32767" attributes="0"/>
+                                  <Component id="scrl_dlgHos_Clinic_LabFindings" pref="132" max="32767" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                                  <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgHos_Clinic_LabFindings" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                               </Group>
                           </Group>
@@ -2629,7 +2629,7 @@
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JLabel" name="jLabel28">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_Complaint">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2637,7 +2637,7 @@
                     <Property name="text" type="java.lang.String" value="History / Complaints"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel29">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_Observations">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2645,7 +2645,7 @@
                     <Property name="text" type="java.lang.String" value="Clinical Observations"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel30">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_LabFindings">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2653,7 +2653,7 @@
                     <Property name="text" type="java.lang.String" value="Lab Findings"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel32">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_Diagnosis">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2661,7 +2661,7 @@
                     <Property name="text" type="java.lang.String" value="Diagnosis"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel33">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_Remarks">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2669,7 +2669,7 @@
                     <Property name="text" type="java.lang.String" value="Remarks"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel34">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_DateLabel">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2677,7 +2677,7 @@
                     <Property name="text" type="java.lang.String" value="Date"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JLabel" name="jLabel35">
+                <Component class="javax.swing.JLabel" name="lbl_dlgHos_Clinic_ReportDate">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Tahoma" size="12" style="0"/>
@@ -2685,14 +2685,14 @@
                     <Property name="text" type="java.lang.String" value="Report Date"/>
                   </Properties>
                 </Component>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane9">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Clinic_Complaint">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea5">
+                    <Component class="javax.swing.JTextArea" name="txt_dlgHos_Clinic_Complaint">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -2700,14 +2700,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane10">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Clinic_Observation">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea6">
+                    <Component class="javax.swing.JTextArea" name="txt_dlgHos_Clinic_Observation">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -2715,14 +2715,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Clinic_LabFindings">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea2">
+                    <Component class="javax.swing.JTextArea" name="txt_dlgHos_Clinic_LabFindings">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -2730,14 +2730,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane7">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Clinic_Diagnosis">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea3">
+                    <Component class="javax.swing.JTextArea" name="txt_dlgHos_Clinic_Diagnosis">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -2745,14 +2745,14 @@
                     </Component>
                   </SubComponents>
                 </Container>
-                <Container class="javax.swing.JScrollPane" name="jScrollPane8">
+                <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Clinic_Remarks">
                   <AuxValues>
                     <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                   </AuxValues>
 
                   <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                   <SubComponents>
-                    <Component class="javax.swing.JTextArea" name="jTextArea4">
+                    <Component class="javax.swing.JTextArea" name="txt_dlgHos_Clinic_Remarks">
                       <Properties>
                         <Property name="columns" type="int" value="20"/>
                         <Property name="rows" type="int" value="5"/>
@@ -2766,11 +2766,6 @@
         </Container>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JToggleButton" name="jToggleButton1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jToggleButton1"/>
-      </Properties>
-    </Component>
     <Menu class="javax.swing.JMenuBar" name="jMenuBar1">
       <SubComponents>
         <Menu class="javax.swing.JMenu" name="jMenu1">

@@ -182,69 +182,68 @@ public class MainWindow extends javax.swing.JFrame {
         ckbx_usrAcc_Fin = new javax.swing.JCheckBox();
         dlgHos_addCustomer = new javax.swing.JDialog();
         pnHosAddCustomer = new javax.swing.JPanel();
-        jLabel13 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel14 = new javax.swing.JLabel();
+        lbl_dlgHos_addnew = new javax.swing.JLabel();
+        pnl_dlgHos_content = new javax.swing.JPanel();
+        lbl_dlgHos_Ownername = new javax.swing.JLabel();
         txt_dlgHos_addCustomer_name = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        lbl_dlgHos_address = new javax.swing.JLabel();
+        lbl_dlgHos_telephone = new javax.swing.JLabel();
         txt_dlgHos_addCustomer_tele = new javax.swing.JTextField();
-        jScrollPane4 = new javax.swing.JScrollPane();
+        scrl_dlgHos_Address = new javax.swing.JScrollPane();
         txt_dlgHos_addCustomer_address = new javax.swing.JTextArea();
-        jLabel17 = new javax.swing.JLabel();
+        lbl_dlgHos_email = new javax.swing.JLabel();
         txt_dlgHos_addCustomer_email = new javax.swing.JTextField();
         btn_dlgHos_addCustomer_cancel = new javax.swing.JButton();
         btn_dlgHos_addCustomer_add = new javax.swing.JButton();
         dlgHos_addPet = new javax.swing.JDialog();
-        pnHosAddCustomer1 = new javax.swing.JPanel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel19 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel20 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jLabel21 = new javax.swing.JLabel();
-        jSpinner2 = new javax.swing.JSpinner();
-        jLabel22 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jLabel25 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        buttonGroup1 = new javax.swing.ButtonGroup();
+        pnHosAddPet = new javax.swing.JPanel();
+        lbl_dlgHos_addPet_topic = new javax.swing.JLabel();
+        pnl_dlgHos_addPet_container = new javax.swing.JPanel();
+        lbl_dlgHos_addPet_name = new javax.swing.JLabel();
+        txt_dlgHos_addPet_name = new javax.swing.JTextField();
+        lbl_dlgHos_addPet_Species = new javax.swing.JLabel();
+        cmb_dlgHos_addPet_Species = new javax.swing.JComboBox<>();
+        lbl_dlgHos_addPet_age = new javax.swing.JLabel();
+        spnr_dlgHos_addPet_years = new javax.swing.JSpinner();
+        lbl_dlgHos_addPet_years = new javax.swing.JLabel();
+        spnr_dlgHos_addPet_months = new javax.swing.JSpinner();
+        lbl_dlgHos_addPet_months = new javax.swing.JLabel();
+        lbl_dlgHos_addPet_sex = new javax.swing.JLabel();
+        rb_dlgHos_addPet_male = new javax.swing.JRadioButton();
+        rb_dlgHos_addPet_female = new javax.swing.JRadioButton();
+        lbl_dlgHos_addPet_breed = new javax.swing.JLabel();
+        txt_dlgHos_addPet_breed = new javax.swing.JTextField();
+        btn_dlgHos_addPet_add = new javax.swing.JButton();
+        btn_dlgHos_addPet_cancel = new javax.swing.JButton();
+        btngp_dlgHos_addPet_Sex = new javax.swing.ButtonGroup();
         dlgHos_Clinic = new javax.swing.JDialog();
-        pnHosAddCustomer2 = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
-        jPanel12 = new javax.swing.JPanel();
-        jScrollPane5 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
-        jPanel19 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel29 = new javax.swing.JLabel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jScrollPane9 = new javax.swing.JScrollPane();
-        jTextArea5 = new javax.swing.JTextArea();
-        jScrollPane10 = new javax.swing.JScrollPane();
-        jTextArea6 = new javax.swing.JTextArea();
-        jScrollPane6 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jScrollPane7 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jTextArea4 = new javax.swing.JTextArea();
-        jToggleButton1 = new javax.swing.JToggleButton();
+        pnHosClinic = new javax.swing.JPanel();
+        pnl_dlgHos_Clinic_Details = new javax.swing.JPanel();
+        lbll_dlgHos_Clinic_petName = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_ReportOf = new javax.swing.JLabel();
+        pnl_dlgHos_Clinic_Ownername = new javax.swing.JLabel();
+        btn_dlgHos_Clinic_new = new javax.swing.JButton();
+        pnl_dlgHos_Clinic_List = new javax.swing.JPanel();
+        scrl_dlgHos_Clinic_list = new javax.swing.JScrollPane();
+        lst_dlgHos_Clinic_list = new javax.swing.JList<>();
+        pnl_dlgHos_Clinic_Report = new javax.swing.JPanel();
+        lbl_dlgHos_Clinic_Complaint = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_Observations = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_LabFindings = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_Diagnosis = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_Remarks = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_DateLabel = new javax.swing.JLabel();
+        lbl_dlgHos_Clinic_ReportDate = new javax.swing.JLabel();
+        scrl_dlgHos_Clinic_Complaint = new javax.swing.JScrollPane();
+        txt_dlgHos_Clinic_Complaint = new javax.swing.JTextArea();
+        scrl_dlgHos_Clinic_Observation = new javax.swing.JScrollPane();
+        txt_dlgHos_Clinic_Observation = new javax.swing.JTextArea();
+        scrl_dlgHos_Clinic_LabFindings = new javax.swing.JScrollPane();
+        txt_dlgHos_Clinic_LabFindings = new javax.swing.JTextArea();
+        scrl_dlgHos_Clinic_Diagnosis = new javax.swing.JScrollPane();
+        txt_dlgHos_Clinic_Diagnosis = new javax.swing.JTextArea();
+        scrl_dlgHos_Clinic_Remarks = new javax.swing.JScrollPane();
+        txt_dlgHos_Clinic_Remarks = new javax.swing.JTextArea();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -1550,30 +1549,30 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnHosAddCustomer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
 
-        jLabel13.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jLabel13.setText("Add New");
+        lbl_dlgHos_addnew.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        lbl_dlgHos_addnew.setText("Add New");
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnl_dlgHos_content.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setText("Owner's Name");
+        lbl_dlgHos_Ownername.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Ownername.setText("Owner's Name");
 
         txt_dlgHos_addCustomer_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel15.setText("Address");
+        lbl_dlgHos_address.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_address.setText("Address");
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel16.setText("Telephone");
+        lbl_dlgHos_telephone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_telephone.setText("Telephone");
 
         txt_dlgHos_addCustomer_tele.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         txt_dlgHos_addCustomer_address.setColumns(20);
         txt_dlgHos_addCustomer_address.setRows(5);
-        jScrollPane4.setViewportView(txt_dlgHos_addCustomer_address);
+        scrl_dlgHos_Address.setViewportView(txt_dlgHos_addCustomer_address);
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel17.setText("E-mail");
+        lbl_dlgHos_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_email.setText("E-mail");
 
         txt_dlgHos_addCustomer_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
@@ -1591,52 +1590,52 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dlgHos_contentLayout = new javax.swing.GroupLayout(pnl_dlgHos_content);
+        pnl_dlgHos_content.setLayout(pnl_dlgHos_contentLayout);
+        pnl_dlgHos_contentLayout.setHorizontalGroup(
+            pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel17))
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_Ownername)
+                    .addComponent(lbl_dlgHos_address)
+                    .addComponent(lbl_dlgHos_telephone)
+                    .addComponent(lbl_dlgHos_email))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_dlgHos_addCustomer_name)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                    .addComponent(scrl_dlgHos_Address, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
                     .addComponent(txt_dlgHos_addCustomer_tele)
                     .addComponent(txt_dlgHos_addCustomer_email))
                 .addGap(45, 45, 45)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_dlgHos_addCustomer_cancel, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
                     .addComponent(btn_dlgHos_addCustomer_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        pnl_dlgHos_contentLayout.setVerticalGroup(
+            pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_Ownername)
                     .addComponent(txt_dlgHos_addCustomer_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_address)
+                    .addComponent(scrl_dlgHos_Address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_dlgHos_addCustomer_add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(jPanel4Layout.createSequentialGroup()
-                            .addComponent(jLabel16)
+                    .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
+                            .addComponent(lbl_dlgHos_telephone)
                             .addGap(10, 10, 10))
                         .addComponent(txt_dlgHos_addCustomer_tele, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgHos_addCustomer_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel17)
+                    .addComponent(lbl_dlgHos_email)
                     .addComponent(btn_dlgHos_addCustomer_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
@@ -1648,9 +1647,9 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnHosAddCustomerLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnHosAddCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_dlgHos_content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnHosAddCustomerLayout.createSequentialGroup()
-                        .addComponent(jLabel13)
+                        .addComponent(lbl_dlgHos_addnew)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1658,9 +1657,9 @@ public class MainWindow extends javax.swing.JFrame {
             pnHosAddCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnHosAddCustomerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_dlgHos_addnew, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_dlgHos_content, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1678,155 +1677,155 @@ public class MainWindow extends javax.swing.JFrame {
         dlgHos_addPet.setTitle("Client Details");
         dlgHos_addPet.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
 
-        pnHosAddCustomer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+        pnHosAddPet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
 
-        jLabel18.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        jLabel18.setText("Add New Pet");
+        lbl_dlgHos_addPet_topic.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        lbl_dlgHos_addPet_topic.setText("Add New Pet");
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        pnl_dlgHos_addPet_container.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel23.setText("Name of Animal");
+        lbl_dlgHos_addPet_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_name.setText("Name of Animal");
 
-        jTextField6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addPet_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel19.setText("Species");
+        lbl_dlgHos_addPet_Species.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_Species.setText("Species");
 
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Canine", "Feline", "Avian", "Other" }));
+        cmb_dlgHos_addPet_Species.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmb_dlgHos_addPet_Species.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Canine", "Feline", "Avian", "Other" }));
 
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel20.setText("Age");
+        lbl_dlgHos_addPet_age.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_age.setText("Age");
 
-        jSpinner1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
+        spnr_dlgHos_addPet_years.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        spnr_dlgHos_addPet_years.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
 
-        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel21.setText("Years -");
+        lbl_dlgHos_addPet_years.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_years.setText("Years -");
 
-        jSpinner2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 11, 1));
+        spnr_dlgHos_addPet_months.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        spnr_dlgHos_addPet_months.setModel(new javax.swing.SpinnerNumberModel(0, 0, 11, 1));
 
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel22.setText("Months");
+        lbl_dlgHos_addPet_months.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_months.setText("Months");
 
-        jLabel24.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel24.setText("Sex");
+        lbl_dlgHos_addPet_sex.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_sex.setText("Sex");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton1.setText("Male");
+        btngp_dlgHos_addPet_Sex.add(rb_dlgHos_addPet_male);
+        rb_dlgHos_addPet_male.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rb_dlgHos_addPet_male.setText("Male");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jRadioButton2.setText("Female");
-        jRadioButton2.setToolTipText("");
+        btngp_dlgHos_addPet_Sex.add(rb_dlgHos_addPet_female);
+        rb_dlgHos_addPet_female.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rb_dlgHos_addPet_female.setText("Female");
+        rb_dlgHos_addPet_female.setToolTipText("");
 
-        jLabel25.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel25.setText("Breed");
+        lbl_dlgHos_addPet_breed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_breed.setText("Breed");
 
-        jTextField7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addPet_breed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jButton6.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton6.setText("Add");
+        btn_dlgHos_addPet_add.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_addPet_add.setText("Add");
 
-        jButton7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton7.setText("Cancel");
+        btn_dlgHos_addPet_cancel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_addPet_cancel.setText("Cancel");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dlgHos_addPet_containerLayout = new javax.swing.GroupLayout(pnl_dlgHos_addPet_container);
+        pnl_dlgHos_addPet_container.setLayout(pnl_dlgHos_addPet_containerLayout);
+        pnl_dlgHos_addPet_containerLayout.setHorizontalGroup(
+            pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_addPet_containerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel20)
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_addPet_containerLayout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_addPet_age)
                         .addGap(81, 81, 81)
-                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(spnr_dlgHos_addPet_years, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel21)
+                        .addComponent(lbl_dlgHos_addPet_years)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(spnr_dlgHos_addPet_months, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel22))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel23)
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel25)
-                            .addComponent(jLabel24))
+                        .addComponent(lbl_dlgHos_addPet_months))
+                    .addGroup(pnl_dlgHos_addPet_containerLayout.createSequentialGroup()
+                        .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_dlgHos_addPet_name)
+                            .addComponent(lbl_dlgHos_addPet_Species)
+                            .addComponent(lbl_dlgHos_addPet_breed)
+                            .addComponent(lbl_dlgHos_addPet_sex))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jRadioButton1)
+                        .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_dlgHos_addPet_containerLayout.createSequentialGroup()
+                                .addComponent(rb_dlgHos_addPet_male)
                                 .addGap(15, 15, 15)
-                                .addComponent(jRadioButton2))
-                            .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel5Layout.createSequentialGroup()
-                                    .addComponent(jButton7)
+                                .addComponent(rb_dlgHos_addPet_female))
+                            .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(pnl_dlgHos_addPet_containerLayout.createSequentialGroup()
+                                    .addComponent(btn_dlgHos_addPet_cancel)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton6))
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.Alignment.LEADING, 0, 252, Short.MAX_VALUE)
-                                .addComponent(jTextField7, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.Alignment.LEADING)))))
+                                    .addComponent(btn_dlgHos_addPet_add))
+                                .addComponent(cmb_dlgHos_addPet_Species, javax.swing.GroupLayout.Alignment.LEADING, 0, 252, Short.MAX_VALUE)
+                                .addComponent(txt_dlgHos_addPet_breed, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_dlgHos_addPet_name, javax.swing.GroupLayout.Alignment.LEADING)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        pnl_dlgHos_addPet_containerLayout.setVerticalGroup(
+            pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_addPet_containerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addPet_name)
+                    .addComponent(txt_dlgHos_addPet_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel19))
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmb_dlgHos_addPet_Species, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_Species))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel20)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel21)
-                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel22))
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addPet_age)
+                    .addComponent(spnr_dlgHos_addPet_years, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_years)
+                    .addComponent(spnr_dlgHos_addPet_months, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_months))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel25))
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgHos_addPet_breed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_breed))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel24)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addPet_sex)
+                    .addComponent(rb_dlgHos_addPet_male)
+                    .addComponent(rb_dlgHos_addPet_female))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnl_dlgHos_addPet_containerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgHos_addPet_add, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgHos_addPet_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout pnHosAddCustomer1Layout = new javax.swing.GroupLayout(pnHosAddCustomer1);
-        pnHosAddCustomer1.setLayout(pnHosAddCustomer1Layout);
-        pnHosAddCustomer1Layout.setHorizontalGroup(
-            pnHosAddCustomer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnHosAddCustomer1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnHosAddPetLayout = new javax.swing.GroupLayout(pnHosAddPet);
+        pnHosAddPet.setLayout(pnHosAddPetLayout);
+        pnHosAddPetLayout.setHorizontalGroup(
+            pnHosAddPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosAddPetLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnHosAddCustomer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnHosAddCustomer1Layout.createSequentialGroup()
-                        .addComponent(jLabel18)
+                .addGroup(pnHosAddPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnHosAddPetLayout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_addPet_topic)
                         .addGap(0, 285, Short.MAX_VALUE))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pnl_dlgHos_addPet_container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        pnHosAddCustomer1Layout.setVerticalGroup(
-            pnHosAddCustomer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnHosAddCustomer1Layout.createSequentialGroup()
+        pnHosAddPetLayout.setVerticalGroup(
+            pnHosAddPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosAddPetLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbl_dlgHos_addPet_topic, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_dlgHos_addPet_container, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -1834,218 +1833,218 @@ public class MainWindow extends javax.swing.JFrame {
         dlgHos_addPet.getContentPane().setLayout(dlgHos_addPetLayout);
         dlgHos_addPetLayout.setHorizontalGroup(
             dlgHos_addPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHosAddCustomer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnHosAddPet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         dlgHos_addPetLayout.setVerticalGroup(
             dlgHos_addPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHosAddCustomer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnHosAddPet, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         dlgHos_Clinic.setTitle("Client Details");
         dlgHos_Clinic.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
 
-        pnHosAddCustomer2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+        pnHosClinic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
+        pnl_dlgHos_Clinic_Details.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
-        jLabel26.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel26.setText("Pet Name");
+        lbll_dlgHos_Clinic_petName.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        lbll_dlgHos_Clinic_petName.setText("Pet Name");
 
-        jLabel31.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel31.setText("Clinical Reports of :");
+        lbl_dlgHos_Clinic_ReportOf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbl_dlgHos_Clinic_ReportOf.setText("Clinical Reports of :");
 
-        jLabel27.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel27.setText("[ Owner : Owners name ]");
+        pnl_dlgHos_Clinic_Ownername.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        pnl_dlgHos_Clinic_Ownername.setText("[ Owner : Owners name ]");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dlgHos_Clinic_DetailsLayout = new javax.swing.GroupLayout(pnl_dlgHos_Clinic_Details);
+        pnl_dlgHos_Clinic_Details.setLayout(pnl_dlgHos_Clinic_DetailsLayout);
+        pnl_dlgHos_Clinic_DetailsLayout.setHorizontalGroup(
+            pnl_dlgHos_Clinic_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_Clinic_DetailsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel31)
+                .addComponent(lbl_dlgHos_Clinic_ReportOf)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbll_dlgHos_Clinic_petName, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_dlgHos_Clinic_Ownername, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(264, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        pnl_dlgHos_Clinic_DetailsLayout.setVerticalGroup(
+            pnl_dlgHos_Clinic_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_Clinic_DetailsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(jLabel26)
-                    .addComponent(jLabel27))
+                .addGroup(pnl_dlgHos_Clinic_DetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_Clinic_ReportOf)
+                    .addComponent(lbll_dlgHos_Clinic_petName)
+                    .addComponent(pnl_dlgHos_Clinic_Ownername))
                 .addContainerGap())
         );
 
-        jButton8.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jButton8.setText("New");
+        btn_dlgHos_Clinic_new.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_Clinic_new.setText("New");
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_dlgHos_Clinic_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jList1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+        lst_dlgHos_Clinic_list.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lst_dlgHos_Clinic_list.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
             public int getSize() { return strings.length; }
             public String getElementAt(int i) { return strings[i]; }
         });
-        jScrollPane5.setViewportView(jList1);
+        scrl_dlgHos_Clinic_list.setViewportView(lst_dlgHos_Clinic_list);
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout pnl_dlgHos_Clinic_ListLayout = new javax.swing.GroupLayout(pnl_dlgHos_Clinic_List);
+        pnl_dlgHos_Clinic_List.setLayout(pnl_dlgHos_Clinic_ListLayout);
+        pnl_dlgHos_Clinic_ListLayout.setHorizontalGroup(
+            pnl_dlgHos_Clinic_ListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(scrl_dlgHos_Clinic_list, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane5)
+        pnl_dlgHos_Clinic_ListLayout.setVerticalGroup(
+            pnl_dlgHos_Clinic_ListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(scrl_dlgHos_Clinic_list)
         );
 
-        jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_dlgHos_Clinic_Report.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jLabel28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel28.setText("History / Complaints");
+        lbl_dlgHos_Clinic_Complaint.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_Complaint.setText("History / Complaints");
 
-        jLabel29.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel29.setText("Clinical Observations");
+        lbl_dlgHos_Clinic_Observations.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_Observations.setText("Clinical Observations");
 
-        jLabel30.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel30.setText("Lab Findings");
+        lbl_dlgHos_Clinic_LabFindings.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_LabFindings.setText("Lab Findings");
 
-        jLabel32.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel32.setText("Diagnosis");
+        lbl_dlgHos_Clinic_Diagnosis.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_Diagnosis.setText("Diagnosis");
 
-        jLabel33.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel33.setText("Remarks");
+        lbl_dlgHos_Clinic_Remarks.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_Remarks.setText("Remarks");
 
-        jLabel34.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel34.setText("Date");
+        lbl_dlgHos_Clinic_DateLabel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_DateLabel.setText("Date");
 
-        jLabel35.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel35.setText("Report Date");
+        lbl_dlgHos_Clinic_ReportDate.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_Clinic_ReportDate.setText("Report Date");
 
-        jTextArea5.setColumns(20);
-        jTextArea5.setRows(5);
-        jScrollPane9.setViewportView(jTextArea5);
+        txt_dlgHos_Clinic_Complaint.setColumns(20);
+        txt_dlgHos_Clinic_Complaint.setRows(5);
+        scrl_dlgHos_Clinic_Complaint.setViewportView(txt_dlgHos_Clinic_Complaint);
 
-        jTextArea6.setColumns(20);
-        jTextArea6.setRows(5);
-        jScrollPane10.setViewportView(jTextArea6);
+        txt_dlgHos_Clinic_Observation.setColumns(20);
+        txt_dlgHos_Clinic_Observation.setRows(5);
+        scrl_dlgHos_Clinic_Observation.setViewportView(txt_dlgHos_Clinic_Observation);
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane6.setViewportView(jTextArea2);
+        txt_dlgHos_Clinic_LabFindings.setColumns(20);
+        txt_dlgHos_Clinic_LabFindings.setRows(5);
+        scrl_dlgHos_Clinic_LabFindings.setViewportView(txt_dlgHos_Clinic_LabFindings);
 
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane7.setViewportView(jTextArea3);
+        txt_dlgHos_Clinic_Diagnosis.setColumns(20);
+        txt_dlgHos_Clinic_Diagnosis.setRows(5);
+        scrl_dlgHos_Clinic_Diagnosis.setViewportView(txt_dlgHos_Clinic_Diagnosis);
 
-        jTextArea4.setColumns(20);
-        jTextArea4.setRows(5);
-        jScrollPane8.setViewportView(jTextArea4);
+        txt_dlgHos_Clinic_Remarks.setColumns(20);
+        txt_dlgHos_Clinic_Remarks.setRows(5);
+        scrl_dlgHos_Clinic_Remarks.setViewportView(txt_dlgHos_Clinic_Remarks);
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dlgHos_Clinic_ReportLayout = new javax.swing.GroupLayout(pnl_dlgHos_Clinic_Report);
+        pnl_dlgHos_Clinic_Report.setLayout(pnl_dlgHos_Clinic_ReportLayout);
+        pnl_dlgHos_Clinic_ReportLayout.setHorizontalGroup(
+            pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel28)
-                    .addComponent(jLabel30)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel29))
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_Clinic_Complaint)
+                    .addComponent(lbl_dlgHos_Clinic_LabFindings)
+                    .addComponent(lbl_dlgHos_Clinic_DateLabel)
+                    .addComponent(lbl_dlgHos_Clinic_Observations))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel35)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
-                            .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.LEADING))
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_Clinic_ReportDate)
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
+                        .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(scrl_dlgHos_Clinic_LabFindings, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                            .addComponent(scrl_dlgHos_Clinic_Complaint, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrl_dlgHos_Clinic_Observation, javax.swing.GroupLayout.Alignment.LEADING))
                         .addGap(45, 45, 45)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel32)
-                            .addComponent(jLabel33))
+                        .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_dlgHos_Clinic_Diagnosis)
+                            .addComponent(lbl_dlgHos_Clinic_Remarks))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane7)
-                            .addComponent(jScrollPane8))))
+                        .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrl_dlgHos_Clinic_Diagnosis)
+                            .addComponent(scrl_dlgHos_Clinic_Remarks))))
                 .addContainerGap())
         );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
+        pnl_dlgHos_Clinic_ReportLayout.setVerticalGroup(
+            pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
-                .addComponent(jLabel32)
+                .addComponent(lbl_dlgHos_Clinic_Diagnosis)
                 .addGap(125, 125, 125)
-                .addComponent(jLabel33)
+                .addComponent(lbl_dlgHos_Clinic_Remarks)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel19Layout.createSequentialGroup()
+            .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel35))
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_Clinic_DateLabel)
+                    .addComponent(lbl_dlgHos_Clinic_ReportDate))
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addComponent(jLabel28))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_Clinic_Complaint))
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane7, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
-                            .addComponent(jScrollPane9))))
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(scrl_dlgHos_Clinic_Diagnosis, javax.swing.GroupLayout.DEFAULT_SIZE, 133, Short.MAX_VALUE)
+                            .addComponent(scrl_dlgHos_Clinic_Complaint))))
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addComponent(jLabel29))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_Clinic_Observations))
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jScrollPane8)
-                            .addComponent(jScrollPane10))))
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
+                        .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(scrl_dlgHos_Clinic_Remarks)
+                            .addComponent(scrl_dlgHos_Clinic_Observation))))
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                        .addComponent(scrl_dlgHos_Clinic_LabFindings, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
                         .addContainerGap())
-                    .addGroup(jPanel19Layout.createSequentialGroup()
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(44, 44, 44)
-                        .addComponent(jLabel30)
+                        .addComponent(lbl_dlgHos_Clinic_LabFindings)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        javax.swing.GroupLayout pnHosAddCustomer2Layout = new javax.swing.GroupLayout(pnHosAddCustomer2);
-        pnHosAddCustomer2.setLayout(pnHosAddCustomer2Layout);
-        pnHosAddCustomer2Layout.setHorizontalGroup(
-            pnHosAddCustomer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnHosAddCustomer2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnHosClinicLayout = new javax.swing.GroupLayout(pnHosClinic);
+        pnHosClinic.setLayout(pnHosClinicLayout);
+        pnHosClinicLayout.setHorizontalGroup(
+            pnHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosClinicLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnHosAddCustomer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(pnHosAddCustomer2Layout.createSequentialGroup()
-                        .addGroup(pnHosAddCustomer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_dlgHos_Clinic_Details, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnHosClinicLayout.createSequentialGroup()
+                        .addGroup(pnHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(btn_dlgHos_Clinic_new, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnl_dlgHos_Clinic_List, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(pnl_dlgHos_Clinic_Report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        pnHosAddCustomer2Layout.setVerticalGroup(
-            pnHosAddCustomer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnHosAddCustomer2Layout.createSequentialGroup()
+        pnHosClinicLayout.setVerticalGroup(
+            pnHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosClinicLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_dlgHos_Clinic_Details, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(pnHosAddCustomer2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_dlgHos_Clinic_Report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_dlgHos_Clinic_List, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_dlgHos_Clinic_new, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -2053,14 +2052,12 @@ public class MainWindow extends javax.swing.JFrame {
         dlgHos_Clinic.getContentPane().setLayout(dlgHos_ClinicLayout);
         dlgHos_ClinicLayout.setHorizontalGroup(
             dlgHos_ClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHosAddCustomer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnHosClinic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         dlgHos_ClinicLayout.setVerticalGroup(
             dlgHos_ClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnHosAddCustomer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnHosClinic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-
-        jToggleButton1.setText("jToggleButton1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Veterinary Hospital Management System");
@@ -6123,8 +6120,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgFin_addtelebill_Cancel;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Add;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Cancel;
+    private javax.swing.JButton btn_dlgHos_Clinic_new;
     private javax.swing.JButton btn_dlgHos_addCustomer_add;
     private javax.swing.JButton btn_dlgHos_addCustomer_cancel;
+    private javax.swing.JButton btn_dlgHos_addPet_add;
+    private javax.swing.JButton btn_dlgHos_addPet_cancel;
     private javax.swing.JButton btn_usrAcc_addAccount;
     private javax.swing.JButton btn_usrAcc_apply;
     private javax.swing.JButton btn_usrAcc_cancel;
@@ -6133,7 +6133,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnfin_dlgAddClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientCancel;
     private javax.swing.JButton btnfin_dlgEditClientUpdate;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup btngp_dlgHos_addPet_Sex;
     private javax.swing.JCheckBox ckbx_Fin_ClientInvoice;
     private javax.swing.JCheckBox ckbx_Fin_Daycare;
     private javax.swing.JCheckBox ckbx_Fin_Ebill;
@@ -6156,6 +6156,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_usrAcc_MobVet;
     private javax.swing.JCheckBox ckbx_usrAcc_PS;
     private javax.swing.JCheckBox ckbx_usrAcc_Ph;
+    private javax.swing.JComboBox<String> cmb_dlgHos_addPet_Species;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_From;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_to;
     private com.toedter.calendar.JDateChooser dc_Fin_Income_From;
@@ -6184,46 +6185,18 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -6238,52 +6211,28 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane5;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JScrollPane jScrollPane7;
-    private javax.swing.JScrollPane jScrollPane8;
-    private javax.swing.JScrollPane jScrollPane9;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lblUsrAcc01;
     private javax.swing.JLabel lblUsrAcc02;
     private javax.swing.JLabel lblUsrAcc03;
@@ -6313,11 +6262,34 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgFin_editClient_Email;
     private javax.swing.JLabel lbl_dlgFin_editClient_tele1;
     private javax.swing.JLabel lbl_dlgFin_editClient_tele2;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_Complaint;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_DateLabel;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_Diagnosis;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_LabFindings;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_Observations;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_Remarks;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_ReportDate;
+    private javax.swing.JLabel lbl_dlgHos_Clinic_ReportOf;
+    private javax.swing.JLabel lbl_dlgHos_Ownername;
+    private javax.swing.JLabel lbl_dlgHos_addPet_Species;
+    private javax.swing.JLabel lbl_dlgHos_addPet_age;
+    private javax.swing.JLabel lbl_dlgHos_addPet_breed;
+    private javax.swing.JLabel lbl_dlgHos_addPet_months;
+    private javax.swing.JLabel lbl_dlgHos_addPet_name;
+    private javax.swing.JLabel lbl_dlgHos_addPet_sex;
+    private javax.swing.JLabel lbl_dlgHos_addPet_topic;
+    private javax.swing.JLabel lbl_dlgHos_addPet_years;
+    private javax.swing.JLabel lbl_dlgHos_addnew;
+    private javax.swing.JLabel lbl_dlgHos_address;
+    private javax.swing.JLabel lbl_dlgHos_email;
+    private javax.swing.JLabel lbl_dlgHos_telephone;
     private javax.swing.JLabel lbl_fin_inc_seperator;
+    private javax.swing.JLabel lbll_dlgHos_Clinic_petName;
     private javax.swing.JList<String> lstUserAccounts;
+    private javax.swing.JList<String> lst_dlgHos_Clinic_list;
     private javax.swing.JPanel pnHosAddCustomer;
-    private javax.swing.JPanel pnHosAddCustomer1;
-    private javax.swing.JPanel pnHosAddCustomer2;
+    private javax.swing.JPanel pnHosAddPet;
+    private javax.swing.JPanel pnHosClinic;
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
     private javax.swing.JPanel pnlClientSearchBar1;
@@ -6352,11 +6324,26 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlPetshop;
     private javax.swing.JPanel pnlPharmacy;
     private javax.swing.JPanel pnl_ExpenseAddnew;
+    private javax.swing.JPanel pnl_dlgHos_Clinic_Details;
+    private javax.swing.JPanel pnl_dlgHos_Clinic_List;
+    private javax.swing.JLabel pnl_dlgHos_Clinic_Ownername;
+    private javax.swing.JPanel pnl_dlgHos_Clinic_Report;
+    private javax.swing.JPanel pnl_dlgHos_addPet_container;
+    private javax.swing.JPanel pnl_dlgHos_content;
     private javax.swing.JPanel pnl_usrAcc_Container;
     private javax.swing.JPanel pnl_usrAcc_Login;
     private javax.swing.JPanel pnl_usrAcc_LoginPrivileges;
     private javax.swing.JPanel pnl_usrAcc_Privileges;
     private javax.swing.JPanel pnltableExpense;
+    private javax.swing.JRadioButton rb_dlgHos_addPet_female;
+    private javax.swing.JRadioButton rb_dlgHos_addPet_male;
+    private javax.swing.JScrollPane scrl_dlgHos_Address;
+    private javax.swing.JScrollPane scrl_dlgHos_Clinic_Complaint;
+    private javax.swing.JScrollPane scrl_dlgHos_Clinic_Diagnosis;
+    private javax.swing.JScrollPane scrl_dlgHos_Clinic_LabFindings;
+    private javax.swing.JScrollPane scrl_dlgHos_Clinic_Observation;
+    private javax.swing.JScrollPane scrl_dlgHos_Clinic_Remarks;
+    private javax.swing.JScrollPane scrl_dlgHos_Clinic_list;
     private javax.swing.JScrollPane scrl_usrAcc_usrAccounts;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Client_Details;
     private javax.swing.JScrollPane scrlp_tbl_Fin_ExpenseDetails;
@@ -6364,6 +6351,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrlp_tbl_Fin_Product_Details;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_addClient_Address;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_editClient_Address;
+    private javax.swing.JSpinner spnr_dlgHos_addPet_months;
+    private javax.swing.JSpinner spnr_dlgHos_addPet_years;
     private javax.swing.JSeparator sprt_usrAcc_Privileges;
     private javax.swing.JSeparator sprtl_usrAcc_login;
     private javax.swing.JTable tbl_Fin_Client_Details;
@@ -6395,10 +6384,17 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgFin_editClient_email;
     private javax.swing.JTextField txt_dlgFin_editClient_tele1;
     private javax.swing.JTextField txt_dlgFin_editClient_tele2;
+    private javax.swing.JTextArea txt_dlgHos_Clinic_Complaint;
+    private javax.swing.JTextArea txt_dlgHos_Clinic_Diagnosis;
+    private javax.swing.JTextArea txt_dlgHos_Clinic_LabFindings;
+    private javax.swing.JTextArea txt_dlgHos_Clinic_Observation;
+    private javax.swing.JTextArea txt_dlgHos_Clinic_Remarks;
     private javax.swing.JTextArea txt_dlgHos_addCustomer_address;
     private javax.swing.JTextField txt_dlgHos_addCustomer_email;
     private javax.swing.JTextField txt_dlgHos_addCustomer_name;
     private javax.swing.JTextField txt_dlgHos_addCustomer_tele;
+    private javax.swing.JTextField txt_dlgHos_addPet_breed;
+    private javax.swing.JTextField txt_dlgHos_addPet_name;
     private javax.swing.JTextField txt_usrAcc_LoginName;
     private javax.swing.JPasswordField txt_usrAcc_Password;
     private javax.swing.JPasswordField txt_usrAcc_cPassword;
