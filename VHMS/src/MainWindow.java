@@ -185,16 +185,16 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        txt_dlgHos_addCustomer_name = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        txt_dlgHos_addCustomer_tele = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txt_dlgHos_addCustomer_address = new javax.swing.JTextArea();
         jLabel17 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        txt_dlgHos_addCustomer_email = new javax.swing.JTextField();
+        btn_dlgHos_addCustomer_cancel = new javax.swing.JButton();
+        btn_dlgHos_addCustomer_add = new javax.swing.JButton();
         dlgHos_addPet = new javax.swing.JDialog();
         pnHosAddCustomer1 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
@@ -288,9 +288,9 @@ public class MainWindow extends javax.swing.JFrame {
         btnHospitalPayments = new javax.swing.JButton();
         pnlHosRegister = new javax.swing.JLayeredPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbl_Hos_Customers = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTable3 = new javax.swing.JTable();
+        tbl_Hos_Pets = new javax.swing.JTable();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         btn_Hos_addCustomer = new javax.swing.JButton();
@@ -1558,7 +1558,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel14.setText("Owner's Name");
 
-        jTextField3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addCustomer_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel15.setText("Address");
@@ -1566,20 +1566,30 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel16.setText("Telephone");
 
-        jTextField5.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addCustomer_tele.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane4.setViewportView(jTextArea1);
+        txt_dlgHos_addCustomer_address.setColumns(20);
+        txt_dlgHos_addCustomer_address.setRows(5);
+        jScrollPane4.setViewportView(txt_dlgHos_addCustomer_address);
 
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel17.setText("E-mail");
 
-        jTextField4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addCustomer_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        jButton4.setText("Cancel");
+        btn_dlgHos_addCustomer_cancel.setText("Cancel");
+        btn_dlgHos_addCustomer_cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_addCustomer_cancelActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("Save");
+        btn_dlgHos_addCustomer_add.setText("Add");
+        btn_dlgHos_addCustomer_add.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_addCustomer_addActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -1594,14 +1604,14 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(jLabel17))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField3)
+                    .addComponent(txt_dlgHos_addCustomer_name)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
-                    .addComponent(jTextField5)
-                    .addComponent(jTextField4))
+                    .addComponent(txt_dlgHos_addCustomer_tele)
+                    .addComponent(txt_dlgHos_addCustomer_email))
                 .addGap(45, 45, 45)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btn_dlgHos_addCustomer_cancel, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(btn_dlgHos_addCustomer_add, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -1610,21 +1620,24 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_dlgHos_addCustomer_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel16)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_dlgHos_addCustomer_add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(jLabel16)
+                            .addGap(10, 10, 10))
+                        .addComponent(txt_dlgHos_addCustomer_tele, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_dlgHos_addCustomer_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_dlgHos_addCustomer_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
@@ -2521,7 +2534,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnlHosRegister.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_Hos_Customers.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -2532,9 +2545,9 @@ public class MainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbl_Hos_Customers);
 
-        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_Hos_Pets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -2545,7 +2558,7 @@ public class MainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane3.setViewportView(jTable3);
+        jScrollPane3.setViewportView(tbl_Hos_Pets);
 
         jLabel8.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         jLabel8.setText("Customers");
@@ -4341,6 +4354,12 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlHome.setVisible(false);
         
         this.pnlHosRegister.setVisible(true);
+        
+        //-update customer table-----------------------------------------
+            Customer cs = new Customer();
+            ResultSet rs = cs.getCustomerDetails();
+            this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
+            //--------------------------------------------------------------
     }//GEN-LAST:event_btnHospitalActionPerformed
 
     private void btnMobileServiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMobileServiceActionPerformed
@@ -4421,7 +4440,7 @@ public class MainWindow extends javax.swing.JFrame {
         //---------filling client details table-----------------
         ResultSet rs;
         Client c = new Client();
-        rs = c.updateClientTable();
+        rs = c.getClientDetails();
         if(rs==null){
             JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
@@ -4456,7 +4475,7 @@ public class MainWindow extends javax.swing.JFrame {
         //-update client table----------------------------------------
         ResultSet rs;
         Client c = new Client();
-        rs = c.updateClientTable();
+        rs = c.getClientDetails();
         if(rs==null){
             JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
@@ -4547,9 +4566,9 @@ public class MainWindow extends javax.swing.JFrame {
         if(c.validateCompanyName(company) & c.validateCompanyAddress(address) & c.validateTelephone(tele1) & c.validateTelephone(tele2) & c.validateEmail(email)){
             int userChoice = JOptionPane.showConfirmDialog(dlgFin_addClient,"Are You sure the details are correct?","Add Client Details",JOptionPane.YES_NO_OPTION);
             if(userChoice==0){
-                    c.addNewClient(company,address,tele1,tele2,email,dlgFin_addClient);
+                    c.setNewClient(company,address,tele1,tele2,email,dlgFin_addClient);
                     //-update client table--------------------------------------
-                    ResultSet rs = c.updateClientTable();
+                    ResultSet rs = c.getClientDetails();
                     if(rs==null){
                         JOptionPane.showMessageDialog(dlgFin_addClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
                     }
@@ -4632,7 +4651,7 @@ public class MainWindow extends javax.swing.JFrame {
                     c.updateClient(company,address,tele1,tele2,email,clientID,dlgFin_editClient);
                     //-update client table--------------------------------------
                     ResultSet rs;
-                    rs = c.updateClientTable();
+                    rs = c.getClientDetails();
                     if(rs==null){
                         JOptionPane.showMessageDialog(dlgFin_editClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
                     }
@@ -4702,7 +4721,7 @@ public class MainWindow extends javax.swing.JFrame {
             Client c = new Client();
             c.deleteClient(ClientID, this);
             ResultSet rs;
-            rs = c.updateClientTable();
+            rs = c.getClientDetails();
             if(rs==null){
                 JOptionPane.showMessageDialog(dlgFin_editClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
             }
@@ -4761,7 +4780,7 @@ public class MainWindow extends javax.swing.JFrame {
                 String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
                 ResultSet rs;
                 Client c = new Client();
-                rs = c.updateProductTable(ClientID);
+                rs = c.getProductDetails(ClientID);
                 if(rs==null){
                     JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
                 }
@@ -4792,7 +4811,7 @@ public class MainWindow extends javax.swing.JFrame {
             String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
             ResultSet rs;
             Client c = new Client();
-            rs = c.updateProductTable(ClientID);
+            rs = c.getProductDetails(ClientID);
             if(rs==null){
                 JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
             }
@@ -4821,7 +4840,7 @@ public class MainWindow extends javax.swing.JFrame {
         //-update client table--------------------------------------
         ResultSet rs;
         Client c = new Client();
-        rs = c.updateClientTable();
+        rs = c.getClientDetails();
         if(rs==null){
             JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
@@ -4836,7 +4855,7 @@ public class MainWindow extends javax.swing.JFrame {
         }
         else{
             String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-            rs = c.updateProductTable(ClientID);
+            rs = c.getProductDetails(ClientID);
             if(rs==null){
                 JOptionPane.showMessageDialog(this, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
             }
@@ -5776,6 +5795,28 @@ public class MainWindow extends javax.swing.JFrame {
         this.dlgHos_Clinic.setLocationRelativeTo(this);
         this.dlgHos_Clinic.setVisible(true); 
     }//GEN-LAST:event_btn_Hos_ViewClinicActionPerformed
+
+    private void btn_dlgHos_addCustomer_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_addCustomer_addActionPerformed
+        int userChoice = JOptionPane.showConfirmDialog(dlgHos_addCustomer,"Are You sure the details are correct?","Add New Customer",JOptionPane.YES_NO_OPTION);
+        if(userChoice==0){
+            String name = this.txt_dlgHos_addCustomer_name.getText();
+            String address = this.txt_dlgHos_addCustomer_address.getText();
+            String tele = this.txt_dlgHos_addCustomer_tele.getText();
+            String email = this.txt_dlgHos_addCustomer_email.getText();
+            Customer cs = new Customer();
+            //-add customer---------------------------------------------
+            cs.addCustomer(name, address, tele, email, dlgHos_addCustomer);
+            //-update customer table-----------------------------------------
+            ResultSet rs = cs.getCustomerDetails();
+            this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
+            //--------------------------------------------------------------
+            this.dlgHos_addCustomer.dispose();
+        }
+    }//GEN-LAST:event_btn_dlgHos_addCustomer_addActionPerformed
+
+    private void btn_dlgHos_addCustomer_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_addCustomer_cancelActionPerformed
+        this.dlgHos_addCustomer.dispose();
+    }//GEN-LAST:event_btn_dlgHos_addCustomer_cancelActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -6082,6 +6123,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgFin_addtelebill_Cancel;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Add;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Cancel;
+    private javax.swing.JButton btn_dlgHos_addCustomer_add;
+    private javax.swing.JButton btn_dlgHos_addCustomer_cancel;
     private javax.swing.JButton btn_usrAcc_addAccount;
     private javax.swing.JButton btn_usrAcc_apply;
     private javax.swing.JButton btn_usrAcc_cancel;
@@ -6141,8 +6184,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
@@ -6232,10 +6273,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
-    private javax.swing.JTable jTable3;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextArea jTextArea3;
     private javax.swing.JTextArea jTextArea4;
@@ -6243,9 +6281,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea6;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JToggleButton jToggleButton1;
@@ -6335,6 +6370,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable tbl_Fin_ExpenseDetails;
     private javax.swing.JTable tbl_Fin_Income_Details;
     private javax.swing.JTable tbl_Fin_Product_Details;
+    private javax.swing.JTable tbl_Hos_Customers;
+    private javax.swing.JTable tbl_Hos_Pets;
     private javax.swing.JTextField txtItemcode;
     private javax.swing.JTextField txtQuantity;
     private javax.swing.JTextField txt_Fin_SearchCompany;
@@ -6358,6 +6395,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgFin_editClient_email;
     private javax.swing.JTextField txt_dlgFin_editClient_tele1;
     private javax.swing.JTextField txt_dlgFin_editClient_tele2;
+    private javax.swing.JTextArea txt_dlgHos_addCustomer_address;
+    private javax.swing.JTextField txt_dlgHos_addCustomer_email;
+    private javax.swing.JTextField txt_dlgHos_addCustomer_name;
+    private javax.swing.JTextField txt_dlgHos_addCustomer_tele;
     private javax.swing.JTextField txt_usrAcc_LoginName;
     private javax.swing.JPasswordField txt_usrAcc_Password;
     private javax.swing.JPasswordField txt_usrAcc_cPassword;

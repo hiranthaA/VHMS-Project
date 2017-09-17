@@ -44,7 +44,7 @@ public class Client {
         product=searchText;
         String sql = "select distinct fc.clientID,fc.company_name,fc.address,fc.tele1,fc.tele2,fc.email from client_products cp,finance_clients fc where cp.clientID=fc.clientID and cp.product like '%"+product+"%'";
         if(product.equals("")){
-            return this.updateClientTable();
+            return this.getClientDetails();
         }
         else{
             try{
@@ -58,7 +58,7 @@ public class Client {
         }
     }
     
-    public ResultSet updateClientTable(){
+    public ResultSet getClientDetails(){
         String sql = "select clientID as 'ClientID',company_name as 'Company', address as 'Address', tele1 as 'Telephone #1', tele2 as 'Telephone #2', email as 'Email' from finance_clients";
         try{
             Statement stmnt = dbcon.createStatement();
@@ -70,7 +70,7 @@ public class Client {
         }
     }
     
-    public ResultSet updateProductTable(String client){
+    public ResultSet getProductDetails(String client){
         String ClientID = client;
             String sql = "select product as 'Product' from client_products where clientID='"+ClientID+"'";
             try{
@@ -83,7 +83,7 @@ public class Client {
             }
     }
     
-    public void addNewClient(String company,String address,String tele1,String tele2,String email,Component comp){
+    public void setNewClient(String company,String address,String tele1,String tele2,String email,Component comp){
         try{
             String SQL = "insert into finance_clients (clientID,company_name,address,tele1,tele2,email) values(?,?,?,?,?,?)";
             PreparedStatement pst = dbcon.prepareStatement(SQL);
