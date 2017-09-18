@@ -2011,9 +2011,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_dlgHos_Clinic_DateLabel)
-                    .addComponent(lbl_dlgHos_Clinic_ReportDate))
+                .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_Clinic_ReportDate, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lbl_dlgHos_Clinic_DateLabel))
                 .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGap(38, 38, 38)
@@ -5864,6 +5864,7 @@ public class MainWindow extends javax.swing.JFrame {
             this.txt_dlgHos_Clinic_Remarks.setEditable(false);
             
             this.btn_dlgHos_Clinic_apply.setEnabled(false);
+            this.btn_dlgHos_Clinic_edit.setEnabled(false);
         //---------------------------------------------------
         try{
             int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
@@ -5988,6 +5989,7 @@ public class MainWindow extends javax.swing.JFrame {
         //---------------------------------------------------
         if(evt.getButton()==MouseEvent.BUTTON1){
             if(!lst_dlgHos_Clinic_list.isSelectionEmpty()){
+                this.btn_dlgHos_Clinic_edit.setEnabled(true);
                 Clinic c = new Clinic();
                 ResultSet rs = c.getClinicDetails(this.lst_dlgHos_Clinic_list.getSelectedValue());
                 try{
@@ -6026,6 +6028,7 @@ public class MainWindow extends javax.swing.JFrame {
             this.txt_dlgHos_Clinic_Remarks.setEditable(true);
             
             this.btn_dlgHos_Clinic_apply.setEnabled(true);
+            this.btn_dlgHos_Clinic_edit.setEnabled(false);
             this.lst_dlgHos_Clinic_list.clearSelection();
             Date date = new Date();
             DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
@@ -6035,7 +6038,8 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_dlgHos_Clinic_newActionPerformed
 
     private void btn_dlgHos_Clinic_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_Clinic_editActionPerformed
-        //-make fields editable--------------------------------------------------    
+        //-make fields editable-------------------------------------------------- 
+        if(!lst_dlgHos_Clinic_list.isSelectionEmpty()){
             this.txt_dlgHos_Clinic_Complaint.setEditable(true);
             this.txt_dlgHos_Clinic_Observation.setEditable(true);
             this.txt_dlgHos_Clinic_LabFindings.setEditable(true);
@@ -6043,52 +6047,96 @@ public class MainWindow extends javax.swing.JFrame {
             this.txt_dlgHos_Clinic_Remarks.setEditable(true);
             
             this.btn_dlgHos_Clinic_apply.setEnabled(true);
+        }
         //---------------------------------------------------
     }//GEN-LAST:event_btn_dlgHos_Clinic_editActionPerformed
 
     private void btn_dlgHos_Clinic_applyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_Clinic_applyActionPerformed
-        Date date = new Date();
-        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-        String reportdate = df.format(date);
-        int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
-        String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
-        String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
-        String obsr = this.txt_dlgHos_Clinic_Observation.getText();
-        String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
-        String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
-        String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
-        Clinic c = new Clinic();
-        String clinicID = c.generateClinicID(dlgHos_Clinic);
-        c.addClinicReport(petID, reportdate, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
-        //-Update clinic list-------------------------------------------
-            DefaultListModel dlm = new DefaultListModel();
-            ResultSet rs = c.getClinicList(petID);
-            if(rs!=null){
-                try{
-                    while(rs.next()){
-                        dlm.addElement(rs.getString("clinicID"));
+        if(lst_dlgHos_Clinic_list.isSelectionEmpty()){
+            Date date = new Date();
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String reportdate = df.format(date);
+            int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+            String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+            String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
+            String obsr = this.txt_dlgHos_Clinic_Observation.getText();
+            String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
+            String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
+            String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
+            Clinic c = new Clinic();
+            String clinicID = c.generateClinicID(dlgHos_Clinic);
+            c.addClinicReport(petID, reportdate, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
+            //-Update clinic list-------------------------------------------
+                DefaultListModel dlm = new DefaultListModel();
+                ResultSet rs = c.getClinicList(petID);
+                if(rs!=null){
+                    try{
+                        while(rs.next()){
+                            dlm.addElement(rs.getString("clinicID"));
+                        }
+                        this.lst_dlgHos_Clinic_list.setModel(dlm);
+                    }
+                    catch(Exception e){
+                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
                     }
                 }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                else{
+                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
                 }
-                this.lst_dlgHos_Clinic_list.setModel(dlm);
-            }
-            else{
-                JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
-            }
-        //--select last element-----------------------------------------------------------
-            this.lst_dlgHos_Clinic_list.setSelectedIndex(lst_dlgHos_Clinic_list.getModel().getSize()-1);
-        //----------------------------------------------------------------------
-        //-make fields uneditable--------------------------------------------------    
-            this.txt_dlgHos_Clinic_Complaint.setEditable(false);
-            this.txt_dlgHos_Clinic_Observation.setEditable(false);
-            this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
-            this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
-            this.txt_dlgHos_Clinic_Remarks.setEditable(false);
-            
-            this.btn_dlgHos_Clinic_apply.setEnabled(false);
-        //---------------------------------------------------
+            //--select last element-----------------------------------------------------------
+                this.lst_dlgHos_Clinic_list.setSelectedIndex(lst_dlgHos_Clinic_list.getModel().getSize()-1);
+            //----------------------------------------------------------------------
+            //-make fields uneditable--------------------------------------------------    
+                this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+                this.txt_dlgHos_Clinic_Observation.setEditable(false);
+                this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+                this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+                this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+
+                this.btn_dlgHos_Clinic_apply.setEnabled(false);
+            //---------------------------------------------------
+        }
+        else{
+            //update existing record
+            int index = this.lst_dlgHos_Clinic_list.getSelectedIndex();
+            int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+            String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+            String clinicID = this.lst_dlgHos_Clinic_list.getSelectedValue();
+            String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
+            String obsr = this.txt_dlgHos_Clinic_Observation.getText();
+            String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
+            String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
+            String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
+            Clinic c = new Clinic();
+            c.updateClinicReport(clinicID, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
+            //-Update clinic list-------------------------------------------
+                DefaultListModel dlm = new DefaultListModel();
+                ResultSet rs = c.getClinicList(petID);
+                if(rs!=null){
+                    try{
+                        while(rs.next()){
+                            dlm.addElement(rs.getString("clinicID"));
+                        }
+                        this.lst_dlgHos_Clinic_list.setModel(dlm);
+                    }
+                    catch(Exception e){
+                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+                else{
+                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
+                }
+            //-make fields uneditable--------------------------------------------------    
+                this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+                this.txt_dlgHos_Clinic_Observation.setEditable(false);
+                this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+                this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+                this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+
+                this.lst_dlgHos_Clinic_list.setSelectedIndex(index);
+                this.btn_dlgHos_Clinic_apply.setEnabled(false);
+            //---------------------------------------------------
+        }
     }//GEN-LAST:event_btn_dlgHos_Clinic_applyActionPerformed
     
     public void showPanels(){

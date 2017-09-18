@@ -73,6 +73,24 @@ public class Clinic {
         }
     }
     
+    public void updateClinicReport(String clinicID, String complaints, String observations, String labfindings, String diagnosis, String remarks, Component comp){
+        try{
+            String SQL = "update clinic set complaints=?,observations=?,labfindings=?,diagnosis=?,remarks=? where clinicID=?";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, complaints);
+            pst.setString(2, observations);
+            pst.setString(3, labfindings);
+            pst.setString(4, diagnosis);
+            pst.setString(5, remarks);
+            pst.setString(6, clinicID);
+            pst.execute();
+            JOptionPane.showMessageDialog(comp, "Clinic Record Updated Successfully!","Clinic Details",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Clinic Record updating failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public String generateClinicID(Component comp){
         String prefix="CL";
         int noClinics=0;
