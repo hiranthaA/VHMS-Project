@@ -6094,6 +6094,7 @@ public class MainWindow extends javax.swing.JFrame {
                 this.txt_dlgHos_Clinic_Remarks.setEditable(false);
 
                 this.btn_dlgHos_Clinic_apply.setEnabled(false);
+                this.btn_dlgHos_Clinic_edit.setEnabled(true);
             //---------------------------------------------------
         }
         else{
