@@ -1,8 +1,12 @@
 
 import java.awt.Component;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /*
@@ -44,6 +48,28 @@ public class Clinic {
         }
         catch(Exception e){
             return null;
+        }
+    }
+    
+    public void addClinicReport(String petID, String date, String complaints, String observations, String labfindings, String diagnosis, String remarks, Component comp){
+        try{
+            String SQL = "insert into clinic(clinicID,petID,date,complaints,observations,labfindings,diagnosis,remarks) values(?,?,?,?,?,?,?,?)";
+            String clinicID = generateClinicID(comp);
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, clinicID);
+            pst.setString(2, petID);
+            pst.setString(3, date);
+            pst.setString(4, complaints);
+            pst.setString(5, observations);
+            pst.setString(6, labfindings);
+            pst.setString(7, diagnosis);
+            pst.setString(8, remarks);
+            pst.execute();
+            increaseNoClinicsByOne();
+            JOptionPane.showMessageDialog(comp, "Clinic Record added Successfully!","Clinic Details",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Clinic Record adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
     

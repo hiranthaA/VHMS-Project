@@ -244,6 +244,8 @@ public class MainWindow extends javax.swing.JFrame {
         txt_dlgHos_Clinic_Diagnosis = new javax.swing.JTextArea();
         scrl_dlgHos_Clinic_Remarks = new javax.swing.JScrollPane();
         txt_dlgHos_Clinic_Remarks = new javax.swing.JTextArea();
+        btn_dlgHos_Clinic_apply = new javax.swing.JButton();
+        btn_dlgHos_Clinic_edit = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -1896,6 +1898,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         btn_dlgHos_Clinic_new.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btn_dlgHos_Clinic_new.setText("New");
+        btn_dlgHos_Clinic_new.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_Clinic_newActionPerformed(evt);
+            }
+        });
 
         pnl_dlgHos_Clinic_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
@@ -1911,7 +1918,9 @@ public class MainWindow extends javax.swing.JFrame {
         pnl_dlgHos_Clinic_List.setLayout(pnl_dlgHos_Clinic_ListLayout);
         pnl_dlgHos_Clinic_ListLayout.setHorizontalGroup(
             pnl_dlgHos_Clinic_ListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(scrl_dlgHos_Clinic_list, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(pnl_dlgHos_Clinic_ListLayout.createSequentialGroup()
+                .addComponent(scrl_dlgHos_Clinic_list, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         pnl_dlgHos_Clinic_ListLayout.setVerticalGroup(
             pnl_dlgHos_Clinic_ListLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1972,22 +1981,24 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(lbl_dlgHos_Clinic_LabFindings)
                     .addComponent(lbl_dlgHos_Clinic_DateLabel)
                     .addComponent(lbl_dlgHos_Clinic_Observations))
-                .addGap(18, 18, 18)
+                .addGap(45, 45, 45)
                 .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_dlgHos_Clinic_ReportDate)
                     .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                         .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(scrl_dlgHos_Clinic_LabFindings, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 392, Short.MAX_VALUE)
+                            .addComponent(scrl_dlgHos_Clinic_Observation, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(scrl_dlgHos_Clinic_Complaint, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrl_dlgHos_Clinic_Observation, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(45, 45, 45)
+                            .addComponent(scrl_dlgHos_Clinic_LabFindings, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(49, 49, 49)
                         .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_dlgHos_Clinic_Diagnosis)
-                            .addComponent(lbl_dlgHos_Clinic_Remarks))
+                            .addComponent(lbl_dlgHos_Clinic_Remarks)
+                            .addComponent(lbl_dlgHos_Clinic_Diagnosis))
                         .addGap(18, 18, 18)
                         .addGroup(pnl_dlgHos_Clinic_ReportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(scrl_dlgHos_Clinic_Diagnosis)
-                            .addComponent(scrl_dlgHos_Clinic_Remarks))))
+                            .addComponent(scrl_dlgHos_Clinic_Remarks, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                            .addComponent(scrl_dlgHos_Clinic_Diagnosis, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)))
+                    .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_Clinic_ReportDate)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         pnl_dlgHos_Clinic_ReportLayout.setVerticalGroup(
@@ -1995,7 +2006,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
                 .addGap(68, 68, 68)
                 .addComponent(lbl_dlgHos_Clinic_Diagnosis)
-                .addGap(125, 125, 125)
+                .addGap(133, 133, 133)
                 .addComponent(lbl_dlgHos_Clinic_Remarks)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(pnl_dlgHos_Clinic_ReportLayout.createSequentialGroup()
@@ -2032,6 +2043,22 @@ public class MainWindow extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
+        btn_dlgHos_Clinic_apply.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_Clinic_apply.setText("Apply");
+        btn_dlgHos_Clinic_apply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_Clinic_applyActionPerformed(evt);
+            }
+        });
+
+        btn_dlgHos_Clinic_edit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_Clinic_edit.setText("Edit");
+        btn_dlgHos_Clinic_edit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_Clinic_editActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout pnlHosClinicLayout = new javax.swing.GroupLayout(pnlHosClinic);
         pnlHosClinic.setLayout(pnlHosClinicLayout);
         pnlHosClinicLayout.setHorizontalGroup(
@@ -2041,11 +2068,19 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_dlgHos_Clinic_Details, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(pnlHosClinicLayout.createSequentialGroup()
-                        .addGroup(pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btn_dlgHos_Clinic_new, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pnl_dlgHos_Clinic_List, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnl_dlgHos_Clinic_List, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnlHosClinicLayout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(btn_dlgHos_Clinic_new, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btn_dlgHos_Clinic_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnl_dlgHos_Clinic_Report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnl_dlgHos_Clinic_Report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlHosClinicLayout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(btn_dlgHos_Clinic_apply, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
         pnlHosClinicLayout.setVerticalGroup(
@@ -2058,7 +2093,10 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(pnl_dlgHos_Clinic_Report, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_dlgHos_Clinic_List, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btn_dlgHos_Clinic_new, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlHosClinicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgHos_Clinic_new, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgHos_Clinic_apply, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgHos_Clinic_edit, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -5812,7 +5850,20 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void btn_Hos_ViewClinicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Hos_ViewClinicActionPerformed
         //----Clear textfields-------------------------------
-        
+            this.lbl_dlgHos_Clinic_ReportDate.setText("");
+            this.txt_dlgHos_Clinic_Complaint.setText("");
+            this.txt_dlgHos_Clinic_Observation.setText("");
+            this.txt_dlgHos_Clinic_LabFindings.setText("");
+            this.txt_dlgHos_Clinic_Diagnosis.setText("");
+            this.txt_dlgHos_Clinic_Remarks.setText("");
+        //-make fields uneditable--------------------------------------------------    
+            this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+            this.txt_dlgHos_Clinic_Observation.setEditable(false);
+            this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+            this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+            this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+            
+            this.btn_dlgHos_Clinic_apply.setEnabled(false);
         //---------------------------------------------------
         try{
             int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
@@ -5839,12 +5890,12 @@ public class MainWindow extends javax.swing.JFrame {
                         }
                     }
                     catch(Exception e){
-                        JOptionPane.showMessageDialog(dlgUserAccounts, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
                     }
                     this.lst_dlgHos_Clinic_list.setModel(dlm);
                 }
                 else{
-                    JOptionPane.showMessageDialog(dlgUserAccounts, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
+                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
                 }
                 //--------------------------------------------------------------
                 this.dlgHos_Clinic.setSize(1200,600);
@@ -5926,6 +5977,15 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_tbl_Hos_CustomersMouseClicked
 
     private void lst_dlgHos_Clinic_listMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lst_dlgHos_Clinic_listMouseClicked
+        //-make fields uneditable--------------------------------------------------    
+            this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+            this.txt_dlgHos_Clinic_Observation.setEditable(false);
+            this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+            this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+            this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+            
+            this.btn_dlgHos_Clinic_apply.setEnabled(false);
+        //---------------------------------------------------
         if(evt.getButton()==MouseEvent.BUTTON1){
             if(!lst_dlgHos_Clinic_list.isSelectionEmpty()){
                 Clinic c = new Clinic();
@@ -5947,8 +6007,89 @@ public class MainWindow extends javax.swing.JFrame {
         }
         else{
             evt.consume();
-        }// TODO add your handling code here:
+        }
     }//GEN-LAST:event_lst_dlgHos_Clinic_listMouseClicked
+
+    private void btn_dlgHos_Clinic_newActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_Clinic_newActionPerformed
+        //----Clear textfields-------------------------------
+            this.lbl_dlgHos_Clinic_ReportDate.setText("");
+            this.txt_dlgHos_Clinic_Complaint.setText("");
+            this.txt_dlgHos_Clinic_Observation.setText("");
+            this.txt_dlgHos_Clinic_LabFindings.setText("");
+            this.txt_dlgHos_Clinic_Diagnosis.setText("");
+            this.txt_dlgHos_Clinic_Remarks.setText("");
+        //-make fields editable--------------------------------------------------    
+            this.txt_dlgHos_Clinic_Complaint.setEditable(true);
+            this.txt_dlgHos_Clinic_Observation.setEditable(true);
+            this.txt_dlgHos_Clinic_LabFindings.setEditable(true);
+            this.txt_dlgHos_Clinic_Diagnosis.setEditable(true);
+            this.txt_dlgHos_Clinic_Remarks.setEditable(true);
+            
+            this.btn_dlgHos_Clinic_apply.setEnabled(true);
+            this.lst_dlgHos_Clinic_list.clearSelection();
+            Date date = new Date();
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String reportdate = df.format(date);
+            this.lbl_dlgHos_Clinic_ReportDate.setText(reportdate);
+        //---------------------------------------------------
+    }//GEN-LAST:event_btn_dlgHos_Clinic_newActionPerformed
+
+    private void btn_dlgHos_Clinic_editActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_Clinic_editActionPerformed
+        //-make fields editable--------------------------------------------------    
+            this.txt_dlgHos_Clinic_Complaint.setEditable(true);
+            this.txt_dlgHos_Clinic_Observation.setEditable(true);
+            this.txt_dlgHos_Clinic_LabFindings.setEditable(true);
+            this.txt_dlgHos_Clinic_Diagnosis.setEditable(true);
+            this.txt_dlgHos_Clinic_Remarks.setEditable(true);
+            
+            this.btn_dlgHos_Clinic_apply.setEnabled(true);
+        //---------------------------------------------------
+    }//GEN-LAST:event_btn_dlgHos_Clinic_editActionPerformed
+
+    private void btn_dlgHos_Clinic_applyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_Clinic_applyActionPerformed
+        Date date = new Date();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String reportdate = df.format(date);
+        int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+        String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+        String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
+        String obsr = this.txt_dlgHos_Clinic_Observation.getText();
+        String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
+        String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
+        String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
+        Clinic c = new Clinic();
+        String clinicID = c.generateClinicID(dlgHos_Clinic);
+        c.addClinicReport(petID, reportdate, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
+        //-Update clinic list-------------------------------------------
+            DefaultListModel dlm = new DefaultListModel();
+            ResultSet rs = c.getClinicList(petID);
+            if(rs!=null){
+                try{
+                    while(rs.next()){
+                        dlm.addElement(rs.getString("clinicID"));
+                    }
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                this.lst_dlgHos_Clinic_list.setModel(dlm);
+            }
+            else{
+                JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
+            }
+        //--select last element-----------------------------------------------------------
+            this.lst_dlgHos_Clinic_list.setSelectedIndex(lst_dlgHos_Clinic_list.getModel().getSize()-1);
+        //----------------------------------------------------------------------
+        //-make fields uneditable--------------------------------------------------    
+            this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+            this.txt_dlgHos_Clinic_Observation.setEditable(false);
+            this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+            this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+            this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+            
+            this.btn_dlgHos_Clinic_apply.setEnabled(false);
+        //---------------------------------------------------
+    }//GEN-LAST:event_btn_dlgHos_Clinic_applyActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -6256,6 +6397,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgFin_addtelebill_Cancel;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Add;
     private javax.swing.JButton btn_dlgFin_addwaterbill_Cancel;
+    private javax.swing.JButton btn_dlgHos_Clinic_apply;
+    private javax.swing.JButton btn_dlgHos_Clinic_edit;
     private javax.swing.JButton btn_dlgHos_Clinic_new;
     private javax.swing.JButton btn_dlgHos_addCustomer_add;
     private javax.swing.JButton btn_dlgHos_addCustomer_cancel;
