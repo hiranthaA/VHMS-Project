@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author hirantha
+ * @author lakmal
  */
 public class Pet {
     private Connection dbcon;

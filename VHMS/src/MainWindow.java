@@ -1900,6 +1900,11 @@ public class MainWindow extends javax.swing.JFrame {
         pnl_dlgHos_Clinic_List.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         lst_dlgHos_Clinic_list.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lst_dlgHos_Clinic_list.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lst_dlgHos_Clinic_listMouseClicked(evt);
+            }
+        });
         scrl_dlgHos_Clinic_list.setViewportView(lst_dlgHos_Clinic_list);
 
         javax.swing.GroupLayout pnl_dlgHos_Clinic_ListLayout = new javax.swing.GroupLayout(pnl_dlgHos_Clinic_List);
@@ -5394,12 +5399,12 @@ public class MainWindow extends javax.swing.JFrame {
                 }
             }
             catch(Exception e){
-                JOptionPane.showMessageDialog(lstUserAccounts, "Cannot refresh users!","Database Error",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(dlgUserAccounts, "Cannot refresh users!","Database Error",JOptionPane.ERROR_MESSAGE);
             }
             this.lstUserAccounts.setModel(dlm);
         }
         else{
-            JOptionPane.showMessageDialog(lstUserAccounts, "Cannot refresh users!","Database Error",JOptionPane.ERROR_MESSAGE);    
+            JOptionPane.showMessageDialog(dlgUserAccounts, "Cannot refresh users!","Database Error",JOptionPane.ERROR_MESSAGE);    
         }
         //----------------------------------------------------------------------
         this.dlgUserAccounts.setSize(874,475);
@@ -5822,7 +5827,26 @@ public class MainWindow extends javax.swing.JFrame {
                 String custName=p.getCustomerName(petID);
                 this.lbl_dlgHos_Clinic_petName.setText(petName+" ["+petID+"]");
                 this.lbl_dlgHos_Clinic_Ownername.setText("Owner : "+custName+" ["+custID+"]");
-                
+                //-Update clinic list-------------------------------------------
+                Clinic c = new Clinic();
+                DefaultListModel dlm = new DefaultListModel();
+                ResultSet rs = c.getClinicList(petID);
+                if(rs!=null){
+                    try{
+                        while(rs.next()){
+                            dlm.addElement(rs.getString("clinicID"));
+                            System.out.println(rs.getString("clinicID"));
+                        }
+                    }
+                    catch(Exception e){
+                        JOptionPane.showMessageDialog(dlgUserAccounts, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    this.lst_dlgHos_Clinic_list.setModel(dlm);
+                }
+                else{
+                    JOptionPane.showMessageDialog(dlgUserAccounts, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
+                }
+                //--------------------------------------------------------------
                 this.dlgHos_Clinic.setSize(1200,600);
                 this.dlgHos_Clinic.setTitle("Clinical Reports");
                 this.dlgHos_Clinic.setLocationRelativeTo(this);
@@ -5833,6 +5857,8 @@ public class MainWindow extends javax.swing.JFrame {
         catch(NullPointerException ne){
             JOptionPane.showMessageDialog(this, "Select a Pet to view clinical records!","Error",JOptionPane.ERROR_MESSAGE);
         }
+        
+        
     }//GEN-LAST:event_btn_Hos_ViewClinicActionPerformed
 
     private void btn_dlgHos_addCustomer_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_addCustomer_addActionPerformed
@@ -5898,6 +5924,31 @@ public class MainWindow extends javax.swing.JFrame {
         }
         //------------------------------------------------------------------
     }//GEN-LAST:event_tbl_Hos_CustomersMouseClicked
+
+    private void lst_dlgHos_Clinic_listMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lst_dlgHos_Clinic_listMouseClicked
+        if(evt.getButton()==MouseEvent.BUTTON1){
+            if(!lst_dlgHos_Clinic_list.isSelectionEmpty()){
+                Clinic c = new Clinic();
+                ResultSet rs = c.getClinicDetails(this.lst_dlgHos_Clinic_list.getSelectedValue());
+                try{
+                    while(rs.next()){
+                        this.lbl_dlgHos_Clinic_ReportDate.setText(rs.getString("date"));
+                        this.txt_dlgHos_Clinic_Complaint.setText(rs.getString("complaints"));
+                        this.txt_dlgHos_Clinic_Observation.setText(rs.getString("observations"));
+                        this.txt_dlgHos_Clinic_LabFindings.setText(rs.getString("labfindings"));
+                        this.txt_dlgHos_Clinic_Diagnosis.setText(rs.getString("diagnosis"));
+                        this.txt_dlgHos_Clinic_Remarks.setText(rs.getString("remarks"));
+                    }
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+        else{
+            evt.consume();
+        }// TODO add your handling code here:
+    }//GEN-LAST:event_lst_dlgHos_Clinic_listMouseClicked
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
