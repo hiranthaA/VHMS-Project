@@ -1860,14 +1860,14 @@ public class MainWindow extends javax.swing.JFrame {
         pnl_dlgHos_Clinic_Details.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
         lbl_dlgHos_Clinic_petName.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        lbl_dlgHos_Clinic_petName.setForeground(new java.awt.Color(255, 51, 0));
+        lbl_dlgHos_Clinic_petName.setForeground(new java.awt.Color(0, 102, 204));
         lbl_dlgHos_Clinic_petName.setText("Pet Name");
 
         lbl_dlgHos_Clinic_ReportOf.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         lbl_dlgHos_Clinic_ReportOf.setText("Clinical Reports of :");
 
         lbl_dlgHos_Clinic_Ownername.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lbl_dlgHos_Clinic_Ownername.setForeground(new java.awt.Color(255, 51, 0));
+        lbl_dlgHos_Clinic_Ownername.setForeground(new java.awt.Color(0, 102, 204));
         lbl_dlgHos_Clinic_Ownername.setText("[ Owner : Owners name ]");
 
         javax.swing.GroupLayout pnl_dlgHos_Clinic_DetailsLayout = new javax.swing.GroupLayout(pnl_dlgHos_Clinic_Details);
