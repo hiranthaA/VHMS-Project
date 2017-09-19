@@ -6962,7 +6962,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
             else{
                 this.lbl_dlgHos_editPet_Species.setForeground(Color.red);
-                this.lbl_dlgHos_editPet_Species.setToolTipText("Selct a species from the list");
+                this.lbl_dlgHos_editPet_Species.setToolTipText("Select a species from the list");
             }
             if(p.validateAge(years,months)){
                 this.lbl_dlgHos_editPet_age.setForeground(Color.black);
