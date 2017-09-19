@@ -164,6 +164,23 @@ public class Customer {
         }
     }
     
+    public void updateCustomer(String name,String address,String tele,String email,String custID,Component comp){
+        try{
+            String updateCustDetailsSQL = "update customer set name=?,address=?,telephone=?,email=? where custID=?";
+            PreparedStatement pst = dbcon.prepareStatement(updateCustDetailsSQL);
+            pst.setString(1, name);
+            pst.setString(2, address);
+            pst.setString(3, tele);
+            pst.setString(4, email);
+            pst.setString(5, custID);
+            pst.execute();
+            JOptionPane.showMessageDialog(comp, "Customer Updated Successfully!","Customer Details",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Customer Updating failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public void updateReg_Service(String custID, String service){
         String sql = "update reg_services set "+service+"=? where custID=?";
         
@@ -175,6 +192,105 @@ public class Customer {
         }
         catch(Exception e){
             e.printStackTrace();
+        }
+    }
+    
+    public boolean validateCustName(String name){
+        if(name.equals("")){
+            return false;
+        }
+        else if(name.length()==1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateAddress(String address){
+        if(address.equals("")){
+            return true;
+        }
+        else if(address.length()==1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateTelephone(String tp){
+        if(tp.equals("")){
+            return true;
+        }
+        else if(tp.length()==10){
+            if(tp.charAt(0)=='0'){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public boolean validateEmail(String email){
+        if(email.equals("")){
+            return true;
+        }
+        else{
+            //---------------------------------------
+            int atIndex=email.indexOf('@');
+            int dotIndex=email.indexOf('.');
+            int lastdotIndex=0;
+            //----------------------------------------
+            if(atIndex==-1){
+                return false;
+            }
+            else{
+                int atCount = 0;
+                for(int x=0; x<email.length(); x++){
+                    if(email.charAt(x)=='@'){
+                        atCount++;
+                    }
+                }
+                if(atCount>1){
+                    return false;
+                }
+                else{
+                    if(dotIndex==-1){
+                        return false;
+                    }
+                    else{
+                        for(int x=0; x<email.length();x++){
+                            if(email.charAt(x)=='.'){
+                                lastdotIndex=x;
+                            }
+                        }
+                        if(lastdotIndex<atIndex){
+                            //check "@" is before the last "."
+                            return false;
+                        }
+                        else if(email.charAt(email.length()-1)=='.'){
+                            //check last character is not a "."
+                            return false;
+                        }
+                        else if(email.charAt(0)=='.' || email.charAt(0)=='@'){
+                            //check starting characters are not "@" or "."
+                            return false;
+                        }
+                        else if(email.charAt(atIndex-1)=='.' || email.charAt(atIndex+1)=='.'){
+                            //check characters before and after "@" is not a "."
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    }
+                }
+            } 
         }
     }
 }

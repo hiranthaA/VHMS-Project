@@ -184,14 +184,14 @@ public class MainWindow extends javax.swing.JFrame {
         pnHosAddCustomer = new javax.swing.JPanel();
         lbl_dlgHos_addnew = new javax.swing.JLabel();
         pnl_dlgHos_content = new javax.swing.JPanel();
-        lbl_dlgHos_Ownername = new javax.swing.JLabel();
+        lbl_dlgHos_addCustomer_Ownername = new javax.swing.JLabel();
         txt_dlgHos_addCustomer_name = new javax.swing.JTextField();
-        lbl_dlgHos_address = new javax.swing.JLabel();
-        lbl_dlgHos_telephone = new javax.swing.JLabel();
+        lbl_dlgHos_addCustomer_address = new javax.swing.JLabel();
+        lbl_dlgHos_addCustomer_telephone = new javax.swing.JLabel();
         txt_dlgHos_addCustomer_tele = new javax.swing.JTextField();
         scrl_dlgHos_Address = new javax.swing.JScrollPane();
         txt_dlgHos_addCustomer_address = new javax.swing.JTextArea();
-        lbl_dlgHos_email = new javax.swing.JLabel();
+        lbl_dlgHos_addCustomer_email = new javax.swing.JLabel();
         txt_dlgHos_addCustomer_email = new javax.swing.JTextField();
         btn_dlgHos_addCustomer_cancel = new javax.swing.JButton();
         btn_dlgHos_addCustomer_add = new javax.swing.JButton();
@@ -246,6 +246,21 @@ public class MainWindow extends javax.swing.JFrame {
         txt_dlgHos_Clinic_Remarks = new javax.swing.JTextArea();
         btn_dlgHos_Clinic_apply = new javax.swing.JButton();
         btn_dlgHos_Clinic_edit = new javax.swing.JButton();
+        dlgHos_editCustomer = new javax.swing.JDialog();
+        pnHosAddCustomer1 = new javax.swing.JPanel();
+        lbl_dlgHos_addnew1 = new javax.swing.JLabel();
+        pnl_dlgHos_content1 = new javax.swing.JPanel();
+        lbl_dlgHos_editCustomer_Ownername = new javax.swing.JLabel();
+        txt_dlgHos_editCustomer_name = new javax.swing.JTextField();
+        lbl_dlgHos_editCustomer_address = new javax.swing.JLabel();
+        lbl_dlgHos_editCustomer_telephone = new javax.swing.JLabel();
+        txt_dlgHos_editCustomer_tele = new javax.swing.JTextField();
+        scrl_dlgHos_Address1 = new javax.swing.JScrollPane();
+        txt_dlgHos_editCustomer_address = new javax.swing.JTextArea();
+        lbl_dlgHos_editCustomer_email = new javax.swing.JLabel();
+        txt_dlgHos_editCustomer_email = new javax.swing.JTextField();
+        btn_dlgHos_editCustomer_cancel = new javax.swing.JButton();
+        btn_dlgHos_editCustomer_save = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -284,7 +299,6 @@ public class MainWindow extends javax.swing.JFrame {
         pnlHospital = new javax.swing.JPanel();
         pnlHospitalMainContainer = new javax.swing.JPanel();
         pnlHosButton = new javax.swing.JPanel();
-        btnHospitalRegister = new javax.swing.JButton();
         btnHospitalClinic = new javax.swing.JButton();
         btnHospitalPayments = new javax.swing.JButton();
         pnlHosRegister = new javax.swing.JLayeredPane();
@@ -1556,27 +1570,57 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnl_dlgHos_content.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        lbl_dlgHos_Ownername.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbl_dlgHos_Ownername.setText("Owner's Name");
+        lbl_dlgHos_addCustomer_Ownername.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_Ownername.setText("Owner's Name");
 
         txt_dlgHos_addCustomer_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addCustomer_name.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_addCustomer_nameFocusLost(evt);
+            }
+        });
 
-        lbl_dlgHos_address.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbl_dlgHos_address.setText("Address");
+        lbl_dlgHos_addCustomer_address.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_address.setText("Address");
 
-        lbl_dlgHos_telephone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbl_dlgHos_telephone.setText("Telephone");
+        lbl_dlgHos_addCustomer_telephone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_telephone.setText("Telephone");
 
         txt_dlgHos_addCustomer_tele.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addCustomer_tele.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_addCustomer_teleFocusLost(evt);
+            }
+        });
+        txt_dlgHos_addCustomer_tele.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgHos_addCustomer_teleKeyTyped(evt);
+            }
+        });
 
         txt_dlgHos_addCustomer_address.setColumns(20);
         txt_dlgHos_addCustomer_address.setRows(5);
+        txt_dlgHos_addCustomer_address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_addCustomer_addressFocusLost(evt);
+            }
+        });
         scrl_dlgHos_Address.setViewportView(txt_dlgHos_addCustomer_address);
 
-        lbl_dlgHos_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        lbl_dlgHos_email.setText("E-mail");
+        lbl_dlgHos_addCustomer_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_email.setText("E-mail");
 
         txt_dlgHos_addCustomer_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_addCustomer_email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_addCustomer_emailFocusLost(evt);
+            }
+        });
+        txt_dlgHos_addCustomer_email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgHos_addCustomer_emailKeyTyped(evt);
+            }
+        });
 
         btn_dlgHos_addCustomer_cancel.setText("Cancel");
         btn_dlgHos_addCustomer_cancel.addActionListener(new java.awt.event.ActionListener() {
@@ -1599,10 +1643,10 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_dlgHos_Ownername)
-                    .addComponent(lbl_dlgHos_address)
-                    .addComponent(lbl_dlgHos_telephone)
-                    .addComponent(lbl_dlgHos_email))
+                    .addComponent(lbl_dlgHos_addCustomer_Ownername)
+                    .addComponent(lbl_dlgHos_addCustomer_address)
+                    .addComponent(lbl_dlgHos_addCustomer_telephone)
+                    .addComponent(lbl_dlgHos_addCustomer_email))
                 .addGap(18, 18, 18)
                 .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txt_dlgHos_addCustomer_name)
@@ -1620,24 +1664,24 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lbl_dlgHos_Ownername)
+                    .addComponent(lbl_dlgHos_addCustomer_Ownername)
                     .addComponent(txt_dlgHos_addCustomer_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl_dlgHos_address)
+                    .addComponent(lbl_dlgHos_addCustomer_address)
                     .addComponent(scrl_dlgHos_Address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btn_dlgHos_addCustomer_add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
-                            .addComponent(lbl_dlgHos_telephone)
-                            .addGap(10, 10, 10))
-                        .addComponent(txt_dlgHos_addCustomer_tele, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(pnl_dlgHos_contentLayout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_dlgHos_addCustomer_tele, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_dlgHos_addCustomer_telephone))))
                 .addGap(18, 18, 18)
                 .addGroup(pnl_dlgHos_contentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgHos_addCustomer_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_dlgHos_email)
+                    .addComponent(lbl_dlgHos_addCustomer_email)
                     .addComponent(btn_dlgHos_addCustomer_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
@@ -2111,6 +2155,166 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(pnlHosClinic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        dlgHos_editCustomer.setTitle("Client Details");
+        dlgHos_editCustomer.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+
+        pnHosAddCustomer1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        lbl_dlgHos_addnew1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        lbl_dlgHos_addnew1.setText("Edit Customer");
+
+        pnl_dlgHos_content1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lbl_dlgHos_editCustomer_Ownername.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editCustomer_Ownername.setText("Owner's Name");
+
+        txt_dlgHos_editCustomer_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_editCustomer_name.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_editCustomer_nameFocusLost(evt);
+            }
+        });
+
+        lbl_dlgHos_editCustomer_address.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editCustomer_address.setText("Address");
+
+        lbl_dlgHos_editCustomer_telephone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editCustomer_telephone.setText("Telephone");
+
+        txt_dlgHos_editCustomer_tele.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_editCustomer_tele.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_editCustomer_teleFocusLost(evt);
+            }
+        });
+        txt_dlgHos_editCustomer_tele.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgHos_editCustomer_teleKeyTyped(evt);
+            }
+        });
+
+        txt_dlgHos_editCustomer_address.setColumns(20);
+        txt_dlgHos_editCustomer_address.setRows(5);
+        txt_dlgHos_editCustomer_address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_editCustomer_addressFocusLost(evt);
+            }
+        });
+        scrl_dlgHos_Address1.setViewportView(txt_dlgHos_editCustomer_address);
+
+        lbl_dlgHos_editCustomer_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editCustomer_email.setText("E-mail");
+
+        txt_dlgHos_editCustomer_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_dlgHos_editCustomer_email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                txt_dlgHos_editCustomer_emailFocusLost(evt);
+            }
+        });
+        txt_dlgHos_editCustomer_email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgHos_editCustomer_emailKeyTyped(evt);
+            }
+        });
+
+        btn_dlgHos_editCustomer_cancel.setText("Cancel");
+        btn_dlgHos_editCustomer_cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_editCustomer_cancelActionPerformed(evt);
+            }
+        });
+
+        btn_dlgHos_editCustomer_save.setText("Save");
+        btn_dlgHos_editCustomer_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_editCustomer_saveActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_dlgHos_content1Layout = new javax.swing.GroupLayout(pnl_dlgHos_content1);
+        pnl_dlgHos_content1.setLayout(pnl_dlgHos_content1Layout);
+        pnl_dlgHos_content1Layout.setHorizontalGroup(
+            pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_content1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_editCustomer_Ownername)
+                    .addComponent(lbl_dlgHos_editCustomer_address)
+                    .addComponent(lbl_dlgHos_editCustomer_telephone)
+                    .addComponent(lbl_dlgHos_editCustomer_email))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txt_dlgHos_editCustomer_name)
+                    .addComponent(scrl_dlgHos_Address1, javax.swing.GroupLayout.DEFAULT_SIZE, 367, Short.MAX_VALUE)
+                    .addComponent(txt_dlgHos_editCustomer_tele)
+                    .addComponent(txt_dlgHos_editCustomer_email))
+                .addGap(45, 45, 45)
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btn_dlgHos_editCustomer_cancel, javax.swing.GroupLayout.DEFAULT_SIZE, 78, Short.MAX_VALUE)
+                    .addComponent(btn_dlgHos_editCustomer_save, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnl_dlgHos_content1Layout.setVerticalGroup(
+            pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_content1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_editCustomer_Ownername)
+                    .addComponent(txt_dlgHos_editCustomer_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbl_dlgHos_editCustomer_address)
+                    .addComponent(scrl_dlgHos_Address1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btn_dlgHos_editCustomer_save, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnl_dlgHos_content1Layout.createSequentialGroup()
+                        .addGap(4, 4, 4)
+                        .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_dlgHos_editCustomer_tele, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_dlgHos_editCustomer_telephone))))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_content1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgHos_editCustomer_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_editCustomer_email)
+                    .addComponent(btn_dlgHos_editCustomer_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnHosAddCustomer1Layout = new javax.swing.GroupLayout(pnHosAddCustomer1);
+        pnHosAddCustomer1.setLayout(pnHosAddCustomer1Layout);
+        pnHosAddCustomer1Layout.setHorizontalGroup(
+            pnHosAddCustomer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosAddCustomer1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnHosAddCustomer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_dlgHos_content1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnHosAddCustomer1Layout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_addnew1)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnHosAddCustomer1Layout.setVerticalGroup(
+            pnHosAddCustomer1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosAddCustomer1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_dlgHos_addnew1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnl_dlgHos_content1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout dlgHos_editCustomerLayout = new javax.swing.GroupLayout(dlgHos_editCustomer.getContentPane());
+        dlgHos_editCustomer.getContentPane().setLayout(dlgHos_editCustomerLayout);
+        dlgHos_editCustomerLayout.setHorizontalGroup(
+            dlgHos_editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnHosAddCustomer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgHos_editCustomerLayout.setVerticalGroup(
+            dlgHos_editCustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnHosAddCustomer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Veterinary Hospital Management System");
 
@@ -2524,17 +2728,6 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnlHosButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        btnHospitalRegister.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
-        btnHospitalRegister.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clients_x32.png"))); // NOI18N
-        btnHospitalRegister.setText("Register");
-        btnHospitalRegister.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnHospitalRegister.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnHospitalRegister.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHospitalRegisterActionPerformed(evt);
-            }
-        });
-
         btnHospitalClinic.setFont(new java.awt.Font("Calibri", 0, 12)); // NOI18N
         btnHospitalClinic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/clients_x32.png"))); // NOI18N
         btnHospitalClinic.setText("Clinic");
@@ -2563,9 +2756,7 @@ public class MainWindow extends javax.swing.JFrame {
             pnlHosButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlHosButtonLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnHospitalRegister)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnHospitalClinic, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnHospitalClinic)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnHospitalPayments)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -2576,7 +2767,6 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(pnlHosButtonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnHospitalClinic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnHospitalRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnHospitalPayments, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -5388,12 +5578,8 @@ public class MainWindow extends javax.swing.JFrame {
         this.dlgFin_addSalaryPayment.setVisible(true); 
     }//GEN-LAST:event_btn_Fin_AddSalaryPaymentActionPerformed
 
-    private void btnHospitalRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalRegisterActionPerformed
-        this.pnlHosRegister.setVisible(true);
-    }//GEN-LAST:event_btnHospitalRegisterActionPerformed
-
     private void btnHospitalClinicActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalClinicActionPerformed
-        this.pnlHosRegister.setVisible(false);
+        this.pnlHosRegister.setVisible(true);
     }//GEN-LAST:event_btnHospitalClinicActionPerformed
 
     private void btnHospitalPaymentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHospitalPaymentsActionPerformed
@@ -5818,7 +6004,14 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void btn_Hos_addCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Hos_addCustomerActionPerformed
         //----Clear textfields-------------------------------
-        
+        this.txt_dlgHos_addCustomer_name.setText("");
+        this.txt_dlgHos_addCustomer_address.setText("");
+        this.txt_dlgHos_addCustomer_tele.setText("");
+        this.txt_dlgHos_addCustomer_email.setText("");
+        this.lbl_dlgHos_addCustomer_Ownername.setForeground(Color.black);
+        this.lbl_dlgHos_addCustomer_address.setForeground(Color.black);
+        this.lbl_dlgHos_addCustomer_telephone.setForeground(Color.black);
+        this.lbl_dlgHos_addCustomer_email.setForeground(Color.black);
         //---------------------------------------------------
         this.dlgHos_addCustomer.setSize(650,380);
         this.dlgHos_addCustomer.setTitle("Add New Customer");
@@ -5827,7 +6020,40 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Hos_addCustomerActionPerformed
 
     private void btn_Hos_editCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Hos_editCustomerActionPerformed
-        
+        int selectedRow = this.tbl_Hos_Customers.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a customer to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            String CustID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
+            String name,address,tele,email;
+            Customer c = new Customer();
+            try{
+                ResultSet rs = c.getCustomerDetails(CustID);
+                while(rs.next()){
+                    name = rs.getString("Name");
+                    address = rs.getString("Address");
+                    tele = rs.getString("Telephone");
+                    email = rs.getString("Email");
+
+                    this.txt_dlgHos_editCustomer_name.setText(name);
+                    this.txt_dlgHos_editCustomer_address.setText(address);
+                    this.txt_dlgHos_editCustomer_tele.setText(tele);
+                    this.txt_dlgHos_editCustomer_email.setText(email);
+                    this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+                    this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+                    this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+                    this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
+                } 
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(this, "Cannot Save Customer Details!","Error",JOptionPane.ERROR_MESSAGE);
+            }
+            this.dlgHos_editCustomer.setSize(650,380);
+            this.dlgHos_editCustomer.setTitle("Edit Customer");
+            this.dlgHos_editCustomer.setLocationRelativeTo(Container);
+            this.dlgHos_editCustomer.setVisible(true); 
+        }
     }//GEN-LAST:event_btn_Hos_editCustomerActionPerformed
 
     private void btn_Hos_addPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Hos_addPetActionPerformed
@@ -5903,7 +6129,7 @@ public class MainWindow extends javax.swing.JFrame {
                 this.dlgHos_Clinic.setTitle("Clinical Reports");
                 this.dlgHos_Clinic.setLocationRelativeTo(this);
                 this.dlgHos_Clinic.setVisible(true);
-                this.lbl_dlgHos_Ownername.setText(petID);
+                this.lbl_dlgHos_addCustomer_Ownername.setText(petID);
             }
         }
         catch(NullPointerException ne){
@@ -5914,20 +6140,54 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Hos_ViewClinicActionPerformed
 
     private void btn_dlgHos_addCustomer_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_addCustomer_addActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgHos_addCustomer,"Are You sure the details are correct?","Add New Customer",JOptionPane.YES_NO_OPTION);
-        if(userChoice==0){
-            String name = this.txt_dlgHos_addCustomer_name.getText();
-            String address = this.txt_dlgHos_addCustomer_address.getText();
-            String tele = this.txt_dlgHos_addCustomer_tele.getText();
-            String email = this.txt_dlgHos_addCustomer_email.getText();
-            Customer cs = new Customer();
+        String name = this.txt_dlgHos_addCustomer_name.getText();
+        String address = this.txt_dlgHos_addCustomer_address.getText();
+        String tele = this.txt_dlgHos_addCustomer_tele.getText();
+        String email = this.txt_dlgHos_addCustomer_email.getText();
+        Customer c = new Customer();
+        if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
             //-add customer---------------------------------------------
-            cs.addCustomer(name, address, tele, email, dlgHos_addCustomer);
+            c.addCustomer(name, address, tele, email, dlgHos_addCustomer);
             //-update customer table-----------------------------------------
-            ResultSet rs = cs.getCustomerDetails();
+            ResultSet rs = c.getCustomerDetails();
             this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
             //--------------------------------------------------------------
             this.dlgHos_addCustomer.dispose();
+        }
+        else{
+            getToolkit().beep();
+            if(c.validateCustName(name)){
+                this.lbl_dlgHos_addCustomer_Ownername.setForeground(Color.black);
+                this.lbl_dlgHos_addCustomer_Ownername.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addCustomer_Ownername.setForeground(Color.red);
+                this.lbl_dlgHos_addCustomer_Ownername.setToolTipText("Invalid Name");
+            }
+            if(c.validateAddress(address)){
+                this.lbl_dlgHos_addCustomer_address.setForeground(Color.black);
+                this.lbl_dlgHos_addCustomer_address.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addCustomer_address.setForeground(Color.red);
+                this.lbl_dlgHos_addCustomer_address.setToolTipText("Invalid Address");
+            }
+            if(c.validateTelephone(tele)){
+                this.lbl_dlgHos_addCustomer_telephone.setForeground(Color.black);
+                this.lbl_dlgHos_addCustomer_telephone.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addCustomer_telephone.setForeground(Color.red);
+                this.lbl_dlgHos_addCustomer_telephone.setToolTipText("Invalid Telephone Number");
+            }
+            if(c.validateEmail(email)){
+                this.lbl_dlgHos_addCustomer_email.setForeground(Color.black);
+                this.lbl_dlgHos_addCustomer_email.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addCustomer_email.setForeground(Color.red);
+                this.lbl_dlgHos_addCustomer_email.setToolTipText("Invalid Email Address");
+            }
         }
     }//GEN-LAST:event_btn_dlgHos_addCustomer_addActionPerformed
 
@@ -6139,6 +6399,203 @@ public class MainWindow extends javax.swing.JFrame {
             //---------------------------------------------------
         }
     }//GEN-LAST:event_btn_dlgHos_Clinic_applyActionPerformed
+
+    private void btn_dlgHos_editCustomer_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_editCustomer_cancelActionPerformed
+        this.dlgHos_editCustomer.dispose();
+    }//GEN-LAST:event_btn_dlgHos_editCustomer_cancelActionPerformed
+
+    private void btn_dlgHos_editCustomer_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_editCustomer_saveActionPerformed
+        Customer c = new Customer();
+        String name = this.txt_dlgHos_editCustomer_name.getText();
+        String address = this.txt_dlgHos_editCustomer_address.getText();
+        String tele = this.txt_dlgHos_editCustomer_tele.getText();
+        String email = this.txt_dlgHos_editCustomer_email.getText();
+        int selectedRow = this.tbl_Hos_Customers.getSelectedRow();
+        String custID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
+        if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                    c.updateCustomer(name,address,tele,email,custID,dlgHos_editCustomer);
+                    //-update client table--------------------------------------
+                    ResultSet rs;
+                    rs = c.getCustomerDetails();
+                    if(rs==null){
+                        JOptionPane.showMessageDialog(dlgHos_editCustomer, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    else{
+                        this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
+                    }
+                    //----------------------------------------------------------
+                    this.dlgHos_editCustomer.dispose();
+        }
+        else{
+            getToolkit().beep();
+            if(c.validateCustName(name)){
+                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
+                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
+            }
+            if(c.validateAddress(address)){
+                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
+                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
+            }
+            if(c.validateTelephone(tele)){
+                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
+                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
+            }
+            if(c.validateEmail(email)){
+                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
+                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
+                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
+            }
+        }
+    }//GEN-LAST:event_btn_dlgHos_editCustomer_saveActionPerformed
+
+    private void txt_dlgHos_addCustomer_teleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_teleKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgHos_addCustomer_teleKeyTyped
+
+    private void txt_dlgHos_editCustomer_teleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgHos_editCustomer_teleKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgHos_editCustomer_teleKeyTyped
+
+    private void txt_dlgHos_addCustomer_teleFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_teleFocusLost
+        Customer c = new Customer();
+        String tele = this.txt_dlgHos_addCustomer_tele.getText();
+        if(c.validateTelephone(tele)){
+            this.lbl_dlgHos_addCustomer_telephone.setForeground(Color.black);
+            this.lbl_dlgHos_addCustomer_telephone.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgHos_addCustomer_telephone.setForeground(Color.red);
+            this.lbl_dlgHos_addCustomer_telephone.setToolTipText("Invalid Telephone Number");
+        }
+    }//GEN-LAST:event_txt_dlgHos_addCustomer_teleFocusLost
+
+    private void txt_dlgHos_addCustomer_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_nameFocusLost
+        Customer c = new Customer();
+        String name = this.txt_dlgHos_addCustomer_name.getText();
+        if(c.validateCustName(name)){
+            this.lbl_dlgHos_addCustomer_Ownername.setForeground(Color.black);
+            this.lbl_dlgHos_addCustomer_Ownername.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgHos_addCustomer_Ownername.setForeground(Color.red);
+            this.lbl_dlgHos_addCustomer_Ownername.setToolTipText("Invalid Name");
+        }
+    }//GEN-LAST:event_txt_dlgHos_addCustomer_nameFocusLost
+
+    private void txt_dlgHos_addCustomer_addressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_addressFocusLost
+        Customer c = new Customer();
+        String address = this.txt_dlgHos_addCustomer_address.getText();
+        if(c.validateCustName(address)){
+            this.lbl_dlgHos_addCustomer_address.setForeground(Color.black);
+            this.lbl_dlgHos_addCustomer_address.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgHos_addCustomer_address.setForeground(Color.red);
+            this.lbl_dlgHos_addCustomer_address.setToolTipText("Invalid Address");
+        }
+    }//GEN-LAST:event_txt_dlgHos_addCustomer_addressFocusLost
+
+    private void txt_dlgHos_addCustomer_emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_emailFocusLost
+        Customer c = new Customer();
+        String email = this.txt_dlgHos_addCustomer_email.getText();
+        if(c.validateCustName(email)){
+            this.txt_dlgHos_addCustomer_email.setForeground(Color.black);
+            this.txt_dlgHos_addCustomer_email.setToolTipText(null);
+        }
+        else{
+            this.txt_dlgHos_addCustomer_email.setForeground(Color.red);
+            this.txt_dlgHos_addCustomer_email.setToolTipText("Invalid email");
+        }
+    }//GEN-LAST:event_txt_dlgHos_addCustomer_emailFocusLost
+
+    private void txt_dlgHos_editCustomer_nameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_editCustomer_nameFocusLost
+        Customer c = new Customer();
+        String name = this.txt_dlgHos_editCustomer_name.getText();
+        if(c.validateCustName(name)){
+            this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+            this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
+            this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
+        }
+    }//GEN-LAST:event_txt_dlgHos_editCustomer_nameFocusLost
+
+    private void txt_dlgHos_editCustomer_addressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_editCustomer_addressFocusLost
+        Customer c = new Customer();
+        String address = this.txt_dlgHos_editCustomer_address.getText();
+        if(c.validateCustName(address)){
+            this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+            this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
+            this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
+        }
+    }//GEN-LAST:event_txt_dlgHos_editCustomer_addressFocusLost
+
+    private void txt_dlgHos_editCustomer_teleFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_editCustomer_teleFocusLost
+        Customer c = new Customer();
+        String tele = this.txt_dlgHos_editCustomer_tele.getText();
+        if(c.validateTelephone(tele)){
+            this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+            this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
+        }
+        else{
+            this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
+            this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
+        }
+    }//GEN-LAST:event_txt_dlgHos_editCustomer_teleFocusLost
+
+    private void txt_dlgHos_editCustomer_emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_editCustomer_emailFocusLost
+        Customer c = new Customer();
+        String email = this.txt_dlgHos_editCustomer_email.getText();
+        if(c.validateCustName(email)){
+            this.txt_dlgHos_editCustomer_email.setForeground(Color.black);
+            this.txt_dlgHos_editCustomer_email.setToolTipText(null);
+        }
+        else{
+            this.txt_dlgHos_editCustomer_email.setForeground(Color.red);
+            this.txt_dlgHos_editCustomer_email.setToolTipText("Invalid email");
+        }
+    }//GEN-LAST:event_txt_dlgHos_editCustomer_emailFocusLost
+
+    private void txt_dlgHos_addCustomer_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_emailKeyTyped
+        char c = evt.getKeyChar();
+        System.out.println(c);
+        if(!((c>=48 && c<=57) || c==KeyEvent.VK_BACK_SPACE || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD || (c>=64 && c<=90) || (c>=97 && c<=122))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgHos_addCustomer_emailKeyTyped
+
+    private void txt_dlgHos_editCustomer_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgHos_editCustomer_emailKeyTyped
+        char c = evt.getKeyChar();
+        System.out.println(c);
+        if(!((c>=48 && c<=57) || c==KeyEvent.VK_BACK_SPACE || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD || (c>=64 && c<=90) || (c>=97 && c<=122))){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgHos_editCustomer_emailKeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -6416,7 +6873,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnHospital;
     private javax.swing.JButton btnHospitalClinic;
     private javax.swing.JButton btnHospitalPayments;
-    private javax.swing.JButton btnHospitalRegister;
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnMobileService;
     private javax.swing.JButton btnPetshop;
@@ -6453,6 +6909,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgHos_addCustomer_cancel;
     private javax.swing.JButton btn_dlgHos_addPet_add;
     private javax.swing.JButton btn_dlgHos_addPet_cancel;
+    private javax.swing.JButton btn_dlgHos_editCustomer_cancel;
+    private javax.swing.JButton btn_dlgHos_editCustomer_save;
     private javax.swing.JButton btn_usrAcc_addAccount;
     private javax.swing.JButton btn_usrAcc_apply;
     private javax.swing.JButton btn_usrAcc_cancel;
@@ -6507,6 +6965,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgHos_Clinic;
     private javax.swing.JDialog dlgHos_addCustomer;
     private javax.swing.JDialog dlgHos_addPet;
+    private javax.swing.JDialog dlgHos_editCustomer;
     private javax.swing.JDialog dlgUserAccounts;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
@@ -6595,7 +7054,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgHos_Clinic_ReportDate;
     private javax.swing.JLabel lbl_dlgHos_Clinic_ReportOf;
     private javax.swing.JLabel lbl_dlgHos_Clinic_petName;
-    private javax.swing.JLabel lbl_dlgHos_Ownername;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_Ownername;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_address;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_email;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_telephone;
     private javax.swing.JLabel lbl_dlgHos_addPet_Species;
     private javax.swing.JLabel lbl_dlgHos_addPet_age;
     private javax.swing.JLabel lbl_dlgHos_addPet_breed;
@@ -6605,13 +7067,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgHos_addPet_topic;
     private javax.swing.JLabel lbl_dlgHos_addPet_years;
     private javax.swing.JLabel lbl_dlgHos_addnew;
-    private javax.swing.JLabel lbl_dlgHos_address;
-    private javax.swing.JLabel lbl_dlgHos_email;
-    private javax.swing.JLabel lbl_dlgHos_telephone;
+    private javax.swing.JLabel lbl_dlgHos_addnew1;
+    private javax.swing.JLabel lbl_dlgHos_editCustomer_Ownername;
+    private javax.swing.JLabel lbl_dlgHos_editCustomer_address;
+    private javax.swing.JLabel lbl_dlgHos_editCustomer_email;
+    private javax.swing.JLabel lbl_dlgHos_editCustomer_telephone;
     private javax.swing.JLabel lbl_fin_inc_seperator;
     private javax.swing.JList<String> lstUserAccounts;
     private javax.swing.JList<String> lst_dlgHos_Clinic_list;
     private javax.swing.JPanel pnHosAddCustomer;
+    private javax.swing.JPanel pnHosAddCustomer1;
     private javax.swing.JPanel pnHosAddPet;
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
@@ -6653,6 +7118,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_dlgHos_Clinic_Report;
     private javax.swing.JPanel pnl_dlgHos_addPet_container;
     private javax.swing.JPanel pnl_dlgHos_content;
+    private javax.swing.JPanel pnl_dlgHos_content1;
     private javax.swing.JPanel pnl_usrAcc_Container;
     private javax.swing.JPanel pnl_usrAcc_Login;
     private javax.swing.JPanel pnl_usrAcc_LoginPrivileges;
@@ -6663,6 +7129,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrl_Hos_Customers;
     private javax.swing.JScrollPane scrl_Hos_Pets;
     private javax.swing.JScrollPane scrl_dlgHos_Address;
+    private javax.swing.JScrollPane scrl_dlgHos_Address1;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Complaint;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Diagnosis;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_LabFindings;
@@ -6722,6 +7189,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgHos_addCustomer_tele;
     private javax.swing.JTextField txt_dlgHos_addPet_breed;
     private javax.swing.JTextField txt_dlgHos_addPet_name;
+    private javax.swing.JTextArea txt_dlgHos_editCustomer_address;
+    private javax.swing.JTextField txt_dlgHos_editCustomer_email;
+    private javax.swing.JTextField txt_dlgHos_editCustomer_name;
+    private javax.swing.JTextField txt_dlgHos_editCustomer_tele;
     private javax.swing.JTextField txt_usrAcc_LoginName;
     private javax.swing.JPasswordField txt_usrAcc_Password;
     private javax.swing.JPasswordField txt_usrAcc_cPassword;
