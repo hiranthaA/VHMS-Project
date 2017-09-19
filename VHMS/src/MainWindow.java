@@ -261,6 +261,26 @@ public class MainWindow extends javax.swing.JFrame {
         txt_dlgHos_editCustomer_email = new javax.swing.JTextField();
         btn_dlgHos_editCustomer_cancel = new javax.swing.JButton();
         btn_dlgHos_editCustomer_save = new javax.swing.JButton();
+        dlgHos_editPet = new javax.swing.JDialog();
+        pnHosAddPet1 = new javax.swing.JPanel();
+        lbl_dlgHos_editPet_topic = new javax.swing.JLabel();
+        pnl_dlgHos_addPet_container1 = new javax.swing.JPanel();
+        lbl_dlgHos_editPet_name = new javax.swing.JLabel();
+        txt_dlgHos_editPet_name = new javax.swing.JTextField();
+        lbl_dlgHos_editPet_Species = new javax.swing.JLabel();
+        cmb_dlgHos_editPet_Species = new javax.swing.JComboBox<>();
+        lbl_dlgHos_editPet_age = new javax.swing.JLabel();
+        spnr_dlgHos_editPet_years = new javax.swing.JSpinner();
+        lbl_dlgHos_editPet_years = new javax.swing.JLabel();
+        spnr_dlgHos_editPet_months = new javax.swing.JSpinner();
+        lbl_dlgHos_editPet_months = new javax.swing.JLabel();
+        lbl_dlgHos_editPet_sex = new javax.swing.JLabel();
+        rb_dlgHos_editPet_male = new javax.swing.JRadioButton();
+        rb_dlgHos_editPet_female = new javax.swing.JRadioButton();
+        lbl_dlgHos_editPet_breed = new javax.swing.JLabel();
+        txt_dlgHos_editPet_breed = new javax.swing.JTextField();
+        btn_dlgHos_editPet_save = new javax.swing.JButton();
+        btn_dlgHos_editPet_cancel = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -2315,6 +2335,184 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(pnHosAddCustomer1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        dlgHos_editPet.setTitle("Client Details");
+        dlgHos_editPet.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+
+        pnHosAddPet1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        lbl_dlgHos_editPet_topic.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        lbl_dlgHos_editPet_topic.setText("Edit Pet");
+
+        pnl_dlgHos_addPet_container1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lbl_dlgHos_editPet_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_name.setText("Name of Animal");
+
+        txt_dlgHos_editPet_name.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        lbl_dlgHos_editPet_Species.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_Species.setText("Species");
+
+        cmb_dlgHos_editPet_Species.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        cmb_dlgHos_editPet_Species.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Canine", "Feline", "Avian", "Other" }));
+
+        lbl_dlgHos_editPet_age.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_age.setText("Age");
+
+        spnr_dlgHos_editPet_years.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        spnr_dlgHos_editPet_years.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
+
+        lbl_dlgHos_editPet_years.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_years.setText("Years -");
+
+        spnr_dlgHos_editPet_months.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        spnr_dlgHos_editPet_months.setModel(new javax.swing.SpinnerNumberModel(0, 0, 11, 1));
+
+        lbl_dlgHos_editPet_months.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_months.setText("Months");
+
+        lbl_dlgHos_editPet_sex.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_sex.setText("Sex");
+
+        btngp_dlgHos_addPet_Sex.add(rb_dlgHos_editPet_male);
+        rb_dlgHos_editPet_male.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rb_dlgHos_editPet_male.setText("Male");
+        rb_dlgHos_editPet_male.setActionCommand("M");
+
+        btngp_dlgHos_addPet_Sex.add(rb_dlgHos_editPet_female);
+        rb_dlgHos_editPet_female.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        rb_dlgHos_editPet_female.setText("Female");
+        rb_dlgHos_editPet_female.setToolTipText("");
+        rb_dlgHos_editPet_female.setActionCommand("F");
+
+        lbl_dlgHos_editPet_breed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_editPet_breed.setText("Breed");
+
+        txt_dlgHos_editPet_breed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        btn_dlgHos_editPet_save.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_editPet_save.setText("Save");
+        btn_dlgHos_editPet_save.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_editPet_saveActionPerformed(evt);
+            }
+        });
+
+        btn_dlgHos_editPet_cancel.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btn_dlgHos_editPet_cancel.setText("Cancel");
+        btn_dlgHos_editPet_cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgHos_editPet_cancelActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_dlgHos_addPet_container1Layout = new javax.swing.GroupLayout(pnl_dlgHos_addPet_container1);
+        pnl_dlgHos_addPet_container1.setLayout(pnl_dlgHos_addPet_container1Layout);
+        pnl_dlgHos_addPet_container1Layout.setHorizontalGroup(
+            pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_addPet_container1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_addPet_container1Layout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_editPet_age)
+                        .addGap(81, 81, 81)
+                        .addComponent(spnr_dlgHos_editPet_years, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_dlgHos_editPet_years)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(spnr_dlgHos_editPet_months, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lbl_dlgHos_editPet_months))
+                    .addGroup(pnl_dlgHos_addPet_container1Layout.createSequentialGroup()
+                        .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_dlgHos_editPet_name)
+                            .addComponent(lbl_dlgHos_editPet_Species)
+                            .addComponent(lbl_dlgHos_editPet_breed)
+                            .addComponent(lbl_dlgHos_editPet_sex))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_dlgHos_addPet_container1Layout.createSequentialGroup()
+                                .addComponent(rb_dlgHos_editPet_male)
+                                .addGap(15, 15, 15)
+                                .addComponent(rb_dlgHos_editPet_female))
+                            .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addGroup(pnl_dlgHos_addPet_container1Layout.createSequentialGroup()
+                                    .addComponent(btn_dlgHos_editPet_cancel)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(btn_dlgHos_editPet_save))
+                                .addComponent(cmb_dlgHos_editPet_Species, javax.swing.GroupLayout.Alignment.LEADING, 0, 252, Short.MAX_VALUE)
+                                .addComponent(txt_dlgHos_editPet_breed, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(txt_dlgHos_editPet_name, javax.swing.GroupLayout.Alignment.LEADING)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnl_dlgHos_addPet_container1Layout.setVerticalGroup(
+            pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_addPet_container1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_editPet_name)
+                    .addComponent(txt_dlgHos_editPet_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cmb_dlgHos_editPet_Species, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_editPet_Species))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_editPet_age)
+                    .addComponent(spnr_dlgHos_editPet_years, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_editPet_years)
+                    .addComponent(spnr_dlgHos_editPet_months, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_editPet_months))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgHos_editPet_breed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_editPet_breed))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_editPet_sex)
+                    .addComponent(rb_dlgHos_editPet_male)
+                    .addComponent(rb_dlgHos_editPet_female))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
+                .addGroup(pnl_dlgHos_addPet_container1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgHos_editPet_save, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgHos_editPet_cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout pnHosAddPet1Layout = new javax.swing.GroupLayout(pnHosAddPet1);
+        pnHosAddPet1.setLayout(pnHosAddPet1Layout);
+        pnHosAddPet1Layout.setHorizontalGroup(
+            pnHosAddPet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosAddPet1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnHosAddPet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnHosAddPet1Layout.createSequentialGroup()
+                        .addComponent(lbl_dlgHos_editPet_topic)
+                        .addGap(0, 323, Short.MAX_VALUE))
+                    .addComponent(pnl_dlgHos_addPet_container1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        pnHosAddPet1Layout.setVerticalGroup(
+            pnHosAddPet1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnHosAddPet1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lbl_dlgHos_editPet_topic, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnl_dlgHos_addPet_container1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout dlgHos_editPetLayout = new javax.swing.GroupLayout(dlgHos_editPet.getContentPane());
+        dlgHos_editPet.getContentPane().setLayout(dlgHos_editPetLayout);
+        dlgHos_editPetLayout.setHorizontalGroup(
+            dlgHos_editPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnHosAddPet1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgHos_editPetLayout.setVerticalGroup(
+            dlgHos_editPetLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnHosAddPet1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Veterinary Hospital Management System");
 
@@ -2793,13 +2991,13 @@ public class MainWindow extends javax.swing.JFrame {
 
         tbl_Hos_Pets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Pet ID", "Name", "Species", "Breed", "Sex", "Years", "Months"
             }
         ));
         scrl_Hos_Pets.setViewportView(tbl_Hos_Pets);
@@ -2832,6 +3030,11 @@ public class MainWindow extends javax.swing.JFrame {
         });
 
         btn_Hos_editPet.setText("Edit");
+        btn_Hos_editPet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_Hos_editPetActionPerformed(evt);
+            }
+        });
 
         pnl_Hos_CustomersSearchBar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
@@ -6057,8 +6260,20 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Hos_editCustomerActionPerformed
 
     private void btn_Hos_addPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Hos_addPetActionPerformed
-        //----Clear textfields-------------------------------
+        //----Clear fields-------------------------------
+        this.txt_dlgHos_addPet_name.setText("");
+        this.cmb_dlgHos_addPet_Species.setSelectedIndex(0);
+        this.spnr_dlgHos_addPet_years.setValue(0);
+        this.spnr_dlgHos_addPet_months.setValue(0);
+        this.txt_dlgHos_addPet_breed.setText("");
+        this.btngp_dlgHos_addPet_Sex.clearSelection();
         
+        
+        this.lbl_dlgHos_addPet_name.setForeground(Color.black);
+        this.lbl_dlgHos_addPet_Species.setForeground(Color.black);
+        this.lbl_dlgHos_addPet_age.setForeground(Color.black);
+        this.lbl_dlgHos_addPet_breed.setForeground(Color.black);
+        this.lbl_dlgHos_addPet_sex.setForeground(Color.black);
         //---------------------------------------------------
         int selectedRow = this.tbl_Hos_Customers.getSelectedRow();
         if(selectedRow==-1){
@@ -6082,6 +6297,8 @@ public class MainWindow extends javax.swing.JFrame {
             this.txt_dlgHos_Clinic_LabFindings.setText("");
             this.txt_dlgHos_Clinic_Diagnosis.setText("");
             this.txt_dlgHos_Clinic_Remarks.setText("");
+            
+            this.lbl_dlgHos_Clinic_Complaint.setForeground(Color.black);
         //-make fields uneditable--------------------------------------------------    
             this.txt_dlgHos_Clinic_Complaint.setEditable(false);
             this.txt_dlgHos_Clinic_Observation.setEditable(false);
@@ -6196,21 +6413,66 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_dlgHos_addCustomer_cancelActionPerformed
 
     private void btn_dlgHos_addPet_addActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_addPet_addActionPerformed
+        Pet p = new Pet();
         String name = this.txt_dlgHos_addPet_name.getText();
         String species = this.cmb_dlgHos_addPet_Species.getSelectedItem().toString();
         int years = Integer.parseInt(this.spnr_dlgHos_addPet_years.getValue().toString());
         int months = Integer.parseInt(this.spnr_dlgHos_addPet_months.getValue().toString());
         String breed = this.txt_dlgHos_addPet_breed.getText();
-        String sex = this.btngp_dlgHos_addPet_Sex.getSelection().getActionCommand();       
-        int selectedRow = this.tbl_Hos_Customers.getSelectedRow();
-        String custID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
-        Pet p = new Pet();
-        p.addPet(name, species, years, months, breed, sex, custID, dlgHos_addPet);
-        //-update pet table-----------------------------------------------------
-        ResultSet rs = p.getPetDetails(custID);
-        this.tbl_Hos_Pets.setModel(DbUtils.resultSetToTableModel(rs));
-        //----------------------------------------------------------------------
-        this.dlgHos_addPet.dispose();
+        if(p.validatePetName(name) & p.validateSpecies(species) & p.validateAge(years, months) & p.validateBreed(breed) & p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+            int selectedRow = this.tbl_Hos_Customers.getSelectedRow();
+            String custID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
+            String sex = this.btngp_dlgHos_addPet_Sex.getSelection().getActionCommand();
+            p.addPet(name, species, years, months, breed, sex, custID, dlgHos_addPet);
+            //-update pet table-----------------------------------------------------
+            ResultSet rs = p.getPetDetails(custID);
+            this.tbl_Hos_Pets.setModel(DbUtils.resultSetToTableModel(rs));
+            //----------------------------------------------------------------------
+            this.dlgHos_addPet.dispose();
+        }
+        else{
+            getToolkit().beep();
+            if(p.validatePetName(name)){
+                this.lbl_dlgHos_addPet_name.setForeground(Color.black);
+                this.lbl_dlgHos_addPet_name.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addPet_name.setForeground(Color.red);
+                this.lbl_dlgHos_addPet_name.setToolTipText("Invalid Name");
+            }
+            if(p.validateSpecies(species)){
+                this.lbl_dlgHos_addPet_Species.setForeground(Color.black);
+                this.lbl_dlgHos_addPet_Species.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addPet_Species.setForeground(Color.red);
+                this.lbl_dlgHos_addPet_Species.setToolTipText("Selct a species from the list");
+            }
+            if(p.validateAge(years,months)){
+                this.lbl_dlgHos_addPet_age.setForeground(Color.black);
+                this.lbl_dlgHos_addPet_age.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addPet_age.setForeground(Color.red);
+                this.lbl_dlgHos_addPet_age.setToolTipText("Invalid Age");
+            }
+            if(p.validateBreed(breed)){
+                this.lbl_dlgHos_addPet_breed.setForeground(Color.black);
+                this.lbl_dlgHos_addPet_breed.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addPet_breed.setForeground(Color.red);
+                this.lbl_dlgHos_addPet_breed.setToolTipText("Invalid Breed");
+            }
+            if(p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+                this.lbl_dlgHos_addPet_sex.setForeground(Color.black);
+                this.lbl_dlgHos_addPet_sex.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_addPet_sex.setForeground(Color.red);
+                this.lbl_dlgHos_addPet_sex.setToolTipText("Select a sex");
+            }
+        }
     }//GEN-LAST:event_btn_dlgHos_addPet_addActionPerformed
 
     private void btn_dlgHos_addPet_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_addPet_cancelActionPerformed
@@ -6287,6 +6549,8 @@ public class MainWindow extends javax.swing.JFrame {
             this.txt_dlgHos_Clinic_Diagnosis.setEditable(true);
             this.txt_dlgHos_Clinic_Remarks.setEditable(true);
             
+            
+            this.lbl_dlgHos_Clinic_Complaint.setForeground(Color.black); 
             this.btn_dlgHos_Clinic_apply.setEnabled(true);
             this.btn_dlgHos_Clinic_edit.setEnabled(false);
             this.lst_dlgHos_Clinic_list.clearSelection();
@@ -6313,90 +6577,106 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void btn_dlgHos_Clinic_applyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_Clinic_applyActionPerformed
         if(lst_dlgHos_Clinic_list.isSelectionEmpty()){
-            Date date = new Date();
-            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-            String reportdate = df.format(date);
-            int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
-            String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
-            String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
-            String obsr = this.txt_dlgHos_Clinic_Observation.getText();
-            String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
-            String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
-            String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
             Clinic c = new Clinic();
-            String clinicID = c.generateClinicID(dlgHos_Clinic);
-            c.addClinicReport(petID, reportdate, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
-            //-Update clinic list-------------------------------------------
-                DefaultListModel dlm = new DefaultListModel();
-                ResultSet rs = c.getClinicList(petID);
-                if(rs!=null){
-                    try{
-                        while(rs.next()){
-                            dlm.addElement(rs.getString("clinicID"));
+            String cmpl = this.txt_dlgHos_Clinic_Complaint.getText();
+            if(c.validateClinicReport(cmpl)){
+                this.lbl_dlgHos_Clinic_Complaint.setForeground(Color.black);
+                Date date = new Date();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String reportdate = df.format(date);
+                int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+                String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+                String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
+                String obsr = this.txt_dlgHos_Clinic_Observation.getText();
+                String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
+                String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
+                String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
+                String clinicID = c.generateClinicID(dlgHos_Clinic);
+                c.addClinicReport(petID, reportdate, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
+                //-Update clinic list-------------------------------------------
+                    DefaultListModel dlm = new DefaultListModel();
+                    ResultSet rs = c.getClinicList(petID);
+                    if(rs!=null){
+                        try{
+                            while(rs.next()){
+                                dlm.addElement(rs.getString("clinicID"));
+                            }
+                            this.lst_dlgHos_Clinic_list.setModel(dlm);
                         }
-                        this.lst_dlgHos_Clinic_list.setModel(dlm);
+                        catch(Exception e){
+                            JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                        }
                     }
-                    catch(Exception e){
-                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    else{
+                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
                     }
-                }
-                else{
-                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
-                }
-            //--select last element-----------------------------------------------------------
-                this.lst_dlgHos_Clinic_list.setSelectedIndex(lst_dlgHos_Clinic_list.getModel().getSize()-1);
-            //----------------------------------------------------------------------
-            //-make fields uneditable--------------------------------------------------    
-                this.txt_dlgHos_Clinic_Complaint.setEditable(false);
-                this.txt_dlgHos_Clinic_Observation.setEditable(false);
-                this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
-                this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
-                this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+                //--select last element-----------------------------------------------------------
+                    this.lst_dlgHos_Clinic_list.setSelectedIndex(lst_dlgHos_Clinic_list.getModel().getSize()-1);
+                //----------------------------------------------------------------------
+                //-make fields uneditable--------------------------------------------------    
+                    this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+                    this.txt_dlgHos_Clinic_Observation.setEditable(false);
+                    this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+                    this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+                    this.txt_dlgHos_Clinic_Remarks.setEditable(false);
 
-                this.btn_dlgHos_Clinic_apply.setEnabled(false);
-                this.btn_dlgHos_Clinic_edit.setEnabled(true);
-            //---------------------------------------------------
+                    this.btn_dlgHos_Clinic_apply.setEnabled(false);
+                    this.btn_dlgHos_Clinic_edit.setEnabled(true);
+                //---------------------------------------------------
+            }
+            else{
+                this.lbl_dlgHos_Clinic_Complaint.setForeground(Color.red);
+                JOptionPane.showMessageDialog(dlgHos_Clinic, "Fields empty!","Error",JOptionPane.ERROR_MESSAGE);
+            }
         }
         else{
-            //update existing record
-            int index = this.lst_dlgHos_Clinic_list.getSelectedIndex();
-            int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
-            String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
-            String clinicID = this.lst_dlgHos_Clinic_list.getSelectedValue();
-            String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
-            String obsr = this.txt_dlgHos_Clinic_Observation.getText();
-            String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
-            String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
-            String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
             Clinic c = new Clinic();
-            c.updateClinicReport(clinicID, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
-            //-Update clinic list-------------------------------------------
-                DefaultListModel dlm = new DefaultListModel();
-                ResultSet rs = c.getClinicList(petID);
-                if(rs!=null){
-                    try{
-                        while(rs.next()){
-                            dlm.addElement(rs.getString("clinicID"));
+            String cmpl = this.txt_dlgHos_Clinic_Complaint.getText();
+            if(c.validateClinicReport(cmpl)){
+                this.lbl_dlgHos_Clinic_Complaint.setForeground(Color.black);    
+                //update existing record
+                int index = this.lst_dlgHos_Clinic_list.getSelectedIndex();
+                int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+                String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+                String clinicID = this.lst_dlgHos_Clinic_list.getSelectedValue();
+                String complaint = this.txt_dlgHos_Clinic_Complaint.getText();
+                String obsr = this.txt_dlgHos_Clinic_Observation.getText();
+                String labf = this.txt_dlgHos_Clinic_LabFindings.getText();
+                String diag = this.txt_dlgHos_Clinic_Diagnosis.getText();
+                String remarks = this.txt_dlgHos_Clinic_Remarks.getText();
+                c.updateClinicReport(clinicID, complaint, obsr, labf, diag, remarks, dlgHos_Clinic);
+                //-Update clinic list-------------------------------------------
+                    DefaultListModel dlm = new DefaultListModel();
+                    ResultSet rs = c.getClinicList(petID);
+                    if(rs!=null){
+                        try{
+                            while(rs.next()){
+                                dlm.addElement(rs.getString("clinicID"));
+                            }
+                            this.lst_dlgHos_Clinic_list.setModel(dlm);
                         }
-                        this.lst_dlgHos_Clinic_list.setModel(dlm);
+                        catch(Exception e){
+                            JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                        }
                     }
-                    catch(Exception e){
-                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    else{
+                        JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
                     }
-                }
-                else{
-                    JOptionPane.showMessageDialog(dlgHos_Clinic, "Cannot refresh Clinic Records!","Database Error",JOptionPane.ERROR_MESSAGE);    
-                }
-            //-make fields uneditable--------------------------------------------------    
-                this.txt_dlgHos_Clinic_Complaint.setEditable(false);
-                this.txt_dlgHos_Clinic_Observation.setEditable(false);
-                this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
-                this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
-                this.txt_dlgHos_Clinic_Remarks.setEditable(false);
+                //-make fields uneditable--------------------------------------------------    
+                    this.txt_dlgHos_Clinic_Complaint.setEditable(false);
+                    this.txt_dlgHos_Clinic_Observation.setEditable(false);
+                    this.txt_dlgHos_Clinic_LabFindings.setEditable(false);
+                    this.txt_dlgHos_Clinic_Diagnosis.setEditable(false);
+                    this.txt_dlgHos_Clinic_Remarks.setEditable(false);
 
-                this.lst_dlgHos_Clinic_list.setSelectedIndex(index);
-                this.btn_dlgHos_Clinic_apply.setEnabled(false);
-            //---------------------------------------------------
+                    this.lst_dlgHos_Clinic_list.setSelectedIndex(index);
+                    this.btn_dlgHos_Clinic_apply.setEnabled(false);
+                //---------------------------------------------------
+            }
+            else{
+                this.lbl_dlgHos_Clinic_Complaint.setForeground(Color.red);
+                JOptionPane.showMessageDialog(dlgHos_Clinic, "Fields empty!","Error",JOptionPane.ERROR_MESSAGE);
+            }
         }
     }//GEN-LAST:event_btn_dlgHos_Clinic_applyActionPerformed
 
@@ -6596,6 +6876,124 @@ public class MainWindow extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_dlgHos_editCustomer_emailKeyTyped
+
+    private void btn_Hos_editPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Hos_editPetActionPerformed
+        int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a pet to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+            String name,species,breed,sex;
+            int ageMonths,ageYears;
+            Pet p = new Pet();
+            try{
+                ResultSet rs = p.getPetIDDetails(petID);
+                while(rs.next()){
+                    name = rs.getString("name");
+                    species = rs.getString("species");
+                    ageYears = rs.getInt("ageYears");
+                    ageMonths = rs.getInt("ageMonths");
+                    breed = rs.getString("breed");
+                    sex = rs.getString("sex");
+
+                    this.txt_dlgHos_editPet_name.setText(name);
+                    this.txt_dlgHos_editPet_breed.setText(breed);
+                    this.cmb_dlgHos_editPet_Species.setSelectedItem(species);
+                    this.spnr_dlgHos_editPet_years.getModel().setValue(ageYears);
+                    this.spnr_dlgHos_editPet_months.getModel().setValue(ageMonths);
+                    if(sex.equals("M")){
+                        this.rb_dlgHos_editPet_male.setSelected(true);
+                    }
+                    else{
+                        this.rb_dlgHos_editPet_female.setSelected(true);
+                    }
+                    
+                    this.lbl_dlgHos_editPet_name.setForeground(Color.black);
+                    this.lbl_dlgHos_editPet_Species.setForeground(Color.black);
+                    this.lbl_dlgHos_editPet_age.setForeground(Color.black);
+                    this.lbl_dlgHos_editPet_breed.setForeground(Color.black);
+                    this.lbl_dlgHos_editPet_sex.setForeground(Color.black);
+                } 
+            }
+            catch(Exception e){
+                JOptionPane.showMessageDialog(this, "Cannot Save Pet Details!","Error",JOptionPane.ERROR_MESSAGE);
+            }
+            this.dlgHos_editPet.setSize(425,380);
+            this.dlgHos_editPet.setTitle("Edit Pet");
+            this.dlgHos_editPet.setLocationRelativeTo(Container);
+            this.dlgHos_editPet.setVisible(true); 
+        }
+    }//GEN-LAST:event_btn_Hos_editPetActionPerformed
+
+    private void btn_dlgHos_editPet_saveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_editPet_saveActionPerformed
+        Pet p = new Pet();
+        String name = this.txt_dlgHos_editPet_name.getText();
+        String species = this.cmb_dlgHos_editPet_Species.getSelectedItem().toString();
+        int years = Integer.parseInt(this.spnr_dlgHos_editPet_years.getValue().toString());
+        int months = Integer.parseInt(this.spnr_dlgHos_editPet_months.getValue().toString());
+        String breed = this.txt_dlgHos_editPet_breed.getText();
+        if(p.validatePetName(name) & p.validateSpecies(species) & p.validateAge(years, months) & p.validateBreed(breed) & p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+            int selectedRow = this.tbl_Hos_Pets.getSelectedRow();
+            String petID = this.tbl_Hos_Pets.getModel().getValueAt(selectedRow, 0).toString();
+            int selectedRow2 = this.tbl_Hos_Customers.getSelectedRow();
+            String custID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow2, 0).toString();
+            String sex = this.btngp_dlgHos_addPet_Sex.getSelection().getActionCommand();
+            p.editPet(name, species, years, months, breed, sex, petID, dlgHos_editPet);
+            //-update pet table-----------------------------------------------------
+            ResultSet rs = p.getPetDetails(custID);
+            this.tbl_Hos_Pets.setModel(DbUtils.resultSetToTableModel(rs));
+            //----------------------------------------------------------------------
+            this.dlgHos_editPet.dispose();
+        }
+        else{
+            getToolkit().beep();
+            if(p.validatePetName(name)){
+                this.lbl_dlgHos_editPet_name.setForeground(Color.black);
+                this.lbl_dlgHos_editPet_name.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editPet_name.setForeground(Color.red);
+                this.lbl_dlgHos_editPet_name.setToolTipText("Invalid Name");
+            }
+            if(p.validateSpecies(species)){
+                this.lbl_dlgHos_editPet_Species.setForeground(Color.black);
+                this.lbl_dlgHos_editPet_Species.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editPet_Species.setForeground(Color.red);
+                this.lbl_dlgHos_editPet_Species.setToolTipText("Selct a species from the list");
+            }
+            if(p.validateAge(years,months)){
+                this.lbl_dlgHos_editPet_age.setForeground(Color.black);
+                this.lbl_dlgHos_editPet_age.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editPet_age.setForeground(Color.red);
+                this.lbl_dlgHos_editPet_age.setToolTipText("Invalid Age");
+            }
+            if(p.validateBreed(breed)){
+                this.lbl_dlgHos_editPet_breed.setForeground(Color.black);
+                this.lbl_dlgHos_editPet_breed.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editPet_breed.setForeground(Color.red);
+                this.lbl_dlgHos_editPet_breed.setToolTipText("Invalid Breed");
+            }
+            if(p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+                this.lbl_dlgHos_editPet_sex.setForeground(Color.black);
+                this.lbl_dlgHos_editPet_sex.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgHos_editPet_sex.setForeground(Color.red);
+                this.lbl_dlgHos_editPet_sex.setToolTipText("Select a sex");
+            }
+        }
+    }//GEN-LAST:event_btn_dlgHos_editPet_saveActionPerformed
+
+    private void btn_dlgHos_editPet_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_editPet_cancelActionPerformed
+        this.dlgHos_editPet.dispose();
+    }//GEN-LAST:event_btn_dlgHos_editPet_cancelActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -6911,6 +7309,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgHos_addPet_cancel;
     private javax.swing.JButton btn_dlgHos_editCustomer_cancel;
     private javax.swing.JButton btn_dlgHos_editCustomer_save;
+    private javax.swing.JButton btn_dlgHos_editPet_cancel;
+    private javax.swing.JButton btn_dlgHos_editPet_save;
     private javax.swing.JButton btn_usrAcc_addAccount;
     private javax.swing.JButton btn_usrAcc_apply;
     private javax.swing.JButton btn_usrAcc_cancel;
@@ -6943,6 +7343,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_usrAcc_PS;
     private javax.swing.JCheckBox ckbx_usrAcc_Ph;
     private javax.swing.JComboBox<String> cmb_dlgHos_addPet_Species;
+    private javax.swing.JComboBox<String> cmb_dlgHos_editPet_Species;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_From;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_to;
     private com.toedter.calendar.JDateChooser dc_Fin_Income_From;
@@ -6966,6 +7367,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgHos_addCustomer;
     private javax.swing.JDialog dlgHos_addPet;
     private javax.swing.JDialog dlgHos_editCustomer;
+    private javax.swing.JDialog dlgHos_editPet;
     private javax.swing.JDialog dlgUserAccounts;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton12;
@@ -7072,12 +7474,21 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgHos_editCustomer_address;
     private javax.swing.JLabel lbl_dlgHos_editCustomer_email;
     private javax.swing.JLabel lbl_dlgHos_editCustomer_telephone;
+    private javax.swing.JLabel lbl_dlgHos_editPet_Species;
+    private javax.swing.JLabel lbl_dlgHos_editPet_age;
+    private javax.swing.JLabel lbl_dlgHos_editPet_breed;
+    private javax.swing.JLabel lbl_dlgHos_editPet_months;
+    private javax.swing.JLabel lbl_dlgHos_editPet_name;
+    private javax.swing.JLabel lbl_dlgHos_editPet_sex;
+    private javax.swing.JLabel lbl_dlgHos_editPet_topic;
+    private javax.swing.JLabel lbl_dlgHos_editPet_years;
     private javax.swing.JLabel lbl_fin_inc_seperator;
     private javax.swing.JList<String> lstUserAccounts;
     private javax.swing.JList<String> lst_dlgHos_Clinic_list;
     private javax.swing.JPanel pnHosAddCustomer;
     private javax.swing.JPanel pnHosAddCustomer1;
     private javax.swing.JPanel pnHosAddPet;
+    private javax.swing.JPanel pnHosAddPet1;
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlClientSearchBar;
     private javax.swing.JPanel pnlDaycare;
@@ -7117,6 +7528,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_dlgHos_Clinic_List;
     private javax.swing.JPanel pnl_dlgHos_Clinic_Report;
     private javax.swing.JPanel pnl_dlgHos_addPet_container;
+    private javax.swing.JPanel pnl_dlgHos_addPet_container1;
     private javax.swing.JPanel pnl_dlgHos_content;
     private javax.swing.JPanel pnl_dlgHos_content1;
     private javax.swing.JPanel pnl_usrAcc_Container;
@@ -7126,6 +7538,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnltableExpense;
     private javax.swing.JRadioButton rb_dlgHos_addPet_female;
     private javax.swing.JRadioButton rb_dlgHos_addPet_male;
+    private javax.swing.JRadioButton rb_dlgHos_editPet_female;
+    private javax.swing.JRadioButton rb_dlgHos_editPet_male;
     private javax.swing.JScrollPane scrl_Hos_Customers;
     private javax.swing.JScrollPane scrl_Hos_Pets;
     private javax.swing.JScrollPane scrl_dlgHos_Address;
@@ -7145,6 +7559,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrlp_txt_dlgFin_editClient_Address;
     private javax.swing.JSpinner spnr_dlgHos_addPet_months;
     private javax.swing.JSpinner spnr_dlgHos_addPet_years;
+    private javax.swing.JSpinner spnr_dlgHos_editPet_months;
+    private javax.swing.JSpinner spnr_dlgHos_editPet_years;
     private javax.swing.JSeparator sprt_usrAcc_Privileges;
     private javax.swing.JSeparator sprtl_usrAcc_login;
     private javax.swing.JTable tbl_Fin_Client_Details;
@@ -7193,6 +7609,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgHos_editCustomer_email;
     private javax.swing.JTextField txt_dlgHos_editCustomer_name;
     private javax.swing.JTextField txt_dlgHos_editCustomer_tele;
+    private javax.swing.JTextField txt_dlgHos_editPet_breed;
+    private javax.swing.JTextField txt_dlgHos_editPet_name;
     private javax.swing.JTextField txt_usrAcc_LoginName;
     private javax.swing.JPasswordField txt_usrAcc_Password;
     private javax.swing.JPasswordField txt_usrAcc_cPassword;

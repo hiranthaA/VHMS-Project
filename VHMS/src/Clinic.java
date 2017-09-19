@@ -157,4 +157,13 @@ public class Clinic {
             e.printStackTrace();
         }
     }
+    
+    public boolean validateClinicReport(String complaint){
+        if(complaint.equals("")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
 }

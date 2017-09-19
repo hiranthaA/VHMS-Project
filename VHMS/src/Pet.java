@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
 
 /*
@@ -44,6 +45,26 @@ public class Pet {
         catch(Exception e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(comp, "Pet adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    public void editPet(String name, String species, int years, int months, String breed, String sex, String petID, Component comp){
+        try{
+            String SQL = "update pets set name=?,species=?,ageYears=?,ageMonths=?,breed=?,sex=? where petID=?";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, name);
+            pst.setString(2, species);
+            pst.setInt(3, years);
+            pst.setInt(4, months);
+            pst.setString(5, breed);
+            pst.setString(6, sex);
+            pst.setString(7, petID);
+            pst.execute();
+            JOptionPane.showMessageDialog(comp, "Pet Updated Successfully!","Pet Details",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(comp, "Pet updatinging failed!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -127,7 +148,19 @@ public class Pet {
     }
     
     public ResultSet getPetDetails(String custID){
-        String sql = "select petID as 'Pet ID',name as 'Pet Name',species as 'Species', ageYears as 'Years',ageMonths as 'Months' from pets where custID='"+custID+"'";
+        String sql = "select petID as 'Pet ID',name as 'Pet Name',species as 'Species', breed as 'Breed', sex as 'Sex', ageYears as 'Years',ageMonths as 'Months' from pets where custID='"+custID+"'";
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs_pet_details = stmnt.executeQuery(sql);
+            return rs_pet_details;
+        }
+        catch(Exception e){
+            return null;
+        }
+    }
+    
+    public ResultSet getPetIDDetails(String petID){
+        String sql = "select * from pets where petID='"+petID+"'";
         try{
             Statement stmnt = dbcon.createStatement();
             ResultSet rs_pet_details = stmnt.executeQuery(sql);
@@ -167,6 +200,57 @@ public class Pet {
         }
         catch(Exception e){
             return null;
+        }
+    }
+    
+    public boolean validatePetName(String petname){
+        if(petname.equals("")){
+            return false;
+        }
+        else if(petname.length()==1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateSpecies(String species){
+        if(species.equals("Select...")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateAge(int y, int m){
+        if(m==0 && y==0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateBreed(String breed){
+        if(breed.equals("")){
+            return false;
+        }
+        else if(breed.length()==1){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateSex(ButtonModel sex){
+        if(sex==null){
+            return false;
+        }
+        else{
+            return true;
         }
     }
 }
