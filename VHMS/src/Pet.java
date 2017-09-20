@@ -68,6 +68,34 @@ public class Pet {
         }
     }
     
+    public ResultSet searchByPetName(String searchText){
+        String pet=null;
+        pet=searchText;
+        String sql = "select petID as 'Pet ID',name as 'Pet Name',species as 'Species', ageYears as 'Years',ageMonths as 'Months' from pets where name like '%"+pet+"%'";
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs_Pet_Details = stmnt.executeQuery(sql);
+            return rs_Pet_Details;
+        }
+        catch(Exception e){
+            return null;
+        }
+    }
+    
+    public ResultSet searchByPetID(String searchText){
+        String petID=null;
+        petID=searchText;
+        String sql = "select petID as 'Pet ID',name as 'Pet Name',species as 'Species', ageYears as 'Years',ageMonths as 'Months' from pets where petID like '%"+petID+"%'";
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs_Pet_Details = stmnt.executeQuery(sql);
+            return rs_Pet_Details;
+        }
+        catch(Exception e){
+            return null;
+        }
+    }
+    
     public String generatePetID(Component comp){
         String prefix="P";
         int noPets=0;

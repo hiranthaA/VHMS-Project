@@ -3063,12 +3063,22 @@ public class MainWindow extends javax.swing.JFrame {
         lbl_Hos_SearchPetName.setToolTipText("");
 
         txt_Hos_SearchPetName.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Hos_SearchPetName.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_Hos_SearchPetNameKeyReleased(evt);
+            }
+        });
 
         lbl_Hos_SearchPetID.setFont(new java.awt.Font("Calibri", 0, 14)); // NOI18N
         lbl_Hos_SearchPetID.setText("Pet ID");
         lbl_Hos_SearchPetID.setToolTipText("");
 
         txt_Hos_SearchPetID.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_Hos_SearchPetID.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txt_Hos_SearchPetIDKeyReleased(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_Hos_CustomersSearchBarLayout = new javax.swing.GroupLayout(pnl_Hos_CustomersSearchBar);
         pnl_Hos_CustomersSearchBar.setLayout(pnl_Hos_CustomersSearchBarLayout);
@@ -5790,11 +5800,27 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnHospitalPaymentsActionPerformed
 
     private void txt_Hos_SearchCustomerKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Hos_SearchCustomerKeyReleased
-        // TODO add your handling code here:
+        ResultSet rs;
+        Customer c = new Customer();
+        rs = c.searchByCustomer(this.txt_Hos_SearchCustomer.getText());
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
+        }
     }//GEN-LAST:event_txt_Hos_SearchCustomerKeyReleased
 
     private void txt_Hos_SearchCustIDKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Hos_SearchCustIDKeyReleased
-        // TODO add your handling code here:
+        ResultSet rs;
+        Customer c = new Customer();
+        rs = c.searchByCustID(this.txt_Hos_SearchCustID.getText());
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
+        }
     }//GEN-LAST:event_txt_Hos_SearchCustIDKeyReleased
 
     private void jMenuItem1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem1MouseClicked
@@ -6994,6 +7020,30 @@ public class MainWindow extends javax.swing.JFrame {
     private void btn_dlgHos_editPet_cancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgHos_editPet_cancelActionPerformed
         this.dlgHos_editPet.dispose();
     }//GEN-LAST:event_btn_dlgHos_editPet_cancelActionPerformed
+
+    private void txt_Hos_SearchPetNameKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Hos_SearchPetNameKeyReleased
+        ResultSet rs;
+        Pet p = new Pet();
+        rs = p.searchByPetName(this.txt_Hos_SearchPetName.getText());
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Hos_Pets.setModel(DbUtils.resultSetToTableModel(rs));
+        }
+    }//GEN-LAST:event_txt_Hos_SearchPetNameKeyReleased
+
+    private void txt_Hos_SearchPetIDKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Hos_SearchPetIDKeyReleased
+        ResultSet rs;
+        Pet p = new Pet();
+        rs = p.searchByPetID(this.txt_Hos_SearchPetID.getText());
+        if(rs==null){
+            JOptionPane.showMessageDialog(this, "Cannot Refresh Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            this.tbl_Hos_Pets.setModel(DbUtils.resultSetToTableModel(rs));
+        }
+    }//GEN-LAST:event_txt_Hos_SearchPetIDKeyReleased
     
     public void showPanels(){
         this.pnlHome.setVisible(true);

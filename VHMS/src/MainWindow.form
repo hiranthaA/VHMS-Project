@@ -4759,6 +4759,9 @@
                                   <Font name="Calibri" size="16" style="0"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Hos_SearchPetNameKeyReleased"/>
+                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="lbl_Hos_SearchPetID">
                               <Properties>
@@ -4775,6 +4778,9 @@
                                   <Font name="Calibri" size="16" style="0"/>
                                 </Property>
                               </Properties>
+                              <Events>
+                                <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_Hos_SearchPetIDKeyReleased"/>
+                              </Events>
                             </Component>
                           </SubComponents>
                         </Container>

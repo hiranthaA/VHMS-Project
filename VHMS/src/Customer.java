@@ -195,6 +195,34 @@ public class Customer {
         }
     }
     
+    public ResultSet searchByCustomer(String searchText){
+        String cust=null;
+        cust=searchText;
+        String sql = "select custID as 'CustomerID',name as 'Name',address as 'Address',telephone as 'Telephone',email as 'Email' from customer where name like '%"+cust+"%'";
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs_Cust_Details = stmnt.executeQuery(sql);
+            return rs_Cust_Details;
+        }
+        catch(Exception e){
+            return null;
+        }
+    }
+    
+    public ResultSet searchByCustID(String searchText){
+        String custID=null;
+        custID=searchText;
+        String sql = "select custID as 'CustomerID',name as 'Name',address as 'Address',telephone as 'Telephone',email as 'Email' from customer where custID like '%"+custID+"%'";
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs_Cust_Details = stmnt.executeQuery(sql);
+            return rs_Cust_Details;
+        }
+        catch(Exception e){
+            return null;
+        }
+    }
+    
     public boolean validateCustName(String name){
         if(name.equals("")){
             return false;
