@@ -362,7 +362,6 @@ public class MainWindow extends javax.swing.JFrame {
         btnStockAdditem = new javax.swing.JButton();
         btnStockDeleteitem = new javax.swing.JButton();
         btnStockEdititem = new javax.swing.JButton();
-        btnStockViewStock = new javax.swing.JButton();
         pnlHospital = new javax.swing.JPanel();
         pnlHospitalMainContainer = new javax.swing.JPanel();
         pnlHosButton = new javax.swing.JPanel();
@@ -3283,14 +3282,6 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        btnStockViewStock.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        btnStockViewStock.setText("View Stock");
-        btnStockViewStock.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStockViewStockActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout pnlBtn1Layout = new javax.swing.GroupLayout(pnlBtn1);
         pnlBtn1.setLayout(pnlBtn1Layout);
         pnlBtn1Layout.setHorizontalGroup(
@@ -3302,8 +3293,6 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(btnStockDeleteitem, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
                 .addComponent(btnStockEdititem, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(btnStockViewStock, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlBtn1Layout.setVerticalGroup(
@@ -3311,10 +3300,9 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlBtn1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlBtn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnStockEdititem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnStockEdititem, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                     .addComponent(btnStockAdditem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnStockDeleteitem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnStockViewStock, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE))
+                    .addComponent(btnStockDeleteitem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -5350,6 +5338,7 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void pharmacyTabbedpaneMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pharmacyTabbedpaneMouseClicked
         this.txtBillItemcode.requestFocusInWindow();
+        update_stock_table();
     }//GEN-LAST:event_pharmacyTabbedpaneMouseClicked
 
     private void btnFinanceClientsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinanceClientsActionPerformed
@@ -7534,11 +7523,6 @@ public class MainWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btnStockEdititemActionPerformed
 
-    private void btnStockViewStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockViewStockActionPerformed
-        // TODO add your handling code here:
-        update_stock_table();
-    }//GEN-LAST:event_btnStockViewStockActionPerformed
-
     private void txt_pha_additemcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_additemcodeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_pha_additemcodeActionPerformed
@@ -7898,7 +7882,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnStockAdditem;
     private javax.swing.JButton btnStockDeleteitem;
     private javax.swing.JButton btnStockEdititem;
-    private javax.swing.JButton btnStockViewStock;
     private javax.swing.JButton btnViewStock;
     private javax.swing.JButton btn_Fin_AddClientInvoice;
     private javax.swing.JButton btn_Fin_AddElecBill;
