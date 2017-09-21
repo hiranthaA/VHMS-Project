@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author lakmal
+ * @author lakmal 
  */
 public class Clinic {
     private Connection dbcon;

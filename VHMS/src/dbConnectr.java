@@ -24,13 +24,13 @@ public class dbConnectr {
         String conPW = "";
 
         try{
-            Scanner sc = new Scanner(new File("conData"));
-                    while(sc.hasNext()){
-                        conURL = "jdbc:mysql://"+sc.next()+":"+sc.next()+"/vhms?autoReconnect=true&useSSL=false";
-                        conUN = sc.next();
-                        conPW = sc.next();
-                    }
-            sc.close();
+            try (Scanner sc = new Scanner(new File("conData"))) {
+                while(sc.hasNext()){
+                    conURL = "jdbc:mysql://"+sc.next()+":"+sc.next()+"/vhms?autoReconnect=true&useSSL=false";
+                    conUN = sc.next();
+                    conPW = sc.next();
+                }
+            }
             Class.forName("com.mysql.jdbc.Driver");
             conn = DriverManager.getConnection(conURL,conUN,conPW);
             //JOptionPane.showMessageDialog(null, "Connection Successfull", "Notification",JOptionPane.INFORMATION_MESSAGE);
