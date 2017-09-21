@@ -301,21 +301,21 @@ public class MainWindow extends javax.swing.JFrame {
         btn_phaAdd = new javax.swing.JButton();
         dc_pha_add_expdate = new com.toedter.calendar.JDateChooser();
         dlgpha_updateItem = new javax.swing.JDialog();
-        pnl_pha_EditItemMain = new javax.swing.JPanel();
-        txt_pha_edititemcode1 = new javax.swing.JTextField();
-        txt_pha_editCompany1 = new javax.swing.JTextField();
-        txt_pha_editItemName1 = new javax.swing.JTextField();
-        txt_pha_editquantity1 = new javax.swing.JTextField();
-        txt_pha_editStockprice1 = new javax.swing.JTextField();
-        txt_pha_editSellingprice1 = new javax.swing.JTextField();
-        lbl_pha_edit_Itemcode = new javax.swing.JLabel();
-        lbl_pha_edit_itemname1 = new javax.swing.JLabel();
-        lbl_pha_edit_Quantity = new javax.swing.JLabel();
-        lbl_pha_edit_expDate = new javax.swing.JLabel();
-        lbl_pha_edit_company = new javax.swing.JLabel();
-        lbl_pha_edit_StockPrice = new javax.swing.JLabel();
-        lbl_pha_edit_Selllingprice = new javax.swing.JLabel();
-        btn_phaEdit1 = new javax.swing.JButton();
+        pnl_dlg_addItemMain1 = new javax.swing.JPanel();
+        txt_pha_additemcode1 = new javax.swing.JTextField();
+        txt_pha_editCompany = new javax.swing.JTextField();
+        txt_pha_addItemName1 = new javax.swing.JTextField();
+        txt_pha_addquantity1 = new javax.swing.JTextField();
+        txt_pha_addStockprice1 = new javax.swing.JTextField();
+        txt_pha_editSellingprice = new javax.swing.JTextField();
+        lbl_pha_editItemcode = new javax.swing.JLabel();
+        lbl_pha_edit_itemname = new javax.swing.JLabel();
+        lbl_pha_editQuantity = new javax.swing.JLabel();
+        lbl_pha_editExpireDate = new javax.swing.JLabel();
+        lbl_pha_editCompany = new javax.swing.JLabel();
+        lbl_pha_editStockPrice = new javax.swing.JLabel();
+        lbl_pha_editSellingprice = new javax.swing.JLabel();
+        btn_phaupdate = new javax.swing.JButton();
         dc_pha_edit_expdate = new com.toedter.calendar.JDateChooser();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
@@ -361,7 +361,7 @@ public class MainWindow extends javax.swing.JFrame {
         pnlBtn1 = new javax.swing.JPanel();
         btnStockAdditem = new javax.swing.JButton();
         btnStockDeleteitem = new javax.swing.JButton();
-        btnStockEdititem = new javax.swing.JButton();
+        btnStockUpdateitem = new javax.swing.JButton();
         pnlHospital = new javax.swing.JPanel();
         pnlHospitalMainContainer = new javax.swing.JPanel();
         pnlHosButton = new javax.swing.JPanel();
@@ -2697,140 +2697,142 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(pnl_dlg_addItemMain, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pnl_pha_EditItemMain.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Edit Item", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Calibri", 1, 24), new java.awt.Color(0, 51, 51))); // NOI18N
+        dlgpha_updateItem.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        dlgpha_updateItem.setModalExclusionType(java.awt.Dialog.ModalExclusionType.TOOLKIT_EXCLUDE);
+        dlgpha_updateItem.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
 
-        txt_pha_edititemcode1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        txt_pha_edititemcode1.addActionListener(new java.awt.event.ActionListener() {
+        pnl_dlg_addItemMain1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Update Item", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Calibri", 1, 24), new java.awt.Color(0, 51, 51))); // NOI18N
+
+        txt_pha_additemcode1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_pha_additemcode1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_pha_edititemcode1ActionPerformed(evt);
+                txt_pha_additemcode1ActionPerformed(evt);
             }
         });
 
-        txt_pha_editCompany1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        txt_pha_editCompany.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_editItemName1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        txt_pha_addItemName1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_editquantity1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        txt_pha_addquantity1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_editStockprice1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        txt_pha_addStockprice1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_editSellingprice1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        txt_pha_editSellingprice.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        lbl_pha_edit_Itemcode.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_Itemcode.setText("Item Code :");
+        lbl_pha_editItemcode.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_editItemcode.setText("Item Code :");
 
-        lbl_pha_edit_itemname1.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_itemname1.setText("Item Name : ");
+        lbl_pha_edit_itemname.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_edit_itemname.setText("Item Name : ");
 
-        lbl_pha_edit_Quantity.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_Quantity.setText("Quantity :");
+        lbl_pha_editQuantity.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_editQuantity.setText("Quantity :");
 
-        lbl_pha_edit_expDate.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_expDate.setText("Expire Date :");
+        lbl_pha_editExpireDate.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_editExpireDate.setText("Expire Date :");
 
-        lbl_pha_edit_company.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_company.setText("Company :");
+        lbl_pha_editCompany.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_editCompany.setText("Company :");
 
-        lbl_pha_edit_StockPrice.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_StockPrice.setText("Stock Price :");
+        lbl_pha_editStockPrice.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_editStockPrice.setText("Stock Price :");
 
-        lbl_pha_edit_Selllingprice.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        lbl_pha_edit_Selllingprice.setText("Selling Price :");
+        lbl_pha_editSellingprice.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_pha_editSellingprice.setText("Selling Price :");
 
-        btn_phaEdit1.setFont(new java.awt.Font("Calibri", 1, 24)); // NOI18N
-        btn_phaEdit1.setText("Edit Item");
-        btn_phaEdit1.addActionListener(new java.awt.event.ActionListener() {
+        btn_phaupdate.setFont(new java.awt.Font("Calibri", 1, 20)); // NOI18N
+        btn_phaupdate.setText("Update");
+        btn_phaupdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_phaEdit1ActionPerformed(evt);
+                btn_phaupdateActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout pnl_pha_EditItemMainLayout = new javax.swing.GroupLayout(pnl_pha_EditItemMain);
-        pnl_pha_EditItemMain.setLayout(pnl_pha_EditItemMainLayout);
-        pnl_pha_EditItemMainLayout.setHorizontalGroup(
-            pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_pha_EditItemMainLayout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dlg_addItemMain1Layout = new javax.swing.GroupLayout(pnl_dlg_addItemMain1);
+        pnl_dlg_addItemMain1.setLayout(pnl_dlg_addItemMain1Layout);
+        pnl_dlg_addItemMain1Layout.setHorizontalGroup(
+            pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_dlg_addItemMain1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                        .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_pha_edit_company)
-                            .addComponent(lbl_pha_edit_itemname1))
-                        .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                                .addGap(82, 82, 82)
-                                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                                        .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(btn_phaEdit1)
-                                            .addComponent(txt_pha_editCompany1, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addComponent(txt_pha_editItemName1)))
-                            .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(lbl_pha_edit_expDate)
-                                    .addComponent(lbl_pha_edit_Selllingprice))
-                                .addGap(48, 48, 48)
-                                .addComponent(dc_pha_edit_expdate, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                        .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_pha_edit_Itemcode, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lbl_pha_edit_StockPrice)
-                            .addComponent(lbl_pha_edit_Quantity))
+                .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_phaupdate))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                        .addComponent(lbl_pha_edit_itemname)
                         .addGap(49, 49, 49)
-                        .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                                .addComponent(txt_pha_editStockprice1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 241, Short.MAX_VALUE)
-                                .addComponent(txt_pha_editSellingprice1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                                .addComponent(txt_pha_editquantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(txt_pha_edititemcode1))))
+                        .addComponent(txt_pha_addItemName1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                        .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_pha_editItemcode, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_pha_editQuantity)
+                            .addComponent(lbl_pha_editStockPrice)
+                            .addComponent(lbl_pha_editCompany))
+                        .addGap(49, 49, 49)
+                        .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_pha_editCompany)
+                            .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                                .addComponent(txt_pha_addStockprice1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                                .addComponent(lbl_pha_editSellingprice)
+                                .addGap(18, 18, 18)
+                                .addComponent(txt_pha_editSellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                                .addComponent(txt_pha_addquantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lbl_pha_editExpireDate)
+                                .addGap(18, 18, 18)
+                                .addComponent(dc_pha_edit_expdate, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_pha_additemcode1))))
                 .addGap(28, 28, 28))
         );
-        pnl_pha_EditItemMainLayout.setVerticalGroup(
-            pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_pha_EditItemMainLayout.createSequentialGroup()
-                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_pha_editItemName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_pha_edit_itemname1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_pha_edititemcode1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_pha_edit_Itemcode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(49, 49, 49)
-                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txt_pha_editquantity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_pha_edit_Quantity, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbl_pha_edit_expDate, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(dc_pha_edit_expdate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(39, 39, 39)
-                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_pha_editStockprice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_pha_edit_StockPrice)
-                    .addComponent(txt_pha_editSellingprice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_pha_edit_Selllingprice))
-                .addGap(44, 44, 44)
-                .addGroup(pnl_pha_EditItemMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_pha_editCompany1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbl_pha_edit_company))
-                .addGap(33, 33, 33)
-                .addComponent(btn_phaEdit1)
-                .addGap(22, 22, 22))
+        pnl_dlg_addItemMain1Layout.setVerticalGroup(
+            pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                        .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_pha_edit_itemname, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_pha_addItemName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txt_pha_additemcode1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_pha_editItemcode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dc_pha_edit_expdate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txt_pha_addquantity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lbl_pha_editQuantity)
+                                .addComponent(lbl_pha_editExpireDate)))
+                        .addGap(18, 18, 18)
+                        .addComponent(txt_pha_editSellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lbl_pha_editSellingprice)
+                            .addComponent(txt_pha_addStockprice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lbl_pha_editStockPrice))))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_pha_editCompany, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_pha_editCompany))
+                .addGap(35, 35, 35)
+                .addComponent(btn_phaupdate)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout dlgpha_updateItemLayout = new javax.swing.GroupLayout(dlgpha_updateItem.getContentPane());
         dlgpha_updateItem.getContentPane().setLayout(dlgpha_updateItemLayout);
         dlgpha_updateItemLayout.setHorizontalGroup(
             dlgpha_updateItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl_pha_EditItemMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnl_dlg_addItemMain1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         dlgpha_updateItemLayout.setVerticalGroup(
             dlgpha_updateItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnl_pha_EditItemMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnl_dlg_addItemMain1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -3274,11 +3276,11 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        btnStockEdititem.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
-        btnStockEdititem.setText("Edit Item");
-        btnStockEdititem.addActionListener(new java.awt.event.ActionListener() {
+        btnStockUpdateitem.setFont(new java.awt.Font("Calibri", 0, 18)); // NOI18N
+        btnStockUpdateitem.setText("Update Item");
+        btnStockUpdateitem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnStockEdititemActionPerformed(evt);
+                btnStockUpdateitemActionPerformed(evt);
             }
         });
 
@@ -3292,7 +3294,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(64, 64, 64)
                 .addComponent(btnStockDeleteitem, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(btnStockEdititem, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnStockUpdateitem, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlBtn1Layout.setVerticalGroup(
@@ -3300,7 +3302,7 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(pnlBtn1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pnlBtn1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnStockEdititem, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
+                    .addComponent(btnStockUpdateitem, javax.swing.GroupLayout.DEFAULT_SIZE, 47, Short.MAX_VALUE)
                     .addComponent(btnStockAdditem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnStockDeleteitem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -3614,8 +3616,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(lbl_Hos_CustomersLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrl_Hos_Customers, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
-                    .addComponent(scrl_Hos_Pets, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE))
+                    .addComponent(scrl_Hos_Customers, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE)
+                    .addComponent(scrl_Hos_Pets, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_Hos_editCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
@@ -3705,7 +3707,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+            .addComponent(jTabbedPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 631, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout pnlMobileLayout = new javax.swing.GroupLayout(pnlMobile);
@@ -3778,14 +3780,14 @@ public class MainWindow extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton12)
-                .addContainerGap(1031, Short.MAX_VALUE))
+                .addContainerGap(1035, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addComponent(jButton12)
-                .addContainerGap(573, Short.MAX_VALUE))
+                .addContainerGap(584, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlHealthcareLayout = new javax.swing.GroupLayout(pnlHealthcare);
@@ -7519,9 +7521,12 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnStockDeleteitemActionPerformed
 
-    private void btnStockEdititemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockEdititemActionPerformed
-
-    }//GEN-LAST:event_btnStockEdititemActionPerformed
+    private void btnStockUpdateitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockUpdateitemActionPerformed
+        this.dlgpha_updateItem.setSize(845,400);
+        this.dlgpha_updateItem.setTitle("Update Item");
+        this.dlgpha_updateItem.setLocationRelativeTo(this.pnlPharmacy);
+        this.dlgpha_updateItem.setVisible(true);
+    }//GEN-LAST:event_btnStockUpdateitemActionPerformed
 
     private void txt_pha_additemcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_additemcodeActionPerformed
         // TODO add your handling code here:
@@ -7533,13 +7538,13 @@ public class MainWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_phaAddActionPerformed
 
-    private void txt_pha_edititemcode1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_edititemcode1ActionPerformed
+    private void txt_pha_additemcode1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_additemcode1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_pha_edititemcode1ActionPerformed
+    }//GEN-LAST:event_txt_pha_additemcode1ActionPerformed
 
-    private void btn_phaEdit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_phaEdit1ActionPerformed
+    private void btn_phaupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_phaupdateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_phaEdit1ActionPerformed
+    }//GEN-LAST:event_btn_phaupdateActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -7881,7 +7886,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btnPharmacy;
     private javax.swing.JButton btnStockAdditem;
     private javax.swing.JButton btnStockDeleteitem;
-    private javax.swing.JButton btnStockEdititem;
+    private javax.swing.JButton btnStockUpdateitem;
     private javax.swing.JButton btnViewStock;
     private javax.swing.JButton btn_Fin_AddClientInvoice;
     private javax.swing.JButton btn_Fin_AddElecBill;
@@ -7920,7 +7925,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_dlgHos_editPet_cancel;
     private javax.swing.JButton btn_dlgHos_editPet_save;
     private javax.swing.JButton btn_phaAdd;
-    private javax.swing.JButton btn_phaEdit1;
+    private javax.swing.JButton btn_phaupdate;
     private javax.swing.JButton btn_usrAcc_addAccount;
     private javax.swing.JButton btn_usrAcc_apply;
     private javax.swing.JButton btn_usrAcc_cancel;
@@ -8090,13 +8095,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_pha_addSellingprice;
     private javax.swing.JLabel lbl_pha_addStockPrice;
     private javax.swing.JLabel lbl_pha_add_itemname;
-    private javax.swing.JLabel lbl_pha_edit_Itemcode;
-    private javax.swing.JLabel lbl_pha_edit_Quantity;
-    private javax.swing.JLabel lbl_pha_edit_Selllingprice;
-    private javax.swing.JLabel lbl_pha_edit_StockPrice;
-    private javax.swing.JLabel lbl_pha_edit_company;
-    private javax.swing.JLabel lbl_pha_edit_expDate;
-    private javax.swing.JLabel lbl_pha_edit_itemname1;
+    private javax.swing.JLabel lbl_pha_editCompany;
+    private javax.swing.JLabel lbl_pha_editExpireDate;
+    private javax.swing.JLabel lbl_pha_editItemcode;
+    private javax.swing.JLabel lbl_pha_editQuantity;
+    private javax.swing.JLabel lbl_pha_editSellingprice;
+    private javax.swing.JLabel lbl_pha_editStockPrice;
+    private javax.swing.JLabel lbl_pha_edit_itemname;
     private javax.swing.JLabel lblstocKQuantity;
     private javax.swing.JLabel lblstockItemcode;
     private javax.swing.JList<String> lstUserAccounts;
@@ -8158,7 +8163,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_dlgHos_content;
     private javax.swing.JPanel pnl_dlgHos_content1;
     private javax.swing.JPanel pnl_dlg_addItemMain;
-    private javax.swing.JPanel pnl_pha_EditItemMain;
+    private javax.swing.JPanel pnl_dlg_addItemMain1;
     private javax.swing.JPanel pnl_usrAcc_Container;
     private javax.swing.JPanel pnl_usrAcc_Login;
     private javax.swing.JPanel pnl_usrAcc_LoginPrivileges;
@@ -8245,16 +8250,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgHos_editPet_name;
     private javax.swing.JTextField txt_pha_addCompany;
     private javax.swing.JTextField txt_pha_addItemName;
+    private javax.swing.JTextField txt_pha_addItemName1;
     private javax.swing.JTextField txt_pha_addSellingprice;
     private javax.swing.JTextField txt_pha_addStockprice;
+    private javax.swing.JTextField txt_pha_addStockprice1;
     private javax.swing.JTextField txt_pha_additemcode;
+    private javax.swing.JTextField txt_pha_additemcode1;
     private javax.swing.JTextField txt_pha_addquantity;
-    private javax.swing.JTextField txt_pha_editCompany1;
-    private javax.swing.JTextField txt_pha_editItemName1;
-    private javax.swing.JTextField txt_pha_editSellingprice1;
-    private javax.swing.JTextField txt_pha_editStockprice1;
-    private javax.swing.JTextField txt_pha_edititemcode1;
-    private javax.swing.JTextField txt_pha_editquantity1;
+    private javax.swing.JTextField txt_pha_addquantity1;
+    private javax.swing.JTextField txt_pha_editCompany;
+    private javax.swing.JTextField txt_pha_editSellingprice;
     private javax.swing.JTextField txt_usrAcc_LoginName;
     private javax.swing.JPasswordField txt_usrAcc_Password;
     private javax.swing.JPasswordField txt_usrAcc_cPassword;
