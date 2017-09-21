@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author lakmal 
+ * @author lakmal
  */
 public class Clinic {
     private Connection dbcon;
@@ -87,7 +87,7 @@ public class Clinic {
             JOptionPane.showMessageDialog(comp, "Clinic Record Updated Successfully!","Clinic Details",JOptionPane.INFORMATION_MESSAGE);
         }
         catch(Exception e){
-            JOptionPane.showMessageDialog(comp, "Clinic Record Updating Failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(comp, "Clinic Record updating failed!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
     
