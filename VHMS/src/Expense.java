@@ -26,6 +26,23 @@ public class Expense {
         dbcon = conn.Connect();
     }
     
+    public void addNewExpense(String service, String date, String desc, double billAmount, Component comp){
+        try{
+            String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            String prefix = "EXP/"+service+"/";
+            pst.setString(1, generateExpenseID(prefix,comp));
+            pst.setString(2, date);
+            pst.setString(3, desc);
+            pst.setDouble(4, billAmount);
+            pst.execute();
+            increaseNoExpenseByOne(comp);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Updating Expenses failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public void addTelephoneBill(String date, String desc, String billAmount, Component comp){
         try{
             String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";

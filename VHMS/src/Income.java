@@ -3,6 +3,7 @@ import java.awt.Component;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import javax.swing.JOptionPane;
 
 /*
@@ -21,6 +22,22 @@ public class Income {
     Income(){
         dbConnectr conn = new dbConnectr();
         dbcon = conn.Connect();
+    }
+    
+    public void addNewIncome(String payID, String service, String date, double amount,Component comp){
+        String sql = "insert into income(paymentID,service,date,amount) values(?,?,?,?)";
+        try{
+            PreparedStatement pst = dbcon.prepareStatement(sql);
+            pst.setString(1,payID);
+            pst.setString(2,service);
+            pst.setString(3,date);
+            pst.setDouble(4,amount);
+            pst.execute();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(comp, "Cannot Add Income Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
     }
     
     public ResultSet updateIncomeTable(String from, String to,boolean PH, boolean HO, boolean MV, boolean PS, boolean DC, boolean HC, Component comp){

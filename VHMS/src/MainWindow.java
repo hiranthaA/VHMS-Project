@@ -3901,11 +3901,6 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         list_PS_PetsToSell.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        list_PS_PetsToSell.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
         list_PS_PetsToSell.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 list_PS_PetsToSellMouseClicked(evt);
@@ -9240,7 +9235,15 @@ public class MainWindow extends javax.swing.JFrame {
                 String sellerID = this.PS_Buy_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
                 String sex = this.btngrp_BuyPet.getSelection().getActionCommand();
                 double price = Double.parseDouble(PS_Buy_TextPrice.getText());
-                p.addPet(species, breed, color, years, months, sex, price, sellerID, this);
+                String petID = p.addPettoBought(species, breed, color, years, months, sex, price, sellerID, this);
+                p.addPettoSale(petID,species, breed, color, years, months, sex, price, this);
+                //----------------------------------------------------------------------
+                Expense exp = new Expense();
+                String description = "PetShop : Bought "+petID+" from Customer "+sellerID+"";
+                Date date = new Date();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String today = df.format(date);
+                exp.addNewExpense("OB", today, description, price, this);
                 //----------------------------------------------------------------------
                 DefaultListModel d = new DefaultListModel();
                 ResultSet petList = p.get_toSell_PetIDs();

@@ -65,7 +65,7 @@ public class PetShop {
     }
     
     public ResultSet getPetDetails(String petID){
-        String querry = "Select species, ageYears, ageMonths, breed, color, sex, photo, price, sellerID from pets_tosell where petID='"+petID+"'";
+        String querry = "Select species, ageYears, ageMonths, breed, color, sex, photo, price from pets_tosell where petID='"+petID+"'";
         try{
             Statement s = dbcon.createStatement();
             ResultSet rs = s.executeQuery(querry);
@@ -98,9 +98,28 @@ public class PetShop {
         }
     }
     
-    public void addPet(String species, String breed, String color, int years, int months, String sex, double price, String sellerID, Component comp){
+    public void addPettoSale(String petID,String species, String breed, String color, int years, int months, String sex, double price, Component comp){
         try{
-            String SQL = "insert into pets_tosell(petID,species,ageYears,ageMonths,breed,color,sex,price,sellerID) values(?,?,?,?,?,?,?,?,?)";
+            String SQL = "insert into pets_tosell(petID,species,ageYears,ageMonths,breed,color,sex,price) values(?,?,?,?,?,?,?,?)";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, petID);
+            pst.setString(2, species);
+            pst.setInt(3, years);
+            pst.setInt(4, months);
+            pst.setString(5, breed);
+            pst.setString(6, color);
+            pst.setString(7, sex);
+            pst.setDouble(8, price);
+            pst.execute();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public String addPettoBought(String species, String breed, String color, int years, int months, String sex, double price, String sellerID, Component comp){
+        try{
+            String SQL = "insert into pets_bought(petID,species,ageYears,ageMonths,breed,color,sex,bought_price,sellerID) values(?,?,?,?,?,?,?,?,?)";
             String petID = generatePetID(comp);
             PreparedStatement pst = dbcon.prepareStatement(SQL);
             pst.setString(1, petID);
@@ -115,10 +134,12 @@ public class PetShop {
             pst.execute();
             increaseNoPetsByOne();
             JOptionPane.showMessageDialog(comp, "Pet Bought Successfully!","Pet Details",JOptionPane.INFORMATION_MESSAGE);
+            return petID;
         }
         catch(Exception e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(comp, "Pet Buying failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+            return null;
         }
     }
     
