@@ -5591,17 +5591,17 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlPetShopMainContainer" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel7" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlPetShopMainContainer" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="jPanel7">
+                <Container class="javax.swing.JPanel" name="pnlPetShopMainContainer">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -5615,29 +5615,29 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tabbedPanePetShop" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tabbedPanePetShop" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+                    <Container class="javax.swing.JTabbedPane" name="tabbedPanePetShop">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="14" style="0"/>
                         </Property>
                       </Properties>
                       <Events>
-                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="jTabbedPane1MouseClicked"/>
+                        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tabbedPanePetShopMouseClicked"/>
                       </Events>
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                       <SubComponents>
-                        <Container class="javax.swing.JPanel" name="jPanel1">
+                        <Container class="javax.swing.JPanel" name="tabpetShopShop">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                               <JTabbedPaneConstraints tabName="Shop">
@@ -5649,17 +5649,17 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_petshopTabShopContainer" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_petshopTabShopContainer" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel4">
+                            <Container class="javax.swing.JPanel" name="pnl_petshopTabShopContainer">
 
                               <Layout>
                                 <DimensionLayout dim="0">
@@ -5667,7 +5667,7 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jPanel5" max="32767" attributes="0"/>
+                                              <Component id="pnl_psShopSearch" max="32767" attributes="0"/>
                                               <Group type="102" alignment="0" attributes="0">
                                                   <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                                       <Group type="102" attributes="0">
@@ -5675,11 +5675,11 @@
                                                           <EmptySpace max="-2" attributes="0"/>
                                                           <Component id="PS_Shop_BtnEdit" max="32767" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="pnl_psShopAvailablePets" min="-2" max="-2" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jPanel12" max="32767" attributes="0"/>
+                                                      <Component id="pnl_PS_Shop_Description" max="32767" attributes="0"/>
                                                       <Group type="102" attributes="0">
                                                           <Component id="PS_Shop_BtnSave" min="-2" pref="93" max="-2" attributes="0"/>
                                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -5695,11 +5695,11 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                                          <Component id="pnl_psShopSearch" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jPanel12" max="32767" attributes="0"/>
-                                              <Component id="jPanel9" max="32767" attributes="0"/>
+                                              <Component id="pnl_PS_Shop_Description" max="32767" attributes="0"/>
+                                              <Component id="pnl_psShopAvailablePets" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -5713,7 +5713,7 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="jPanel5">
+                                <Container class="javax.swing.JPanel" name="pnl_psShopSearch">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5786,7 +5786,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel9">
+                                <Container class="javax.swing.JPanel" name="pnl_psShopAvailablePets">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5804,7 +5804,7 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="PS_Shop_LabelPetsAvailable" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jScrollPane1" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
+                                                  <Component id="scrlPane_PS_Shop_AvailableList" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -5816,14 +5816,14 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="PS_Shop_LabelPetsAvailable" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane1" max="32767" attributes="0"/>
+                                              <Component id="scrlPane_PS_Shop_AvailableList" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                                    <Container class="javax.swing.JScrollPane" name="scrlPane_PS_Shop_AvailableList">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -5858,7 +5858,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel12">
+                                <Container class="javax.swing.JPanel" name="pnl_PS_Shop_Description">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -5910,7 +5910,7 @@
                                                                   </Group>
                                                               </Group>
                                                               <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
-                                                              <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
+                                                              <Component id="pnl_PS_Shop_Photo" min="-2" max="-2" attributes="0"/>
                                                           </Group>
                                                           <Group type="102" attributes="0">
                                                               <Component id="PS_Shop_LabelRs" min="-2" max="-2" attributes="0"/>
@@ -5965,7 +5965,7 @@
                                                           <Component id="rb_PS_AvailablePet_Female" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
-                                                  <Component id="jPanel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="pnl_PS_Shop_Photo" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace pref="38" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
@@ -6035,7 +6035,7 @@
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Container class="javax.swing.JPanel" name="jPanel14">
+                                    <Container class="javax.swing.JPanel" name="pnl_PS_Shop_Photo">
                                       <Properties>
                                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -6174,7 +6174,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JPanel" name="jPanel2">
+                        <Container class="javax.swing.JPanel" name="pnl_PS_tabSell">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                               <JTabbedPaneConstraints tabName="Sell">
@@ -6186,37 +6186,37 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel17" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_PS_sellMain" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel17" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_PS_sellMain" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel17">
+                            <Container class="javax.swing.JPanel" name="pnl_PS_sellMain">
 
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="pnl_dlgHos_content2" max="32767" attributes="0"/>
+                                          <Component id="pnl_PS_Sell_Customer" max="32767" attributes="0"/>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="pnl_ps_Sell_Cart" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                       <Component id="PS_Sell_BtnAddtoCart" pref="57" max="32767" attributes="0"/>
                                                       <Component id="PS_Sell_BtnRemoveFromCart" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="pnl_ps_sell_available" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jPanel20" max="32767" attributes="0"/>
+                                              <Component id="pnl_ps_sell_NetAmount" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -6227,10 +6227,10 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="pnl_dlgHos_content2" max="32767" attributes="0"/>
+                                              <Component id="pnl_PS_Sell_Customer" max="32767" attributes="0"/>
                                               <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
-                                                      <Component id="jPanel19" max="32767" attributes="0"/>
+                                                      <Component id="pnl_ps_sell_available" max="32767" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
                                                           <Component id="PS_Sell_BtnAddtoCart" min="-2" pref="32" max="-2" attributes="0"/>
@@ -6238,10 +6238,10 @@
                                                           <Component id="PS_Sell_BtnRemoveFromCart" min="-2" pref="32" max="-2" attributes="0"/>
                                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                       </Group>
-                                                      <Component id="jPanel18" alignment="0" max="32767" attributes="0"/>
+                                                      <Component id="pnl_ps_Sell_Cart" alignment="0" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                                  <Component id="jPanel20" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="pnl_ps_sell_NetAmount" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
@@ -6250,7 +6250,7 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="pnl_dlgHos_content2">
+                                <Container class="javax.swing.JPanel" name="pnl_PS_Sell_Customer">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -6267,7 +6267,7 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jScrollPane4" pref="544" max="32767" attributes="0"/>
+                                                  <Component id="scrl_ps_sell_tblcustomer" pref="544" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="PS_Sell_LabelSearchName" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -6287,7 +6287,7 @@
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="PS_Sell_TextBuyerName" max="32767" attributes="0"/>
-                                                          <Component id="scrl_dlgHos_Address2" max="32767" attributes="0"/>
+                                                          <Component id="scrl_ps_sell_textAddress" max="32767" attributes="0"/>
                                                           <Component id="PS_Sell_TextTelephone" max="32767" attributes="0"/>
                                                           <Component id="PS_Sell_TextEmail" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
@@ -6316,7 +6316,7 @@
                                                   <Component id="PS_Sell_LabelSearchID" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jScrollPane4" min="-2" pref="195" max="-2" attributes="0"/>
+                                              <Component id="scrl_ps_sell_tblcustomer" min="-2" pref="195" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="PS_Sell_LabelBuyersName" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -6325,7 +6325,7 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="PS_Sell_LabelAddress" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="scrl_dlgHos_Address2" min="-2" pref="117" max="-2" attributes="0"/>
+                                                  <Component id="scrl_ps_sell_textAddress" min="-2" pref="117" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace pref="28" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
@@ -6394,7 +6394,7 @@
                                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PS_Sell_TextTelephoneKeyTyped"/>
                                       </Events>
                                     </Component>
-                                    <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Address2">
+                                    <Container class="javax.swing.JScrollPane" name="scrl_ps_sell_textAddress">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -6464,7 +6464,7 @@
                                         <Property name="text" type="java.lang.String" value="Search ID"/>
                                       </Properties>
                                     </Component>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                                    <Container class="javax.swing.JScrollPane" name="scrl_ps_sell_tblcustomer">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -6514,7 +6514,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel18">
+                                <Container class="javax.swing.JPanel" name="pnl_ps_Sell_Cart">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -6532,7 +6532,7 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="PS_Sell_LabelCart" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jScrollPane2" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
+                                                  <Component id="scrl_ps_sell_cart" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -6544,14 +6544,14 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="PS_Sell_LabelCart" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane2" max="32767" attributes="0"/>
+                                              <Component id="scrl_ps_sell_cart" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                                    <Container class="javax.swing.JScrollPane" name="scrl_ps_sell_cart">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -6583,7 +6583,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel19">
+                                <Container class="javax.swing.JPanel" name="pnl_ps_sell_available">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -6601,7 +6601,7 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="PS_Sell_LabelAvailablePets" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="jScrollPane3" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
+                                                  <Component id="scrl_ps_sell_availablelist" alignment="0" min="-2" pref="186" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
@@ -6613,14 +6613,14 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="PS_Sell_LabelAvailablePets" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane3" max="32767" attributes="0"/>
+                                              <Component id="scrl_ps_sell_availablelist" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                                    <Container class="javax.swing.JScrollPane" name="scrl_ps_sell_availablelist">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -6668,7 +6668,7 @@
                                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_BtnRemoveFromCartActionPerformed"/>
                                   </Events>
                                 </Component>
-                                <Container class="javax.swing.JPanel" name="jPanel20">
+                                <Container class="javax.swing.JPanel" name="pnl_ps_sell_NetAmount">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -6768,7 +6768,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JPanel" name="jPanel3">
+                        <Container class="javax.swing.JPanel" name="pnl_PS_tabBuy">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                               <JTabbedPaneConstraints tabName="Buy">
@@ -6780,26 +6780,26 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel23" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_ps_buy_main" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel23" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_ps_buy_main" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel23">
+                            <Container class="javax.swing.JPanel" name="pnl_ps_buy_main">
 
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="pnl_dlgHos_content4" max="32767" attributes="0"/>
+                                          <Component id="pnl_ps_buy_Customer" max="32767" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel24" min="-2" max="-2" attributes="0"/>
+                                          <Component id="pnl_ps_buy_Description" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -6809,8 +6809,8 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jPanel24" max="32767" attributes="0"/>
-                                              <Component id="pnl_dlgHos_content4" max="32767" attributes="0"/>
+                                              <Component id="pnl_ps_buy_Description" max="32767" attributes="0"/>
+                                              <Component id="pnl_ps_buy_Customer" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -6818,7 +6818,7 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="pnl_dlgHos_content4">
+                                <Container class="javax.swing.JPanel" name="pnl_ps_buy_Customer">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -6835,7 +6835,7 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jScrollPane6" alignment="0" pref="535" max="32767" attributes="0"/>
+                                                  <Component id="scrl_ps_buy_tblCustomer" alignment="0" pref="535" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
                                                       <Component id="PS_Buy_LabelSearchName" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -6855,7 +6855,7 @@
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Component id="PS_Buy_TextSellerName" alignment="0" max="32767" attributes="0"/>
-                                                          <Component id="scrl_dlgHos_Address4" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="scrl_ps_buy_address" alignment="0" max="32767" attributes="0"/>
                                                           <Component id="PS_Buy_TextTelephone" alignment="0" max="32767" attributes="0"/>
                                                           <Component id="PS_Buy_TextEmail" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
@@ -6884,7 +6884,7 @@
                                                   <Component id="PS_Buy_LabelSearchID" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jScrollPane6" min="-2" pref="195" max="-2" attributes="0"/>
+                                              <Component id="scrl_ps_buy_tblCustomer" min="-2" pref="195" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="PS_Buy_LabelSellersName" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -6893,7 +6893,7 @@
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="PS_Buy_LabelAddress" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="scrl_dlgHos_Address4" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
+                                                  <Component id="scrl_ps_buy_address" alignment="0" min="-2" pref="117" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace pref="28" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
@@ -6962,7 +6962,7 @@
                                         <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PS_Buy_TextTelephoneKeyTyped"/>
                                       </Events>
                                     </Component>
-                                    <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Address4">
+                                    <Container class="javax.swing.JScrollPane" name="scrl_ps_buy_address">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -7032,7 +7032,7 @@
                                         <Property name="text" type="java.lang.String" value="Search ID"/>
                                       </Properties>
                                     </Component>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane6">
+                                    <Container class="javax.swing.JScrollPane" name="scrl_ps_buy_tblCustomer">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -7083,7 +7083,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel24">
+                                <Container class="javax.swing.JPanel" name="pnl_ps_buy_Description">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -7154,7 +7154,7 @@
                                                                       </Group>
                                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                                          <Component id="jPanel25" max="32767" attributes="0"/>
+                                                                          <Component id="pnl_ps_Buy_photo" max="32767" attributes="0"/>
                                                                           <Group type="102" attributes="0">
                                                                               <Component id="PS_Buy_LabelPhoto" min="-2" pref="76" max="-2" attributes="0"/>
                                                                               <EmptySpace min="0" pref="123" max="32767" attributes="0"/>
@@ -7190,7 +7190,7 @@
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                          <Component id="jPanel25" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="pnl_ps_Buy_photo" min="-2" max="-2" attributes="0"/>
                                                           <Group type="102" attributes="0">
                                                               <Group type="103" groupAlignment="3" attributes="0">
                                                                   <Component id="PS_Buy_LabelBreed" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -7391,7 +7391,7 @@
                                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Buy_BtnBuyActionPerformed"/>
                                       </Events>
                                     </Component>
-                                    <Container class="javax.swing.JPanel" name="jPanel25">
+                                    <Container class="javax.swing.JPanel" name="pnl_ps_Buy_photo">
                                       <Properties>
                                         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                           <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">

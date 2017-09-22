@@ -399,20 +399,20 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel16 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         pnlPetshop = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
+        pnlPetShopMainContainer = new javax.swing.JPanel();
+        tabbedPanePetShop = new javax.swing.JTabbedPane();
+        tabpetShopShop = new javax.swing.JPanel();
+        pnl_petshopTabShopContainer = new javax.swing.JPanel();
+        pnl_psShopSearch = new javax.swing.JPanel();
         PS_Shop_TextSearchPetID = new javax.swing.JTextField();
         PS_Shop_LabelPetIDSearch = new javax.swing.JLabel();
         PS_Shop_LabelPetSpeciesSearch = new javax.swing.JLabel();
         PS_Shop_TextSearchPetSpecies = new javax.swing.JTextField();
-        jPanel9 = new javax.swing.JPanel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        pnl_psShopAvailablePets = new javax.swing.JPanel();
+        scrlPane_PS_Shop_AvailableList = new javax.swing.JScrollPane();
         list_PS_PetsToSell = new javax.swing.JList<>();
         PS_Shop_LabelPetsAvailable = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
+        pnl_PS_Shop_Description = new javax.swing.JPanel();
         PS_Shop_LabelDescription = new javax.swing.JLabel();
         PS_Shop_LabelSpecies = new javax.swing.JLabel();
         PS_Shop_TextSpecies = new javax.swing.JTextField();
@@ -420,7 +420,7 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Shop_TextBreed = new javax.swing.JTextField();
         PS_Shop_LabelColor = new javax.swing.JLabel();
         PS_Shop_TextColor = new javax.swing.JTextField();
-        jPanel14 = new javax.swing.JPanel();
+        pnl_PS_Shop_Photo = new javax.swing.JPanel();
         PS_Shop_LabelAge = new javax.swing.JLabel();
         PS_Shop_TextYears = new javax.swing.JTextField();
         PS_Shop_LabelPrice = new javax.swing.JLabel();
@@ -435,15 +435,15 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Shop_BtnRemove = new javax.swing.JButton();
         PS_Shop_BtnEdit = new javax.swing.JButton();
         PS_Shop_BtnSave = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
-        pnl_dlgHos_content2 = new javax.swing.JPanel();
+        pnl_PS_tabSell = new javax.swing.JPanel();
+        pnl_PS_sellMain = new javax.swing.JPanel();
+        pnl_PS_Sell_Customer = new javax.swing.JPanel();
         PS_Sell_LabelBuyersName = new javax.swing.JLabel();
         PS_Sell_TextBuyerName = new javax.swing.JTextField();
         PS_Sell_LabelAddress = new javax.swing.JLabel();
         PS_Sell_LabelTelephone = new javax.swing.JLabel();
         PS_Sell_TextTelephone = new javax.swing.JTextField();
-        scrl_dlgHos_Address2 = new javax.swing.JScrollPane();
+        scrl_ps_sell_textAddress = new javax.swing.JScrollPane();
         PS_Sell_TextAddress = new javax.swing.JTextArea();
         PS_Sell_LabelEmail = new javax.swing.JLabel();
         PS_Sell_TextEmail = new javax.swing.JTextField();
@@ -451,35 +451,35 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Sell_TextSearchName = new javax.swing.JTextField();
         PS_Sell_TextSearchID = new javax.swing.JTextField();
         PS_Sell_LabelSearchID = new javax.swing.JLabel();
-        jScrollPane4 = new javax.swing.JScrollPane();
+        scrl_ps_sell_tblcustomer = new javax.swing.JScrollPane();
         PS_Sell_TableCustomer = new javax.swing.JTable();
         PS_Sell_BtnNewBuyer = new javax.swing.JButton();
         PS_Sell_BtnEdit = new javax.swing.JButton();
         PS_Sell_BtnSave = new javax.swing.JButton();
-        jPanel18 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        pnl_ps_Sell_Cart = new javax.swing.JPanel();
+        scrl_ps_sell_cart = new javax.swing.JScrollPane();
         list_PS_Cart = new javax.swing.JList<>();
         PS_Sell_LabelCart = new javax.swing.JLabel();
-        jPanel19 = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        pnl_ps_sell_available = new javax.swing.JPanel();
+        scrl_ps_sell_availablelist = new javax.swing.JScrollPane();
         list_PS_AvailablePetList = new javax.swing.JList<>();
         PS_Sell_LabelAvailablePets = new javax.swing.JLabel();
         PS_Sell_BtnAddtoCart = new javax.swing.JButton();
         PS_Sell_BtnRemoveFromCart = new javax.swing.JButton();
-        jPanel20 = new javax.swing.JPanel();
+        pnl_ps_sell_NetAmount = new javax.swing.JPanel();
         PS_Sell_LabelNetPrice = new javax.swing.JLabel();
         PS_Sell_LabelRS = new javax.swing.JLabel();
         PS_Sell_LabelNetAmount = new javax.swing.JLabel();
         PS_Sell_ButtonSell = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel23 = new javax.swing.JPanel();
-        pnl_dlgHos_content4 = new javax.swing.JPanel();
+        pnl_PS_tabBuy = new javax.swing.JPanel();
+        pnl_ps_buy_main = new javax.swing.JPanel();
+        pnl_ps_buy_Customer = new javax.swing.JPanel();
         PS_Buy_LabelSellersName = new javax.swing.JLabel();
         PS_Buy_TextSellerName = new javax.swing.JTextField();
         PS_Buy_LabelAddress = new javax.swing.JLabel();
         PS_Buy_LabelTelephone = new javax.swing.JLabel();
         PS_Buy_TextTelephone = new javax.swing.JTextField();
-        scrl_dlgHos_Address4 = new javax.swing.JScrollPane();
+        scrl_ps_buy_address = new javax.swing.JScrollPane();
         PS_Buy_TextAddress = new javax.swing.JTextArea();
         PS_Buy_LabelEmail = new javax.swing.JLabel();
         PS_Buy_TextEmail = new javax.swing.JTextField();
@@ -487,12 +487,12 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_TextSearchName = new javax.swing.JTextField();
         PS_Buy_TextSearchID = new javax.swing.JTextField();
         PS_Buy_LabelSearchID = new javax.swing.JLabel();
-        jScrollPane6 = new javax.swing.JScrollPane();
+        scrl_ps_buy_tblCustomer = new javax.swing.JScrollPane();
         PS_Buy_TableCustomer = new javax.swing.JTable();
         PS_Buy_BtnEdit = new javax.swing.JButton();
         PS_Buy_BtnNewSeller = new javax.swing.JButton();
         PS_Buy_BtnSave = new javax.swing.JButton();
-        jPanel24 = new javax.swing.JPanel();
+        pnl_ps_buy_Description = new javax.swing.JPanel();
         PS_Buy_LabelSpecies = new javax.swing.JLabel();
         PS_Buy_TextSpecies = new javax.swing.JTextField();
         PS_Buy_TextBreed = new javax.swing.JTextField();
@@ -512,7 +512,7 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_SpinMonths = new javax.swing.JSpinner();
         PS_Buy_LabelMonths = new javax.swing.JLabel();
         PS_Buy_BtnBuy = new javax.swing.JButton();
-        jPanel25 = new javax.swing.JPanel();
+        pnl_ps_Buy_photo = new javax.swing.JPanel();
         PS_Buy_LabelPhoto = new javax.swing.JLabel();
         PS_Buy_BtnAddPic = new javax.swing.JButton();
         PS_Buy_BtnRemovePic = new javax.swing.JButton();
@@ -3841,16 +3841,16 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Shop", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        pnlPetShopMainContainer.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Shop", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
-        jTabbedPane1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
+        tabbedPanePetShop.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        tabbedPanePetShop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTabbedPane1MouseClicked(evt);
+                tabbedPanePetShopMouseClicked(evt);
             }
         });
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_psShopSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         PS_Shop_TextSearchPetID.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -3870,11 +3870,11 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_psShopSearchLayout = new javax.swing.GroupLayout(pnl_psShopSearch);
+        pnl_psShopSearch.setLayout(pnl_psShopSearchLayout);
+        pnl_psShopSearchLayout.setHorizontalGroup(
+            pnl_psShopSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_psShopSearchLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Shop_LabelPetIDSearch)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -3885,12 +3885,12 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(PS_Shop_TextSearchPetSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        pnl_psShopSearchLayout.setVerticalGroup(
+            pnl_psShopSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_psShopSearchLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_psShopSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_psShopSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(PS_Shop_LabelPetIDSearch)
                         .addComponent(PS_Shop_LabelPetSpeciesSearch)
                         .addComponent(PS_Shop_TextSearchPetSpecies, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
@@ -3898,7 +3898,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_psShopAvailablePets.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         list_PS_PetsToSell.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         list_PS_PetsToSell.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -3906,33 +3906,33 @@ public class MainWindow extends javax.swing.JFrame {
                 list_PS_PetsToSellMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(list_PS_PetsToSell);
+        scrlPane_PS_Shop_AvailableList.setViewportView(list_PS_PetsToSell);
 
         PS_Shop_LabelPetsAvailable.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         PS_Shop_LabelPetsAvailable.setText("Available Pets");
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_psShopAvailablePetsLayout = new javax.swing.GroupLayout(pnl_psShopAvailablePets);
+        pnl_psShopAvailablePets.setLayout(pnl_psShopAvailablePetsLayout);
+        pnl_psShopAvailablePetsLayout.setHorizontalGroup(
+            pnl_psShopAvailablePetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_psShopAvailablePetsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_psShopAvailablePetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Shop_LabelPetsAvailable)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrlPane_PS_Shop_AvailableList, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
+        pnl_psShopAvailablePetsLayout.setVerticalGroup(
+            pnl_psShopAvailablePetsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_psShopAvailablePetsLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Shop_LabelPetsAvailable)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1)
+                .addComponent(scrlPane_PS_Shop_AvailableList)
                 .addContainerGap())
         );
 
-        jPanel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_PS_Shop_Description.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         PS_Shop_LabelDescription.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         PS_Shop_LabelDescription.setText("Description");
@@ -3955,16 +3955,16 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Shop_TextColor.setEditable(false);
         PS_Shop_TextColor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jPanel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnl_PS_Shop_Photo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_PS_Shop_PhotoLayout = new javax.swing.GroupLayout(pnl_PS_Shop_Photo);
+        pnl_PS_Shop_Photo.setLayout(pnl_PS_Shop_PhotoLayout);
+        pnl_PS_Shop_PhotoLayout.setHorizontalGroup(
+            pnl_PS_Shop_PhotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 239, Short.MAX_VALUE)
         );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_PS_Shop_PhotoLayout.setVerticalGroup(
+            pnl_PS_Shop_PhotoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 265, Short.MAX_VALUE)
         );
 
@@ -4003,15 +4003,15 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Shop_TextPrice.setEditable(false);
         PS_Shop_TextPrice.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
 
-        javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
-        jPanel12.setLayout(jPanel12Layout);
-        jPanel12Layout.setHorizontalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_PS_Shop_DescriptionLayout = new javax.swing.GroupLayout(pnl_PS_Shop_Description);
+        pnl_PS_Shop_Description.setLayout(pnl_PS_Shop_DescriptionLayout);
+        pnl_PS_Shop_DescriptionLayout.setHorizontalGroup(
+            pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
+                .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
                         .addGap(23, 23, 23)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Shop_LabelSpecies)
                             .addComponent(PS_Shop_LabeBreed)
                             .addComponent(PS_Shop_LabelColor)
@@ -4019,70 +4019,70 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(PS_Shop_LabelSex)
                             .addComponent(PS_Shop_LabelPrice))
                         .addGap(27, 27, 27)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel12Layout.createSequentialGroup()
-                                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
+                                .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(PS_Shop_TextBreed, javax.swing.GroupLayout.DEFAULT_SIZE, 423, Short.MAX_VALUE)
                                     .addComponent(PS_Shop_TextSpecies)
                                     .addComponent(PS_Shop_TextColor)
-                                    .addGroup(jPanel12Layout.createSequentialGroup()
-                                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
+                                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(PS_Shop_TextYears, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(rb_PS_AvailablePet_Male))
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(rb_PS_AvailablePet_Female)
-                                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                            .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
                                                 .addComponent(PS_Shop_LabelYears)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(PS_Shop_TextMonths, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(PS_Shop_LabelMonths)))))
                                 .addGap(58, 58, 58)
-                                .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel12Layout.createSequentialGroup()
+                                .addComponent(pnl_PS_Shop_Photo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
                                 .addComponent(PS_Shop_LabelRs)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PS_Shop_TextPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel12Layout.createSequentialGroup()
+                    .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(PS_Shop_LabelDescription)))
                 .addContainerGap(58, Short.MAX_VALUE))
         );
-        jPanel12Layout.setVerticalGroup(
-            jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel12Layout.createSequentialGroup()
+        pnl_PS_Shop_DescriptionLayout.setVerticalGroup(
+            pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Shop_LabelDescription)
                 .addGap(33, 33, 33)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel12Layout.createSequentialGroup()
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_PS_Shop_DescriptionLayout.createSequentialGroup()
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PS_Shop_LabelSpecies)
                             .addComponent(PS_Shop_TextSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PS_Shop_LabeBreed)
                             .addComponent(PS_Shop_TextBreed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(34, 34, 34)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PS_Shop_LabelColor)
                             .addComponent(PS_Shop_TextColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PS_Shop_TextYears, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PS_Shop_LabelAge)
                             .addComponent(PS_Shop_LabelYears)
                             .addComponent(PS_Shop_TextMonths, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PS_Shop_LabelMonths))
                         .addGap(35, 35, 35)
-                        .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PS_Shop_LabelSex)
                             .addComponent(rb_PS_AvailablePet_Male)
                             .addComponent(rb_PS_AvailablePet_Female)))
-                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnl_PS_Shop_Photo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addGroup(jPanel12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Shop_LabelPrice)
                     .addComponent(PS_Shop_LabelRs)
                     .addComponent(PS_Shop_TextPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -4105,60 +4105,60 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_petshopTabShopContainerLayout = new javax.swing.GroupLayout(pnl_petshopTabShopContainer);
+        pnl_petshopTabShopContainer.setLayout(pnl_petshopTabShopContainerLayout);
+        pnl_petshopTabShopContainerLayout.setHorizontalGroup(
+            pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_petshopTabShopContainerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_psShopSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnl_petshopTabShopContainerLayout.createSequentialGroup()
+                        .addGroup(pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(pnl_petshopTabShopContainerLayout.createSequentialGroup()
                                 .addComponent(PS_Shop_BtnRemove, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(PS_Shop_BtnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(pnl_psShopAvailablePets, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnl_PS_Shop_Description, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pnl_petshopTabShopContainerLayout.createSequentialGroup()
                                 .addComponent(PS_Shop_BtnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        pnl_petshopTabShopContainerLayout.setVerticalGroup(
+            pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_petshopTabShopContainerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_psShopSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_PS_Shop_Description, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_psShopAvailablePets, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnl_petshopTabShopContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(PS_Shop_BtnRemove, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                     .addComponent(PS_Shop_BtnEdit, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PS_Shop_BtnSave, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout tabpetShopShopLayout = new javax.swing.GroupLayout(tabpetShopShop);
+        tabpetShopShop.setLayout(tabpetShopShopLayout);
+        tabpetShopShopLayout.setHorizontalGroup(
+            tabpetShopShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_petshopTabShopContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        tabpetShopShopLayout.setVerticalGroup(
+            tabpetShopShopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_petshopTabShopContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Shop", jPanel1);
+        tabbedPanePetShop.addTab("Shop", tabpetShopShop);
 
-        pnl_dlgHos_content2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_PS_Sell_Customer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         PS_Sell_LabelBuyersName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Sell_LabelBuyersName.setText("Buyer's Name");
@@ -4196,7 +4196,7 @@ public class MainWindow extends javax.swing.JFrame {
                 PS_Sell_TextAddressFocusLost(evt);
             }
         });
-        scrl_dlgHos_Address2.setViewportView(PS_Sell_TextAddress);
+        scrl_ps_sell_textAddress.setViewportView(PS_Sell_TextAddress);
 
         PS_Sell_LabelEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Sell_LabelEmail.setText("E-mail");
@@ -4247,7 +4247,7 @@ public class MainWindow extends javax.swing.JFrame {
                 PS_Sell_TableCustomerMouseClicked(evt);
             }
         });
-        jScrollPane4.setViewportView(PS_Sell_TableCustomer);
+        scrl_ps_sell_tblcustomer.setViewportView(PS_Sell_TableCustomer);
 
         PS_Sell_BtnNewBuyer.setText("New Buyer");
         PS_Sell_BtnNewBuyer.addActionListener(new java.awt.event.ActionListener() {
@@ -4270,15 +4270,15 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout pnl_dlgHos_content2Layout = new javax.swing.GroupLayout(pnl_dlgHos_content2);
-        pnl_dlgHos_content2.setLayout(pnl_dlgHos_content2Layout);
-        pnl_dlgHos_content2Layout.setHorizontalGroup(
-            pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_PS_Sell_CustomerLayout = new javax.swing.GroupLayout(pnl_PS_Sell_Customer);
+        pnl_PS_Sell_Customer.setLayout(pnl_PS_Sell_CustomerLayout);
+        pnl_PS_Sell_CustomerLayout.setHorizontalGroup(
+            pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_PS_Sell_CustomerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
-                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrl_ps_sell_tblcustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 544, Short.MAX_VALUE)
+                    .addGroup(pnl_PS_Sell_CustomerLayout.createSequentialGroup()
                         .addComponent(PS_Sell_LabelSearchName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PS_Sell_TextSearchName, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4286,19 +4286,19 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(PS_Sell_LabelSearchID)
                         .addGap(18, 18, 18)
                         .addComponent(PS_Sell_TextSearchID, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
-                        .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_PS_Sell_CustomerLayout.createSequentialGroup()
+                        .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Sell_LabelBuyersName)
                             .addComponent(PS_Sell_LabelAddress)
                             .addComponent(PS_Sell_LabelTelephone)
                             .addComponent(PS_Sell_LabelEmail))
                         .addGap(18, 18, 18)
-                        .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Sell_TextBuyerName)
-                            .addComponent(scrl_dlgHos_Address2)
+                            .addComponent(scrl_ps_sell_textAddress)
                             .addComponent(PS_Sell_TextTelephone)
                             .addComponent(PS_Sell_TextEmail)))
-                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                    .addGroup(pnl_PS_Sell_CustomerLayout.createSequentialGroup()
                         .addComponent(PS_Sell_BtnNewBuyer, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PS_Sell_BtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4307,96 +4307,96 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        pnl_dlgHos_content2Layout.setVerticalGroup(
-            pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_dlgHos_content2Layout.createSequentialGroup()
+        pnl_PS_Sell_CustomerLayout.setVerticalGroup(
+            pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_PS_Sell_CustomerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Sell_TextSearchName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_TextSearchID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_LabelSearchName)
                     .addComponent(PS_Sell_LabelSearchID))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrl_ps_sell_tblcustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Sell_LabelBuyersName)
                     .addComponent(PS_Sell_TextBuyerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Sell_LabelAddress)
-                    .addComponent(scrl_dlgHos_Address2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrl_ps_sell_textAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Sell_TextTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_LabelTelephone))
                 .addGap(18, 18, 18)
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Sell_TextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_LabelEmail))
                 .addGap(32, 32, 32)
-                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Sell_BtnNewBuyer, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_BtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_BtnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_ps_Sell_Cart.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         list_PS_Cart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jScrollPane2.setViewportView(list_PS_Cart);
+        scrl_ps_sell_cart.setViewportView(list_PS_Cart);
 
         PS_Sell_LabelCart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         PS_Sell_LabelCart.setText("Cart");
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_ps_Sell_CartLayout = new javax.swing.GroupLayout(pnl_ps_Sell_Cart);
+        pnl_ps_Sell_Cart.setLayout(pnl_ps_Sell_CartLayout);
+        pnl_ps_Sell_CartLayout.setHorizontalGroup(
+            pnl_ps_Sell_CartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_Sell_CartLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_ps_Sell_CartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Sell_LabelCart)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrl_ps_sell_cart, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
+        pnl_ps_Sell_CartLayout.setVerticalGroup(
+            pnl_ps_Sell_CartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_Sell_CartLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Sell_LabelCart)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2)
+                .addComponent(scrl_ps_sell_cart)
                 .addContainerGap())
         );
 
-        jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_ps_sell_available.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         list_PS_AvailablePetList.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jScrollPane3.setViewportView(list_PS_AvailablePetList);
+        scrl_ps_sell_availablelist.setViewportView(list_PS_AvailablePetList);
 
         PS_Sell_LabelAvailablePets.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         PS_Sell_LabelAvailablePets.setText("Available Pets");
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_ps_sell_availableLayout = new javax.swing.GroupLayout(pnl_ps_sell_available);
+        pnl_ps_sell_available.setLayout(pnl_ps_sell_availableLayout);
+        pnl_ps_sell_availableLayout.setHorizontalGroup(
+            pnl_ps_sell_availableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_sell_availableLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_ps_sell_availableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Sell_LabelAvailablePets)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrl_ps_sell_availablelist, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
+        pnl_ps_sell_availableLayout.setVerticalGroup(
+            pnl_ps_sell_availableLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_sell_availableLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Sell_LabelAvailablePets)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane3)
+                .addComponent(scrl_ps_sell_availablelist)
                 .addContainerGap())
         );
 
@@ -4414,7 +4414,7 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_ps_sell_NetAmount.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         PS_Sell_LabelNetPrice.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PS_Sell_LabelNetPrice.setText("Net Price :");
@@ -4437,11 +4437,11 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_ps_sell_NetAmountLayout = new javax.swing.GroupLayout(pnl_ps_sell_NetAmount);
+        pnl_ps_sell_NetAmount.setLayout(pnl_ps_sell_NetAmountLayout);
+        pnl_ps_sell_NetAmountLayout.setHorizontalGroup(
+            pnl_ps_sell_NetAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_sell_NetAmountLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Sell_LabelNetPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -4452,79 +4452,79 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(PS_Sell_ButtonSell, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
+        pnl_ps_sell_NetAmountLayout.setVerticalGroup(
+            pnl_ps_sell_NetAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_sell_NetAmountLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGroup(pnl_ps_sell_NetAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_ps_sell_NetAmountLayout.createSequentialGroup()
                         .addComponent(PS_Sell_LabelNetPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_sell_NetAmountLayout.createSequentialGroup()
                         .addGap(0, 30, Short.MAX_VALUE)
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnl_ps_sell_NetAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_sell_NetAmountLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(PS_Sell_LabelNetAmount)
                                 .addComponent(PS_Sell_LabelRS))
                             .addComponent(PS_Sell_ButtonSell, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel17Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_PS_sellMainLayout = new javax.swing.GroupLayout(pnl_PS_sellMain);
+        pnl_PS_sellMain.setLayout(pnl_PS_sellMainLayout);
+        pnl_PS_sellMainLayout.setHorizontalGroup(
+            pnl_PS_sellMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_PS_sellMainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnl_dlgHos_content2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_PS_Sell_Customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnl_PS_sellMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnl_PS_sellMainLayout.createSequentialGroup()
+                        .addComponent(pnl_ps_Sell_Cart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnl_PS_sellMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(PS_Sell_BtnAddtoCart, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
                             .addComponent(PS_Sell_BtnRemoveFromCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
-                        .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(pnl_ps_sell_available, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnl_ps_sell_NetAmount, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+        pnl_PS_sellMainLayout.setVerticalGroup(
+            pnl_PS_sellMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_PS_sellMainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pnl_dlgHos_content2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel17Layout.createSequentialGroup()
-                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGroup(pnl_PS_sellMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnl_PS_Sell_Customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnl_PS_sellMainLayout.createSequentialGroup()
+                        .addGroup(pnl_PS_sellMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnl_ps_sell_available, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pnl_PS_sellMainLayout.createSequentialGroup()
                                 .addGap(211, 211, 211)
                                 .addComponent(PS_Sell_BtnAddtoCart, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(PS_Sell_BtnRemoveFromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(pnl_ps_Sell_Cart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(11, 11, 11)
-                        .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(pnl_ps_sell_NetAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout pnl_PS_tabSellLayout = new javax.swing.GroupLayout(pnl_PS_tabSell);
+        pnl_PS_tabSell.setLayout(pnl_PS_tabSellLayout);
+        pnl_PS_tabSellLayout.setHorizontalGroup(
+            pnl_PS_tabSellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_PS_sellMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        pnl_PS_tabSellLayout.setVerticalGroup(
+            pnl_PS_tabSellLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_PS_sellMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Sell", jPanel2);
+        tabbedPanePetShop.addTab("Sell", pnl_PS_tabSell);
 
-        pnl_dlgHos_content4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_ps_buy_Customer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         PS_Buy_LabelSellersName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Buy_LabelSellersName.setText("Seller's Name");
@@ -4562,7 +4562,7 @@ public class MainWindow extends javax.swing.JFrame {
                 PS_Buy_TextAddressFocusLost(evt);
             }
         });
-        scrl_dlgHos_Address4.setViewportView(PS_Buy_TextAddress);
+        scrl_ps_buy_address.setViewportView(PS_Buy_TextAddress);
 
         PS_Buy_LabelEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Buy_LabelEmail.setText("E-mail");
@@ -4616,7 +4616,7 @@ public class MainWindow extends javax.swing.JFrame {
                 PS_Buy_TableCustomerMouseEntered(evt);
             }
         });
-        jScrollPane6.setViewportView(PS_Buy_TableCustomer);
+        scrl_ps_buy_tblCustomer.setViewportView(PS_Buy_TableCustomer);
 
         PS_Buy_BtnEdit.setText("Edit");
         PS_Buy_BtnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -4639,15 +4639,15 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout pnl_dlgHos_content4Layout = new javax.swing.GroupLayout(pnl_dlgHos_content4);
-        pnl_dlgHos_content4.setLayout(pnl_dlgHos_content4Layout);
-        pnl_dlgHos_content4Layout.setHorizontalGroup(
-            pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_dlgHos_content4Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_ps_buy_CustomerLayout = new javax.swing.GroupLayout(pnl_ps_buy_Customer);
+        pnl_ps_buy_Customer.setLayout(pnl_ps_buy_CustomerLayout);
+        pnl_ps_buy_CustomerLayout.setHorizontalGroup(
+            pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_buy_CustomerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
-                    .addGroup(pnl_dlgHos_content4Layout.createSequentialGroup()
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrl_ps_buy_tblCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
+                    .addGroup(pnl_ps_buy_CustomerLayout.createSequentialGroup()
                         .addComponent(PS_Buy_LabelSearchName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PS_Buy_TextSearchName, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4655,19 +4655,19 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(PS_Buy_LabelSearchID)
                         .addGap(18, 18, 18)
                         .addComponent(PS_Buy_TextSearchID, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnl_dlgHos_content4Layout.createSequentialGroup()
-                        .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_ps_buy_CustomerLayout.createSequentialGroup()
+                        .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Buy_LabelSellersName)
                             .addComponent(PS_Buy_LabelAddress)
                             .addComponent(PS_Buy_LabelTelephone)
                             .addComponent(PS_Buy_LabelEmail))
                         .addGap(18, 18, 18)
-                        .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Buy_TextSellerName)
-                            .addComponent(scrl_dlgHos_Address4)
+                            .addComponent(scrl_ps_buy_address)
                             .addComponent(PS_Buy_TextTelephone)
                             .addComponent(PS_Buy_TextEmail)))
-                    .addGroup(pnl_dlgHos_content4Layout.createSequentialGroup()
+                    .addGroup(pnl_ps_buy_CustomerLayout.createSequentialGroup()
                         .addComponent(PS_Buy_BtnNewSeller, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PS_Buy_BtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4676,42 +4676,42 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        pnl_dlgHos_content4Layout.setVerticalGroup(
-            pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_dlgHos_content4Layout.createSequentialGroup()
+        pnl_ps_buy_CustomerLayout.setVerticalGroup(
+            pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_buy_CustomerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_TextSearchName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_TextSearchID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_LabelSearchName)
                     .addComponent(PS_Buy_LabelSearchID))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(scrl_ps_buy_tblCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_LabelSellersName)
                     .addComponent(PS_Buy_TextSellerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Buy_LabelAddress)
-                    .addComponent(scrl_dlgHos_Address4, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(scrl_ps_buy_address, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_TextTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_LabelTelephone))
                 .addGap(18, 18, 18)
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_TextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_LabelEmail))
                 .addGap(32, 32, 32)
-                .addGroup(pnl_dlgHos_content4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_BtnNewSeller, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_BtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_BtnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jPanel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_ps_buy_Description.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         PS_Buy_LabelSpecies.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Buy_LabelSpecies.setText("Species :");
@@ -4771,16 +4771,16 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnl_ps_Buy_photo.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
-        jPanel25.setLayout(jPanel25Layout);
-        jPanel25Layout.setHorizontalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnl_ps_Buy_photoLayout = new javax.swing.GroupLayout(pnl_ps_Buy_photo);
+        pnl_ps_Buy_photo.setLayout(pnl_ps_Buy_photoLayout);
+        pnl_ps_Buy_photoLayout.setHorizontalGroup(
+            pnl_ps_Buy_photoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
-        jPanel25Layout.setVerticalGroup(
-            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnl_ps_Buy_photoLayout.setVerticalGroup(
+            pnl_ps_Buy_photoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 220, Short.MAX_VALUE)
         );
 
@@ -4791,27 +4791,27 @@ public class MainWindow extends javax.swing.JFrame {
 
         PS_Buy_BtnRemovePic.setText("Remove");
 
-        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
-        jPanel24.setLayout(jPanel24Layout);
-        jPanel24Layout.setHorizontalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel24Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_ps_buy_DescriptionLayout = new javax.swing.GroupLayout(pnl_ps_buy_Description);
+        pnl_ps_buy_Description.setLayout(pnl_ps_buy_DescriptionLayout);
+        pnl_ps_buy_DescriptionLayout.setHorizontalGroup(
+            pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
+                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Buy_LabelPetDescription)
-                            .addGroup(jPanel24Layout.createSequentialGroup()
+                            .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                                 .addGap(13, 13, 13)
-                                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel24Layout.createSequentialGroup()
+                                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
                                         .addComponent(PS_Buy_BtnRemovePic, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
                                         .addComponent(PS_Buy_BtnAddPic)
                                         .addGap(17, 17, 17))
-                                    .addGroup(jPanel24Layout.createSequentialGroup()
-                                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
+                                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(PS_Buy_LabelSpecies)
                                             .addComponent(PS_Buy_LabelColor)
                                             .addComponent(PS_Buy_LabelAge)
@@ -4822,20 +4822,20 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(PS_Buy_TextPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(jPanel24Layout.createSequentialGroup()
+                                    .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                                         .addComponent(PS_Buy_LabelBreed)
                                         .addGap(36, 36, 36)
-                                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(PS_Buy_TextBreed, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                                            .addGroup(jPanel24Layout.createSequentialGroup()
-                                                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                            .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
+                                                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                                     .addComponent(PS_Buy_SpinYears)
                                                     .addComponent(PS_Buy_RadioMale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(PS_Buy_LabelYears, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel24Layout.createSequentialGroup()
+                                                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                                                         .addComponent(PS_Buy_SpinMonths, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(PS_Buy_LabelMonths))
@@ -4843,47 +4843,47 @@ public class MainWindow extends javax.swing.JFrame {
                                             .addComponent(PS_Buy_TextSpecies, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                                             .addComponent(PS_Buy_TextColor))
                                         .addGap(18, 18, 18)
-                                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                            .addGroup(jPanel24Layout.createSequentialGroup()
+                                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(pnl_ps_Buy_photo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                                                 .addComponent(PS_Buy_LabelPhoto, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addGap(0, 123, Short.MAX_VALUE)))))))
                         .addContainerGap())
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(PS_Buy_BtnBuy, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10))))
         );
-        jPanel24Layout.setVerticalGroup(
-            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel24Layout.createSequentialGroup()
+        pnl_ps_buy_DescriptionLayout.setVerticalGroup(
+            pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(PS_Buy_LabelPetDescription)
                 .addGap(33, 33, 33)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel24Layout.createSequentialGroup()
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
+                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(PS_Buy_LabelSpecies)
                             .addComponent(PS_Buy_TextSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PS_Buy_LabelPhoto))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel24Layout.createSequentialGroup()
-                                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(pnl_ps_Buy_photo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(pnl_ps_buy_DescriptionLayout.createSequentialGroup()
+                                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(PS_Buy_LabelBreed)
                                     .addComponent(PS_Buy_TextBreed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(28, 28, 28)
-                                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                         .addComponent(PS_Buy_RadioMale)
                                         .addComponent(PS_Buy_RadioFemale))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
-                                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_buy_DescriptionLayout.createSequentialGroup()
+                                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(PS_Buy_LabelColor)
                                             .addComponent(PS_Buy_TextColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(39, 39, 39)
-                                        .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                        .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(PS_Buy_LabelAge)
                                             .addComponent(PS_Buy_LabelYears)
                                             .addComponent(PS_Buy_SpinYears, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4892,11 +4892,11 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addGap(38, 38, 38)
                                         .addComponent(PS_Buy_LabelSex)))))
                         .addGap(40, 40, 40))
-                    .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(PS_Buy_BtnAddPic, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(PS_Buy_BtnRemovePic, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(53, 53, 53)
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(pnl_ps_buy_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_TextPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_LabelRs)
                     .addComponent(PS_Buy_LabelPrice))
@@ -4905,60 +4905,60 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel23Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_ps_buy_mainLayout = new javax.swing.GroupLayout(pnl_ps_buy_main);
+        pnl_ps_buy_main.setLayout(pnl_ps_buy_mainLayout);
+        pnl_ps_buy_mainLayout.setHorizontalGroup(
+            pnl_ps_buy_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_ps_buy_mainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnl_dlgHos_content4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(pnl_ps_buy_Customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_ps_buy_Description, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+        pnl_ps_buy_mainLayout.setVerticalGroup(
+            pnl_ps_buy_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_ps_buy_mainLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(pnl_dlgHos_content4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnl_ps_buy_mainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pnl_ps_buy_Description, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_ps_buy_Customer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout pnl_PS_tabBuyLayout = new javax.swing.GroupLayout(pnl_PS_tabBuy);
+        pnl_PS_tabBuy.setLayout(pnl_PS_tabBuyLayout);
+        pnl_PS_tabBuyLayout.setHorizontalGroup(
+            pnl_PS_tabBuyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_ps_buy_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        pnl_PS_tabBuyLayout.setVerticalGroup(
+            pnl_PS_tabBuyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_ps_buy_main, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Buy", jPanel3);
+        tabbedPanePetShop.addTab("Buy", pnl_PS_tabBuy);
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+        javax.swing.GroupLayout pnlPetShopMainContainerLayout = new javax.swing.GroupLayout(pnlPetShopMainContainer);
+        pnlPetShopMainContainer.setLayout(pnlPetShopMainContainerLayout);
+        pnlPetShopMainContainerLayout.setHorizontalGroup(
+            pnlPetShopMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabbedPanePetShop)
         );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+        pnlPetShopMainContainerLayout.setVerticalGroup(
+            pnlPetShopMainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabbedPanePetShop)
         );
 
         javax.swing.GroupLayout pnlPetshopLayout = new javax.swing.GroupLayout(pnlPetshop);
         pnlPetshop.setLayout(pnlPetshopLayout);
         pnlPetshopLayout.setHorizontalGroup(
             pnlPetshopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPetShopMainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlPetshopLayout.setVerticalGroup(
             pnlPetshopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlPetShopMainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet DayCare", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
@@ -9025,7 +9025,7 @@ public class MainWindow extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PS_Shop_TextSearchPetSpeciesKeyReleased
 
-    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+    private void tabbedPanePetShopMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabbedPanePetShopMouseClicked
 //        //-update customer table-----------------------------------------
 //            Customer cs = new Customer();
 //            ResultSet rs = cs.getCustomerDetails();
@@ -9038,7 +9038,7 @@ public class MainWindow extends javax.swing.JFrame {
 //            PS_Buy_BtnEdit.setEnabled(false);
 //            PS_Buy_BtnSave.setEnabled(false);
 //        //----------------------------------------------------------------------
-    }//GEN-LAST:event_jTabbedPane1MouseClicked
+    }//GEN-LAST:event_tabbedPanePetShopMouseClicked
 
     private void PS_Buy_TableCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PS_Buy_TableCustomerMouseClicked
         //-update text fields----------------------------------------------
@@ -10254,37 +10254,15 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel24;
-    private javax.swing.JPanel jPanel25;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
     private javax.swing.JScrollPane jscroll_pha_stock;
@@ -10419,6 +10397,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlIncomeSearch;
     private javax.swing.JPanel pnlIncomeTab;
     private javax.swing.JPanel pnlMobile;
+    private javax.swing.JPanel pnlPetShopMainContainer;
     private javax.swing.JPanel pnlPetshop;
     private javax.swing.JPanel pnlPharmacy;
     private javax.swing.JPanel pnlPharmacyIssueBill;
@@ -10428,6 +10407,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlStock;
     private javax.swing.JPanel pnl_ExpenseAddnew;
     private javax.swing.JPanel pnl_Hos_CustomersSearchBar;
+    private javax.swing.JPanel pnl_PS_Sell_Customer;
+    private javax.swing.JPanel pnl_PS_Shop_Description;
+    private javax.swing.JPanel pnl_PS_Shop_Photo;
+    private javax.swing.JPanel pnl_PS_sellMain;
+    private javax.swing.JPanel pnl_PS_tabBuy;
+    private javax.swing.JPanel pnl_PS_tabSell;
     private javax.swing.JPanel pnl_Ph_AddItem;
     private javax.swing.JPanel pnl_Ph_ItemDetails;
     private javax.swing.JPanel pnl_dlgHos_Clinic_Details;
@@ -10437,10 +10422,18 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_dlgHos_addPet_container1;
     private javax.swing.JPanel pnl_dlgHos_content;
     private javax.swing.JPanel pnl_dlgHos_content1;
-    private javax.swing.JPanel pnl_dlgHos_content2;
-    private javax.swing.JPanel pnl_dlgHos_content4;
     private javax.swing.JPanel pnl_dlg_addItemMain;
     private javax.swing.JPanel pnl_dlg_addItemMain1;
+    private javax.swing.JPanel pnl_petshopTabShopContainer;
+    private javax.swing.JPanel pnl_psShopAvailablePets;
+    private javax.swing.JPanel pnl_psShopSearch;
+    private javax.swing.JPanel pnl_ps_Buy_photo;
+    private javax.swing.JPanel pnl_ps_Sell_Cart;
+    private javax.swing.JPanel pnl_ps_buy_Customer;
+    private javax.swing.JPanel pnl_ps_buy_Description;
+    private javax.swing.JPanel pnl_ps_buy_main;
+    private javax.swing.JPanel pnl_ps_sell_NetAmount;
+    private javax.swing.JPanel pnl_ps_sell_available;
     private javax.swing.JPanel pnl_usrAcc_Container;
     private javax.swing.JPanel pnl_usrAcc_Login;
     private javax.swing.JPanel pnl_usrAcc_LoginPrivileges;
@@ -10452,19 +10445,24 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_dlgHos_addPet_male;
     private javax.swing.JRadioButton rb_dlgHos_editPet_female;
     private javax.swing.JRadioButton rb_dlgHos_editPet_male;
+    private javax.swing.JScrollPane scrlPane_PS_Shop_AvailableList;
     private javax.swing.JScrollPane scrlPharmacyBillItemtbl;
     private javax.swing.JScrollPane scrl_Hos_Customers;
     private javax.swing.JScrollPane scrl_Hos_Pets;
     private javax.swing.JScrollPane scrl_dlgHos_Address;
     private javax.swing.JScrollPane scrl_dlgHos_Address1;
-    private javax.swing.JScrollPane scrl_dlgHos_Address2;
-    private javax.swing.JScrollPane scrl_dlgHos_Address4;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Complaint;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Diagnosis;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_LabFindings;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Observation;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Remarks;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_list;
+    private javax.swing.JScrollPane scrl_ps_buy_address;
+    private javax.swing.JScrollPane scrl_ps_buy_tblCustomer;
+    private javax.swing.JScrollPane scrl_ps_sell_availablelist;
+    private javax.swing.JScrollPane scrl_ps_sell_cart;
+    private javax.swing.JScrollPane scrl_ps_sell_tblcustomer;
+    private javax.swing.JScrollPane scrl_ps_sell_textAddress;
     private javax.swing.JScrollPane scrl_usrAcc_usrAccounts;
     private javax.swing.JScrollPane scrlp_tbl_Fin_Client_Details;
     private javax.swing.JScrollPane scrlp_tbl_Fin_ExpenseDetails;
@@ -10478,6 +10476,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSpinner spnr_dlgHos_editPet_years;
     private javax.swing.JSeparator sprt_usrAcc_Privileges;
     private javax.swing.JSeparator sprtl_usrAcc_login;
+    private javax.swing.JTabbedPane tabbedPanePetShop;
+    private javax.swing.JPanel tabpetShopShop;
     private javax.swing.JTable tblPharmacyBillItems;
     private javax.swing.JTable tbl_Fin_Client_Details;
     private javax.swing.JTable tbl_Fin_ExpenseDetails;
