@@ -77,6 +77,24 @@ public class PetShop {
         }
     }
     
+    public double getPetPrice(String petID){
+        String querry = "select price from pets_tosell where petID='"+petID+"'";
+        double price=0;
+        try{
+            Statement st = dbcon.createStatement();
+            ResultSet rs = st.executeQuery(querry);
+            while(rs.next()){
+                price = rs.getDouble("price");
+            }
+            return price;
+        }
+        catch(Exception e){
+            e.printStackTrace();
+            return price;
+        }
+        
+    }
+    
     public boolean updatePetDetails(String petID,String species, String breed, String color, String sex, double price, int years, int months){
         
         String querry = "update pets_tosell set species=?, ageYears=?, ageMonths=?, breed=?, color=?, sex=?,  price=? where petID='"+petID+"'";
