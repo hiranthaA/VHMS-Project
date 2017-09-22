@@ -3,7 +3,10 @@ import java.awt.Component;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ButtonModel;
 import javax.swing.JOptionPane;
 
@@ -158,6 +161,37 @@ public class PetShop {
             e.printStackTrace();
             JOptionPane.showMessageDialog(comp, "Pet Buying failed!","Database Error",JOptionPane.ERROR_MESSAGE);
             return null;
+        }
+    }
+    
+    public void addPettoSold(String petID,String species, String breed, String color, int years, int months, String sex, String photo, double price,String buyerID, Component comp){
+        try{
+            String SQL = "insert into pets_sold(petID,species,ageYears,ageMonths,breed,color,sex,photo,sold_price,buyerID) values(?,?,?,?,?,?,?,?,?,?)";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, petID);
+            pst.setString(2, species);
+            pst.setInt(3, years);
+            pst.setInt(4, months);
+            pst.setString(5, breed);
+            pst.setString(6, color);
+            pst.setString(7, sex);
+            pst.setString(8, photo);
+            pst.setDouble(9, price);
+            pst.setString(10,buyerID);
+            pst.execute();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    public void deletePet(String petID){
+        String querry = "delete from pets_tosell where petID='"+petID+"'";
+        try {
+            Statement st = dbcon.createStatement();
+            st.executeUpdate(querry);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
     

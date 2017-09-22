@@ -6758,6 +6758,9 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Sell"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_ButtonSellActionPerformed"/>
+                                      </Events>
                                     </Component>
                                   </SubComponents>
                                 </Container>

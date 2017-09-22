@@ -4431,6 +4431,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         PS_Sell_ButtonSell.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PS_Sell_ButtonSell.setText("Sell");
+        PS_Sell_ButtonSell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Sell_ButtonSellActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -9640,6 +9645,74 @@ public class MainWindow extends javax.swing.JFrame {
             this.PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rs));
         }
     }//GEN-LAST:event_PS_Buy_TextSearchIDKeyReleased
+
+    private void PS_Sell_ButtonSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_ButtonSellActionPerformed
+        int nItems = list_PS_Cart.getModel().getSize();
+        ResultSet rs;
+        String species="";
+        int years=0;
+        int months=0;
+        String petID="";
+        String breed="";
+        String color="";
+        String sex="";
+        String photo="";
+        String buyerID="";
+        double price=0;
+        int selectedRow = PS_Sell_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a Customer to Sell Pets!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            buyerID = PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
+            PetShop p = new PetShop();
+            for(int x=0; x<nItems; x++){
+                petID = dlmCart.elementAt(x).toString();
+                rs = p.getPetDetails(petID);
+                try{
+                    while(rs.next()){
+                        species = rs.getString("species");
+                        breed = rs.getString("breed");
+                        color = rs.getString("color");
+                        sex = rs.getString("sex");
+                        photo = rs.getString("photo");
+                        years = rs.getInt("ageYears");
+                        months = rs.getInt("ageMonths");
+                        price = rs.getDouble("price");
+                    }
+                    
+                    p.addPettoSold(petID, species, breed, color, years, months, sex, photo, price, buyerID, this);
+                    p.deletePet(petID);
+                    
+                }
+                catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+            JOptionPane.showMessageDialog(this, "Pets Sold Successfully!","Pet Sold",JOptionPane.INFORMATION_MESSAGE);
+            //----------------------------------------------------------------------
+            DefaultListModel d = new DefaultListModel();
+            ResultSet petList = p.get_toSell_PetIDs();
+            dlmAvailable.clear();
+            dlmCart.clear();
+            if(petList!=null){
+                try{
+                    while(petList.next()){
+                        d.addElement(petList.getString("petID"));
+                        dlmAvailable.addElement(petList.getString("petID"));
+                    }
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                list_PS_PetsToSell.setModel(d);
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
+            }
+            //----------------------------------------------------------------------
+        }
+    }//GEN-LAST:event_PS_Sell_ButtonSellActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
