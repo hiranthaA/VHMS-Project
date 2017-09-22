@@ -6216,8 +6216,8 @@
                                                   <Component id="jPanel18" min="-2" max="-2" attributes="0"/>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                      <Component id="jButton2" pref="57" max="32767" attributes="0"/>
-                                                      <Component id="jButton3" max="32767" attributes="0"/>
+                                                      <Component id="PS_Sell_BtnAddtoCart" pref="57" max="32767" attributes="0"/>
+                                                      <Component id="PS_Sell_BtnRemoveFromCart" max="32767" attributes="0"/>
                                                   </Group>
                                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                                   <Component id="jPanel19" min="-2" max="-2" attributes="0"/>
@@ -6239,9 +6239,9 @@
                                                       <Component id="jPanel19" max="32767" attributes="0"/>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <EmptySpace min="-2" pref="211" max="-2" attributes="0"/>
-                                                          <Component id="jButton2" min="-2" pref="32" max="-2" attributes="0"/>
+                                                          <Component id="PS_Sell_BtnAddtoCart" min="-2" pref="32" max="-2" attributes="0"/>
                                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                          <Component id="jButton3" min="-2" pref="32" max="-2" attributes="0"/>
+                                                          <Component id="PS_Sell_BtnRemoveFromCart" min="-2" pref="32" max="-2" attributes="0"/>
                                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                       </Group>
                                                       <Component id="jPanel18" alignment="0" max="32767" attributes="0"/>
@@ -6292,14 +6292,18 @@
                                                       </Group>
                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="txt_dlgHos_addCustomer_name1" max="32767" attributes="0"/>
+                                                          <Component id="PS_Sell_TextBuyerName" max="32767" attributes="0"/>
                                                           <Component id="scrl_dlgHos_Address2" max="32767" attributes="0"/>
-                                                          <Component id="txt_dlgHos_addCustomer_tele1" max="32767" attributes="0"/>
-                                                          <Component id="txt_dlgHos_addCustomer_email1" alignment="0" max="32767" attributes="0"/>
+                                                          <Component id="PS_Sell_TextTelephone" max="32767" attributes="0"/>
+                                                          <Component id="PS_Sell_TextEmail" alignment="0" max="32767" attributes="0"/>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="PS_Sell_BtnNewBuyer" min="-2" pref="91" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="PS_Sell_BtnEdit" min="-2" pref="97" max="-2" attributes="0"/>
+                                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                      <Component id="PS_Sell_BtnSave" min="-2" pref="97" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -6320,11 +6324,9 @@
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jScrollPane4" min="-2" pref="195" max="-2" attributes="0"/>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jButton5" min="-2" pref="32" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="lbl_dlgHos_addCustomer_Ownername1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="txt_dlgHos_addCustomer_name1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="PS_Sell_TextBuyerName" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
@@ -6333,15 +6335,21 @@
                                               </Group>
                                               <EmptySpace pref="28" max="32767" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="txt_dlgHos_addCustomer_tele1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="PS_Sell_TextTelephone" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="lbl_dlgHos_addCustomer_telephone1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace type="separate" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="txt_dlgHos_addCustomer_email1" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="PS_Sell_TextEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="lbl_dlgHos_addCustomer_email1" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="PS_Sell_BtnNewBuyer" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Component id="PS_Sell_BtnEdit" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                                                  <Component id="PS_Sell_BtnSave" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
@@ -6355,14 +6363,14 @@
                                         <Property name="text" type="java.lang.String" value="Buyer&apos;s Name"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="txt_dlgHos_addCustomer_name1">
+                                    <Component class="javax.swing.JTextField" name="PS_Sell_TextBuyerName">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="12" style="0"/>
                                         </Property>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_dlgHos_addCustomer_name1FocusLost"/>
+                                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="PS_Sell_TextBuyerNameFocusLost"/>
                                       </Events>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="lbl_dlgHos_addCustomer_address1">
@@ -6381,15 +6389,15 @@
                                         <Property name="text" type="java.lang.String" value="Telephone"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="txt_dlgHos_addCustomer_tele1">
+                                    <Component class="javax.swing.JTextField" name="PS_Sell_TextTelephone">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="12" style="0"/>
                                         </Property>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_dlgHos_addCustomer_tele1FocusLost"/>
-                                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgHos_addCustomer_tele1KeyTyped"/>
+                                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="PS_Sell_TextTelephoneFocusLost"/>
+                                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PS_Sell_TextTelephoneKeyTyped"/>
                                       </Events>
                                     </Component>
                                     <Container class="javax.swing.JScrollPane" name="scrl_dlgHos_Address2">
@@ -6399,7 +6407,7 @@
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                       <SubComponents>
-                                        <Component class="javax.swing.JTextArea" name="txt_dlgHos_addCustomer_address1">
+                                        <Component class="javax.swing.JTextArea" name="PS_Sell_TextAddress">
                                           <Properties>
                                             <Property name="columns" type="int" value="20"/>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -6408,7 +6416,7 @@
                                             <Property name="rows" type="int" value="5"/>
                                           </Properties>
                                           <Events>
-                                            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_dlgHos_addCustomer_address1FocusLost"/>
+                                            <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="PS_Sell_TextAddressFocusLost"/>
                                           </Events>
                                         </Component>
                                       </SubComponents>
@@ -6421,15 +6429,15 @@
                                         <Property name="text" type="java.lang.String" value="E-mail"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="txt_dlgHos_addCustomer_email1">
+                                    <Component class="javax.swing.JTextField" name="PS_Sell_TextEmail">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="12" style="0"/>
                                         </Property>
                                       </Properties>
                                       <Events>
-                                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="txt_dlgHos_addCustomer_email1FocusLost"/>
-                                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgHos_addCustomer_email1KeyTyped"/>
+                                        <EventHandler event="focusLost" listener="java.awt.event.FocusListener" parameters="java.awt.event.FocusEvent" handler="PS_Sell_TextEmailFocusLost"/>
+                                        <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="PS_Sell_TextEmailKeyTyped"/>
                                       </Events>
                                     </Component>
                                     <Component class="javax.swing.JLabel" name="jLabel19">
@@ -6463,7 +6471,7 @@
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                       <SubComponents>
-                                        <Component class="javax.swing.JTable" name="jTable1">
+                                        <Component class="javax.swing.JTable" name="PS_Sell_TableCustomer">
                                           <Properties>
                                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                                               <Table columnCount="4" rowCount="4">
@@ -6474,13 +6482,35 @@
                                               </Table>
                                             </Property>
                                           </Properties>
+                                          <Events>
+                                            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="PS_Sell_TableCustomerMouseClicked"/>
+                                          </Events>
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JButton" name="jButton5">
+                                    <Component class="javax.swing.JButton" name="PS_Sell_BtnNewBuyer">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="New Buyer"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_BtnNewBuyerActionPerformed"/>
+                                      </Events>
+                                    </Component>
+                                    <Component class="javax.swing.JButton" name="PS_Sell_BtnEdit">
+                                      <Properties>
+                                        <Property name="text" type="java.lang.String" value="Edit"/>
+                                      </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_BtnEditActionPerformed"/>
+                                      </Events>
+                                    </Component>
+                                    <Component class="javax.swing.JButton" name="PS_Sell_BtnSave">
+                                      <Properties>
+                                        <Property name="text" type="java.lang.String" value="Save"/>
+                                      </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_BtnSaveActionPerformed"/>
+                                      </Events>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -6528,19 +6558,13 @@
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                       <SubComponents>
-                                        <Component class="javax.swing.JList" name="jList2">
+                                        <Component class="javax.swing.JList" name="list_PS_Cart">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Tahoma" size="14" style="0"/>
                                             </Property>
                                             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                                              <StringArray count="5">
-                                                <StringItem index="0" value="Item 1"/>
-                                                <StringItem index="1" value="Item 2"/>
-                                                <StringItem index="2" value="Item 3"/>
-                                                <StringItem index="3" value="Item 4"/>
-                                                <StringItem index="4" value="Item 5"/>
-                                              </StringArray>
+                                              <StringArray count="0"/>
                                             </Property>
                                           </Properties>
                                           <AuxValues>
@@ -6603,19 +6627,13 @@
 
                                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
                                       <SubComponents>
-                                        <Component class="javax.swing.JList" name="jList3">
+                                        <Component class="javax.swing.JList" name="list_PS_AvailablePetList">
                                           <Properties>
                                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                               <Font name="Tahoma" size="14" style="0"/>
                                             </Property>
                                             <Property name="model" type="javax.swing.ListModel" editor="org.netbeans.modules.form.editors2.ListModelEditor">
-                                              <StringArray count="5">
-                                                <StringItem index="0" value="Item 1"/>
-                                                <StringItem index="1" value="Item 2"/>
-                                                <StringItem index="2" value="Item 3"/>
-                                                <StringItem index="3" value="Item 4"/>
-                                                <StringItem index="4" value="Item 5"/>
-                                              </StringArray>
+                                              <StringArray count="0"/>
                                             </Property>
                                           </Properties>
                                           <AuxValues>
@@ -6634,15 +6652,21 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="javax.swing.JButton" name="jButton2">
+                                <Component class="javax.swing.JButton" name="PS_Sell_BtnAddtoCart">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="&lt;&lt;"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_BtnAddtoCartActionPerformed"/>
+                                  </Events>
                                 </Component>
-                                <Component class="javax.swing.JButton" name="jButton3">
+                                <Component class="javax.swing.JButton" name="PS_Sell_BtnRemoveFromCart">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="&gt;&gt;"/>
                                   </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Sell_BtnRemoveFromCartActionPerformed"/>
+                                  </Events>
                                 </Component>
                                 <Container class="javax.swing.JPanel" name="jPanel20">
                                   <Properties>
@@ -6663,10 +6687,10 @@
                                               <Component id="jLabel16" min="-2" pref="85" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jLabel18" min="-2" pref="198" max="-2" attributes="0"/>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                                              <Component id="jButton4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jButton4" min="-2" pref="114" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -6727,7 +6751,7 @@
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="18" style="0"/>
                                         </Property>
-                                        <Property name="text" type="java.lang.String" value="Purchase"/>
+                                        <Property name="text" type="java.lang.String" value="Sell"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
@@ -7023,16 +7047,25 @@
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Edit"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Buy_BtnEditActionPerformed"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="PS_Buy_BtnNewSeller">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="New Seller"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Buy_BtnNewSellerActionPerformed"/>
+                                      </Events>
                                     </Component>
                                     <Component class="javax.swing.JButton" name="PS_Buy_BtnSave">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Save"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Buy_BtnSaveActionPerformed"/>
+                                      </Events>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -7061,9 +7094,9 @@
                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                   <Group type="102" alignment="0" attributes="0">
                                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                                      <Component id="jButton10" min="-2" pref="71" max="-2" attributes="0"/>
+                                                                      <Component id="PS_Buy_BtnRemovePic" min="-2" pref="82" max="-2" attributes="0"/>
                                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                                      <Component id="jButton9" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="PS_Buy_BtnAddPic" min="-2" max="-2" attributes="0"/>
                                                                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
                                                                   </Group>
                                                                   <Group type="102" alignment="0" attributes="0">
@@ -7077,33 +7110,33 @@
                                                                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                                                       <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                                      <Component id="jTextField18" min="-2" pref="178" max="-2" attributes="0"/>
+                                                                      <Component id="PS_Buy_TextPrice" min="-2" pref="178" max="-2" attributes="0"/>
                                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                                   </Group>
                                                                   <Group type="102" alignment="0" attributes="0">
                                                                       <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
                                                                       <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
                                                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                                                          <Component id="jTextField15" pref="204" max="32767" attributes="0"/>
+                                                                          <Component id="PS_Buy_TextBreed" pref="204" max="32767" attributes="0"/>
                                                                           <Group type="102" alignment="0" attributes="0">
                                                                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                                                                  <Component id="jSpinner1" max="32767" attributes="0"/>
-                                                                                  <Component id="jRadioButton1" max="32767" attributes="0"/>
+                                                                                  <Component id="PS_Buy_SpinYears" max="32767" attributes="0"/>
+                                                                                  <Component id="PS_Buy_RadioMale" max="32767" attributes="0"/>
                                                                               </Group>
                                                                               <EmptySpace max="-2" attributes="0"/>
                                                                               <Component id="jLabel31" min="-2" pref="38" max="-2" attributes="0"/>
                                                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                                   <Group type="102" attributes="0">
-                                                                                      <Component id="jSpinner2" min="-2" pref="46" max="-2" attributes="0"/>
+                                                                                      <Component id="PS_Buy_SpinMonths" min="-2" pref="46" max="-2" attributes="0"/>
                                                                                       <EmptySpace max="-2" attributes="0"/>
                                                                                       <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
                                                                                   </Group>
-                                                                                  <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+                                                                                  <Component id="PS_Buy_RadioFemale" min="-2" max="-2" attributes="0"/>
                                                                               </Group>
                                                                           </Group>
-                                                                          <Component id="jTextField14" alignment="0" pref="204" max="32767" attributes="0"/>
-                                                                          <Component id="jTextField16" alignment="0" max="32767" attributes="0"/>
+                                                                          <Component id="PS_Buy_TextSpecies" alignment="0" pref="204" max="32767" attributes="0"/>
+                                                                          <Component id="PS_Buy_TextColor" alignment="0" max="32767" attributes="0"/>
                                                                       </Group>
                                                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -7121,7 +7154,7 @@
                                                   </Group>
                                                   <Group type="102" alignment="1" attributes="0">
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                      <Component id="jButton8" min="-2" pref="134" max="-2" attributes="0"/>
+                                                      <Component id="PS_Buy_BtnBuy" min="-2" pref="134" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -7138,7 +7171,7 @@
                                                   <Group type="102" attributes="0">
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="PS_Buy_TextSpecies" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace max="-2" attributes="0"/>
@@ -7147,25 +7180,25 @@
                                                           <Group type="102" attributes="0">
                                                               <Group type="103" groupAlignment="3" attributes="0">
                                                                   <Component id="jLabel27" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="PS_Buy_TextBreed" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="0" attributes="0">
                                                                   <Group type="103" alignment="1" groupAlignment="3" attributes="0">
-                                                                      <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                      <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="PS_Buy_RadioMale" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                      <Component id="PS_Buy_RadioFemale" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                   </Group>
                                                                   <Group type="102" alignment="1" attributes="0">
                                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                                           <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="PS_Buy_TextColor" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                       </Group>
                                                                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                                           <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                           <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="jSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                          <Component id="jSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="PS_Buy_SpinYears" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                          <Component id="PS_Buy_SpinMonths" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                           <Component id="jLabel35" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                       </Group>
                                                                       <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
@@ -7177,18 +7210,18 @@
                                                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                                                   </Group>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jButton9" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
-                                                      <Component id="jButton10" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="PS_Buy_BtnAddPic" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                                                      <Component id="PS_Buy_BtnRemovePic" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jTextField18" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="PS_Buy_TextPrice" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel34" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jButton8" min="-2" pref="41" max="-2" attributes="0"/>
+                                              <Component id="PS_Buy_BtnBuy" min="-2" pref="41" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
@@ -7203,14 +7236,14 @@
                                         <Property name="text" type="java.lang.String" value="Species :"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="jTextField14">
+                                    <Component class="javax.swing.JTextField" name="PS_Buy_TextSpecies">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="14" style="0"/>
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="jTextField15">
+                                    <Component class="javax.swing.JTextField" name="PS_Buy_TextBreed">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="14" style="0"/>
@@ -7233,7 +7266,7 @@
                                         <Property name="text" type="java.lang.String" value="Color :"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="jTextField16">
+                                    <Component class="javax.swing.JTextField" name="PS_Buy_TextColor">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="14" style="0"/>
@@ -7280,23 +7313,25 @@
                                         <Property name="text" type="java.lang.String" value="Rs ."/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+                                    <Component class="javax.swing.JRadioButton" name="PS_Buy_RadioMale">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                                           <ComponentRef name="btngrp_BuyPet"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Male"/>
+                                        <Property name="actionCommand" type="java.lang.String" value="M"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+                                    <Component class="javax.swing.JRadioButton" name="PS_Buy_RadioFemale">
                                       <Properties>
                                         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
                                           <ComponentRef name="btngrp_BuyPet"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Female"/>
+                                        <Property name="actionCommand" type="java.lang.String" value="F"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JTextField" name="jTextField18">
+                                    <Component class="javax.swing.JTextField" name="PS_Buy_TextPrice">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="18" style="0"/>
@@ -7311,14 +7346,14 @@
                                         <Property name="text" type="java.lang.String" value="Years -"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JSpinner" name="jSpinner1">
+                                    <Component class="javax.swing.JSpinner" name="PS_Buy_SpinYears">
                                       <Properties>
                                         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                                           <SpinnerModel initial="0" maximum="20" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
                                         </Property>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JSpinner" name="jSpinner2">
+                                    <Component class="javax.swing.JSpinner" name="PS_Buy_SpinMonths">
                                       <Properties>
                                         <Property name="model" type="javax.swing.SpinnerModel" editor="org.netbeans.modules.form.editors2.SpinnerModelEditor">
                                           <SpinnerModel initial="0" maximum="11" minimum="0" numberType="java.lang.Integer" stepSize="1" type="number"/>
@@ -7331,13 +7366,16 @@
                                         <Property name="toolTipText" type="java.lang.String" value=""/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton8">
+                                    <Component class="javax.swing.JButton" name="PS_Buy_BtnBuy">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="18" style="0"/>
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Buy"/>
                                       </Properties>
+                                      <Events>
+                                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PS_Buy_BtnBuyActionPerformed"/>
+                                      </Events>
                                     </Component>
                                     <Container class="javax.swing.JPanel" name="jPanel25">
                                       <Properties>
@@ -7369,12 +7407,12 @@
                                         <Property name="text" type="java.lang.String" value="Photo"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton9">
+                                    <Component class="javax.swing.JButton" name="PS_Buy_BtnAddPic">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Add"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton10">
+                                    <Component class="javax.swing.JButton" name="PS_Buy_BtnRemovePic">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="Remove"/>
                                       </Properties>

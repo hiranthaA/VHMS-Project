@@ -24,7 +24,7 @@ public class Customer {
         dbcon = conn.Connect();
     }
     
-    public void addCustomer(String name, String address, String tele, String email,Component comp){
+    public String addCustomer(String name, String address, String tele, String email,Component comp){
         try{
             String SQL = "insert into customer(custID,name,address,telephone,email) values(?,?,?,?,?)";
             String custID = generateCustomerID(comp);
@@ -36,11 +36,12 @@ public class Customer {
             pst.setString(5, email);
             pst.execute();
             increaseNoCustomersByOne();
-            addReg_Service(custID, "ho");
             JOptionPane.showMessageDialog(comp, "Customer added Successfully!","Customer Details",JOptionPane.INFORMATION_MESSAGE);
+            return custID;
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(comp, "Customer adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+            return null;
         }
     }
     

@@ -16,6 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
+import javax.swing.ListModel;
 import net.proteanit.sql.DbUtils;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -31,7 +32,8 @@ public class MainWindow extends javax.swing.JFrame {
     
     Connection dbcon;
     static String accessedUser;
-    
+    DefaultListModel dlmCart = new DefaultListModel();
+    DefaultListModel dlmAvailable = new DefaultListModel();
     public MainWindow() {
         initComponents();
         setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
@@ -437,31 +439,33 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel17 = new javax.swing.JPanel();
         pnl_dlgHos_content2 = new javax.swing.JPanel();
         lbl_dlgHos_addCustomer_Ownername1 = new javax.swing.JLabel();
-        txt_dlgHos_addCustomer_name1 = new javax.swing.JTextField();
+        PS_Sell_TextBuyerName = new javax.swing.JTextField();
         lbl_dlgHos_addCustomer_address1 = new javax.swing.JLabel();
         lbl_dlgHos_addCustomer_telephone1 = new javax.swing.JLabel();
-        txt_dlgHos_addCustomer_tele1 = new javax.swing.JTextField();
+        PS_Sell_TextTelephone = new javax.swing.JTextField();
         scrl_dlgHos_Address2 = new javax.swing.JScrollPane();
-        txt_dlgHos_addCustomer_address1 = new javax.swing.JTextArea();
+        PS_Sell_TextAddress = new javax.swing.JTextArea();
         lbl_dlgHos_addCustomer_email1 = new javax.swing.JLabel();
-        txt_dlgHos_addCustomer_email1 = new javax.swing.JTextField();
+        PS_Sell_TextEmail = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jTextField7 = new javax.swing.JTextField();
         jTextField9 = new javax.swing.JTextField();
         jLabel20 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton5 = new javax.swing.JButton();
+        PS_Sell_TableCustomer = new javax.swing.JTable();
+        PS_Sell_BtnNewBuyer = new javax.swing.JButton();
+        PS_Sell_BtnEdit = new javax.swing.JButton();
+        PS_Sell_BtnSave = new javax.swing.JButton();
         jPanel18 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jList2 = new javax.swing.JList<>();
+        list_PS_Cart = new javax.swing.JList<>();
         jLabel14 = new javax.swing.JLabel();
         jPanel19 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
+        list_PS_AvailablePetList = new javax.swing.JList<>();
         jLabel15 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        PS_Sell_BtnAddtoCart = new javax.swing.JButton();
+        PS_Sell_BtnRemoveFromCart = new javax.swing.JButton();
         jPanel20 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -490,28 +494,28 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_BtnSave = new javax.swing.JButton();
         jPanel24 = new javax.swing.JPanel();
         jLabel26 = new javax.swing.JLabel();
-        jTextField14 = new javax.swing.JTextField();
-        jTextField15 = new javax.swing.JTextField();
+        PS_Buy_TextSpecies = new javax.swing.JTextField();
+        PS_Buy_TextBreed = new javax.swing.JTextField();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jTextField16 = new javax.swing.JTextField();
+        PS_Buy_TextColor = new javax.swing.JTextField();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jTextField18 = new javax.swing.JTextField();
+        PS_Buy_RadioMale = new javax.swing.JRadioButton();
+        PS_Buy_RadioFemale = new javax.swing.JRadioButton();
+        PS_Buy_TextPrice = new javax.swing.JTextField();
         jLabel31 = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
-        jSpinner2 = new javax.swing.JSpinner();
+        PS_Buy_SpinYears = new javax.swing.JSpinner();
+        PS_Buy_SpinMonths = new javax.swing.JSpinner();
         jLabel35 = new javax.swing.JLabel();
-        jButton8 = new javax.swing.JButton();
+        PS_Buy_BtnBuy = new javax.swing.JButton();
         jPanel25 = new javax.swing.JPanel();
         jLabel36 = new javax.swing.JLabel();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
+        PS_Buy_BtnAddPic = new javax.swing.JButton();
+        PS_Buy_BtnRemovePic = new javax.swing.JButton();
         pnlDaycare = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
         pnlHealthcare = new javax.swing.JPanel();
@@ -4164,10 +4168,10 @@ public class MainWindow extends javax.swing.JFrame {
         lbl_dlgHos_addCustomer_Ownername1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbl_dlgHos_addCustomer_Ownername1.setText("Buyer's Name");
 
-        txt_dlgHos_addCustomer_name1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_dlgHos_addCustomer_name1.addFocusListener(new java.awt.event.FocusAdapter() {
+        PS_Sell_TextBuyerName.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PS_Sell_TextBuyerName.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txt_dlgHos_addCustomer_name1FocusLost(evt);
+                PS_Sell_TextBuyerNameFocusLost(evt);
             }
         });
 
@@ -4177,40 +4181,40 @@ public class MainWindow extends javax.swing.JFrame {
         lbl_dlgHos_addCustomer_telephone1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbl_dlgHos_addCustomer_telephone1.setText("Telephone");
 
-        txt_dlgHos_addCustomer_tele1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_dlgHos_addCustomer_tele1.addFocusListener(new java.awt.event.FocusAdapter() {
+        PS_Sell_TextTelephone.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PS_Sell_TextTelephone.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txt_dlgHos_addCustomer_tele1FocusLost(evt);
+                PS_Sell_TextTelephoneFocusLost(evt);
             }
         });
-        txt_dlgHos_addCustomer_tele1.addKeyListener(new java.awt.event.KeyAdapter() {
+        PS_Sell_TextTelephone.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txt_dlgHos_addCustomer_tele1KeyTyped(evt);
+                PS_Sell_TextTelephoneKeyTyped(evt);
             }
         });
 
-        txt_dlgHos_addCustomer_address1.setColumns(20);
-        txt_dlgHos_addCustomer_address1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_dlgHos_addCustomer_address1.setRows(5);
-        txt_dlgHos_addCustomer_address1.addFocusListener(new java.awt.event.FocusAdapter() {
+        PS_Sell_TextAddress.setColumns(20);
+        PS_Sell_TextAddress.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PS_Sell_TextAddress.setRows(5);
+        PS_Sell_TextAddress.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txt_dlgHos_addCustomer_address1FocusLost(evt);
+                PS_Sell_TextAddressFocusLost(evt);
             }
         });
-        scrl_dlgHos_Address2.setViewportView(txt_dlgHos_addCustomer_address1);
+        scrl_dlgHos_Address2.setViewportView(PS_Sell_TextAddress);
 
         lbl_dlgHos_addCustomer_email1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lbl_dlgHos_addCustomer_email1.setText("E-mail");
 
-        txt_dlgHos_addCustomer_email1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        txt_dlgHos_addCustomer_email1.addFocusListener(new java.awt.event.FocusAdapter() {
+        PS_Sell_TextEmail.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PS_Sell_TextEmail.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txt_dlgHos_addCustomer_email1FocusLost(evt);
+                PS_Sell_TextEmailFocusLost(evt);
             }
         });
-        txt_dlgHos_addCustomer_email1.addKeyListener(new java.awt.event.KeyAdapter() {
+        PS_Sell_TextEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txt_dlgHos_addCustomer_email1KeyTyped(evt);
+                PS_Sell_TextEmailKeyTyped(evt);
             }
         });
 
@@ -4222,7 +4226,7 @@ public class MainWindow extends javax.swing.JFrame {
 
         jLabel20.setText("Search ID");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        PS_Sell_TableCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -4233,9 +4237,33 @@ public class MainWindow extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane4.setViewportView(jTable1);
+        PS_Sell_TableCustomer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                PS_Sell_TableCustomerMouseClicked(evt);
+            }
+        });
+        jScrollPane4.setViewportView(PS_Sell_TableCustomer);
 
-        jButton5.setText("New Buyer");
+        PS_Sell_BtnNewBuyer.setText("New Buyer");
+        PS_Sell_BtnNewBuyer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Sell_BtnNewBuyerActionPerformed(evt);
+            }
+        });
+
+        PS_Sell_BtnEdit.setText("Edit");
+        PS_Sell_BtnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Sell_BtnEditActionPerformed(evt);
+            }
+        });
+
+        PS_Sell_BtnSave.setText("Save");
+        PS_Sell_BtnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Sell_BtnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_dlgHos_content2Layout = new javax.swing.GroupLayout(pnl_dlgHos_content2);
         pnl_dlgHos_content2.setLayout(pnl_dlgHos_content2Layout);
@@ -4261,12 +4289,16 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(lbl_dlgHos_addCustomer_email1))
                         .addGap(18, 18, 18)
                         .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_dlgHos_addCustomer_name1)
+                            .addComponent(PS_Sell_TextBuyerName)
                             .addComponent(scrl_dlgHos_Address2)
-                            .addComponent(txt_dlgHos_addCustomer_tele1)
-                            .addComponent(txt_dlgHos_addCustomer_email1)))
+                            .addComponent(PS_Sell_TextTelephone)
+                            .addComponent(PS_Sell_TextEmail)))
                     .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
-                        .addComponent(jButton5)
+                        .addComponent(PS_Sell_BtnNewBuyer, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(PS_Sell_BtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(PS_Sell_BtnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -4282,35 +4314,33 @@ public class MainWindow extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbl_dlgHos_addCustomer_Ownername1)
-                    .addComponent(txt_dlgHos_addCustomer_name1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PS_Sell_TextBuyerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lbl_dlgHos_addCustomer_address1)
                     .addComponent(scrl_dlgHos_Address2, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
                 .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_dlgHos_addCustomer_tele1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PS_Sell_TextTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_dlgHos_addCustomer_telephone1))
                 .addGap(18, 18, 18)
                 .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txt_dlgHos_addCustomer_email1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PS_Sell_TextEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbl_dlgHos_addCustomer_email1))
-                .addGap(29, 29, 29))
+                .addGap(32, 32, 32)
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PS_Sell_BtnNewBuyer, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PS_Sell_BtnEdit, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PS_Sell_BtnSave, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         jPanel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jList2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jList2.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(jList2);
+        list_PS_Cart.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jScrollPane2.setViewportView(list_PS_Cart);
 
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel14.setText("Cart");
@@ -4338,13 +4368,8 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jList3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jList3.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane3.setViewportView(jList3);
+        list_PS_AvailablePetList.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jScrollPane3.setViewportView(list_PS_AvailablePetList);
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel15.setText("Available Pets");
@@ -4370,9 +4395,19 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton2.setText("<<");
+        PS_Sell_BtnAddtoCart.setText("<<");
+        PS_Sell_BtnAddtoCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Sell_BtnAddtoCartActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText(">>");
+        PS_Sell_BtnRemoveFromCart.setText(">>");
+        PS_Sell_BtnRemoveFromCart.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Sell_BtnRemoveFromCartActionPerformed(evt);
+            }
+        });
 
         jPanel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
@@ -4387,7 +4422,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel18.setText("000000.00");
 
         jButton4.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton4.setText("Purchase");
+        jButton4.setText("Sell");
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
@@ -4398,10 +4433,10 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel18)
-                .addGap(56, 56, 56)
-                .addComponent(jButton4)
+                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         jPanel20Layout.setVerticalGroup(
@@ -4435,8 +4470,8 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(PS_Sell_BtnAddtoCart, javax.swing.GroupLayout.DEFAULT_SIZE, 57, Short.MAX_VALUE)
+                            .addComponent(PS_Sell_BtnRemoveFromCart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -4453,9 +4488,9 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addGap(211, 211, 211)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PS_Sell_BtnAddtoCart, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(PS_Sell_BtnRemoveFromCart, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(11, 11, 11)
@@ -4561,10 +4596,25 @@ public class MainWindow extends javax.swing.JFrame {
         jScrollPane6.setViewportView(PS_Buy_TableCustomer);
 
         PS_Buy_BtnEdit.setText("Edit");
+        PS_Buy_BtnEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Buy_BtnEditActionPerformed(evt);
+            }
+        });
 
         PS_Buy_BtnNewSeller.setText("New Seller");
+        PS_Buy_BtnNewSeller.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Buy_BtnNewSellerActionPerformed(evt);
+            }
+        });
 
         PS_Buy_BtnSave.setText("Save");
+        PS_Buy_BtnSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Buy_BtnSaveActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_dlgHos_content4Layout = new javax.swing.GroupLayout(pnl_dlgHos_content4);
         pnl_dlgHos_content4.setLayout(pnl_dlgHos_content4Layout);
@@ -4643,9 +4693,9 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel26.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel26.setText("Species :");
 
-        jTextField14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PS_Buy_TextSpecies.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        jTextField15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PS_Buy_TextBreed.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel27.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel27.setText("Breed :");
@@ -4653,7 +4703,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel28.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel28.setText("Color :");
 
-        jTextField16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PS_Buy_TextColor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel29.setText("Age :");
@@ -4670,26 +4720,33 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel34.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel34.setText("Rs .");
 
-        btngrp_BuyPet.add(jRadioButton1);
-        jRadioButton1.setText("Male");
+        btngrp_BuyPet.add(PS_Buy_RadioMale);
+        PS_Buy_RadioMale.setText("Male");
+        PS_Buy_RadioMale.setActionCommand("M");
 
-        btngrp_BuyPet.add(jRadioButton2);
-        jRadioButton2.setText("Female");
+        btngrp_BuyPet.add(PS_Buy_RadioFemale);
+        PS_Buy_RadioFemale.setText("Female");
+        PS_Buy_RadioFemale.setActionCommand("F");
 
-        jTextField18.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        PS_Buy_TextPrice.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         jLabel31.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel31.setText("Years -");
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
+        PS_Buy_SpinYears.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
 
-        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, 11, 1));
+        PS_Buy_SpinMonths.setModel(new javax.swing.SpinnerNumberModel(0, 0, 11, 1));
 
         jLabel35.setText("Months");
         jLabel35.setToolTipText("");
 
-        jButton8.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jButton8.setText("Buy");
+        PS_Buy_BtnBuy.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        PS_Buy_BtnBuy.setText("Buy");
+        PS_Buy_BtnBuy.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Buy_BtnBuyActionPerformed(evt);
+            }
+        });
 
         jPanel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -4707,9 +4764,9 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel36.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel36.setText("Photo");
 
-        jButton9.setText("Add");
+        PS_Buy_BtnAddPic.setText("Add");
 
-        jButton10.setText("Remove");
+        PS_Buy_BtnRemovePic.setText("Remove");
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
@@ -4726,9 +4783,9 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel24Layout.createSequentialGroup()
                                         .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(PS_Buy_BtnRemovePic, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(18, 18, 18)
-                                        .addComponent(jButton9)
+                                        .addComponent(PS_Buy_BtnAddPic)
                                         .addGap(17, 17, 17))
                                     .addGroup(jPanel24Layout.createSequentialGroup()
                                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4740,28 +4797,28 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addGap(27, 27, 27)
                                         .addComponent(jLabel34)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(PS_Buy_TextPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanel24Layout.createSequentialGroup()
                                         .addComponent(jLabel27)
                                         .addGap(36, 36, 36)
                                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addComponent(jTextField15, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                            .addComponent(PS_Buy_TextBreed, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
                                             .addGroup(jPanel24Layout.createSequentialGroup()
                                                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                                    .addComponent(jSpinner1)
-                                                    .addComponent(jRadioButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                                    .addComponent(PS_Buy_SpinYears)
+                                                    .addComponent(PS_Buy_RadioMale, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                                     .addGroup(jPanel24Layout.createSequentialGroup()
-                                                        .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addComponent(PS_Buy_SpinMonths, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                         .addComponent(jLabel35))
-                                                    .addComponent(jRadioButton2)))
-                                            .addComponent(jTextField14, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
-                                            .addComponent(jTextField16))
+                                                    .addComponent(PS_Buy_RadioFemale)))
+                                            .addComponent(PS_Buy_TextSpecies, javax.swing.GroupLayout.DEFAULT_SIZE, 204, Short.MAX_VALUE)
+                                            .addComponent(PS_Buy_TextColor))
                                         .addGap(18, 18, 18)
                                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jPanel25, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -4771,7 +4828,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(PS_Buy_BtnBuy, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(10, 10, 10))))
         );
         jPanel24Layout.setVerticalGroup(
@@ -4784,7 +4841,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(jPanel24Layout.createSequentialGroup()
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel26)
-                            .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(PS_Buy_TextSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel36))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -4792,36 +4849,36 @@ public class MainWindow extends javax.swing.JFrame {
                             .addGroup(jPanel24Layout.createSequentialGroup()
                                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel27)
-                                    .addComponent(jTextField15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(PS_Buy_TextBreed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(28, 28, 28)
                                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                        .addComponent(jRadioButton1)
-                                        .addComponent(jRadioButton2))
+                                        .addComponent(PS_Buy_RadioMale)
+                                        .addComponent(PS_Buy_RadioFemale))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
                                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel28)
-                                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(PS_Buy_TextColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(39, 39, 39)
                                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                             .addComponent(jLabel29)
                                             .addComponent(jLabel31)
-                                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(PS_Buy_SpinYears, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(PS_Buy_SpinMonths, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                             .addComponent(jLabel35))
                                         .addGap(38, 38, 38)
                                         .addComponent(jLabel30)))))
                         .addGap(40, 40, 40))
                     .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(PS_Buy_BtnAddPic, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(PS_Buy_BtnRemovePic, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(53, 53, 53)
                 .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PS_Buy_TextPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel34)
                     .addComponent(jLabel32))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PS_Buy_BtnBuy, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -6408,35 +6465,81 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlEmployee.setVisible(false);
         this.pnlFinance.setVisible(false);
         this.pnlHome.setVisible(false);
-        //-update customer table-----------------------------------------
-            Customer cs = new Customer();
-            ResultSet rs = cs.getCustomerDetails();
-            this.PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rs));
-        //----------------------------------------------------------------------
+        
+        dlmAvailable.clear();
+        dlmCart.clear();
+        list_PS_AvailablePetList.setModel(dlmAvailable);
+        list_PS_Cart.setModel(dlmCart);
+        Customer c = new Customer();
+        PetShop p = new PetShop();
+        ResultSet rsBuy = c.getCustomerDetails();
+        ResultSet rsSell = c.getCustomerDetails();
+        //-Buy section---------------------------------------------------------------------------
+            this.PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsBuy));
+            
+            PS_Buy_BtnEdit.setEnabled(false);
+            PS_Buy_BtnSave.setEnabled(false);
+            PS_Buy_TextSellerName.setText("");
+            PS_Buy_TextAddress.setText("");
+            PS_Buy_TextTelephone.setText("");
+            PS_Buy_TextEmail.setText("");
+            PS_Buy_TextSellerName.setEditable(false);
+            PS_Buy_TextAddress.setEditable(false);
+            PS_Buy_TextTelephone.setEditable(false);
+            PS_Buy_TextEmail.setEditable(false);
+        //-Sell section---------------------------------------------------------------------------
+            this.PS_Sell_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsSell));
+            
+            PS_Sell_BtnEdit.setEnabled(false);
+            PS_Sell_BtnSave.setEnabled(false);
+            PS_Sell_TextBuyerName.setText("");
+            PS_Sell_TextAddress.setText("");
+            PS_Sell_TextTelephone.setText("");
+            PS_Sell_TextEmail.setText("");
+            PS_Sell_TextBuyerName.setEditable(false);
+            PS_Sell_TextAddress.setEditable(false);
+            PS_Sell_TextTelephone.setEditable(false);
+            PS_Sell_TextEmail.setEditable(false);
+            
+            ResultSet sellpetList = p.get_toSell_PetIDs();
+
+            if(sellpetList!=null){
+                try{
+                    while(sellpetList.next()){
+                        dlmAvailable.addElement(sellpetList.getString("petID"));
+                    }
+                }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
+            }
+        
+        //-Shop Section---------------------------------------------------------------------
             PS_Shop_BtnRemove.setEnabled(false);
             PS_Shop_BtnEdit.setEnabled(false);
             PS_Shop_BtnSave.setEnabled(false);
             rb_PS_AvailablePet_Male.setEnabled(false);
             rb_PS_AvailablePet_Female.setEnabled(false);
-        //----------------------------------------------------------------------
-        DefaultListModel d = new DefaultListModel();
-        PetShop p = new PetShop();
-        ResultSet petList = p.get_toSell_PetIDs();
-        
-        if(petList!=null){
-            try{
-                while(petList.next()){
-                    d.addElement(petList.getString("petID"));
+            
+            DefaultListModel dlmSellList = new DefaultListModel();
+            ResultSet petList = p.get_toSell_PetIDs();
+            if(petList!=null){
+                try{
+                    while(petList.next()){
+                        dlmSellList.addElement(petList.getString("petID"));
+                    }
                 }
+                catch(Exception e){
+                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                list_PS_PetsToSell.setModel(dlmSellList);
             }
-            catch(Exception e){
-                JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            else{
+                JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
             }
-            list_PS_PetsToSell.setModel(d);
-        }
-        else{
-            JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
-        }
         //----------------------------------------------------------------------
     }//GEN-LAST:event_btnPetshopActionPerformed
 
@@ -7974,7 +8077,8 @@ public class MainWindow extends javax.swing.JFrame {
         Customer c = new Customer();
         if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
             //-add customer---------------------------------------------
-            c.addCustomer(name, address, tele, email, dlgHos_addCustomer);
+            String custID = c.addCustomer(name, address, tele, email, dlgHos_addCustomer);
+            c.addReg_Service(custID, "ho");
             //-update customer table-----------------------------------------
             ResultSet rs = c.getCustomerDetails();
             this.tbl_Hos_Customers.setModel(DbUtils.resultSetToTableModel(rs));
@@ -8304,7 +8408,7 @@ public class MainWindow extends javax.swing.JFrame {
         String custID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
         if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
                     c.updateCustomer(name,address,tele,email,custID,dlgHos_editCustomer);
-                    //-update client table--------------------------------------
+                    //-update customer table--------------------------------------
                     ResultSet rs;
                     rs = c.getCustomerDetails();
                     if(rs==null){
@@ -8712,29 +8816,29 @@ public class MainWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_phaupdateActionPerformed
 
-    private void txt_dlgHos_addCustomer_email1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_email1KeyTyped
+    private void PS_Sell_TextEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Sell_TextEmailKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dlgHos_addCustomer_email1KeyTyped
+    }//GEN-LAST:event_PS_Sell_TextEmailKeyTyped
 
-    private void txt_dlgHos_addCustomer_email1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_email1FocusLost
+    private void PS_Sell_TextEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Sell_TextEmailFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dlgHos_addCustomer_email1FocusLost
+    }//GEN-LAST:event_PS_Sell_TextEmailFocusLost
 
-    private void txt_dlgHos_addCustomer_address1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_address1FocusLost
+    private void PS_Sell_TextAddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Sell_TextAddressFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dlgHos_addCustomer_address1FocusLost
+    }//GEN-LAST:event_PS_Sell_TextAddressFocusLost
 
-    private void txt_dlgHos_addCustomer_tele1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_tele1KeyTyped
+    private void PS_Sell_TextTelephoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Sell_TextTelephoneKeyTyped
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dlgHos_addCustomer_tele1KeyTyped
+    }//GEN-LAST:event_PS_Sell_TextTelephoneKeyTyped
 
-    private void txt_dlgHos_addCustomer_tele1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_tele1FocusLost
+    private void PS_Sell_TextTelephoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Sell_TextTelephoneFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dlgHos_addCustomer_tele1FocusLost
+    }//GEN-LAST:event_PS_Sell_TextTelephoneFocusLost
 
-    private void txt_dlgHos_addCustomer_name1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_dlgHos_addCustomer_name1FocusLost
+    private void PS_Sell_TextBuyerNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Sell_TextBuyerNameFocusLost
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_dlgHos_addCustomer_name1FocusLost
+    }//GEN-LAST:event_PS_Sell_TextBuyerNameFocusLost
 
     private void PS_Buy_TextSellerNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Buy_TextSellerNameFocusLost
         // TODO add your handling code here:
@@ -8899,18 +9003,18 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_PS_Shop_TextSearchPetSpeciesKeyReleased
 
     private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-        //-update customer table-----------------------------------------
-            Customer cs = new Customer();
-            ResultSet rs = cs.getCustomerDetails();
-            this.PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rs));
-        //-disable textfields and buttons-------------------------------------------------------------
-            PS_Buy_TextSellerName.setEditable(false);
-            PS_Buy_TextAddress.setEditable(false);
-            PS_Buy_TextTelephone.setEditable(false);
-            PS_Buy_TextEmail.setEditable(false);
-            PS_Buy_BtnEdit.setEnabled(false);
-            PS_Buy_BtnSave.setEnabled(false);
-        //----------------------------------------------------------------------
+//        //-update customer table-----------------------------------------
+//            Customer cs = new Customer();
+//            ResultSet rs = cs.getCustomerDetails();
+//            this.PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rs));
+//        //-disable textfields and buttons-------------------------------------------------------------
+//            PS_Buy_TextSellerName.setEditable(false);
+//            PS_Buy_TextAddress.setEditable(false);
+//            PS_Buy_TextTelephone.setEditable(false);
+//            PS_Buy_TextEmail.setEditable(false);
+//            PS_Buy_BtnEdit.setEnabled(false);
+//            PS_Buy_BtnSave.setEnabled(false);
+//        //----------------------------------------------------------------------
     }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     private void PS_Buy_TableCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PS_Buy_TableCustomerMouseClicked
@@ -8935,6 +9039,11 @@ public class MainWindow extends javax.swing.JFrame {
                         PS_Buy_TextEmail.setText(rs.getString("Email"));
                     }
                     PS_Buy_BtnEdit.setEnabled(true);
+                    PS_Buy_TextSellerName.setEditable(false);
+                    PS_Buy_TextAddress.setEditable(false);
+                    PS_Buy_TextTelephone.setEditable(false);
+                    PS_Buy_TextEmail.setEditable(false);
+                    PS_Buy_BtnSave.setEnabled(false);
                 }
             }
             catch(Exception e){
@@ -8947,6 +9056,483 @@ public class MainWindow extends javax.swing.JFrame {
     private void PS_Buy_TableCustomerMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PS_Buy_TableCustomerMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_PS_Buy_TableCustomerMouseEntered
+
+    private void PS_Buy_BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Buy_BtnEditActionPerformed
+        int selectedRow = this.PS_Buy_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a customer to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+        PS_Buy_TextSellerName.setEditable(true);
+        PS_Buy_TextAddress.setEditable(true);
+        PS_Buy_TextTelephone.setEditable(true);
+        PS_Buy_TextEmail.setEditable(true);
+        PS_Buy_BtnSave.setEnabled(true);
+        }
+    }//GEN-LAST:event_PS_Buy_BtnEditActionPerformed
+
+    private void PS_Buy_BtnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Buy_BtnSaveActionPerformed
+        int selectedRow = this.PS_Buy_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+            Customer c = new Customer();
+            String name = PS_Buy_TextSellerName.getText();
+            String address = PS_Buy_TextAddress.getText();
+            String tele = PS_Buy_TextTelephone.getText();
+            String email = PS_Buy_TextEmail.getText();
+            if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                String custID=c.addCustomer(name,address,tele,email,this);
+                c.addReg_Service(custID, "ps");
+                //-update customer table--------------------------------------
+                ResultSet rsBuy = c.getCustomerDetails();
+                ResultSet rsSell = c.getCustomerDetails();
+                if(rsBuy==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsBuy));
+                    PS_Sell_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsSell));
+                    PS_Buy_BtnSave.setEnabled(false);
+                    PS_Buy_BtnEdit.setEnabled(false);
+                    PS_Buy_TextSellerName.setEditable(false);
+                    PS_Buy_TextAddress.setEditable(false);
+                    PS_Buy_TextTelephone.setEditable(false);
+                    PS_Buy_TextEmail.setEditable(false);
+                    PS_Buy_TextSellerName.setText("");
+                    PS_Buy_TextAddress.setText("");
+                    PS_Buy_TextTelephone.setText("");
+                    PS_Buy_TextEmail.setText("");
+                }
+                //----------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+    //            if(c.validateCustName(name)){
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
+    //            }
+    //            if(c.validateAddress(address)){
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
+    //            }
+    //            if(c.validateTelephone(tele)){
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
+    //            }
+    //            if(c.validateEmail(email)){
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
+    //            }
+            }
+        }
+        else{
+            Customer c = new Customer();
+            String name = PS_Buy_TextSellerName.getText();
+            String address = PS_Buy_TextAddress.getText();
+            String tele = PS_Buy_TextTelephone.getText();
+            String email = PS_Buy_TextEmail.getText();
+            String sellerID = this.PS_Buy_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
+            if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                c.updateCustomer(name,address,tele,email,sellerID,this);
+                //-update customer table--------------------------------------
+                ResultSet rsBuy = c.getCustomerDetails();
+                ResultSet rsSell = c.getCustomerDetails();
+                if(rsBuy==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsBuy));
+                    PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsSell));
+                    PS_Buy_BtnSave.setEnabled(false);
+                    PS_Buy_BtnEdit.setEnabled(false);
+                    PS_Buy_TextSellerName.setEditable(false);
+                    PS_Buy_TextAddress.setEditable(false);
+                    PS_Buy_TextTelephone.setEditable(false);
+                    PS_Buy_TextEmail.setEditable(false);
+                    PS_Buy_TextSellerName.setText("");
+                    PS_Buy_TextAddress.setText("");
+                    PS_Buy_TextTelephone.setText("");
+                    PS_Buy_TextEmail.setText("");
+                }
+                //----------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+    //            if(c.validateCustName(name)){
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
+    //            }
+    //            if(c.validateAddress(address)){
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
+    //            }
+    //            if(c.validateTelephone(tele)){
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
+    //            }
+    //            if(c.validateEmail(email)){
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
+    //            }
+            }
+        }
+    }//GEN-LAST:event_PS_Buy_BtnSaveActionPerformed
+
+    private void PS_Buy_BtnNewSellerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Buy_BtnNewSellerActionPerformed
+        PS_Buy_TableCustomer.clearSelection();
+        PS_Buy_BtnSave.setEnabled(true);
+        PS_Buy_BtnEdit.setEnabled(false);
+        PS_Buy_TextSellerName.setText("");
+        PS_Buy_TextAddress.setText("");
+        PS_Buy_TextTelephone.setText("");
+        PS_Buy_TextEmail.setText("");
+        PS_Buy_TextSellerName.setEditable(true);
+        PS_Buy_TextAddress.setEditable(true);
+        PS_Buy_TextTelephone.setEditable(true);
+        PS_Buy_TextEmail.setEditable(true);
+    }//GEN-LAST:event_PS_Buy_BtnNewSellerActionPerformed
+
+    private void PS_Buy_BtnBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Buy_BtnBuyActionPerformed
+        int selectedRow = this.PS_Buy_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a Customer to Buy Pets!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            PetShop p = new PetShop();
+            String species = PS_Buy_TextSpecies.getText();
+            String breed = this.PS_Buy_TextBreed.getText();
+            String color = PS_Buy_TextColor.getText();
+            int years = Integer.parseInt(this.PS_Buy_SpinYears.getValue().toString());
+            int months = Integer.parseInt(this.PS_Buy_SpinMonths.getValue().toString());
+
+            if(p.validateSpecies(species) & p.validateAge(years, months) & p.validateBreed(breed) & p.validateSex(this.btngrp_BuyPet.getSelection()) & p.validatePrice(PS_Buy_TextPrice.getText()) & p.validateColor(color)){  
+                String sellerID = this.PS_Buy_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
+                String sex = this.btngrp_BuyPet.getSelection().getActionCommand();
+                double price = Double.parseDouble(PS_Buy_TextPrice.getText());
+                p.addPet(species, breed, color, years, months, sex, price, sellerID, this);
+                //----------------------------------------------------------------------
+                DefaultListModel d = new DefaultListModel();
+                ResultSet petList = p.get_toSell_PetIDs();
+
+                if(petList!=null){
+                    try{
+                        while(petList.next()){
+                            d.addElement(petList.getString("petID"));
+                        }
+                    }
+                    catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    list_PS_PetsToSell.setModel(d);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
+                }
+                //----------------------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+    //            if(p.validatePetName(name)){
+    //                this.lbl_dlgHos_addPet_name.setForeground(Color.black);
+    //                this.lbl_dlgHos_addPet_name.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_addPet_name.setForeground(Color.red);
+    //                this.lbl_dlgHos_addPet_name.setToolTipText("Invalid Name");
+    //            }
+    //            if(p.validateSpecies(species)){
+    //                this.lbl_dlgHos_addPet_Species.setForeground(Color.black);
+    //                this.lbl_dlgHos_addPet_Species.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_addPet_Species.setForeground(Color.red);
+    //                this.lbl_dlgHos_addPet_Species.setToolTipText("Selct a species from the list");
+    //            }
+    //            if(p.validateAge(years,months)){
+    //                this.lbl_dlgHos_addPet_age.setForeground(Color.black);
+    //                this.lbl_dlgHos_addPet_age.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_addPet_age.setForeground(Color.red);
+    //                this.lbl_dlgHos_addPet_age.setToolTipText("Invalid Age");
+    //            }
+    //            if(p.validateBreed(breed)){
+    //                this.lbl_dlgHos_addPet_breed.setForeground(Color.black);
+    //                this.lbl_dlgHos_addPet_breed.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_addPet_breed.setForeground(Color.red);
+    //                this.lbl_dlgHos_addPet_breed.setToolTipText("Invalid Breed");
+    //            }
+    //            if(p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+    //                this.lbl_dlgHos_addPet_sex.setForeground(Color.black);
+    //                this.lbl_dlgHos_addPet_sex.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_addPet_sex.setForeground(Color.red);
+    //                this.lbl_dlgHos_addPet_sex.setToolTipText("Select a sex");
+    //            }
+            }
+        }
+    }//GEN-LAST:event_PS_Buy_BtnBuyActionPerformed
+
+    private void PS_Sell_BtnNewBuyerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnNewBuyerActionPerformed
+        PS_Sell_TableCustomer.clearSelection();
+        PS_Sell_BtnSave.setEnabled(true);
+        PS_Sell_BtnEdit.setEnabled(false);
+        PS_Sell_TextBuyerName.setText("");
+        PS_Sell_TextAddress.setText("");
+        PS_Sell_TextTelephone.setText("");
+        PS_Sell_TextEmail.setText("");
+        PS_Sell_TextBuyerName.setEditable(true);
+        PS_Sell_TextAddress.setEditable(true);
+        PS_Sell_TextTelephone.setEditable(true);
+        PS_Sell_TextEmail.setEditable(true);
+    }//GEN-LAST:event_PS_Sell_BtnNewBuyerActionPerformed
+
+    private void PS_Sell_BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnEditActionPerformed
+        int selectedRow = this.PS_Sell_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a customer to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+        PS_Sell_TextBuyerName.setEditable(true);
+        PS_Sell_TextAddress.setEditable(true);
+        PS_Sell_TextTelephone.setEditable(true);
+        PS_Sell_TextEmail.setEditable(true);
+        PS_Sell_BtnSave.setEnabled(true);
+        }
+    }//GEN-LAST:event_PS_Sell_BtnEditActionPerformed
+
+    private void PS_Sell_BtnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnSaveActionPerformed
+        int selectedRow = this.PS_Sell_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+            Customer c = new Customer();
+            String name = PS_Sell_TextBuyerName.getText();
+            String address = PS_Sell_TextAddress.getText();
+            String tele = PS_Sell_TextTelephone.getText();
+            String email = PS_Sell_TextEmail.getText();
+            if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                String buyerID=c.addCustomer(name,address,tele,email,this);
+                c.addReg_Service(buyerID, "ps");
+                //-update customer table--------------------------------------
+                ResultSet rsBuy = c.getCustomerDetails();
+                ResultSet rsSell = c.getCustomerDetails();
+                
+                if(rsSell==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    PS_Sell_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsSell));
+                    PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsBuy));
+                    PS_Sell_BtnSave.setEnabled(false);
+                    PS_Sell_BtnEdit.setEnabled(false);
+                    PS_Sell_TextBuyerName.setEditable(false);
+                    PS_Sell_TextAddress.setEditable(false);
+                    PS_Sell_TextTelephone.setEditable(false);
+                    PS_Sell_TextEmail.setEditable(false);
+                    PS_Sell_TextBuyerName.setText("");
+                    PS_Sell_TextAddress.setText("");
+                    PS_Sell_TextTelephone.setText("");
+                    PS_Sell_TextEmail.setText("");
+                }
+                //----------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+    //            if(c.validateCustName(name)){
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
+    //            }
+    //            if(c.validateAddress(address)){
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
+    //            }
+    //            if(c.validateTelephone(tele)){
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
+    //            }
+    //            if(c.validateEmail(email)){
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
+    //            }
+            }
+        }
+        else{
+            Customer c = new Customer();
+            String name = PS_Sell_TextBuyerName.getText();
+            String address = PS_Sell_TextAddress.getText();
+            String tele = PS_Sell_TextTelephone.getText();
+            String email = PS_Sell_TextEmail.getText();
+            String buyerID = this.PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
+            if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                c.updateCustomer(name,address,tele,email,buyerID,this);
+                //-update customer table--------------------------------------
+                ResultSet rsBuy = c.getCustomerDetails();
+                ResultSet rsSell = c.getCustomerDetails();
+                if(rsSell==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Refresh Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    PS_Sell_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsSell));
+                    PS_Buy_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsBuy));
+                    PS_Sell_BtnSave.setEnabled(false);
+                    PS_Sell_BtnEdit.setEnabled(false);
+                    PS_Sell_TextBuyerName.setEditable(false);
+                    PS_Sell_TextAddress.setEditable(false);
+                    PS_Sell_TextTelephone.setEditable(false);
+                    PS_Sell_TextEmail.setEditable(false);
+                    PS_Sell_TextBuyerName.setText("");
+                    PS_Sell_TextAddress.setText("");
+                    PS_Sell_TextTelephone.setText("");
+                    PS_Sell_TextEmail.setText("");
+                }
+                //----------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+    //            if(c.validateCustName(name)){
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
+    //            }
+    //            if(c.validateAddress(address)){
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
+    //            }
+    //            if(c.validateTelephone(tele)){
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
+    //            }
+    //            if(c.validateEmail(email)){
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
+    //            }
+    //            else{
+    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
+    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
+    //            }
+            }
+        }
+    }//GEN-LAST:event_PS_Sell_BtnSaveActionPerformed
+
+    private void PS_Sell_TableCustomerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PS_Sell_TableCustomerMouseClicked
+        //-update text fields----------------------------------------------
+        int selectedRow = this.PS_Sell_TableCustomer.getSelectedRow();
+        if(selectedRow==-1){
+
+        }
+        else{
+            String buyerID = this.PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
+            Customer c = new Customer();
+            ResultSet rs = c.getCustomerDetails(buyerID);
+            try{
+                if(rs==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Load Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    while(rs.next()){
+                        PS_Sell_TextBuyerName.setText(rs.getString("Name"));
+                        PS_Sell_TextAddress.setText(rs.getString("Address"));
+                        PS_Sell_TextTelephone.setText(rs.getString("Telephone"));
+                        PS_Sell_TextEmail.setText(rs.getString("Email"));
+                    }
+                    PS_Sell_BtnEdit.setEnabled(true);
+                    PS_Sell_TextBuyerName.setEditable(false);
+                    PS_Sell_TextAddress.setEditable(false);
+                    PS_Sell_TextTelephone.setEditable(false);
+                    PS_Sell_TextEmail.setEditable(false);
+                    PS_Sell_BtnSave.setEnabled(false);
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        //------------------------------------------------------------------
+    }//GEN-LAST:event_PS_Sell_TableCustomerMouseClicked
+    
+    private void PS_Sell_BtnAddtoCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnAddtoCartActionPerformed
+        int selectedItem = list_PS_AvailablePetList.getSelectedIndex();
+        if(selectedItem==-1){
+            JOptionPane.showMessageDialog(this, "Select a Pet to Add to Cart!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            String petID = list_PS_AvailablePetList.getSelectedValue();
+            dlmCart.addElement(petID);
+            dlmAvailable.removeElementAt(selectedItem);
+        }
+    }//GEN-LAST:event_PS_Sell_BtnAddtoCartActionPerformed
+
+    private void PS_Sell_BtnRemoveFromCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnRemoveFromCartActionPerformed
+        int selectedItem = list_PS_Cart.getSelectedIndex();
+        if(selectedItem==-1){
+            JOptionPane.showMessageDialog(this, "Select a Pet to Remove From Cart!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            String petID = list_PS_Cart.getSelectedValue();
+            dlmAvailable.addElement(petID);
+            dlmCart.removeElementAt(selectedItem);
+        }
+    }//GEN-LAST:event_PS_Sell_BtnRemoveFromCartActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -9266,14 +9852,35 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel Lbl_BillItemcode;
     private javax.swing.JLabel Lbl_BillQuantity;
     private javax.swing.JPanel Main;
+    private javax.swing.JButton PS_Buy_BtnAddPic;
+    private javax.swing.JButton PS_Buy_BtnBuy;
     private javax.swing.JButton PS_Buy_BtnEdit;
     private javax.swing.JButton PS_Buy_BtnNewSeller;
+    private javax.swing.JButton PS_Buy_BtnRemovePic;
     private javax.swing.JButton PS_Buy_BtnSave;
+    private javax.swing.JRadioButton PS_Buy_RadioFemale;
+    private javax.swing.JRadioButton PS_Buy_RadioMale;
+    private javax.swing.JSpinner PS_Buy_SpinMonths;
+    private javax.swing.JSpinner PS_Buy_SpinYears;
     private javax.swing.JTable PS_Buy_TableCustomer;
     private javax.swing.JTextArea PS_Buy_TextAddress;
+    private javax.swing.JTextField PS_Buy_TextBreed;
+    private javax.swing.JTextField PS_Buy_TextColor;
     private javax.swing.JTextField PS_Buy_TextEmail;
+    private javax.swing.JTextField PS_Buy_TextPrice;
     private javax.swing.JTextField PS_Buy_TextSellerName;
+    private javax.swing.JTextField PS_Buy_TextSpecies;
     private javax.swing.JTextField PS_Buy_TextTelephone;
+    private javax.swing.JButton PS_Sell_BtnAddtoCart;
+    private javax.swing.JButton PS_Sell_BtnEdit;
+    private javax.swing.JButton PS_Sell_BtnNewBuyer;
+    private javax.swing.JButton PS_Sell_BtnRemoveFromCart;
+    private javax.swing.JButton PS_Sell_BtnSave;
+    private javax.swing.JTable PS_Sell_TableCustomer;
+    private javax.swing.JTextArea PS_Sell_TextAddress;
+    private javax.swing.JTextField PS_Sell_TextBuyerName;
+    private javax.swing.JTextField PS_Sell_TextEmail;
+    private javax.swing.JTextField PS_Sell_TextTelephone;
     private javax.swing.JButton PS_Shop_BtnEdit;
     private javax.swing.JButton PS_Shop_BtnRemove;
     private javax.swing.JButton PS_Shop_BtnSave;
@@ -9407,14 +10014,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgUserAccounts;
     private javax.swing.JDialog dlgpha_addItem;
     private javax.swing.JDialog dlgpha_updateItem;
-    private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -9450,8 +10051,6 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -9488,25 +10087,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane6;
-    private javax.swing.JSpinner jSpinner1;
-    private javax.swing.JSpinner jSpinner2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField12;
     private javax.swing.JTextField jTextField13;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField15;
-    private javax.swing.JTextField jTextField16;
-    private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField9;
     private javax.swing.JScrollPane jscroll_pha_stock;
@@ -9607,6 +10197,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_pha_edit_itemname;
     private javax.swing.JLabel lblstocKQuantity;
     private javax.swing.JLabel lblstockItemcode;
+    private javax.swing.JList<String> list_PS_AvailablePetList;
+    private javax.swing.JList<String> list_PS_Cart;
     private javax.swing.JList<String> list_PS_PetsToSell;
     private javax.swing.JList<String> lstUserAccounts;
     private javax.swing.JList<String> lst_dlgHos_Clinic_list;
@@ -9746,13 +10338,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextArea txt_dlgHos_Clinic_Observation;
     private javax.swing.JTextArea txt_dlgHos_Clinic_Remarks;
     private javax.swing.JTextArea txt_dlgHos_addCustomer_address;
-    private javax.swing.JTextArea txt_dlgHos_addCustomer_address1;
     private javax.swing.JTextField txt_dlgHos_addCustomer_email;
-    private javax.swing.JTextField txt_dlgHos_addCustomer_email1;
     private javax.swing.JTextField txt_dlgHos_addCustomer_name;
-    private javax.swing.JTextField txt_dlgHos_addCustomer_name1;
     private javax.swing.JTextField txt_dlgHos_addCustomer_tele;
-    private javax.swing.JTextField txt_dlgHos_addCustomer_tele1;
     private javax.swing.JTextField txt_dlgHos_addPet_breed;
     private javax.swing.JTextField txt_dlgHos_addPet_name;
     private javax.swing.JTextArea txt_dlgHos_editCustomer_address;
