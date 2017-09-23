@@ -275,7 +275,10 @@ public class PetShop {
     }
     
     public boolean validateSpecies(String species){
-        if(species.equals("Select...")){
+        if(species.equals("")){
+            return false;
+        }
+        else if(species.length()==1){
             return false;
         }
         else{

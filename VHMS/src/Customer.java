@@ -165,6 +165,20 @@ public class Customer {
         }
     }
     
+    public void updateReg_Service(String custID, String service){
+        String sql = "update reg_services set "+service+"=? where custID=?";
+        
+        try{
+            PreparedStatement pst = dbcon.prepareStatement(sql);
+            pst.setBoolean(1, true);
+            pst.setString(2, custID);
+            pst.execute();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
     public void updateCustomer(String name,String address,String tele,String email,String custID,Component comp){
         try{
             String updateCustDetailsSQL = "update customer set name=?,address=?,telephone=?,email=? where custID=?";
@@ -179,20 +193,6 @@ public class Customer {
         }
         catch(Exception e){
             JOptionPane.showMessageDialog(comp, "Customer Updating failed!","Database Error",JOptionPane.ERROR_MESSAGE);
-        }
-    }
-    
-    public void updateReg_Service(String custID, String service){
-        String sql = "update reg_services set "+service+"=? where custID=?";
-        
-        try{
-            PreparedStatement pst = dbcon.prepareStatement(sql);
-            pst.setBoolean(1, true);
-            pst.setString(2, custID);
-            pst.execute();
-        }
-        catch(Exception e){
-            e.printStackTrace();
         }
     }
     

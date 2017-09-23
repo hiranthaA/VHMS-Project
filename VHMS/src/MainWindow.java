@@ -416,7 +416,7 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Shop_LabelDescription = new javax.swing.JLabel();
         PS_Shop_LabelSpecies = new javax.swing.JLabel();
         PS_Shop_TextSpecies = new javax.swing.JTextField();
-        PS_Shop_LabeBreed = new javax.swing.JLabel();
+        PS_Shop_LabelBreed = new javax.swing.JLabel();
         PS_Shop_TextBreed = new javax.swing.JTextField();
         PS_Shop_LabelColor = new javax.swing.JLabel();
         PS_Shop_TextColor = new javax.swing.JTextField();
@@ -3943,8 +3943,8 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Shop_TextSpecies.setEditable(false);
         PS_Shop_TextSpecies.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        PS_Shop_LabeBreed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        PS_Shop_LabeBreed.setText("Breed :");
+        PS_Shop_LabelBreed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        PS_Shop_LabelBreed.setText("Breed :");
 
         PS_Shop_TextBreed.setEditable(false);
         PS_Shop_TextBreed.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -3973,6 +3973,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         PS_Shop_TextYears.setEditable(false);
         PS_Shop_TextYears.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PS_Shop_TextYears.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PS_Shop_TextYearsKeyTyped(evt);
+            }
+        });
 
         PS_Shop_LabelPrice.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         PS_Shop_LabelPrice.setText("Price");
@@ -3988,6 +3993,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         PS_Shop_TextMonths.setEditable(false);
         PS_Shop_TextMonths.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PS_Shop_TextMonths.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PS_Shop_TextMonthsKeyTyped(evt);
+            }
+        });
 
         PS_Shop_LabelMonths.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Shop_LabelMonths.setText("Months");
@@ -4002,6 +4012,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         PS_Shop_TextPrice.setEditable(false);
         PS_Shop_TextPrice.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        PS_Shop_TextPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PS_Shop_TextPriceKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_PS_Shop_DescriptionLayout = new javax.swing.GroupLayout(pnl_PS_Shop_Description);
         pnl_PS_Shop_Description.setLayout(pnl_PS_Shop_DescriptionLayout);
@@ -4013,7 +4028,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(23, 23, 23)
                         .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(PS_Shop_LabelSpecies)
-                            .addComponent(PS_Shop_LabeBreed)
+                            .addComponent(PS_Shop_LabelBreed)
                             .addComponent(PS_Shop_LabelColor)
                             .addComponent(PS_Shop_LabelAge)
                             .addComponent(PS_Shop_LabelSex)
@@ -4062,7 +4077,7 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(PS_Shop_TextSpecies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(36, 36, 36)
                         .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(PS_Shop_LabeBreed)
+                            .addComponent(PS_Shop_LabelBreed)
                             .addComponent(PS_Shop_TextBreed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(34, 34, 34)
                         .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -4090,6 +4105,11 @@ public class MainWindow extends javax.swing.JFrame {
         );
 
         PS_Shop_BtnRemove.setText("Remove");
+        PS_Shop_BtnRemove.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PS_Shop_BtnRemoveActionPerformed(evt);
+            }
+        });
 
         PS_Shop_BtnEdit.setText("Edit");
         PS_Shop_BtnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -4752,6 +4772,11 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_RadioFemale.setActionCommand("F");
 
         PS_Buy_TextPrice.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        PS_Buy_TextPrice.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PS_Buy_TextPriceKeyTyped(evt);
+            }
+        });
 
         PS_Buy_LabelYears.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         PS_Buy_LabelYears.setText("Years -");
@@ -6510,6 +6535,38 @@ public class MainWindow extends javax.swing.JFrame {
             PS_Buy_TextAddress.setEditable(false);
             PS_Buy_TextTelephone.setEditable(false);
             PS_Buy_TextEmail.setEditable(false);
+
+            PS_Buy_LabelSellersName.setForeground(Color.black);
+            PS_Buy_LabelSellersName.setToolTipText(null);
+            PS_Buy_LabelAddress.setForeground(Color.black);
+            PS_Buy_LabelAddress.setToolTipText(null);
+            PS_Buy_LabelTelephone.setForeground(Color.black);
+            PS_Buy_LabelTelephone.setToolTipText(null);
+            PS_Buy_LabelEmail.setForeground(Color.black);
+            PS_Buy_LabelEmail.setToolTipText(null);
+            
+            PS_Buy_BtnBuy.setEnabled(true);
+            
+            PS_Buy_TextSpecies.setText("");
+            PS_Buy_TextBreed.setText("");
+            PS_Buy_TextColor.setText("");
+            PS_Buy_TextPrice.setText("");
+            PS_Buy_SpinYears.setValue(0);
+            PS_Buy_SpinMonths.setValue(0);
+            btngrp_BuyPet.clearSelection();
+            
+            PS_Buy_LabelSpecies.setForeground(Color.black);
+            PS_Buy_LabelSpecies.setToolTipText(null);
+            PS_Buy_LabelAge.setForeground(Color.black);
+            PS_Buy_LabelAge.setToolTipText(null);
+            PS_Buy_LabelBreed.setForeground(Color.black);
+            PS_Buy_LabelBreed.setToolTipText(null);
+            PS_Buy_LabelSex.setForeground(Color.black);
+            PS_Buy_LabelSex.setToolTipText(null);
+            PS_Buy_LabelPrice.setForeground(Color.black);
+            PS_Buy_LabelPrice.setToolTipText(null);
+            PS_Buy_LabelColor.setForeground(Color.black);
+            PS_Buy_LabelColor.setToolTipText(null);
         //-Sell section---------------------------------------------------------------------------
             this.PS_Sell_TableCustomer.setModel(DbUtils.resultSetToTableModel(rsSell));
             
@@ -6523,6 +6580,17 @@ public class MainWindow extends javax.swing.JFrame {
             PS_Sell_TextAddress.setEditable(false);
             PS_Sell_TextTelephone.setEditable(false);
             PS_Sell_TextEmail.setEditable(false);
+            
+            PS_Sell_ButtonSell.setEnabled(true);
+            
+            PS_Sell_LabelBuyersName.setForeground(Color.black);
+            PS_Sell_LabelBuyersName.setToolTipText(null);
+            PS_Sell_LabelAddress.setForeground(Color.black);
+            PS_Sell_LabelAddress.setToolTipText(null);
+            PS_Sell_LabelTelephone.setForeground(Color.black);
+            PS_Sell_LabelTelephone.setToolTipText(null);
+            PS_Sell_LabelEmail.setForeground(Color.black);
+            PS_Sell_LabelEmail.setToolTipText(null);
             
             ResultSet sellpetList = p.get_toSell_PetIDs();
 
@@ -6547,6 +6615,27 @@ public class MainWindow extends javax.swing.JFrame {
             rb_PS_AvailablePet_Male.setEnabled(false);
             rb_PS_AvailablePet_Female.setEnabled(false);
             
+            PS_Shop_TextSpecies.setText("");
+            PS_Shop_TextBreed.setText("");
+            PS_Shop_TextYears.setText("");
+            PS_Shop_TextMonths.setText("");
+            PS_Shop_TextColor.setText("");
+            PS_Shop_TextPrice.setText("");
+            btngrp_AvailablePets.clearSelection();
+            
+            PS_Shop_LabelSpecies.setForeground(Color.black);
+            PS_Shop_LabelSpecies.setToolTipText(null);
+            PS_Shop_LabelAge.setForeground(Color.black);
+            PS_Shop_LabelAge.setToolTipText(null);
+            PS_Shop_LabelBreed.setForeground(Color.black);
+            PS_Shop_LabelBreed.setToolTipText(null);
+            PS_Shop_LabelSex.setForeground(Color.black);
+            PS_Shop_LabelSex.setToolTipText(null);
+            PS_Shop_LabelPrice.setForeground(Color.black);
+            PS_Shop_LabelPrice.setToolTipText(null);
+            PS_Shop_LabelColor.setForeground(Color.black);
+            PS_Shop_LabelColor.setToolTipText(null);
+                
             DefaultListModel dlmSellList = new DefaultListModel();
             ResultSet petList = p.get_toSell_PetIDs();
             if(petList!=null){
@@ -6884,16 +6973,19 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Select a client to delete!","Error",JOptionPane.ERROR_MESSAGE);
         }
         else{
-            String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
-            Client c = new Client();
-            c.deleteClient(ClientID, this);
-            ResultSet rs;
-            rs = c.getClientDetails();
-            if(rs==null){
-                JOptionPane.showMessageDialog(dlgFin_editClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
-            }
-            else{
-                this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+            int userChoice = JOptionPane.showConfirmDialog(this,"Delete selected client?", "Delete Client Details", JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                String ClientID = this.tbl_Fin_Client_Details.getModel().getValueAt(selectedRow, 0).toString();
+                Client c = new Client();
+                c.deleteClient(ClientID, this);
+                ResultSet rs;
+                rs = c.getClientDetails();
+                if(rs==null){
+                    JOptionPane.showMessageDialog(dlgFin_editClient, "Cannot Refresh Client Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    this.tbl_Fin_Client_Details.setModel(DbUtils.resultSetToTableModel(rs));
+                }
             }
         }
     }//GEN-LAST:event_btnFin_DeleteClientActionPerformed
@@ -8161,6 +8253,9 @@ public class MainWindow extends javax.swing.JFrame {
             String custID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
             String sex = this.btngp_dlgHos_addPet_Sex.getSelection().getActionCommand();
             p.addPet(name, species, years, months, breed, sex, custID, dlgHos_addPet);
+            //----------------------------------------------------------------------
+            Customer c = new Customer();
+            c.updateReg_Service(custID, "ho");
             //-update pet table-----------------------------------------------------
             ResultSet rs = p.getPetDetails(custID);
             this.tbl_Hos_Pets.setModel(DbUtils.resultSetToTableModel(rs));
@@ -8840,7 +8935,11 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_phaupdateActionPerformed
 
     private void PS_Sell_TextEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Sell_TextEmailKeyTyped
-        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        System.out.println(c);
+        if(!((c>=48 && c<=57) || c==KeyEvent.VK_BACK_SPACE || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD || (c>=64 && c<=90) || (c>=97 && c<=122))){
+            evt.consume();
+        }
     }//GEN-LAST:event_PS_Sell_TextEmailKeyTyped
 
     private void PS_Sell_TextEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Sell_TextEmailFocusLost
@@ -8852,7 +8951,10 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_PS_Sell_TextAddressFocusLost
 
     private void PS_Sell_TextTelephoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Sell_TextTelephoneKeyTyped
-        // TODO add your handling code here:
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
     }//GEN-LAST:event_PS_Sell_TextTelephoneKeyTyped
 
     private void PS_Sell_TextTelephoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Sell_TextTelephoneFocusLost
@@ -8872,7 +8974,10 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_PS_Buy_TextTelephoneFocusLost
 
     private void PS_Buy_TextTelephoneKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Buy_TextTelephoneKeyTyped
-        // TODO add your handling code here:
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
     }//GEN-LAST:event_PS_Buy_TextTelephoneKeyTyped
 
     private void PS_Buy_TextAddressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_PS_Buy_TextAddressFocusLost
@@ -8884,7 +8989,11 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_PS_Buy_TextEmailFocusLost
 
     private void PS_Buy_TextEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Buy_TextEmailKeyTyped
-        // TODO add your handling code here:
+        char c = evt.getKeyChar();
+        System.out.println(c);
+        if(!((c>=48 && c<=57) || c==KeyEvent.VK_BACK_SPACE || c==KeyEvent.VK_DELETE || c==KeyEvent.VK_PERIOD || (c>=64 && c<=90) || (c>=97 && c<=122))){
+            evt.consume();
+        }
     }//GEN-LAST:event_PS_Buy_TextEmailKeyTyped
 
     private void list_PS_PetsToSellMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list_PS_PetsToSellMouseClicked
@@ -8899,19 +9008,32 @@ public class MainWindow extends javax.swing.JFrame {
         if(evt.getButton()==MouseEvent.BUTTON1){
             if(!list_PS_PetsToSell.isSelectionEmpty()){
                 //-----------
-                    PS_Shop_BtnEdit.setEnabled(true);
-                    PS_Shop_BtnRemove.setEnabled(true);
-                    rb_PS_AvailablePet_Male.setEnabled(true);
-                    rb_PS_AvailablePet_Female.setEnabled(true);
-                    
-                    PS_Shop_TextSpecies.setEditable(false);
-                    PS_Shop_TextBreed.setEditable(false);
-                    PS_Shop_TextColor.setEditable(false);
-                    PS_Shop_TextYears.setEditable(false);
-                    PS_Shop_TextMonths.setEditable(false);
-                    PS_Shop_TextPrice.setEditable(false);
-                    PS_Shop_BtnSave.setEnabled(false);
-                //-----------
+                PS_Shop_BtnEdit.setEnabled(true);
+                PS_Shop_BtnRemove.setEnabled(true);
+                rb_PS_AvailablePet_Male.setEnabled(true);
+                rb_PS_AvailablePet_Female.setEnabled(true);
+
+                PS_Shop_TextSpecies.setEditable(false);
+                PS_Shop_TextBreed.setEditable(false);
+                PS_Shop_TextColor.setEditable(false);
+                PS_Shop_TextYears.setEditable(false);
+                PS_Shop_TextMonths.setEditable(false);
+                PS_Shop_TextPrice.setEditable(false);
+                PS_Shop_BtnSave.setEnabled(false);
+                //----------------------------------------------------------
+                PS_Shop_LabelSpecies.setForeground(Color.black);
+                PS_Shop_LabelSpecies.setToolTipText(null);
+                PS_Shop_LabelAge.setForeground(Color.black);
+                PS_Shop_LabelAge.setToolTipText(null);
+                PS_Shop_LabelBreed.setForeground(Color.black);
+                PS_Shop_LabelBreed.setToolTipText(null);
+                PS_Shop_LabelSex.setForeground(Color.black);
+                PS_Shop_LabelSex.setToolTipText(null);
+                PS_Shop_LabelPrice.setForeground(Color.black);
+                PS_Shop_LabelPrice.setToolTipText(null);
+                PS_Shop_LabelColor.setForeground(Color.black);
+                PS_Shop_LabelColor.setToolTipText(null);
+                //----------------------------------------------------------------------
                 PetShop p = new PetShop();
                 ResultSet petDetails = p.getPetDetails(list_PS_PetsToSell.getSelectedValue());
                 try{
@@ -8961,25 +9083,103 @@ public class MainWindow extends javax.swing.JFrame {
         String species = PS_Shop_TextSpecies.getText();
         String breed = PS_Shop_TextBreed.getText();
         String color = PS_Shop_TextColor.getText();
-        double price = Double.parseDouble(PS_Shop_TextPrice.getText());
-        int years = Integer.parseInt(PS_Shop_TextYears.getText());
-        int months = Integer.parseInt(PS_Shop_TextMonths.getText());
+        int years,months;
+        if(PS_Shop_TextYears.getText().equals("")){
+            years = 0;
+        }
+        else{
+            years = Integer.parseInt(PS_Shop_TextYears.getText());
+        }
+        if(PS_Shop_TextMonths.getText().equals("")){
+            months = 0;
+        }
+        else{
+            months = Integer.parseInt(PS_Shop_TextMonths.getText());
+        }
         String sex = btngrp_AvailablePets.getSelection().getActionCommand();
         
         PetShop p = new PetShop();
-        Boolean result = p.updatePetDetails(petID, species, breed, color, sex, price, years, months);
-        if(result){
-            JOptionPane.showMessageDialog(this, "Pet Updated Successfully!","Pet Details",JOptionPane.INFORMATION_MESSAGE);
-            PS_Shop_TextSpecies.setEditable(false);
-            PS_Shop_TextBreed.setEditable(false);
-            PS_Shop_TextColor.setEditable(false);
-            PS_Shop_TextYears.setEditable(false);
-            PS_Shop_TextMonths.setEditable(false);
-            PS_Shop_TextPrice.setEditable(false);
-            PS_Shop_BtnSave.setEnabled(false);
+        if(p.validateSpecies(species) & p.validateAge(years, months) & p.validateBreed(breed) & p.validateSex(this.btngrp_AvailablePets.getSelection()) & p.validatePrice(PS_Shop_TextPrice.getText()) & p.validateColor(color)){
+            double price = Double.parseDouble(PS_Shop_TextPrice.getText());
+            Boolean result = p.updatePetDetails(petID, species, breed, color, sex, price, years, months);
+            if(result){
+                JOptionPane.showMessageDialog(this, "Pet Updated Successfully!","Pet Details",JOptionPane.INFORMATION_MESSAGE);
+                PS_Shop_TextSpecies.setEditable(false);
+                PS_Shop_TextBreed.setEditable(false);
+                PS_Shop_TextColor.setEditable(false);
+                PS_Shop_TextYears.setEditable(false);
+                PS_Shop_TextMonths.setEditable(false);
+                PS_Shop_TextPrice.setEditable(false);
+                PS_Shop_BtnSave.setEnabled(false);
+                //----------------------------------------------------------------------
+                PS_Shop_LabelSpecies.setForeground(Color.black);
+                PS_Shop_LabelSpecies.setToolTipText(null);
+                PS_Shop_LabelAge.setForeground(Color.black);
+                PS_Shop_LabelAge.setToolTipText(null);
+                PS_Shop_LabelBreed.setForeground(Color.black);
+                PS_Shop_LabelBreed.setToolTipText(null);
+                PS_Shop_LabelSex.setForeground(Color.black);
+                PS_Shop_LabelSex.setToolTipText(null);
+                PS_Shop_LabelPrice.setForeground(Color.black);
+                PS_Shop_LabelPrice.setToolTipText(null);
+                PS_Shop_LabelColor.setForeground(Color.black);
+                PS_Shop_LabelColor.setToolTipText(null);
+                //----------------------------------------------------------------------
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Pet Updating Failed!","Pet Details",JOptionPane.ERROR_MESSAGE);
+            }
         }
         else{
-            JOptionPane.showMessageDialog(this, "Pet Updating Failed!","Pet Details",JOptionPane.ERROR_MESSAGE);
+            getToolkit().beep();
+            if(p.validateSpecies(species)){
+                this.PS_Shop_LabelSpecies.setForeground(Color.black);
+                this.PS_Shop_LabelSpecies.setToolTipText(null);
+            }
+            else{
+                this.PS_Shop_LabelSpecies.setForeground(Color.red);
+                this.PS_Shop_LabelSpecies.setToolTipText("Invalid Pet Species");
+            }
+            if(p.validateAge(years,months)){
+                this.PS_Shop_LabelAge.setForeground(Color.black);
+                this.PS_Shop_LabelAge.setToolTipText(null);
+            }
+            else{
+                this.PS_Shop_LabelAge.setForeground(Color.red);
+                this.PS_Shop_LabelAge.setToolTipText("Invalid Age");
+            }
+            if(p.validateBreed(breed)){
+                this.PS_Shop_LabelBreed.setForeground(Color.black);
+                this.PS_Shop_LabelBreed.setToolTipText(null);
+            }
+            else{
+                this.PS_Shop_LabelBreed.setForeground(Color.red);
+                this.PS_Shop_LabelBreed.setToolTipText("Invalid Breed");
+            }
+            if(p.validateSex(this.btngrp_AvailablePets.getSelection())){
+                this.PS_Shop_LabelSex.setForeground(Color.black);
+                this.PS_Shop_LabelSex.setToolTipText(null);
+            }
+            else{
+                this.PS_Shop_LabelSex.setForeground(Color.red);
+                this.PS_Shop_LabelSex.setToolTipText("Select a sex");
+            }
+            if(p.validatePrice(PS_Shop_TextPrice.getText())){
+                this.PS_Shop_LabelPrice.setForeground(Color.black);
+                this.PS_Shop_LabelPrice.setToolTipText(null);
+            }
+            else{
+                this.PS_Shop_LabelPrice.setForeground(Color.red);
+                this.PS_Shop_LabelPrice.setToolTipText("Invalid Price");
+            }
+            if(p.validateColor(color)){
+                this.PS_Shop_LabelColor.setForeground(Color.black);
+                this.PS_Shop_LabelColor.setToolTipText(null);
+            }
+            else{
+                this.PS_Shop_LabelColor.setForeground(Color.red);
+                this.PS_Shop_LabelColor.setToolTipText("Invalid color");
+            }
         }
     }//GEN-LAST:event_PS_Shop_BtnSaveActionPerformed
 
@@ -9047,6 +9247,18 @@ public class MainWindow extends javax.swing.JFrame {
 
         }
         else{
+            //------------------------------------------------------------------
+            PS_Buy_LabelSellersName.setForeground(Color.black);
+            PS_Buy_LabelSellersName.setToolTipText(null);
+            PS_Buy_LabelAddress.setForeground(Color.black);
+            PS_Buy_LabelAddress.setToolTipText(null);
+            PS_Buy_LabelTelephone.setForeground(Color.black);
+            PS_Buy_LabelTelephone.setToolTipText(null);
+            PS_Buy_LabelEmail.setForeground(Color.black);
+            PS_Buy_LabelEmail.setToolTipText(null);
+            
+            PS_Buy_BtnBuy.setEnabled(true);
+            //------------------------------------------------------------------
             String CustID = this.PS_Buy_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
             Customer c = new Customer();
             ResultSet rs = c.getCustomerDetails(CustID);
@@ -9086,11 +9298,13 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Select a customer to edit details!","Error",JOptionPane.ERROR_MESSAGE);
         }
         else{
-        PS_Buy_TextSellerName.setEditable(true);
-        PS_Buy_TextAddress.setEditable(true);
-        PS_Buy_TextTelephone.setEditable(true);
-        PS_Buy_TextEmail.setEditable(true);
-        PS_Buy_BtnSave.setEnabled(true);
+            PS_Buy_BtnBuy.setEnabled(false);
+            
+            PS_Buy_TextSellerName.setEditable(true);
+            PS_Buy_TextAddress.setEditable(true);
+            PS_Buy_TextTelephone.setEditable(true);
+            PS_Buy_TextEmail.setEditable(true);
+            PS_Buy_BtnSave.setEnabled(true);
         }
     }//GEN-LAST:event_PS_Buy_BtnEditActionPerformed
 
@@ -9105,6 +9319,18 @@ public class MainWindow extends javax.swing.JFrame {
             if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
                 String custID=c.addCustomer(name,address,tele,email,this);
                 c.addReg_Service(custID, "ps");
+                //------------------------------------------------------------------
+                PS_Buy_LabelSellersName.setForeground(Color.black);
+                PS_Buy_LabelSellersName.setToolTipText(null);
+                PS_Buy_LabelAddress.setForeground(Color.black);
+                PS_Buy_LabelAddress.setToolTipText(null);
+                PS_Buy_LabelTelephone.setForeground(Color.black);
+                PS_Buy_LabelTelephone.setToolTipText(null);
+                PS_Buy_LabelEmail.setForeground(Color.black);
+                PS_Buy_LabelEmail.setToolTipText(null);
+                
+                PS_Buy_BtnBuy.setEnabled(true);
+                //------------------------------------------------------------------
                 //-update customer table--------------------------------------
                 ResultSet rsBuy = c.getCustomerDetails();
                 ResultSet rsSell = c.getCustomerDetails();
@@ -9129,38 +9355,38 @@ public class MainWindow extends javax.swing.JFrame {
             }
             else{
                 getToolkit().beep();
-    //            if(c.validateCustName(name)){
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
-    //            }
-    //            if(c.validateAddress(address)){
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
-    //            }
-    //            if(c.validateTelephone(tele)){
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
-    //            }
-    //            if(c.validateEmail(email)){
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
-    //            }
+                if(c.validateCustName(name)){
+                    this.PS_Buy_LabelSellersName.setForeground(Color.black);
+                    this.PS_Buy_LabelSellersName.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelSellersName.setForeground(Color.red);
+                    this.PS_Buy_LabelSellersName.setToolTipText("Invalid Name");
+                }
+                if(c.validateAddress(address)){
+                    this.PS_Buy_LabelAddress.setForeground(Color.black);
+                    this.PS_Buy_LabelAddress.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelAddress.setForeground(Color.red);
+                    this.PS_Buy_LabelAddress.setToolTipText("Invalid Address");
+                }
+                if(c.validateTelephone(tele)){
+                    this.PS_Buy_LabelTelephone.setForeground(Color.black);
+                    this.PS_Buy_LabelTelephone.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelTelephone.setForeground(Color.red);
+                    this.PS_Buy_LabelTelephone.setToolTipText("Invalid Telephone Number");
+                }
+                if(c.validateEmail(email)){
+                    this.PS_Buy_LabelEmail.setForeground(Color.black);
+                    this.PS_Buy_LabelEmail.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelEmail.setForeground(Color.red);
+                    this.PS_Buy_LabelEmail.setToolTipText("Invalid Email Address");
+                }
             }
         }
         else{
@@ -9172,6 +9398,18 @@ public class MainWindow extends javax.swing.JFrame {
             String sellerID = this.PS_Buy_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
             if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
                 c.updateCustomer(name,address,tele,email,sellerID,this);
+                //------------------------------------------------------------------
+                PS_Buy_LabelSellersName.setForeground(Color.black);
+                PS_Buy_LabelSellersName.setToolTipText(null);
+                PS_Buy_LabelAddress.setForeground(Color.black);
+                PS_Buy_LabelAddress.setToolTipText(null);
+                PS_Buy_LabelTelephone.setForeground(Color.black);
+                PS_Buy_LabelTelephone.setToolTipText(null);
+                PS_Buy_LabelEmail.setForeground(Color.black);
+                PS_Buy_LabelEmail.setToolTipText(null);
+                
+                PS_Buy_BtnBuy.setEnabled(true);
+                //------------------------------------------------------------------
                 //-update customer table--------------------------------------
                 ResultSet rsBuy = c.getCustomerDetails();
                 ResultSet rsSell = c.getCustomerDetails();
@@ -9196,44 +9434,45 @@ public class MainWindow extends javax.swing.JFrame {
             }
             else{
                 getToolkit().beep();
-    //            if(c.validateCustName(name)){
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
-    //            }
-    //            if(c.validateAddress(address)){
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
-    //            }
-    //            if(c.validateTelephone(tele)){
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
-    //            }
-    //            if(c.validateEmail(email)){
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
-    //            }
+                if(c.validateCustName(name)){
+                    this.PS_Buy_LabelSellersName.setForeground(Color.black);
+                    this.PS_Buy_LabelSellersName.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelSellersName.setForeground(Color.red);
+                    this.PS_Buy_LabelSellersName.setToolTipText("Invalid Name");
+                }
+                if(c.validateAddress(address)){
+                    this.PS_Buy_LabelAddress.setForeground(Color.black);
+                    this.PS_Buy_LabelAddress.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelAddress.setForeground(Color.red);
+                    this.PS_Buy_LabelAddress.setToolTipText("Invalid Address");
+                }
+                if(c.validateTelephone(tele)){
+                    this.PS_Buy_LabelTelephone.setForeground(Color.black);
+                    this.PS_Buy_LabelTelephone.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelTelephone.setForeground(Color.red);
+                    this.PS_Buy_LabelTelephone.setToolTipText("Invalid Telephone Number");
+                }
+                if(c.validateEmail(email)){
+                    this.PS_Buy_LabelEmail.setForeground(Color.black);
+                    this.PS_Buy_LabelEmail.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelEmail.setForeground(Color.red);
+                    this.PS_Buy_LabelEmail.setToolTipText("Invalid Email Address");
+                }    
             }
         }
     }//GEN-LAST:event_PS_Buy_BtnSaveActionPerformed
 
     private void PS_Buy_BtnNewSellerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Buy_BtnNewSellerActionPerformed
         PS_Buy_TableCustomer.clearSelection();
+        PS_Buy_BtnBuy.setEnabled(false);
         PS_Buy_BtnSave.setEnabled(true);
         PS_Buy_BtnEdit.setEnabled(false);
         PS_Buy_TextSellerName.setText("");
@@ -9244,6 +9483,17 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_TextAddress.setEditable(true);
         PS_Buy_TextTelephone.setEditable(true);
         PS_Buy_TextEmail.setEditable(true);
+        
+        //------------------------------------------------------------------
+        PS_Buy_LabelSellersName.setForeground(Color.black);
+        PS_Buy_LabelSellersName.setToolTipText(null);
+        PS_Buy_LabelAddress.setForeground(Color.black);
+        PS_Buy_LabelAddress.setToolTipText(null);
+        PS_Buy_LabelTelephone.setForeground(Color.black);
+        PS_Buy_LabelTelephone.setToolTipText(null);
+        PS_Buy_LabelEmail.setForeground(Color.black);
+        PS_Buy_LabelEmail.setToolTipText(null);
+        //------------------------------------------------------------------
     }//GEN-LAST:event_PS_Buy_BtnNewSellerActionPerformed
 
     private void PS_Buy_BtnBuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Buy_BtnBuyActionPerformed
@@ -9265,13 +9515,29 @@ public class MainWindow extends javax.swing.JFrame {
                 double price = Double.parseDouble(PS_Buy_TextPrice.getText());
                 String petID = p.addPettoBought(species, breed, color, years, months, sex, price, sellerID, this);
                 p.addPettoSale(petID,species, breed, color, years, months, sex, price, this);
-                //----------------------------------------------------------------------
+                
                 Expense exp = new Expense();
                 String description = "PetShop : Bought "+petID+" from Customer "+sellerID+"";
                 Date date = new Date();
                 DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                 String today = df.format(date);
                 exp.addNewExpense("OB", today, description, price, this);
+                //----------------------------------------------------------------------
+                Customer c = new Customer();
+                c.updateReg_Service(sellerID, "ps");
+                //----------------------------------------------------------------------
+                PS_Buy_LabelSpecies.setForeground(Color.black);
+                PS_Buy_LabelSpecies.setToolTipText(null);
+                PS_Buy_LabelAge.setForeground(Color.black);
+                PS_Buy_LabelAge.setToolTipText(null);
+                PS_Buy_LabelBreed.setForeground(Color.black);
+                PS_Buy_LabelBreed.setToolTipText(null);
+                PS_Buy_LabelSex.setForeground(Color.black);
+                PS_Buy_LabelSex.setToolTipText(null);
+                PS_Buy_LabelPrice.setForeground(Color.black);
+                PS_Buy_LabelPrice.setToolTipText(null);
+                PS_Buy_LabelColor.setForeground(Color.black);
+                PS_Buy_LabelColor.setToolTipText(null);
                 //----------------------------------------------------------------------
                 PS_Buy_TextSpecies.setText("");
                 PS_Buy_TextBreed.setText("");
@@ -9303,52 +9569,61 @@ public class MainWindow extends javax.swing.JFrame {
             }
             else{
                 getToolkit().beep();
-    //            if(p.validatePetName(name)){
-    //                this.lbl_dlgHos_addPet_name.setForeground(Color.black);
-    //                this.lbl_dlgHos_addPet_name.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_addPet_name.setForeground(Color.red);
-    //                this.lbl_dlgHos_addPet_name.setToolTipText("Invalid Name");
-    //            }
-    //            if(p.validateSpecies(species)){
-    //                this.lbl_dlgHos_addPet_Species.setForeground(Color.black);
-    //                this.lbl_dlgHos_addPet_Species.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_addPet_Species.setForeground(Color.red);
-    //                this.lbl_dlgHos_addPet_Species.setToolTipText("Selct a species from the list");
-    //            }
-    //            if(p.validateAge(years,months)){
-    //                this.lbl_dlgHos_addPet_age.setForeground(Color.black);
-    //                this.lbl_dlgHos_addPet_age.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_addPet_age.setForeground(Color.red);
-    //                this.lbl_dlgHos_addPet_age.setToolTipText("Invalid Age");
-    //            }
-    //            if(p.validateBreed(breed)){
-    //                this.lbl_dlgHos_addPet_breed.setForeground(Color.black);
-    //                this.lbl_dlgHos_addPet_breed.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_addPet_breed.setForeground(Color.red);
-    //                this.lbl_dlgHos_addPet_breed.setToolTipText("Invalid Breed");
-    //            }
-    //            if(p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
-    //                this.lbl_dlgHos_addPet_sex.setForeground(Color.black);
-    //                this.lbl_dlgHos_addPet_sex.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_addPet_sex.setForeground(Color.red);
-    //                this.lbl_dlgHos_addPet_sex.setToolTipText("Select a sex");
-    //            }
+                if(p.validateSpecies(species)){
+                    this.PS_Buy_LabelSpecies.setForeground(Color.black);
+                    this.PS_Buy_LabelSpecies.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelSpecies.setForeground(Color.red);
+                    this.PS_Buy_LabelSpecies.setToolTipText("Invalid Pet Species");
+                }
+                if(p.validateAge(years,months)){
+                    this.PS_Buy_LabelAge.setForeground(Color.black);
+                    this.PS_Buy_LabelAge.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelAge.setForeground(Color.red);
+                    this.PS_Buy_LabelAge.setToolTipText("Invalid Age");
+                }
+                if(p.validateBreed(breed)){
+                    this.PS_Buy_LabelBreed.setForeground(Color.black);
+                    this.PS_Buy_LabelBreed.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelBreed.setForeground(Color.red);
+                    this.PS_Buy_LabelBreed.setToolTipText("Invalid Breed");
+                }
+                if(p.validateSex(this.btngrp_BuyPet.getSelection())){
+                    this.PS_Buy_LabelSex.setForeground(Color.black);
+                    this.PS_Buy_LabelSex.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelSex.setForeground(Color.red);
+                    this.PS_Buy_LabelSex.setToolTipText("Select a sex");
+                }
+                if(p.validatePrice(PS_Buy_TextPrice.getText())){
+                    this.PS_Buy_LabelPrice.setForeground(Color.black);
+                    this.PS_Buy_LabelPrice.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelPrice.setForeground(Color.red);
+                    this.PS_Buy_LabelPrice.setToolTipText("Select a sex");
+                }
+                if(p.validateColor(color)){
+                    this.PS_Buy_LabelColor.setForeground(Color.black);
+                    this.PS_Buy_LabelColor.setToolTipText(null);
+                }
+                else{
+                    this.PS_Buy_LabelColor.setForeground(Color.red);
+                    this.PS_Buy_LabelColor.setToolTipText("Select a sex");
+                }
             }
         }
     }//GEN-LAST:event_PS_Buy_BtnBuyActionPerformed
 
     private void PS_Sell_BtnNewBuyerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnNewBuyerActionPerformed
         PS_Sell_TableCustomer.clearSelection();
+        PS_Sell_ButtonSell.setEnabled(false);
         PS_Sell_BtnSave.setEnabled(true);
         PS_Sell_BtnEdit.setEnabled(false);
         PS_Sell_TextBuyerName.setText("");
@@ -9359,6 +9634,17 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Sell_TextAddress.setEditable(true);
         PS_Sell_TextTelephone.setEditable(true);
         PS_Sell_TextEmail.setEditable(true);
+        
+        //------------------------------------------------------------------
+        PS_Sell_LabelBuyersName.setForeground(Color.black);
+        PS_Sell_LabelBuyersName.setToolTipText(null);
+        PS_Sell_LabelAddress.setForeground(Color.black);
+        PS_Sell_LabelAddress.setToolTipText(null);
+        PS_Sell_LabelTelephone.setForeground(Color.black);
+        PS_Sell_LabelTelephone.setToolTipText(null);
+        PS_Sell_LabelEmail.setForeground(Color.black);
+        PS_Sell_LabelEmail.setToolTipText(null);
+        //------------------------------------------------------------------
     }//GEN-LAST:event_PS_Sell_BtnNewBuyerActionPerformed
 
     private void PS_Sell_BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_BtnEditActionPerformed
@@ -9367,11 +9653,12 @@ public class MainWindow extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Select a customer to edit details!","Error",JOptionPane.ERROR_MESSAGE);
         }
         else{
-        PS_Sell_TextBuyerName.setEditable(true);
-        PS_Sell_TextAddress.setEditable(true);
-        PS_Sell_TextTelephone.setEditable(true);
-        PS_Sell_TextEmail.setEditable(true);
-        PS_Sell_BtnSave.setEnabled(true);
+            PS_Sell_ButtonSell.setEnabled(false);
+            PS_Sell_TextBuyerName.setEditable(true);
+            PS_Sell_TextAddress.setEditable(true);
+            PS_Sell_TextTelephone.setEditable(true);
+            PS_Sell_TextEmail.setEditable(true);
+            PS_Sell_BtnSave.setEnabled(true);
         }
     }//GEN-LAST:event_PS_Sell_BtnEditActionPerformed
 
@@ -9386,6 +9673,18 @@ public class MainWindow extends javax.swing.JFrame {
             if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
                 String buyerID=c.addCustomer(name,address,tele,email,this);
                 c.addReg_Service(buyerID, "ps");
+                //------------------------------------------------------------------
+                PS_Sell_LabelBuyersName.setForeground(Color.black);
+                PS_Sell_LabelBuyersName.setToolTipText(null);
+                PS_Sell_LabelAddress.setForeground(Color.black);
+                PS_Sell_LabelAddress.setToolTipText(null);
+                PS_Sell_LabelTelephone.setForeground(Color.black);
+                PS_Sell_LabelTelephone.setToolTipText(null);
+                PS_Sell_LabelEmail.setForeground(Color.black);
+                PS_Sell_LabelEmail.setToolTipText(null);
+                
+                PS_Sell_ButtonSell.setEnabled(true);
+                //------------------------------------------------------------------
                 //-update customer table--------------------------------------
                 ResultSet rsBuy = c.getCustomerDetails();
                 ResultSet rsSell = c.getCustomerDetails();
@@ -9411,38 +9710,38 @@ public class MainWindow extends javax.swing.JFrame {
             }
             else{
                 getToolkit().beep();
-    //            if(c.validateCustName(name)){
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
-    //            }
-    //            if(c.validateAddress(address)){
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
-    //            }
-    //            if(c.validateTelephone(tele)){
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
-    //            }
-    //            if(c.validateEmail(email)){
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
-    //            }
+                if(c.validateCustName(name)){
+                    this.PS_Sell_LabelBuyersName.setForeground(Color.black);
+                    this.PS_Sell_LabelBuyersName.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelBuyersName.setForeground(Color.red);
+                    this.PS_Sell_LabelBuyersName.setToolTipText("Invalid Name");
+                }
+                if(c.validateAddress(address)){
+                    this.PS_Sell_LabelAddress.setForeground(Color.black);
+                    this.PS_Sell_LabelAddress.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelAddress.setForeground(Color.red);
+                    this.PS_Sell_LabelAddress.setToolTipText("Invalid Address");
+                }
+                if(c.validateTelephone(tele)){
+                    this.PS_Sell_LabelTelephone.setForeground(Color.black);
+                    this.PS_Sell_LabelTelephone.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelTelephone.setForeground(Color.red);
+                    this.PS_Sell_LabelTelephone.setToolTipText("Invalid Telephone Number");
+                }
+                if(c.validateEmail(email)){
+                    this.PS_Sell_LabelEmail.setForeground(Color.black);
+                    this.PS_Sell_LabelEmail.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelEmail.setForeground(Color.red);
+                    this.PS_Sell_LabelEmail.setToolTipText("Invalid Email Address");
+                }
             }
         }
         else{
@@ -9454,6 +9753,18 @@ public class MainWindow extends javax.swing.JFrame {
             String buyerID = this.PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
             if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
                 c.updateCustomer(name,address,tele,email,buyerID,this);
+                //------------------------------------------------------------------
+                PS_Sell_LabelBuyersName.setForeground(Color.black);
+                PS_Sell_LabelBuyersName.setToolTipText(null);
+                PS_Sell_LabelAddress.setForeground(Color.black);
+                PS_Sell_LabelAddress.setToolTipText(null);
+                PS_Sell_LabelTelephone.setForeground(Color.black);
+                PS_Sell_LabelTelephone.setToolTipText(null);
+                PS_Sell_LabelEmail.setForeground(Color.black);
+                PS_Sell_LabelEmail.setToolTipText(null);
+                
+                PS_Sell_ButtonSell.setEnabled(true);
+                //------------------------------------------------------------------
                 //-update customer table--------------------------------------
                 ResultSet rsBuy = c.getCustomerDetails();
                 ResultSet rsSell = c.getCustomerDetails();
@@ -9478,38 +9789,38 @@ public class MainWindow extends javax.swing.JFrame {
             }
             else{
                 getToolkit().beep();
-    //            if(c.validateCustName(name)){
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_Ownername.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_Ownername.setToolTipText("Invalid Name");
-    //            }
-    //            if(c.validateAddress(address)){
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_address.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_address.setToolTipText("Invalid Address");
-    //            }
-    //            if(c.validateTelephone(tele)){
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_telephone.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_telephone.setToolTipText("Invalid Telephone Number");
-    //            }
-    //            if(c.validateEmail(email)){
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.black);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText(null);
-    //            }
-    //            else{
-    //                this.lbl_dlgHos_editCustomer_email.setForeground(Color.red);
-    //                this.lbl_dlgHos_editCustomer_email.setToolTipText("Invalid Email Address");
-    //            }
+                if(c.validateCustName(name)){
+                    this.PS_Sell_LabelBuyersName.setForeground(Color.black);
+                    this.PS_Sell_LabelBuyersName.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelBuyersName.setForeground(Color.red);
+                    this.PS_Sell_LabelBuyersName.setToolTipText("Invalid Name");
+                }
+                if(c.validateAddress(address)){
+                    this.PS_Sell_LabelAddress.setForeground(Color.black);
+                    this.PS_Sell_LabelAddress.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelAddress.setForeground(Color.red);
+                    this.PS_Sell_LabelAddress.setToolTipText("Invalid Address");
+                }
+                if(c.validateTelephone(tele)){
+                    this.PS_Sell_LabelTelephone.setForeground(Color.black);
+                    this.PS_Sell_LabelTelephone.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelTelephone.setForeground(Color.red);
+                    this.PS_Sell_LabelTelephone.setToolTipText("Invalid Telephone Number");
+                }
+                if(c.validateEmail(email)){
+                    this.PS_Sell_LabelEmail.setForeground(Color.black);
+                    this.PS_Sell_LabelEmail.setToolTipText(null);
+                }
+                else{
+                    this.PS_Sell_LabelEmail.setForeground(Color.red);
+                    this.PS_Sell_LabelEmail.setToolTipText("Invalid Email Address");
+                }
             }
         }
     }//GEN-LAST:event_PS_Sell_BtnSaveActionPerformed
@@ -9521,6 +9832,18 @@ public class MainWindow extends javax.swing.JFrame {
 
         }
         else{
+            //------------------------------------------------------------------
+            PS_Sell_LabelBuyersName.setForeground(Color.black);
+            PS_Sell_LabelBuyersName.setToolTipText(null);
+            PS_Sell_LabelAddress.setForeground(Color.black);
+            PS_Sell_LabelAddress.setToolTipText(null);
+            PS_Sell_LabelTelephone.setForeground(Color.black);
+            PS_Sell_LabelTelephone.setToolTipText(null);
+            PS_Sell_LabelEmail.setForeground(Color.black);
+            PS_Sell_LabelEmail.setToolTipText(null);
+            
+            PS_Sell_ButtonSell.setEnabled(true);
+            //------------------------------------------------------------------
             String buyerID = this.PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
             Customer c = new Customer();
             ResultSet rs = c.getCustomerDetails(buyerID);
@@ -9648,71 +9971,162 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void PS_Sell_ButtonSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Sell_ButtonSellActionPerformed
         int nItems = list_PS_Cart.getModel().getSize();
-        ResultSet rs;
-        String species="";
-        int years=0;
-        int months=0;
-        String petID="";
-        String breed="";
-        String color="";
-        String sex="";
-        String photo="";
-        String buyerID="";
-        double price=0;
-        int selectedRow = PS_Sell_TableCustomer.getSelectedRow();
-        if(selectedRow==-1){
-            JOptionPane.showMessageDialog(this, "Select a Customer to Sell Pets!","Error",JOptionPane.ERROR_MESSAGE);
+        if(nItems!=0){
+            ResultSet rs;
+            String species="";
+            int years=0;
+            int months=0;
+            String petID="";
+            String breed="";
+            String color="";
+            String sex="";
+            String photo="";
+            String buyerID="";
+            double price=0;
+            int selectedRow = PS_Sell_TableCustomer.getSelectedRow();
+            if(selectedRow==-1){
+                JOptionPane.showMessageDialog(this, "Select a Customer to Sell Pets!","Error",JOptionPane.ERROR_MESSAGE);
+            }
+            else{
+                buyerID = PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
+                PetShop p = new PetShop();
+                Income i = new Income();
+                for(int x=0; x<nItems; x++){
+                    petID = dlmCart.elementAt(x).toString();
+                    rs = p.getPetDetails(petID);
+                    try{
+                        while(rs.next()){
+                            species = rs.getString("species");
+                            breed = rs.getString("breed");
+                            color = rs.getString("color");
+                            sex = rs.getString("sex");
+                            photo = rs.getString("photo");
+                            years = rs.getInt("ageYears");
+                            months = rs.getInt("ageMonths");
+                            price = rs.getDouble("price");
+                        }
+
+                        p.addPettoSold(petID, species, breed, color, years, months, sex, photo, price, buyerID, this);
+                        p.deletePet(petID);
+                        double netAmount = Double.parseDouble(PS_Sell_LabelNetAmount.getText());
+                        Date date = new Date();
+                        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                        String today = df.format(date);
+                        i.addNewIncome("PS", today, netAmount, this);
+                    }
+                    catch(Exception e){
+                        e.printStackTrace();
+                    }
+                }
+                JOptionPane.showMessageDialog(this, "Pets Sold Successfully!","Pet Sold",JOptionPane.INFORMATION_MESSAGE);
+                //----------------------------------------------------------------------
+                    Customer c = new Customer();
+                    c.updateReg_Service(buyerID, "ps");
+                //----------------------------------------------------------------------
+                DefaultListModel d = new DefaultListModel();
+                ResultSet petList = p.get_toSell_PetIDs();
+                dlmAvailable.clear();
+                dlmCart.clear();
+                if(petList!=null){
+                    try{
+                        while(petList.next()){
+                            d.addElement(petList.getString("petID"));
+                            dlmAvailable.addElement(petList.getString("petID"));
+                        }
+                    }
+                    catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    list_PS_PetsToSell.setModel(d);
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
+                }
+                //----------------------------------------------------------------------
+            }
         }
         else{
-            buyerID = PS_Sell_TableCustomer.getModel().getValueAt(selectedRow, 0).toString();
-            PetShop p = new PetShop();
-            for(int x=0; x<nItems; x++){
-                petID = dlmCart.elementAt(x).toString();
-                rs = p.getPetDetails(petID);
+            JOptionPane.showMessageDialog(this, "Pet Cart is Empty","Error",JOptionPane.ERROR_MESSAGE);   
+        }
+    }//GEN-LAST:event_PS_Sell_ButtonSellActionPerformed
+
+    private void PS_Shop_TextPriceKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Shop_TextPriceKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_PS_Shop_TextPriceKeyTyped
+
+    private void PS_Shop_TextYearsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Shop_TextYearsKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_PS_Shop_TextYearsKeyTyped
+
+    private void PS_Shop_TextMonthsKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Shop_TextMonthsKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_PS_Shop_TextMonthsKeyTyped
+
+    private void PS_Buy_TextPriceKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Buy_TextPriceKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_PS_Buy_TextPriceKeyTyped
+
+    private void PS_Shop_BtnRemoveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PS_Shop_BtnRemoveActionPerformed
+        int selectedIndex = list_PS_PetsToSell.getSelectedIndex();
+        if(selectedIndex==-1){
+            JOptionPane.showMessageDialog(this, "Select a Pet to Remove!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            int userChoice = JOptionPane.showConfirmDialog(this,"Remove selected pet?", "Delete Pets", JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                String petID = list_PS_PetsToSell.getSelectedValue();
+                PetShop p = new PetShop();
                 try{
-                    while(rs.next()){
-                        species = rs.getString("species");
-                        breed = rs.getString("breed");
-                        color = rs.getString("color");
-                        sex = rs.getString("sex");
-                        photo = rs.getString("photo");
-                        years = rs.getInt("ageYears");
-                        months = rs.getInt("ageMonths");
-                        price = rs.getDouble("price");
-                    }
-                    
-                    p.addPettoSold(petID, species, breed, color, years, months, sex, photo, price, buyerID, this);
                     p.deletePet(petID);
-                    
+                    JOptionPane.showMessageDialog(this, "Pet Removed Succssfully!","Remove Pets",JOptionPane.INFORMATION_MESSAGE);
+                    PS_Shop_TextSpecies.setText("");
+                    PS_Shop_TextBreed.setText("");
+                    PS_Shop_TextYears.setText("");
+                    PS_Shop_TextMonths.setText("");
+                    PS_Shop_TextColor.setText("");
+                    PS_Shop_TextPrice.setText("");
+                    btngrp_AvailablePets.clearSelection();
                 }
                 catch(Exception e){
                     e.printStackTrace();
                 }
-            }
-            JOptionPane.showMessageDialog(this, "Pets Sold Successfully!","Pet Sold",JOptionPane.INFORMATION_MESSAGE);
-            //----------------------------------------------------------------------
-            DefaultListModel d = new DefaultListModel();
-            ResultSet petList = p.get_toSell_PetIDs();
-            dlmAvailable.clear();
-            dlmCart.clear();
-            if(petList!=null){
-                try{
-                    while(petList.next()){
-                        d.addElement(petList.getString("petID"));
-                        dlmAvailable.addElement(petList.getString("petID"));
+                //---------------------------------------------------------------------------------
+                DefaultListModel d = new DefaultListModel();
+                ResultSet petList = p.get_toSell_PetIDs();
+                dlmAvailable.clear();
+                dlmCart.clear();
+                if(petList!=null){
+                    try{
+                        while(petList.next()){
+                            d.addElement(petList.getString("petID"));
+                            dlmAvailable.addElement(petList.getString("petID"));
+                        }
                     }
+                    catch(Exception e){
+                        JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                    }
+                    list_PS_PetsToSell.setModel(d);
                 }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                else{
+                    JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
                 }
-                list_PS_PetsToSell.setModel(d);
+                //----------------------------------------------------------------------
             }
-            else{
-                JOptionPane.showMessageDialog(this, "Cannot Load Pet Details!!","Database Error",JOptionPane.ERROR_MESSAGE);    
-            }
-            //----------------------------------------------------------------------
         }
-    }//GEN-LAST:event_PS_Sell_ButtonSellActionPerformed
+            
+    }//GEN-LAST:event_PS_Shop_BtnRemoveActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -10097,8 +10511,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton PS_Shop_BtnEdit;
     private javax.swing.JButton PS_Shop_BtnRemove;
     private javax.swing.JButton PS_Shop_BtnSave;
-    private javax.swing.JLabel PS_Shop_LabeBreed;
     private javax.swing.JLabel PS_Shop_LabelAge;
+    private javax.swing.JLabel PS_Shop_LabelBreed;
     private javax.swing.JLabel PS_Shop_LabelColor;
     private javax.swing.JLabel PS_Shop_LabelDescription;
     private javax.swing.JLabel PS_Shop_LabelMonths;

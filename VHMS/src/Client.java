@@ -134,17 +134,14 @@ public class Client {
     
     public void deleteClient(String ClientID, Component comp){
         String deleteSelectedClientSQL = "delete from finance_clients where clientID='"+ClientID+"'";
-            int userChoice = JOptionPane.showConfirmDialog(comp,"Delete selected client?", "Delete Client Details", JOptionPane.YES_NO_OPTION);
-            if(userChoice==0){
-                try{
-                    Statement stmnt = dbcon.createStatement();
-                    stmnt.executeUpdate(deleteSelectedClientSQL);
-                    JOptionPane.showMessageDialog(comp, "Client details deleted successfully", "Delete Client Details", JOptionPane.INFORMATION_MESSAGE);
-                }
-                catch(Exception e){
-                    JOptionPane.showMessageDialog(comp, "Deleting client details failed", "Delete Client Details", JOptionPane.ERROR_MESSAGE);
-                }
-            }
+        try{
+            Statement stmnt = dbcon.createStatement();
+            stmnt.executeUpdate(deleteSelectedClientSQL);
+            JOptionPane.showMessageDialog(comp, "Client details deleted successfully", "Delete Client Details", JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Deleting client details failed", "Delete Client Details", JOptionPane.ERROR_MESSAGE);
+        }
     }
     
     public String generateClientID(Component comp){

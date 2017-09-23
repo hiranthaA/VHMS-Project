@@ -24,19 +24,46 @@ public class Income {
         dbcon = conn.Connect();
     }
     
-    public void addNewIncome(String payID, String service, String date, double amount,Component comp){
-        String sql = "insert into income(paymentID,service,date,amount) values(?,?,?,?)";
+    public String addNewIncome(String service, String date, double amount,Component comp){
+        String sql = "insert into income(paymentID,service,date,tot_amount) values(?,?,?,?)";
+        String prefix = "PAY/"+service+"/";
         try{
+            String payID = generatePaymentID(prefix,comp);
             PreparedStatement pst = dbcon.prepareStatement(sql);
             pst.setString(1,payID);
             pst.setString(2,service);
             pst.setString(3,date);
             pst.setDouble(4,amount);
             pst.execute();
+            increaseNoIncomeByOne(comp);
+            return payID;
         }
         catch(Exception e){
             e.printStackTrace();
             JOptionPane.showMessageDialog(comp, "Cannot Add Income Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+            return null;
+        }
+    }
+    
+    public void increaseNoIncomeByOne(Component comp){
+        try{
+            int noIncome=0;
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs = stmnt.executeQuery("select fincome from count");
+            while(rs.next()){
+                noIncome = rs.getInt("fincome");
+            }
+            try{
+                String SQL = "update count set fincome="+(noIncome+1)+" where fincome="+noIncome;
+                Statement stmnt2 = dbcon.createStatement();
+                stmnt2.executeUpdate(SQL);
+            }
+            catch(Exception ex){
+                JOptionPane.showMessageDialog(comp, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Communication with the database interrupted!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
     
@@ -226,6 +253,54 @@ public class Income {
             e.printStackTrace();
             JOptionPane.showMessageDialog(comp, "Cannot Refresh Income Details!","Database Error",JOptionPane.ERROR_MESSAGE);
             return 0;
+        }
+    }
+    
+    public String generatePaymentID(String prefix,Component comp){
+        int noPayments=0;
+        String payID=null;
+        try{
+            Statement stmnt = dbcon.createStatement();
+            ResultSet rs = stmnt.executeQuery("select fincome from count");
+            while(rs.next()){
+                noPayments = rs.getInt("fincome");
+            }
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Cannot retrieve data from the database!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        if(noPayments<9){
+            payID=prefix.concat("000000").concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else if(noPayments<99){
+            payID=prefix.concat("00000").concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else if(noPayments<999){
+            payID=prefix.concat("0000").concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else if(noPayments<9999){
+            payID=prefix.concat("000").concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else if(noPayments<99999){
+            payID=prefix.concat("00").concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else if(noPayments<999999){
+            payID=prefix.concat("0").concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else if(noPayments<9999999){
+            payID=prefix.concat(Integer.toString(noPayments+1));
+            return payID;
+        }
+        else{
+            JOptionPane.showMessageDialog(comp, "Cannot Generate paymentID. Maximum no.of Payments Reached","Database Error",JOptionPane.ERROR_MESSAGE);
+            return payID;
         }
     }
 }
