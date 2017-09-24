@@ -17,6 +17,7 @@ import java.util.Date;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 import javax.swing.ListModel;
+import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -321,6 +322,7 @@ public class MainWindow extends javax.swing.JFrame {
         dc_pha_edit_expdate = new com.toedter.calendar.JDateChooser();
         btngrp_BuyPet = new javax.swing.ButtonGroup();
         btngrp_AvailablePets = new javax.swing.ButtonGroup();
+        btngrp_DayCarePets = new javax.swing.ButtonGroup();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -518,6 +520,79 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_BtnRemovePic = new javax.swing.JButton();
         pnlDaycare = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        table_dc_customer = new javax.swing.JTable();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        table_dc_pet = new javax.swing.JTable();
+        pnl_dlgHos_addPet_container3 = new javax.swing.JPanel();
+        lbl_dlgHos_addPet_name2 = new javax.swing.JLabel();
+        text_dc_petname = new javax.swing.JTextField();
+        lbl_dlgHos_addPet_Species2 = new javax.swing.JLabel();
+        combo_dc_species = new javax.swing.JComboBox<>();
+        lbl_dlgHos_addPet_age2 = new javax.swing.JLabel();
+        spin_dc_years = new javax.swing.JSpinner();
+        lbl_dlgHos_addPet_years2 = new javax.swing.JLabel();
+        spin_dc_months = new javax.swing.JSpinner();
+        lbl_dlgHos_addPet_months2 = new javax.swing.JLabel();
+        lbl_dlgHos_addPet_sex2 = new javax.swing.JLabel();
+        radio_dc_male = new javax.swing.JRadioButton();
+        radio_dc_female = new javax.swing.JRadioButton();
+        lbl_dlgHos_addPet_breed2 = new javax.swing.JLabel();
+        text_dc_breed = new javax.swing.JTextField();
+        button_dc_newpet = new javax.swing.JButton();
+        button_dc_editpet = new javax.swing.JButton();
+        button_dc_savepet = new javax.swing.JButton();
+        button_dc_TakeCare = new javax.swing.JButton();
+        pnl_dlgHos_content2 = new javax.swing.JPanel();
+        lbl_dlgHos_addCustomer_Ownername1 = new javax.swing.JLabel();
+        text_dc_ownername = new javax.swing.JTextField();
+        lbl_dlgHos_addCustomer_address1 = new javax.swing.JLabel();
+        lbl_dlgHos_addCustomer_telephone1 = new javax.swing.JLabel();
+        text_dc_tele = new javax.swing.JTextField();
+        scrl_dlgHos_Address2 = new javax.swing.JScrollPane();
+        text_dc_address = new javax.swing.JTextArea();
+        lbl_dlgHos_addCustomer_email1 = new javax.swing.JLabel();
+        text_dc_email = new javax.swing.JTextField();
+        button_dc_editcust = new javax.swing.JButton();
+        button_dc_newcust = new javax.swing.JButton();
+        button_dc_savecust = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jLabel4 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel21 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
+        jLabel22 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
         pnlHealthcare = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jButton12 = new javax.swing.JButton();
@@ -3111,7 +3186,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(btnFinance, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnLogout, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         btnHospital.getAccessibleContext().setAccessibleName("Hospital");
@@ -3306,7 +3381,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addComponent(pnl_Ph_ItemDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(pnlPharmacyTotalBill, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(scrlPharmacyBillItemtbl, javax.swing.GroupLayout.DEFAULT_SIZE, 437, Short.MAX_VALUE))
+                    .addComponent(scrlPharmacyBillItemtbl, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlPharmacyIssueBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Btn_DeleteBillItem)
@@ -3736,8 +3811,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(lbl_Hos_CustomersLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrl_Hos_Customers, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE)
-                    .addComponent(scrl_Hos_Pets, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE))
+                    .addComponent(scrl_Hos_Customers, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+                    .addComponent(scrl_Hos_Pets, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlHosRegisterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_Hos_editCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
@@ -4096,7 +4171,7 @@ public class MainWindow extends javax.swing.JFrame {
                             .addComponent(rb_PS_AvailablePet_Male)
                             .addComponent(rb_PS_AvailablePet_Female)))
                     .addComponent(pnl_PS_Shop_Photo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(pnl_PS_Shop_DescriptionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Shop_LabelPrice)
                     .addComponent(PS_Shop_LabelRs)
@@ -4346,7 +4421,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Sell_LabelAddress)
                     .addComponent(scrl_ps_sell_textAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(pnl_PS_Sell_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Sell_TextTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Sell_LabelTelephone))
@@ -4715,7 +4790,7 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(PS_Buy_LabelAddress)
                     .addComponent(scrl_ps_buy_address, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
                 .addGroup(pnl_ps_buy_CustomerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(PS_Buy_TextTelephone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PS_Buy_LabelTelephone))
@@ -4988,15 +5063,670 @@ public class MainWindow extends javax.swing.JFrame {
 
         jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet DayCare", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
+        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        jTabbedPane1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel2.setText("Search Name");
+
+        jLabel3.setText("Search ID");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        table_dc_customer.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        table_dc_customer.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_dc_customerMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(table_dc_customer);
+
+        table_dc_pet.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "PetID", "Pet Name", "Species", "Breed", "Sex", "Years", "Months"
+            }
+        ));
+        table_dc_pet.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                table_dc_petMouseClicked(evt);
+            }
+        });
+        jScrollPane3.setViewportView(table_dc_pet);
+
+        pnl_dlgHos_addPet_container3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        lbl_dlgHos_addPet_name2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_name2.setText("Pet Name");
+
+        text_dc_petname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        lbl_dlgHos_addPet_Species2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_Species2.setText("Species");
+
+        combo_dc_species.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        combo_dc_species.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Canine", "Feline", "Avian", "Other" }));
+
+        lbl_dlgHos_addPet_age2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_age2.setText("Age");
+
+        spin_dc_years.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        spin_dc_years.setModel(new javax.swing.SpinnerNumberModel(0, 0, 20, 1));
+
+        lbl_dlgHos_addPet_years2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_years2.setText("Years -");
+
+        spin_dc_months.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        spin_dc_months.setModel(new javax.swing.SpinnerNumberModel(0, 0, 11, 1));
+
+        lbl_dlgHos_addPet_months2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_months2.setText("Months");
+
+        lbl_dlgHos_addPet_sex2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_sex2.setText("Sex");
+
+        btngrp_DayCarePets.add(radio_dc_male);
+        radio_dc_male.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        radio_dc_male.setText("Male");
+        radio_dc_male.setActionCommand("M");
+
+        btngrp_DayCarePets.add(radio_dc_female);
+        radio_dc_female.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        radio_dc_female.setText("Female");
+        radio_dc_female.setToolTipText("");
+        radio_dc_female.setActionCommand("F");
+
+        lbl_dlgHos_addPet_breed2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addPet_breed2.setText("Breed");
+
+        text_dc_breed.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+
+        button_dc_newpet.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        button_dc_newpet.setText("New");
+        button_dc_newpet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_newpetActionPerformed(evt);
+            }
+        });
+
+        button_dc_editpet.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        button_dc_editpet.setText("Edit");
+        button_dc_editpet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_editpetActionPerformed(evt);
+            }
+        });
+
+        button_dc_savepet.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        button_dc_savepet.setText("Save");
+        button_dc_savepet.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_savepetActionPerformed(evt);
+            }
+        });
+
+        button_dc_TakeCare.setBackground(new java.awt.Color(0, 204, 0));
+        button_dc_TakeCare.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        button_dc_TakeCare.setText("Take Care");
+        button_dc_TakeCare.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_TakeCareActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_dlgHos_addPet_container3Layout = new javax.swing.GroupLayout(pnl_dlgHos_addPet_container3);
+        pnl_dlgHos_addPet_container3.setLayout(pnl_dlgHos_addPet_container3Layout);
+        pnl_dlgHos_addPet_container3Layout.setHorizontalGroup(
+            pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_addPet_container3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnl_dlgHos_addPet_container3Layout.createSequentialGroup()
+                            .addComponent(button_dc_newpet, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(button_dc_editpet, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(button_dc_savepet, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(button_dc_TakeCare, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
+                        .addGroup(pnl_dlgHos_addPet_container3Layout.createSequentialGroup()
+                            .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(lbl_dlgHos_addPet_name2)
+                                .addComponent(lbl_dlgHos_addPet_Species2)
+                                .addComponent(lbl_dlgHos_addPet_sex2)
+                                .addComponent(lbl_dlgHos_addPet_age2))
+                            .addGap(18, 18, 18)
+                            .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(pnl_dlgHos_addPet_container3Layout.createSequentialGroup()
+                                    .addComponent(spin_dc_years, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(lbl_dlgHos_addPet_years2)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(spin_dc_months, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(lbl_dlgHos_addPet_months2))
+                                .addGroup(pnl_dlgHos_addPet_container3Layout.createSequentialGroup()
+                                    .addComponent(radio_dc_male)
+                                    .addGap(15, 15, 15)
+                                    .addComponent(radio_dc_female))
+                                .addComponent(combo_dc_species, 0, 298, Short.MAX_VALUE)
+                                .addComponent(text_dc_petname)
+                                .addComponent(text_dc_breed))
+                            .addGap(17, 17, 17)))
+                    .addComponent(lbl_dlgHos_addPet_breed2))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+        pnl_dlgHos_addPet_container3Layout.setVerticalGroup(
+            pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_addPet_container3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addPet_name2)
+                    .addComponent(text_dc_petname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(combo_dc_species, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_Species2))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_dc_breed, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_breed2))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addPet_age2)
+                    .addComponent(spin_dc_years, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_years2)
+                    .addComponent(spin_dc_months, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addPet_months2))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addPet_sex2)
+                    .addComponent(radio_dc_male)
+                    .addComponent(radio_dc_female))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(button_dc_newpet, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button_dc_editpet, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(button_dc_savepet, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(button_dc_TakeCare, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        pnl_dlgHos_content2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        lbl_dlgHos_addCustomer_Ownername1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_Ownername1.setText("Owner's Name");
+
+        text_dc_ownername.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        text_dc_ownername.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                text_dc_ownernameFocusLost(evt);
+            }
+        });
+
+        lbl_dlgHos_addCustomer_address1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_address1.setText("Address");
+
+        lbl_dlgHos_addCustomer_telephone1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_telephone1.setText("Telephone");
+
+        text_dc_tele.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        text_dc_tele.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                text_dc_teleFocusLost(evt);
+            }
+        });
+        text_dc_tele.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                text_dc_teleKeyTyped(evt);
+            }
+        });
+
+        text_dc_address.setColumns(20);
+        text_dc_address.setRows(5);
+        text_dc_address.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                text_dc_addressFocusLost(evt);
+            }
+        });
+        scrl_dlgHos_Address2.setViewportView(text_dc_address);
+
+        lbl_dlgHos_addCustomer_email1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        lbl_dlgHos_addCustomer_email1.setText("E-mail");
+
+        text_dc_email.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        text_dc_email.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                text_dc_emailFocusLost(evt);
+            }
+        });
+        text_dc_email.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                text_dc_emailKeyTyped(evt);
+            }
+        });
+
+        button_dc_editcust.setText("Edit");
+        button_dc_editcust.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_editcustActionPerformed(evt);
+            }
+        });
+
+        button_dc_newcust.setText("New");
+        button_dc_newcust.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_newcustActionPerformed(evt);
+            }
+        });
+
+        button_dc_savecust.setText("Save");
+        button_dc_savecust.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_savecustActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_dlgHos_content2Layout = new javax.swing.GroupLayout(pnl_dlgHos_content2);
+        pnl_dlgHos_content2.setLayout(pnl_dlgHos_content2Layout);
+        pnl_dlgHos_content2Layout.setHorizontalGroup(
+            pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                        .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lbl_dlgHos_addCustomer_Ownername1)
+                            .addComponent(lbl_dlgHos_addCustomer_address1)
+                            .addComponent(lbl_dlgHos_addCustomer_telephone1)
+                            .addComponent(lbl_dlgHos_addCustomer_email1))
+                        .addGap(18, 18, 18)
+                        .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(scrl_dlgHos_Address2)
+                            .addComponent(text_dc_ownername, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(text_dc_email)
+                            .addComponent(text_dc_tele, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                        .addComponent(button_dc_newcust, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(button_dc_editcust, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(button_dc_savecust, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnl_dlgHos_content2Layout.setVerticalGroup(
+            pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbl_dlgHos_addCustomer_Ownername1)
+                    .addComponent(text_dc_ownername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                        .addGap(28, 28, 28)
+                        .addComponent(lbl_dlgHos_addCustomer_address1))
+                    .addGroup(pnl_dlgHos_content2Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(scrl_dlgHos_Address2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_dc_tele, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addCustomer_telephone1))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_dc_email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbl_dlgHos_addCustomer_email1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGroup(pnl_dlgHos_content2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(button_dc_newcust, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_dc_editcust, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(button_dc_savecust, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(pnl_dlgHos_content2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnl_dlgHos_addPet_container3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnl_dlgHos_addPet_container3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnl_dlgHos_content2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("Customers", jPanel1);
+
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        jList1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(jList1);
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setText("Pets in Care");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addGap(0, 135, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane2)
+                .addContainerGap())
+        );
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel6.setText("Summary");
+
+        jButton2.setBackground(new java.awt.Color(153, 0, 0));
+        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jButton2.setText("Take Out");
+
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel5.setText("Pet Name :");
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel7.setText("Pet name here");
+
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel8.setText("Owner :");
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel9.setText("Owner name here");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel10.setText("Assigned Date");
+
+        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel12.setText("assignd date here");
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel13.setText("Took Care For");
+
+        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel14.setText("no of date here");
+
+        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel15.setText("Meal");
+
+        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        jLabel16.setText("Comfort");
+
+        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel17.setText("meal type");
+
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel18.setText("comfort type");
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jSeparator1)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(22, 22, 22)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel8))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel12))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel14)))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel16))
+                        .addGap(28, 28, 28)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel17)
+                            .addComponent(jLabel18))
+                        .addGap(12, 12, 12)))
+                .addContainerGap())
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(2, 2, 2)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel17))
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel16)
+                            .addComponent(jLabel18)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel12))
+                        .addGap(41, 41, 41)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel14))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        jLabel19.setText("jLabel19");
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+        );
+
+        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel20.setText("Meal Type");
+
+        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel21.setText("Comfort");
+
+        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel22.setText("Cage");
+
+        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                        .addComponent(jLabel22)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel20)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel21)
+                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel22)
+                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Day Care", jPanel2);
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         javax.swing.GroupLayout pnlDaycareLayout = new javax.swing.GroupLayout(pnlDaycare);
@@ -5052,7 +5782,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 605, Short.MAX_VALUE)
         );
 
         jTabbedPane4.addTab("tab1", jPanel21);
@@ -5065,7 +5795,7 @@ public class MainWindow extends javax.swing.JFrame {
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 603, Short.MAX_VALUE)
+            .addGap(0, 605, Short.MAX_VALUE)
         );
 
         jTabbedPane4.addTab("tab2", jPanel22);
@@ -5327,8 +6057,8 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(pnlClientSearchBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrlp_tbl_Fin_Product_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
-                    .addComponent(scrlp_tbl_Fin_Client_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE))
+                    .addComponent(scrlp_tbl_Fin_Product_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE)
+                    .addComponent(scrlp_tbl_Fin_Client_Details, javax.swing.GroupLayout.DEFAULT_SIZE, 411, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(pnlFinanceClientsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(btnFin_AddClient)
@@ -6665,6 +7395,38 @@ public class MainWindow extends javax.swing.JFrame {
         this.pnlEmployee.setVisible(false);
         this.pnlFinance.setVisible(false);
         this.pnlHome.setVisible(false);
+        
+        //----------------------------------------------------------------------
+        Customer c = new Customer();
+        ResultSet rs = c.getCustomerDetails();
+        this.table_dc_customer.setModel(DbUtils.resultSetToTableModel(rs));
+        //----------------------------------------------------------------------
+        
+        button_dc_editpet.setEnabled(false);
+        button_dc_savepet.setEnabled(false);
+        button_dc_savecust.setEnabled(false);
+        
+        text_dc_ownername.setEditable(false);
+        text_dc_address.setEditable(false);
+        text_dc_tele.setEditable(false);
+        text_dc_email.setEditable(false);
+        text_dc_ownername.setText("");
+        text_dc_address.setText("");
+        text_dc_tele.setText("");
+        text_dc_email.setText("");
+        
+        text_dc_petname.setEditable(false);
+        text_dc_breed.setEditable(false);
+        text_dc_petname.setText("");
+        combo_dc_species.getModel().setSelectedItem("Select...");
+        text_dc_breed.setText("");
+        spin_dc_years.setValue(0);
+        spin_dc_months.setValue(0);
+        btngrp_DayCarePets.clearSelection();
+        //clear pets table-----------------------------------------------------
+        DefaultTableModel dtm = (DefaultTableModel) table_dc_pet.getModel();
+        dtm.setRowCount(0);
+        //---------------------------------------------------------------------
     }//GEN-LAST:event_btnDaycareActionPerformed
 
     private void btnHealthcareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHealthcareActionPerformed
@@ -8314,10 +9076,7 @@ public class MainWindow extends javax.swing.JFrame {
     private void tbl_Hos_CustomersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_Hos_CustomersMouseClicked
         //-update pet table----------------------------------------------
         int selectedRow = this.tbl_Hos_Customers.getSelectedRow();
-        if(selectedRow==-1){
-        // clear table pet details
-        }
-        else{
+        if(selectedRow!=-1){
             String CustID = this.tbl_Hos_Customers.getModel().getValueAt(selectedRow, 0).toString();
             Pet p = new Pet();
             ResultSet rs = p.getPetDetails(CustID);
@@ -10127,6 +10886,492 @@ public class MainWindow extends javax.swing.JFrame {
         }
             
     }//GEN-LAST:event_PS_Shop_BtnRemoveActionPerformed
+
+    private void button_dc_newpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_newpetActionPerformed
+        int selectedRow = this.table_dc_customer.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a customer to add pet!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            table_dc_pet.clearSelection();
+            text_dc_petname.setText("");
+            combo_dc_species.getModel().setSelectedItem("Select...");
+            text_dc_breed.setText("");
+            spin_dc_years.setValue(0);
+            spin_dc_months.setValue(0);
+            btngrp_DayCarePets.clearSelection();
+            text_dc_petname.setEditable(true);
+            text_dc_breed.setEditable(true);
+            button_dc_editpet.setEnabled(false);
+            button_dc_savepet.setEnabled(true);
+        }
+    }//GEN-LAST:event_button_dc_newpetActionPerformed
+
+    private void button_dc_editpetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_editpetActionPerformed
+        int selectedRow = this.table_dc_pet.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a pet to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            text_dc_petname.setEditable(true);
+            text_dc_breed.setEditable(true);
+            button_dc_savepet.setEnabled(true);
+        }
+    }//GEN-LAST:event_button_dc_editpetActionPerformed
+
+    private void text_dc_ownernameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_text_dc_ownernameFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_dc_ownernameFocusLost
+
+    private void text_dc_teleFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_text_dc_teleFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_dc_teleFocusLost
+
+    private void text_dc_teleKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_text_dc_teleKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_dc_teleKeyTyped
+
+    private void text_dc_addressFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_text_dc_addressFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_dc_addressFocusLost
+
+    private void text_dc_emailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_text_dc_emailFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_dc_emailFocusLost
+
+    private void text_dc_emailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_text_dc_emailKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_text_dc_emailKeyTyped
+
+    private void button_dc_editcustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_editcustActionPerformed
+        int selectedRow = this.table_dc_customer.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a customer to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            text_dc_ownername.setEditable(true);
+            text_dc_address.setEditable(true);
+            text_dc_tele.setEditable(true);
+            text_dc_email.setEditable(true);
+            button_dc_editcust.setEnabled(false);
+            button_dc_savecust.setEnabled(true);
+        }
+    }//GEN-LAST:event_button_dc_editcustActionPerformed
+
+    private void button_dc_newcustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_newcustActionPerformed
+        table_dc_customer.clearSelection();
+        text_dc_ownername.setText("");
+        text_dc_address.setText("");
+        text_dc_tele.setText("");
+        text_dc_email.setText("");
+        text_dc_ownername.setEditable(true);
+        text_dc_address.setEditable(true);
+        text_dc_tele.setEditable(true);
+        text_dc_email.setEditable(true);
+        button_dc_editcust.setEnabled(false);
+        button_dc_savecust.setEnabled(true);
+        
+        //clear pets table-----------------------------------------------------
+        DefaultTableModel dtm = (DefaultTableModel) table_dc_pet.getModel();
+        dtm.setRowCount(0);
+        //---------------------------------------------------------------------
+    }//GEN-LAST:event_button_dc_newcustActionPerformed
+
+    private void button_dc_savecustActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_savecustActionPerformed
+        int selectedRow = this.table_dc_customer.getSelectedRow();
+        if(selectedRow==-1){
+            Customer c = new Customer();
+            String name = text_dc_ownername.getText();
+            String address = text_dc_address.getText();
+            String tele = text_dc_tele.getText();
+            String email = text_dc_email.getText();
+            if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                String owner=c.addCustomer(name,address,tele,email,this);
+                c.addReg_Service(owner, "dc");
+                table_dc_customer.clearSelection();
+                text_dc_ownername.setText("");
+                text_dc_address.setText("");
+                text_dc_tele.setText("");
+                text_dc_email.setText("");
+                //clear pets table-----------------------------------------------------
+                DefaultTableModel dtm = (DefaultTableModel) table_dc_pet.getModel();
+                dtm.setRowCount(0);
+                //-update customer table--------------------------------------
+                ResultSet rs = c.getCustomerDetails();
+                
+                if(rs==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Retrieve Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    table_dc_customer.setModel(DbUtils.resultSetToTableModel(rs));
+                }
+                //----------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+//                if(c.validateCustName(name)){
+//                    this.PS_Sell_LabelBuyersName.setForeground(Color.black);
+//                    this.PS_Sell_LabelBuyersName.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelBuyersName.setForeground(Color.red);
+//                    this.PS_Sell_LabelBuyersName.setToolTipText("Invalid Name");
+//                }
+//                if(c.validateAddress(address)){
+//                    this.PS_Sell_LabelAddress.setForeground(Color.black);
+//                    this.PS_Sell_LabelAddress.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelAddress.setForeground(Color.red);
+//                    this.PS_Sell_LabelAddress.setToolTipText("Invalid Address");
+//                }
+//                if(c.validateTelephone(tele)){
+//                    this.PS_Sell_LabelTelephone.setForeground(Color.black);
+//                    this.PS_Sell_LabelTelephone.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelTelephone.setForeground(Color.red);
+//                    this.PS_Sell_LabelTelephone.setToolTipText("Invalid Telephone Number");
+//                }
+//                if(c.validateEmail(email)){
+//                    this.PS_Sell_LabelEmail.setForeground(Color.black);
+//                    this.PS_Sell_LabelEmail.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelEmail.setForeground(Color.red);
+//                    this.PS_Sell_LabelEmail.setToolTipText("Invalid Email Address");
+//                }
+            }
+        }
+        else{
+            Customer c = new Customer();
+            String name = text_dc_ownername.getText();
+            String address = text_dc_address.getText();
+            String tele = text_dc_tele.getText();
+            String email = text_dc_email.getText();
+            String owner = this.table_dc_customer.getModel().getValueAt(selectedRow, 0).toString();
+            if(c.validateCustName(name) & c.validateAddress(address) & c.validateTelephone(tele) & c.validateEmail(email)){
+                c.updateCustomer(name,address,tele,email,owner,this);
+                table_dc_customer.clearSelection();
+                text_dc_ownername.setText("");
+                text_dc_address.setText("");
+                text_dc_tele.setText("");
+                text_dc_email.setText("");    
+                //-update customer table--------------------------------------
+                ResultSet rs = c.getCustomerDetails();
+                if(rs==null){
+                    JOptionPane.showMessageDialog(this, "Cannot Retrieve Customer Details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    table_dc_customer.setModel(DbUtils.resultSetToTableModel(rs));
+                }
+                //----------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+//                if(c.validateCustName(name)){
+//                    this.PS_Sell_LabelBuyersName.setForeground(Color.black);
+//                    this.PS_Sell_LabelBuyersName.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelBuyersName.setForeground(Color.red);
+//                    this.PS_Sell_LabelBuyersName.setToolTipText("Invalid Name");
+//                }
+//                if(c.validateAddress(address)){
+//                    this.PS_Sell_LabelAddress.setForeground(Color.black);
+//                    this.PS_Sell_LabelAddress.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelAddress.setForeground(Color.red);
+//                    this.PS_Sell_LabelAddress.setToolTipText("Invalid Address");
+//                }
+//                if(c.validateTelephone(tele)){
+//                    this.PS_Sell_LabelTelephone.setForeground(Color.black);
+//                    this.PS_Sell_LabelTelephone.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelTelephone.setForeground(Color.red);
+//                    this.PS_Sell_LabelTelephone.setToolTipText("Invalid Telephone Number");
+//                }
+//                if(c.validateEmail(email)){
+//                    this.PS_Sell_LabelEmail.setForeground(Color.black);
+//                    this.PS_Sell_LabelEmail.setToolTipText(null);
+//                }
+//                else{
+//                    this.PS_Sell_LabelEmail.setForeground(Color.red);
+//                    this.PS_Sell_LabelEmail.setToolTipText("Invalid Email Address");
+//                }
+            }
+        }
+    }//GEN-LAST:event_button_dc_savecustActionPerformed
+
+    private void button_dc_savepetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_savepetActionPerformed
+        int selectedRow = this.table_dc_pet.getSelectedRow();
+        if(selectedRow==-1){   
+            Pet p = new Pet();
+            String name = text_dc_petname.getText();
+            String species = combo_dc_species.getSelectedItem().toString();
+            int years = Integer.parseInt(spin_dc_years.getValue().toString());
+            int months = Integer.parseInt(spin_dc_years.getValue().toString());
+            String breed = text_dc_breed.getText();
+            int selectedCustRow = table_dc_customer.getSelectedRow();
+            if(p.validatePetName(name) & p.validateSpecies(species) & p.validateAge(years, months) & p.validateBreed(breed) & p.validateSex(btngrp_DayCarePets.getSelection())){
+                String custID = table_dc_customer.getModel().getValueAt(selectedCustRow, 0).toString();
+                String sex = btngrp_DayCarePets.getSelection().getActionCommand();
+                p.addPet(name, species, years, months, breed, sex, custID, this);
+                //----------------------------------------------------------------------
+                Customer c = new Customer();
+                c.updateReg_Service(custID, "dc");
+                //-update pet table-----------------------------------------------------
+                ResultSet rs = p.getPetDetails(custID);
+                table_dc_pet.setModel(DbUtils.resultSetToTableModel(rs));
+                //----------------------------------------------------------------------
+                text_dc_petname.setText("");
+                combo_dc_species.getModel().setSelectedItem("Select...");
+                text_dc_breed.setText("");
+                spin_dc_years.setValue(0);
+                spin_dc_months.setValue(0);
+                btngrp_DayCarePets.clearSelection();
+                text_dc_petname.setEditable(false);
+                text_dc_breed.setEditable(false);
+                button_dc_savepet.setEnabled(false);
+                //----------------------------------------------------------------------
+            }
+            else{
+                getToolkit().beep();
+//                if(p.validatePetName(name)){
+//                    this.lbl_dlgHos_addPet_name.setForeground(Color.black);
+//                    this.lbl_dlgHos_addPet_name.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_addPet_name.setForeground(Color.red);
+//                    this.lbl_dlgHos_addPet_name.setToolTipText("Invalid Name");
+//                }
+//                if(p.validateSpecies(species)){
+//                    this.lbl_dlgHos_addPet_Species.setForeground(Color.black);
+//                    this.lbl_dlgHos_addPet_Species.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_addPet_Species.setForeground(Color.red);
+//                    this.lbl_dlgHos_addPet_Species.setToolTipText("Selct a species from the list");
+//                }
+//                if(p.validateAge(years,months)){
+//                    this.lbl_dlgHos_addPet_age.setForeground(Color.black);
+//                    this.lbl_dlgHos_addPet_age.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_addPet_age.setForeground(Color.red);
+//                    this.lbl_dlgHos_addPet_age.setToolTipText("Invalid Age");
+//                }
+//                if(p.validateBreed(breed)){
+//                    this.lbl_dlgHos_addPet_breed.setForeground(Color.black);
+//                    this.lbl_dlgHos_addPet_breed.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_addPet_breed.setForeground(Color.red);
+//                    this.lbl_dlgHos_addPet_breed.setToolTipText("Invalid Breed");
+//                }
+//                if(p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+//                    this.lbl_dlgHos_addPet_sex.setForeground(Color.black);
+//                    this.lbl_dlgHos_addPet_sex.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_addPet_sex.setForeground(Color.red);
+//                    this.lbl_dlgHos_addPet_sex.setToolTipText("Select a sex");
+//                }
+            }
+        }
+        else{
+            Pet p = new Pet();
+            String name = text_dc_petname.getText();
+            String species = combo_dc_species.getSelectedItem().toString();
+            int years = Integer.parseInt(spin_dc_years.getValue().toString());
+            int months = Integer.parseInt(spin_dc_years.getValue().toString());
+            String breed = text_dc_breed.getText();
+            if(p.validatePetName(name) & p.validateSpecies(species) & p.validateAge(years, months) & p.validateBreed(breed) & p.validateSex(this.btngrp_DayCarePets.getSelection())){
+                String petID = this.table_dc_pet.getModel().getValueAt(selectedRow, 0).toString();
+                int selectedCustRow = this.table_dc_customer.getSelectedRow();
+                String custID = this.table_dc_customer.getModel().getValueAt(selectedCustRow, 0).toString();
+                String sex = this.btngrp_DayCarePets.getSelection().getActionCommand();
+                p.editPet(name, species, years, months, breed, sex, petID, this);
+                //-update pet table-----------------------------------------------------
+                ResultSet rs = p.getPetDetails(custID);
+                this.table_dc_pet.setModel(DbUtils.resultSetToTableModel(rs));
+                //----------------------------------------------------------------------
+                button_dc_savepet.setEnabled(false);
+                text_dc_petname.setEditable(false);
+                text_dc_breed.setEditable(false);
+                text_dc_petname.setText("");
+                combo_dc_species.getModel().setSelectedItem("Select...");
+                text_dc_breed.setText("");
+                spin_dc_years.setValue(0);
+                spin_dc_months.setValue(0);
+                btngrp_DayCarePets.clearSelection();
+                
+            }
+            else{
+                getToolkit().beep();
+//                if(p.validatePetName(name)){
+//                    this.lbl_dlgHos_editPet_name.setForeground(Color.black);
+//                    this.lbl_dlgHos_editPet_name.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_editPet_name.setForeground(Color.red);
+//                    this.lbl_dlgHos_editPet_name.setToolTipText("Invalid Name");
+//                }
+//                if(p.validateSpecies(species)){
+//                    this.lbl_dlgHos_editPet_Species.setForeground(Color.black);
+//                    this.lbl_dlgHos_editPet_Species.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_editPet_Species.setForeground(Color.red);
+//                    this.lbl_dlgHos_editPet_Species.setToolTipText("Select a species from the list");
+//                }
+//                if(p.validateAge(years,months)){
+//                    this.lbl_dlgHos_editPet_age.setForeground(Color.black);
+//                    this.lbl_dlgHos_editPet_age.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_editPet_age.setForeground(Color.red);
+//                    this.lbl_dlgHos_editPet_age.setToolTipText("Invalid Age");
+//                }
+//                if(p.validateBreed(breed)){
+//                    this.lbl_dlgHos_editPet_breed.setForeground(Color.black);
+//                    this.lbl_dlgHos_editPet_breed.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_editPet_breed.setForeground(Color.red);
+//                    this.lbl_dlgHos_editPet_breed.setToolTipText("Invalid Breed");
+//                }
+//                if(p.validateSex(this.btngp_dlgHos_addPet_Sex.getSelection())){
+//                    this.lbl_dlgHos_editPet_sex.setForeground(Color.black);
+//                    this.lbl_dlgHos_editPet_sex.setToolTipText(null);
+//                }
+//                else{
+//                    this.lbl_dlgHos_editPet_sex.setForeground(Color.red);
+//                    this.lbl_dlgHos_editPet_sex.setToolTipText("Select a sex");
+//                }
+            }
+        }
+    }//GEN-LAST:event_button_dc_savepetActionPerformed
+
+    private void table_dc_customerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_dc_customerMouseClicked
+        //-update text fields----------------------------------------------
+        int selectedRow = table_dc_customer.getSelectedRow();
+        if(selectedRow!=-1){
+//            //------------------------------------------------------------------
+//            PS_Sell_LabelBuyersName.setForeground(Color.black);
+//            PS_Sell_LabelBuyersName.setToolTipText(null);
+//            PS_Sell_LabelAddress.setForeground(Color.black);
+//            PS_Sell_LabelAddress.setToolTipText(null);
+//            PS_Sell_LabelTelephone.setForeground(Color.black);
+//            PS_Sell_LabelTelephone.setToolTipText(null);
+//            PS_Sell_LabelEmail.setForeground(Color.black);
+//            PS_Sell_LabelEmail.setToolTipText(null);
+//            
+//            PS_Sell_ButtonSell.setEnabled(true);
+//            //------------------------------------------------------------------
+            
+            String custID = table_dc_customer.getModel().getValueAt(selectedRow, 0).toString();
+            Customer c = new Customer();
+            Pet p = new Pet();
+            ResultSet rspet = p.getPetDetails(custID);
+            ResultSet rscust = c.getCustomerDetails(custID);
+            try{
+                if(rspet==null){
+                    JOptionPane.showMessageDialog(this, "Error Occured when retrieving pet details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    table_dc_pet.setModel(DbUtils.resultSetToTableModel(rspet));
+                }
+                if(rscust==null){
+                    JOptionPane.showMessageDialog(this, "Error Occured when retrieving customer details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    while(rscust.next()){
+                        text_dc_ownername.setText(rscust.getString("Name"));
+                        text_dc_address.setText(rscust.getString("Address"));
+                        text_dc_tele.setText(rscust.getString("Telephone"));
+                        text_dc_email.setText(rscust.getString("Email"));
+                    }
+                    text_dc_ownername.setEditable(false);
+                    text_dc_address.setEditable(false);
+                    text_dc_tele.setEditable(false);
+                    text_dc_email.setEditable(false);
+                    button_dc_editcust.setEnabled(true);
+                    button_dc_savecust.setEnabled(false);
+                    button_dc_editpet.setEnabled(false);
+                    button_dc_savepet.setEnabled(false);
+                    text_dc_petname.setText("");
+                    combo_dc_species.getModel().setSelectedItem("Select...");
+                    text_dc_breed.setText("");
+                    spin_dc_years.setValue(0);
+                    spin_dc_months.setValue(0);
+                    btngrp_DayCarePets.clearSelection();
+                    text_dc_petname.setEditable(false);
+                    text_dc_breed.setEditable(false);
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        //------------------------------------------------------------------
+    }//GEN-LAST:event_table_dc_customerMouseClicked
+
+    private void table_dc_petMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_table_dc_petMouseClicked
+        int selectedRow = table_dc_pet.getSelectedRow();
+        if(selectedRow!=-1){
+            String petID = table_dc_pet.getModel().getValueAt(selectedRow, 0).toString();
+            Pet p = new Pet();
+            ResultSet rspet = p.getPetIDDetails(petID);
+            try{
+                if(rspet==null){
+                    JOptionPane.showMessageDialog(this, "Error Occured when retrieving pet details!","Database Error",JOptionPane.ERROR_MESSAGE);
+                }
+                else{
+                    while(rspet.next()){
+                        text_dc_petname.setText(rspet.getString("name"));
+                        combo_dc_species.getModel().setSelectedItem(rspet.getString("species"));
+                        text_dc_breed.setText(rspet.getString("breed"));
+                        spin_dc_years.setValue(rspet.getInt("ageYears"));
+                        spin_dc_months.setValue(rspet.getInt("ageMonths"));
+                        if(rspet.getString("sex").equals("M")){
+                            radio_dc_male.setSelected(true);
+                        }
+                        else{
+                            radio_dc_female.setSelected(true);
+                        }
+                        button_dc_editpet.setEnabled(true);
+                        button_dc_savepet.setEnabled(false);
+                        text_dc_petname.setEditable(false);
+                        text_dc_breed.setEditable(false);
+                    }
+                }
+            }
+            catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+    }//GEN-LAST:event_table_dc_petMouseClicked
+
+    private void button_dc_TakeCareActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_TakeCareActionPerformed
+        int selectedRow = this.table_dc_pet.getSelectedRow();
+        if(selectedRow==-1){
+            JOptionPane.showMessageDialog(this, "Select a pet to add to day care!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            String petID = table_dc_pet.getModel().getValueAt(selectedRow, 0).toString();
+            DayCarePet dcp = new DayCarePet();
+            boolean available = dcp.isPetIn(petID);
+            if(available){
+                JOptionPane.showMessageDialog(this, "Sorry! We are already taking care of this pet","Day Care",JOptionPane.WARNING_MESSAGE);
+            }
+            else{
+                dcp.takeCare(petID);
+            }
+        }
+    }//GEN-LAST:event_button_dc_TakeCareActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -10601,6 +11846,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btngp_dlgHos_addPet_Sex;
     private javax.swing.ButtonGroup btngrp_AvailablePets;
     private javax.swing.ButtonGroup btngrp_BuyPet;
+    private javax.swing.ButtonGroup btngrp_DayCarePets;
+    private javax.swing.JButton button_dc_TakeCare;
+    private javax.swing.JButton button_dc_editcust;
+    private javax.swing.JButton button_dc_editpet;
+    private javax.swing.JButton button_dc_newcust;
+    private javax.swing.JButton button_dc_newpet;
+    private javax.swing.JButton button_dc_savecust;
+    private javax.swing.JButton button_dc_savepet;
     private javax.swing.JCheckBox ckbx_Fin_ClientInvoice;
     private javax.swing.JCheckBox ckbx_Fin_Daycare;
     private javax.swing.JCheckBox ckbx_Fin_Ebill;
@@ -10625,6 +11878,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_usrAcc_Ph;
     private javax.swing.JComboBox<String> cmb_dlgHos_addPet_Species;
     private javax.swing.JComboBox<String> cmb_dlgHos_editPet_Species;
+    private javax.swing.JComboBox<String> combo_dc_species;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_From;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_to;
     private com.toedter.calendar.JDateChooser dc_Fin_Income_From;
@@ -10655,8 +11909,33 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgpha_addItem;
     private javax.swing.JDialog dlgpha_updateItem;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -10668,17 +11947,31 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JScrollPane jscroll_pha_stock;
     private javax.swing.JLabel lblPharmacy_RsLabel;
     private javax.swing.JLabel lblPharmacy_Total;
@@ -10727,17 +12020,28 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_dlgHos_Clinic_ReportOf;
     private javax.swing.JLabel lbl_dlgHos_Clinic_petName;
     private javax.swing.JLabel lbl_dlgHos_addCustomer_Ownername;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_Ownername1;
     private javax.swing.JLabel lbl_dlgHos_addCustomer_address;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_address1;
     private javax.swing.JLabel lbl_dlgHos_addCustomer_email;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_email1;
     private javax.swing.JLabel lbl_dlgHos_addCustomer_telephone;
+    private javax.swing.JLabel lbl_dlgHos_addCustomer_telephone1;
     private javax.swing.JLabel lbl_dlgHos_addPet_Species;
+    private javax.swing.JLabel lbl_dlgHos_addPet_Species2;
     private javax.swing.JLabel lbl_dlgHos_addPet_age;
+    private javax.swing.JLabel lbl_dlgHos_addPet_age2;
     private javax.swing.JLabel lbl_dlgHos_addPet_breed;
+    private javax.swing.JLabel lbl_dlgHos_addPet_breed2;
     private javax.swing.JLabel lbl_dlgHos_addPet_months;
+    private javax.swing.JLabel lbl_dlgHos_addPet_months2;
     private javax.swing.JLabel lbl_dlgHos_addPet_name;
+    private javax.swing.JLabel lbl_dlgHos_addPet_name2;
     private javax.swing.JLabel lbl_dlgHos_addPet_sex;
+    private javax.swing.JLabel lbl_dlgHos_addPet_sex2;
     private javax.swing.JLabel lbl_dlgHos_addPet_topic;
     private javax.swing.JLabel lbl_dlgHos_addPet_years;
+    private javax.swing.JLabel lbl_dlgHos_addPet_years2;
     private javax.swing.JLabel lbl_dlgHos_addnew;
     private javax.swing.JLabel lbl_dlgHos_addnew1;
     private javax.swing.JLabel lbl_dlgHos_editCustomer_Ownername;
@@ -10834,8 +12138,10 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_dlgHos_Clinic_Report;
     private javax.swing.JPanel pnl_dlgHos_addPet_container;
     private javax.swing.JPanel pnl_dlgHos_addPet_container1;
+    private javax.swing.JPanel pnl_dlgHos_addPet_container3;
     private javax.swing.JPanel pnl_dlgHos_content;
     private javax.swing.JPanel pnl_dlgHos_content1;
+    private javax.swing.JPanel pnl_dlgHos_content2;
     private javax.swing.JPanel pnl_dlg_addItemMain;
     private javax.swing.JPanel pnl_dlg_addItemMain1;
     private javax.swing.JPanel pnl_petshopTabShopContainer;
@@ -10853,6 +12159,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_usrAcc_LoginPrivileges;
     private javax.swing.JPanel pnl_usrAcc_Privileges;
     private javax.swing.JPanel pnltableExpense;
+    private javax.swing.JRadioButton radio_dc_female;
+    private javax.swing.JRadioButton radio_dc_male;
     private javax.swing.JRadioButton rb_PS_AvailablePet_Female;
     private javax.swing.JRadioButton rb_PS_AvailablePet_Male;
     private javax.swing.JRadioButton rb_dlgHos_addPet_female;
@@ -10865,6 +12173,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrl_Hos_Pets;
     private javax.swing.JScrollPane scrl_dlgHos_Address;
     private javax.swing.JScrollPane scrl_dlgHos_Address1;
+    private javax.swing.JScrollPane scrl_dlgHos_Address2;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Complaint;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_Diagnosis;
     private javax.swing.JScrollPane scrl_dlgHos_Clinic_LabFindings;
@@ -10884,6 +12193,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrlp_tbl_Fin_Product_Details;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_addClient_Address;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_editClient_Address;
+    private javax.swing.JSpinner spin_dc_months;
+    private javax.swing.JSpinner spin_dc_years;
     private javax.swing.JSpinner spnr_dlgHos_addPet_months;
     private javax.swing.JSpinner spnr_dlgHos_addPet_years;
     private javax.swing.JSpinner spnr_dlgHos_editPet_months;
@@ -10891,6 +12202,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSeparator sprt_usrAcc_Privileges;
     private javax.swing.JSeparator sprtl_usrAcc_login;
     private javax.swing.JTabbedPane tabbedPanePetShop;
+    private javax.swing.JTable table_dc_customer;
+    private javax.swing.JTable table_dc_pet;
     private javax.swing.JPanel tabpetShopShop;
     private javax.swing.JTable tblPharmacyBillItems;
     private javax.swing.JTable tbl_Fin_Client_Details;
@@ -10900,6 +12213,12 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable tbl_Hos_Customers;
     private javax.swing.JTable tbl_Hos_Pets;
     private javax.swing.JTable tbl_stock;
+    private javax.swing.JTextArea text_dc_address;
+    private javax.swing.JTextField text_dc_breed;
+    private javax.swing.JTextField text_dc_email;
+    private javax.swing.JTextField text_dc_ownername;
+    private javax.swing.JTextField text_dc_petname;
+    private javax.swing.JTextField text_dc_tele;
     private javax.swing.JTextField txtBillItemcode;
     private javax.swing.JTextField txtBillQuantity;
     private javax.swing.JTextField txtStockQuantity;

@@ -18,7 +18,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author sashini
+ * @author shashini
  */
 public class PetShop {
     private Connection dbcon;
