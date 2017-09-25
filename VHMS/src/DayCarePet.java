@@ -85,4 +85,83 @@ public class DayCarePet {
         ID = day.concat(Integer.toString(count+1));
         return ID;
     }
+    
+    public ResultSet getDCPets(){
+        String sql = "select petID from pet_daycare";
+        try{
+            Statement s = dbcon.createStatement();
+            ResultSet r = s.executeQuery(sql);
+            return r;
+        }
+        catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+    
+    public ResultSet getPetName(String petID){
+        String sql = "select name from pets where petID='"+petID+"'";
+        try{
+            Statement s = dbcon.createStatement();
+            ResultSet r = s.executeQuery(sql);
+            return r;
+        }
+        catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+    
+    public ResultSet getPetOwnerName(String petID){
+        String sql = "select c.name from customer c, pets p where c.custID=p.custID and p.petID='"+petID+"'";
+        try{
+            Statement s = dbcon.createStatement();
+            ResultSet r = s.executeQuery(sql);
+            return r;
+        }
+        catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+    
+    public ResultSet getPetAssignedDate(String petID){
+        String sql = "select date from pet_daycare where status=1 and petID='"+petID+"'";
+        try{
+            Statement s = dbcon.createStatement();
+            ResultSet r = s.executeQuery(sql);
+            return r;
+        }
+        catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+    
+    public ResultSet getPetMeal(String petID){
+        String sql = "select meal from pet_daycare where status=1 and petID='"+petID+"'";
+        try{
+            Statement s = dbcon.createStatement();
+            ResultSet r = s.executeQuery(sql);
+            return r;
+        }
+        catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+    
+    public ResultSet getPetConfort(String petID){
+        String sql = "select comfort from pet_daycare where status=1 and petID='"+petID+"'";
+        try{
+            Statement s = dbcon.createStatement();
+            ResultSet r = s.executeQuery(sql);
+            return r;
+        }
+        catch(SQLException ex){
+            ex.printStackTrace();
+            return null;
+        }
+    }
+    
 }
