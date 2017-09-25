@@ -21,6 +21,7 @@ import javax.swing.JOptionPane;
 import javax.swing.ListModel;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
+import java.time.*;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -522,17 +523,17 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Buy_BtnAddPic = new javax.swing.JButton();
         PS_Buy_BtnRemovePic = new javax.swing.JButton();
         pnlDaycare = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        pnlDayCareContainer = new javax.swing.JPanel();
+        tabPaneDayCare = new javax.swing.JTabbedPane();
+        pnlDayCareCustomers = new javax.swing.JPanel();
+        pnlDayCareSearch = new javax.swing.JPanel();
+        text_dc_SearchByID = new javax.swing.JTextField();
+        label_dc_SeachName = new javax.swing.JLabel();
+        text_dc_SearchByName = new javax.swing.JTextField();
+        label_dc_SeachID = new javax.swing.JLabel();
+        scrl_dc_tblCustomer = new javax.swing.JScrollPane();
         table_dc_customer = new javax.swing.JTable();
-        jScrollPane3 = new javax.swing.JScrollPane();
+        scrl_dc_tblPet = new javax.swing.JScrollPane();
         table_dc_pet = new javax.swing.JTable();
         pnl_dlgHos_addPet_container3 = new javax.swing.JPanel();
         lbl_dlgHos_addPet_name2 = new javax.swing.JLabel();
@@ -566,36 +567,42 @@ public class MainWindow extends javax.swing.JFrame {
         button_dc_editcust = new javax.swing.JButton();
         button_dc_newcust = new javax.swing.JButton();
         button_dc_savecust = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel5 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        pnlDayCareDayCare = new javax.swing.JPanel();
+        pnl_dc_mainContainer = new javax.swing.JPanel();
+        pnl_dc_PetsInCare = new javax.swing.JPanel();
+        scrlDayCarePetsList = new javax.swing.JScrollPane();
         list_DaycarePets = new javax.swing.JList<>();
-        jLabel4 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
+        label_PetsInCare = new javax.swing.JLabel();
+        pnlDayCareSummary = new javax.swing.JPanel();
+        label_dc_Summary = new javax.swing.JLabel();
+        button_dc_TakeOut = new javax.swing.JButton();
+        seperator_dc_Summary = new javax.swing.JSeparator();
+        pnl_dc_PetDetails = new javax.swing.JPanel();
+        label_dc_PetNameLabel = new javax.swing.JLabel();
         label_dc_petname = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         label_dc_owner = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
-        jLabel20 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel21 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel22 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        label_dc_ownerLabel = new javax.swing.JLabel();
+        pnlDCAssignedDates = new javax.swing.JPanel();
+        label_dc_noDays = new javax.swing.JLabel();
+        label_dc_adateLabel = new javax.swing.JLabel();
+        label_dc_adate = new javax.swing.JLabel();
+        label_dc_TookCareFor = new javax.swing.JLabel();
+        pnlDCFacilities = new javax.swing.JPanel();
+        label_dc_mealLabel = new javax.swing.JLabel();
+        label_dc_ComfortLabel = new javax.swing.JLabel();
+        label_dc_comfort = new javax.swing.JLabel();
+        label_dc_meal = new javax.swing.JLabel();
+        label_dc_cage = new javax.swing.JLabel();
+        label_dc_cageLabel = new javax.swing.JLabel();
+        pnlDCMealMenuImage = new javax.swing.JPanel();
+        label_menu_image = new javax.swing.JLabel();
+        label_dc_menuType = new javax.swing.JLabel();
+        combo_dc_meal = new javax.swing.JComboBox<>();
+        label_dc_comfortType = new javax.swing.JLabel();
+        combo_dc_comfort = new javax.swing.JComboBox<>();
+        label_dc_Cage = new javax.swing.JLabel();
+        combo_dc_cage = new javax.swing.JComboBox<>();
+        button_dc_apply = new javax.swing.JButton();
         pnlHealthcare = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jButton12 = new javax.swing.JButton();
@@ -5064,41 +5071,41 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(pnlPetShopMainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet DayCare", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
+        pnlDayCareContainer.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet DayCare", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
 
-        jTabbedPane1.setTabPlacement(javax.swing.JTabbedPane.LEFT);
-        jTabbedPane1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        tabPaneDayCare.setTabPlacement(javax.swing.JTabbedPane.LEFT);
+        tabPaneDayCare.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        pnlDayCareSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jLabel2.setText("Search Name");
+        label_dc_SeachName.setText("Search Name");
 
-        jLabel3.setText("Search ID");
+        label_dc_SeachID.setText("Search ID");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlDayCareSearchLayout = new javax.swing.GroupLayout(pnlDayCareSearch);
+        pnlDayCareSearch.setLayout(pnlDayCareSearchLayout);
+        pnlDayCareSearchLayout.setHorizontalGroup(
+            pnlDayCareSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDayCareSearchLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
+                .addComponent(label_dc_SeachName)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(text_dc_SearchByName, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(62, 62, 62)
-                .addComponent(jLabel3)
+                .addComponent(label_dc_SeachID)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(text_dc_SearchByID, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        pnlDayCareSearchLayout.setVerticalGroup(
+            pnlDayCareSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDayCareSearchLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                .addGroup(pnlDayCareSearchLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(text_dc_SearchByID, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_dc_SeachName)
+                    .addComponent(text_dc_SearchByName, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label_dc_SeachID))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
@@ -5118,7 +5125,7 @@ public class MainWindow extends javax.swing.JFrame {
                 table_dc_customerMouseClicked(evt);
             }
         });
-        jScrollPane1.setViewportView(table_dc_customer);
+        scrl_dc_tblCustomer.setViewportView(table_dc_customer);
 
         table_dc_pet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -5136,7 +5143,7 @@ public class MainWindow extends javax.swing.JFrame {
                 table_dc_petMouseClicked(evt);
             }
         });
-        jScrollPane3.setViewportView(table_dc_pet);
+        scrl_dc_tblPet.setViewportView(table_dc_pet);
 
         pnl_dlgHos_addPet_container3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
@@ -5259,7 +5266,7 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addComponent(text_dc_breed))
                             .addGap(17, 17, 17)))
                     .addComponent(lbl_dlgHos_addPet_breed2))
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_dlgHos_addPet_container3Layout.setVerticalGroup(
             pnl_dlgHos_addPet_container3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -5431,43 +5438,43 @@ public class MainWindow extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlDayCareCustomersLayout = new javax.swing.GroupLayout(pnlDayCareCustomers);
+        pnlDayCareCustomers.setLayout(pnlDayCareCustomersLayout);
+        pnlDayCareCustomersLayout.setHorizontalGroup(
+            pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDayCareCustomersLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(pnlDayCareSearch, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(pnlDayCareCustomersLayout.createSequentialGroup()
+                        .addGroup(pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(pnl_dlgHos_content2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE))
+                            .addComponent(scrl_dc_tblCustomer, javax.swing.GroupLayout.DEFAULT_SIZE, 559, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(pnl_dlgHos_addPet_container3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                            .addComponent(scrl_dc_tblPet, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
                 .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlDayCareCustomersLayout.setVerticalGroup(
+            pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDayCareCustomersLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnlDayCareSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(scrl_dc_tblPet, javax.swing.GroupLayout.DEFAULT_SIZE, 238, Short.MAX_VALUE)
+                    .addComponent(scrl_dc_tblCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlDayCareCustomersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnl_dlgHos_addPet_container3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnl_dlgHos_content2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        jTabbedPane1.addTab("Customers", jPanel1);
+        tabPaneDayCare.addTab("Customers", pnlDayCareCustomers);
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnl_dc_PetsInCare.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
         list_DaycarePets.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         list_DaycarePets.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -5475,279 +5482,354 @@ public class MainWindow extends javax.swing.JFrame {
                 list_DaycarePetsMouseClicked(evt);
             }
         });
-        jScrollPane2.setViewportView(list_DaycarePets);
+        scrlDayCarePetsList.setViewportView(list_DaycarePets);
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setText("Pets in Care");
+        label_PetsInCare.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_PetsInCare.setText("Pets in Care");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dc_PetsInCareLayout = new javax.swing.GroupLayout(pnl_dc_PetsInCare);
+        pnl_dc_PetsInCare.setLayout(pnl_dc_PetsInCareLayout);
+        pnl_dc_PetsInCareLayout.setHorizontalGroup(
+            pnl_dc_PetsInCareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dc_PetsInCareLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
+                .addGroup(pnl_dc_PetsInCareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrlDayCarePetsList, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
+                    .addGroup(pnl_dc_PetsInCareLayout.createSequentialGroup()
+                        .addComponent(label_PetsInCare)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+        pnl_dc_PetsInCareLayout.setVerticalGroup(
+            pnl_dc_PetsInCareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_dc_PetsInCareLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel4)
+                .addComponent(label_PetsInCare)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane2)
+                .addComponent(scrlDayCarePetsList)
                 .addContainerGap())
         );
 
-        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+        pnlDayCareSummary.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel6.setText("Summary");
+        label_dc_Summary.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        label_dc_Summary.setText("Summary");
 
-        jButton2.setBackground(new java.awt.Color(153, 0, 0));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jButton2.setText("Take Out");
+        button_dc_TakeOut.setBackground(new java.awt.Color(153, 0, 0));
+        button_dc_TakeOut.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        button_dc_TakeOut.setText("Take Out");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel5.setText("Pet Name :");
+        pnl_dc_PetDetails.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        label_dc_petname.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        label_dc_PetNameLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_PetNameLabel.setText("Pet Name :");
+
+        label_dc_petname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_dc_petname.setText("Pet name here");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel8.setText("Owner :");
-
-        label_dc_owner.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        label_dc_owner.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         label_dc_owner.setText("Owner name here");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel10.setText("Assigned Date");
+        label_dc_ownerLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_ownerLabel.setText("Owner     :");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel12.setText("assignd date here");
-
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel13.setText("Took Care For");
-
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel14.setText("no of date here");
-
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel15.setText("Meal");
-
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel16.setText("Comfort");
-
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel17.setText("meal type");
-
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel18.setText("comfort type");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jSeparator1)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel8))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(label_dc_petname)
-                            .addComponent(label_dc_owner))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel12))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addComponent(jLabel13)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel14)))
-                        .addGap(54, 54, 54)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel16))
-                        .addGap(28, 28, 28)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel18))
-                        .addGap(24, 24, 24)))
-                .addContainerGap())
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnl_dc_PetDetailsLayout = new javax.swing.GroupLayout(pnl_dc_PetDetails);
+        pnl_dc_PetDetails.setLayout(pnl_dc_PetDetailsLayout);
+        pnl_dc_PetDetailsLayout.setHorizontalGroup(
+            pnl_dc_PetDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dc_PetDetailsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel5)
-                                    .addComponent(label_dc_petname))
-                                .addGap(41, 41, 41)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel8)
-                                    .addComponent(label_dc_owner)))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel10)
-                                    .addComponent(jLabel12))
-                                .addGap(41, 41, 41)
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel14))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(jLabel17))
-                        .addGap(41, 41, 41)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel16)
-                            .addComponent(jLabel18))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-
-        jPanel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
-
-        jLabel19.setText("jLabel19");
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel19, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-        );
-
-        jLabel20.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel20.setText("Meal Type");
-
-        jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Menu 1", "Menu 2", "Menu 3", "Provided" }));
-
-        jLabel21.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel21.setText("Comfort");
-
-        jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Normal", "Luxury" }));
-
-        jLabel22.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel22.setText("Cage");
-
-        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Cage 1", "Cage 2", "Cage 3", "Cage 4", "Cage 5", "Cage 6", "Cage 7", "Cage 8" }));
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pnl_dc_PetDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_dc_PetNameLabel)
+                    .addComponent(label_dc_ownerLabel))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel20)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnl_dc_PetDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_dc_petname)
+                    .addComponent(label_dc_owner))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnl_dc_PetDetailsLayout.setVerticalGroup(
+            pnl_dc_PetDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dc_PetDetailsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_dc_PetDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_PetNameLabel)
+                    .addComponent(label_dc_petname))
+                .addGap(18, 18, 18)
+                .addGroup(pnl_dc_PetDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_ownerLabel)
+                    .addComponent(label_dc_owner))
+                .addContainerGap())
+        );
+
+        pnlDCAssignedDates.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        label_dc_noDays.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_noDays.setText("no of date here");
+
+        label_dc_adateLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_adateLabel.setText("Assigned Date");
+
+        label_dc_adate.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_adate.setText("assignd date ");
+
+        label_dc_TookCareFor.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_TookCareFor.setText("Took Care For");
+
+        javax.swing.GroupLayout pnlDCAssignedDatesLayout = new javax.swing.GroupLayout(pnlDCAssignedDates);
+        pnlDCAssignedDates.setLayout(pnlDCAssignedDatesLayout);
+        pnlDCAssignedDatesLayout.setHorizontalGroup(
+            pnlDCAssignedDatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDCAssignedDatesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDCAssignedDatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDCAssignedDatesLayout.createSequentialGroup()
+                        .addComponent(label_dc_adateLabel)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel21)
+                        .addComponent(label_dc_adate))
+                    .addGroup(pnlDCAssignedDatesLayout.createSequentialGroup()
+                        .addComponent(label_dc_TookCareFor)
+                        .addGap(18, 18, 18)
+                        .addComponent(label_dc_noDays)))
+                .addContainerGap())
+        );
+        pnlDCAssignedDatesLayout.setVerticalGroup(
+            pnlDCAssignedDatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDCAssignedDatesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDCAssignedDatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_adateLabel)
+                    .addComponent(label_dc_adate))
+                .addGap(18, 18, 18)
+                .addGroup(pnlDCAssignedDatesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_TookCareFor)
+                    .addComponent(label_dc_noDays))
+                .addContainerGap())
+        );
+
+        pnlDCFacilities.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        label_dc_mealLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_mealLabel.setText("Meal        :");
+
+        label_dc_ComfortLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_ComfortLabel.setText("Comfort   :");
+
+        label_dc_comfort.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_comfort.setText("N/A");
+
+        label_dc_meal.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_meal.setText("N/A");
+
+        label_dc_cage.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_cage.setText("N/A");
+
+        label_dc_cageLabel.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
+        label_dc_cageLabel.setText("Cage       :");
+
+        javax.swing.GroupLayout pnlDCFacilitiesLayout = new javax.swing.GroupLayout(pnlDCFacilities);
+        pnlDCFacilities.setLayout(pnlDCFacilitiesLayout);
+        pnlDCFacilitiesLayout.setHorizontalGroup(
+            pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDCFacilitiesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_dc_ComfortLabel)
+                    .addComponent(label_dc_cageLabel)
+                    .addComponent(label_dc_mealLabel))
+                .addGap(32, 32, 32)
+                .addGroup(pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(label_dc_meal)
+                    .addComponent(label_dc_cage)
+                    .addComponent(label_dc_comfort, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlDCFacilitiesLayout.setVerticalGroup(
+            pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDCFacilitiesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_mealLabel)
+                    .addComponent(label_dc_meal))
+                .addGap(11, 11, 11)
+                .addGroup(pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_ComfortLabel)
+                    .addComponent(label_dc_comfort))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnlDCFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(label_dc_cage)
+                    .addComponent(label_dc_cageLabel))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout pnlDayCareSummaryLayout = new javax.swing.GroupLayout(pnlDayCareSummary);
+        pnlDayCareSummary.setLayout(pnlDayCareSummaryLayout);
+        pnlDayCareSummaryLayout.setHorizontalGroup(
+            pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDayCareSummaryLayout.createSequentialGroup()
+                .addGroup(pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlDayCareSummaryLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(seperator_dc_Summary)
+                            .addGroup(pnlDayCareSummaryLayout.createSequentialGroup()
+                                .addComponent(label_dc_Summary, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))))
+                    .addGroup(pnlDayCareSummaryLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(pnl_dc_PetDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnlDCFacilities, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                        .addComponent(jLabel22)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(button_dc_TakeOut, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(pnlDCAssignedDates, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap())
+        );
+        pnlDayCareSummaryLayout.setVerticalGroup(
+            pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDayCareSummaryLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(button_dc_TakeOut, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pnlDayCareSummaryLayout.createSequentialGroup()
+                        .addComponent(label_dc_Summary, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(2, 2, 2)
+                        .addComponent(seperator_dc_Summary, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(pnlDayCareSummaryLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(pnlDCAssignedDates, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(pnl_dc_PetDetails, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(pnlDCFacilities, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(28, Short.MAX_VALUE))
+        );
+
+        pnlDCMealMenuImage.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
+
+        label_menu_image.setText("jLabel19");
+
+        javax.swing.GroupLayout pnlDCMealMenuImageLayout = new javax.swing.GroupLayout(pnlDCMealMenuImage);
+        pnlDCMealMenuImage.setLayout(pnlDCMealMenuImageLayout);
+        pnlDCMealMenuImageLayout.setHorizontalGroup(
+            pnlDCMealMenuImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_menu_image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlDCMealMenuImageLayout.setVerticalGroup(
+            pnlDCMealMenuImageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label_menu_image, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+        );
+
+        label_dc_menuType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_menuType.setText("Meal Type");
+
+        combo_dc_meal.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        combo_dc_meal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Menu 1", "Menu 2", "Menu 3", "Provided" }));
+
+        label_dc_comfortType.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_comfortType.setText("Comfort");
+
+        combo_dc_comfort.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        combo_dc_comfort.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Normal", "Luxury" }));
+
+        label_dc_Cage.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        label_dc_Cage.setText("Cage");
+
+        combo_dc_cage.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        combo_dc_cage.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select...", "Cage 1", "Cage 2", "Cage 3", "Cage 4", "Cage 5", "Cage 6", "Cage 7", "Cage 8" }));
+
+        button_dc_apply.setText("Apply");
+        button_dc_apply.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button_dc_applyActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnl_dc_mainContainerLayout = new javax.swing.GroupLayout(pnl_dc_mainContainer);
+        pnl_dc_mainContainer.setLayout(pnl_dc_mainContainerLayout);
+        pnl_dc_mainContainerLayout.setHorizontalGroup(
+            pnl_dc_mainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_dc_mainContainerLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnl_dc_PetsInCare, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(pnl_dc_mainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlDayCareSummary, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlDCMealMenuImage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_dc_mainContainerLayout.createSequentialGroup()
+                        .addGroup(pnl_dc_mainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(button_dc_apply)
+                            .addGroup(pnl_dc_mainContainerLayout.createSequentialGroup()
+                                .addComponent(label_dc_menuType)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(combo_dc_meal, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(label_dc_comfortType)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(combo_dc_comfort, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                                .addComponent(label_dc_Cage)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(combo_dc_cage, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(14, 14, 14)))
                 .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+        pnl_dc_mainContainerLayout.setVerticalGroup(
+            pnl_dc_mainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_dc_mainContainerLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(27, 27, 27)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel20)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel21)
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel22)
-                            .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(pnl_dc_mainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnl_dc_mainContainerLayout.createSequentialGroup()
+                        .addComponent(pnlDCMealMenuImage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(pnl_dc_mainContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(label_dc_menuType)
+                            .addComponent(combo_dc_meal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_dc_comfortType)
+                            .addComponent(combo_dc_comfort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(label_dc_Cage)
+                            .addComponent(combo_dc_cage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(button_dc_apply)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addComponent(pnlDayCareSummary, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(pnl_dc_PetsInCare, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        javax.swing.GroupLayout pnlDayCareDayCareLayout = new javax.swing.GroupLayout(pnlDayCareDayCare);
+        pnlDayCareDayCare.setLayout(pnlDayCareDayCareLayout);
+        pnlDayCareDayCareLayout.setHorizontalGroup(
+            pnlDayCareDayCareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_dc_mainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        pnlDayCareDayCareLayout.setVerticalGroup(
+            pnlDayCareDayCareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnl_dc_mainContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("Day Care", jPanel2);
+        tabPaneDayCare.addTab("Day Care", pnlDayCareDayCare);
 
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+        javax.swing.GroupLayout pnlDayCareContainerLayout = new javax.swing.GroupLayout(pnlDayCareContainer);
+        pnlDayCareContainer.setLayout(pnlDayCareContainerLayout);
+        pnlDayCareContainerLayout.setHorizontalGroup(
+            pnlDayCareContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabPaneDayCare)
         );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+        pnlDayCareContainerLayout.setVerticalGroup(
+            pnlDayCareContainerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(tabPaneDayCare)
         );
 
         javax.swing.GroupLayout pnlDaycareLayout = new javax.swing.GroupLayout(pnlDaycare);
         pnlDaycare.setLayout(pnlDaycareLayout);
         pnlDaycareLayout.setHorizontalGroup(
             pnlDaycareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlDayCareContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlDaycareLayout.setVerticalGroup(
             pnlDaycareLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlDayCareContainer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel10.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Pet Health Care Service", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Calibri", 0, 18))); // NOI18N
@@ -11408,8 +11490,49 @@ public class MainWindow extends javax.swing.JFrame {
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
+                list_DaycarePets.setSelectedValue(petID, true);
+                tabPaneDayCare.setSelectedIndex(1);
+                String petname=null;
+                String ownername=null;
+                String assignedDate = null;
+                //----------------------
+                ResultSet pet = dcp.getPetName(list_DaycarePets.getSelectedValue());
+                try {
+                    while(pet.next()){
+                        petname=pet.getString("name");
                     }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
                 }
+                label_dc_petname.setText(petname);
+                //-----------------------
+                ResultSet own = dcp.getPetOwnerName(list_DaycarePets.getSelectedValue());
+                try {
+                    while(own.next()){
+                        ownername=own.getString("name");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_owner.setText(ownername);
+                //-----------------------
+                ResultSet aDate = dcp.getPetAssignedDate(list_DaycarePets.getSelectedValue());
+                try {
+                    while(aDate.next()){
+                        assignedDate=aDate.getString("date");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_adate.setText(assignedDate);
+                //-----------------------
+                Date date = new Date();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String today = df.format(date);
+                int days=dcp.getDateDiff(assignedDate,today);
+                label_dc_noDays.setText(Integer.toString(days)+" Day(s)");
+            }
+        }                
     }//GEN-LAST:event_button_dc_TakeCareActionPerformed
 
     private void list_DaycarePetsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_list_DaycarePetsMouseClicked
@@ -11418,6 +11541,9 @@ public class MainWindow extends javax.swing.JFrame {
                 String petname=null;
                 String ownername=null;
                 String assignedDate = null;
+                String mealType = null;
+                String comfortType = null;
+                String cageNo = null;
                 DayCarePet dcp = new DayCarePet();
                 //----------------------
                 ResultSet pet = dcp.getPetName(list_DaycarePets.getSelectedValue());
@@ -11428,6 +11554,7 @@ public class MainWindow extends javax.swing.JFrame {
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
+                label_dc_petname.setText(petname);
                 //-----------------------
                 ResultSet own = dcp.getPetOwnerName(list_DaycarePets.getSelectedValue());
                 try {
@@ -11437,7 +11564,7 @@ public class MainWindow extends javax.swing.JFrame {
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
-                //-----------------------
+                label_dc_owner.setText(ownername);
                 //-----------------------
                 ResultSet aDate = dcp.getPetAssignedDate(list_DaycarePets.getSelectedValue());
                 try {
@@ -11447,13 +11574,102 @@ public class MainWindow extends javax.swing.JFrame {
                 } catch (SQLException ex) {
                     ex.printStackTrace();
                 }
+                label_dc_adate.setText(assignedDate);
                 //-----------------------
-                label_dc_petname.setText(petname);
-                label_dc_owner.setText(ownername);
-                label_dc_owner.setText(assignedDate);
+                ResultSet meal = dcp.getPetMeal(list_DaycarePets.getSelectedValue());
+                try {
+                    while(meal.next()){
+                        mealType=meal.getString("meal");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_meal.setText(mealType);
+                combo_dc_meal.setSelectedItem(mealType);
+                //-----------------------
+                ResultSet comfort = dcp.getPetComfort(list_DaycarePets.getSelectedValue());
+                try {
+                    while(comfort.next()){
+                        comfortType=comfort.getString("comfort");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_comfort.setText(comfortType);
+                combo_dc_comfort.setSelectedItem(comfortType);
+                //-----------------------
+                ResultSet cage = dcp.getPetCage(list_DaycarePets.getSelectedValue());
+                try {
+                    while(cage.next()){
+                        cageNo=cage.getString("cage");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_cage.setText(cageNo);
+                combo_dc_cage.setSelectedItem(cageNo);
+                //-----------------------
+                Date date = new Date();
+                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+                String today = df.format(date);
+                int days=dcp.getDateDiff(assignedDate,today);
+                label_dc_noDays.setText(Integer.toString(days)+" Day(s)");
             }
         }
     }//GEN-LAST:event_list_DaycarePetsMouseClicked
+
+    private void button_dc_applyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button_dc_applyActionPerformed
+        if(list_DaycarePets.getSelectedIndex()==-1){    
+            JOptionPane.showMessageDialog(null, "Select a pet to edit facilities","Day Care",JOptionPane.ERROR_MESSAGE);
+        }
+        else{
+            String selectedmeal = combo_dc_meal.getSelectedItem().toString();
+            String selectedcomfort = combo_dc_comfort.getSelectedItem().toString();
+            String selectedcage = combo_dc_cage.getSelectedItem().toString();
+            String mealType="";
+            String comfortType="";
+            String cageNo="";
+            if(selectedmeal.equals("Select...") || selectedcomfort.equals("Select...") || selectedcage.equals("Select...")){
+                getToolkit().beep();
+            }
+            else{
+                String petID = list_DaycarePets.getSelectedValue();
+                DayCarePet dcp = new DayCarePet();
+                dcp.addDayCareFacilities(petID, selectedmeal, selectedcomfort, selectedcage);
+                //-----------------------
+                ResultSet meal = dcp.getPetMeal(list_DaycarePets.getSelectedValue());
+                try {
+                    while(meal.next()){
+                        mealType=meal.getString("meal");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_meal.setText(mealType);
+                //-----------------------
+                ResultSet comfort = dcp.getPetComfort(list_DaycarePets.getSelectedValue());
+                try {
+                    while(comfort.next()){
+                        comfortType=comfort.getString("comfort");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_comfort.setText(comfortType);
+                //-----------------------
+                ResultSet cage = dcp.getPetCage(list_DaycarePets.getSelectedValue());
+                try {
+                    while(cage.next()){
+                        cageNo=cage.getString("cage");
+                    }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+                label_dc_cage.setText(cageNo);
+                //-----------------------
+            }
+        }
+    }//GEN-LAST:event_button_dc_applyActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -11930,6 +12146,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.ButtonGroup btngrp_BuyPet;
     private javax.swing.ButtonGroup btngrp_DayCarePets;
     private javax.swing.JButton button_dc_TakeCare;
+    private javax.swing.JButton button_dc_TakeOut;
+    private javax.swing.JButton button_dc_apply;
     private javax.swing.JButton button_dc_editcust;
     private javax.swing.JButton button_dc_editpet;
     private javax.swing.JButton button_dc_newcust;
@@ -11960,6 +12178,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JCheckBox ckbx_usrAcc_Ph;
     private javax.swing.JComboBox<String> cmb_dlgHos_addPet_Species;
     private javax.swing.JComboBox<String> cmb_dlgHos_editPet_Species;
+    private javax.swing.JComboBox<String> combo_dc_cage;
+    private javax.swing.JComboBox<String> combo_dc_comfort;
+    private javax.swing.JComboBox<String> combo_dc_meal;
     private javax.swing.JComboBox<String> combo_dc_species;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_From;
     private com.toedter.calendar.JDateChooser dc_Fin_Expense_to;
@@ -11991,30 +12212,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgpha_addItem;
     private javax.swing.JDialog dlgpha_updateItem;
     private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -12026,34 +12225,39 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;
     private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane3;
     private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JScrollPane jscroll_pha_stock;
+    private javax.swing.JLabel label_PetsInCare;
+    private javax.swing.JLabel label_dc_Cage;
+    private javax.swing.JLabel label_dc_ComfortLabel;
+    private javax.swing.JLabel label_dc_PetNameLabel;
+    private javax.swing.JLabel label_dc_SeachID;
+    private javax.swing.JLabel label_dc_SeachName;
+    private javax.swing.JLabel label_dc_Summary;
+    private javax.swing.JLabel label_dc_TookCareFor;
+    private javax.swing.JLabel label_dc_adate;
+    private javax.swing.JLabel label_dc_adateLabel;
+    private javax.swing.JLabel label_dc_cage;
+    private javax.swing.JLabel label_dc_cageLabel;
+    private javax.swing.JLabel label_dc_comfort;
+    private javax.swing.JLabel label_dc_comfortType;
+    private javax.swing.JLabel label_dc_meal;
+    private javax.swing.JLabel label_dc_mealLabel;
+    private javax.swing.JLabel label_dc_menuType;
+    private javax.swing.JLabel label_dc_noDays;
     private javax.swing.JLabel label_dc_owner;
+    private javax.swing.JLabel label_dc_ownerLabel;
     private javax.swing.JLabel label_dc_petname;
+    private javax.swing.JLabel label_menu_image;
     private javax.swing.JLabel lblPharmacy_RsLabel;
     private javax.swing.JLabel lblPharmacy_Total;
     private javax.swing.JLabel lblPharmacy_TotalLabel;
@@ -12168,6 +12372,14 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlAnualReport;
     private javax.swing.JPanel pnlBtn1;
     private javax.swing.JPanel pnlClientSearchBar;
+    private javax.swing.JPanel pnlDCAssignedDates;
+    private javax.swing.JPanel pnlDCFacilities;
+    private javax.swing.JPanel pnlDCMealMenuImage;
+    private javax.swing.JPanel pnlDayCareContainer;
+    private javax.swing.JPanel pnlDayCareCustomers;
+    private javax.swing.JPanel pnlDayCareDayCare;
+    private javax.swing.JPanel pnlDayCareSearch;
+    private javax.swing.JPanel pnlDayCareSummary;
     private javax.swing.JPanel pnlDaycare;
     private javax.swing.JPanel pnlEmployee;
     private javax.swing.JPanel pnlExpenseReport;
@@ -12215,6 +12427,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnl_PS_tabSell;
     private javax.swing.JPanel pnl_Ph_AddItem;
     private javax.swing.JPanel pnl_Ph_ItemDetails;
+    private javax.swing.JPanel pnl_dc_PetDetails;
+    private javax.swing.JPanel pnl_dc_PetsInCare;
+    private javax.swing.JPanel pnl_dc_mainContainer;
     private javax.swing.JPanel pnl_dlgHos_Clinic_Details;
     private javax.swing.JPanel pnl_dlgHos_Clinic_List;
     private javax.swing.JPanel pnl_dlgHos_Clinic_Report;
@@ -12249,10 +12464,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JRadioButton rb_dlgHos_addPet_male;
     private javax.swing.JRadioButton rb_dlgHos_editPet_female;
     private javax.swing.JRadioButton rb_dlgHos_editPet_male;
+    private javax.swing.JScrollPane scrlDayCarePetsList;
     private javax.swing.JScrollPane scrlPane_PS_Shop_AvailableList;
     private javax.swing.JScrollPane scrlPharmacyBillItemtbl;
     private javax.swing.JScrollPane scrl_Hos_Customers;
     private javax.swing.JScrollPane scrl_Hos_Pets;
+    private javax.swing.JScrollPane scrl_dc_tblCustomer;
+    private javax.swing.JScrollPane scrl_dc_tblPet;
     private javax.swing.JScrollPane scrl_dlgHos_Address;
     private javax.swing.JScrollPane scrl_dlgHos_Address1;
     private javax.swing.JScrollPane scrl_dlgHos_Address2;
@@ -12275,6 +12493,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JScrollPane scrlp_tbl_Fin_Product_Details;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_addClient_Address;
     private javax.swing.JScrollPane scrlp_txt_dlgFin_editClient_Address;
+    private javax.swing.JSeparator seperator_dc_Summary;
     private javax.swing.JSpinner spin_dc_months;
     private javax.swing.JSpinner spin_dc_years;
     private javax.swing.JSpinner spnr_dlgHos_addPet_months;
@@ -12283,6 +12502,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSpinner spnr_dlgHos_editPet_years;
     private javax.swing.JSeparator sprt_usrAcc_Privileges;
     private javax.swing.JSeparator sprtl_usrAcc_login;
+    private javax.swing.JTabbedPane tabPaneDayCare;
     private javax.swing.JTabbedPane tabbedPanePetShop;
     private javax.swing.JTable table_dc_customer;
     private javax.swing.JTable table_dc_pet;
@@ -12295,6 +12515,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTable tbl_Hos_Customers;
     private javax.swing.JTable tbl_Hos_Pets;
     private javax.swing.JTable tbl_stock;
+    private javax.swing.JTextField text_dc_SearchByID;
+    private javax.swing.JTextField text_dc_SearchByName;
     private javax.swing.JTextArea text_dc_address;
     private javax.swing.JTextField text_dc_breed;
     private javax.swing.JTextField text_dc_email;

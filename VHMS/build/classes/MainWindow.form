@@ -7465,17 +7465,17 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlDayCareContainer" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jPanel8" alignment="0" max="32767" attributes="0"/>
+                      <Component id="pnlDayCareContainer" alignment="0" max="32767" attributes="0"/>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Container class="javax.swing.JPanel" name="jPanel8">
+                <Container class="javax.swing.JPanel" name="pnlDayCareContainer">
                   <Properties>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
@@ -7489,17 +7489,17 @@
                   <Layout>
                     <DimensionLayout dim="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tabPaneDayCare" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jTabbedPane1" alignment="0" max="32767" attributes="0"/>
+                          <Component id="tabPaneDayCare" alignment="0" max="32767" attributes="0"/>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
+                    <Container class="javax.swing.JTabbedPane" name="tabPaneDayCare">
                       <Properties>
                         <Property name="tabPlacement" type="int" value="2"/>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -7509,7 +7509,7 @@
 
                       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
                       <SubComponents>
-                        <Container class="javax.swing.JPanel" name="jPanel1">
+                        <Container class="javax.swing.JPanel" name="pnlDayCareCustomers">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                               <JTabbedPaneConstraints tabName="Customers">
@@ -7524,16 +7524,16 @@
                                   <Group type="102" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jPanel3" max="32767" attributes="0"/>
+                                          <Component id="pnlDayCareSearch" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                                   <Component id="pnl_dlgHos_content2" max="32767" attributes="0"/>
-                                                  <Component id="jScrollPane1" pref="559" max="32767" attributes="0"/>
+                                                  <Component id="scrl_dc_tblCustomer" pref="559" max="32767" attributes="0"/>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Component id="pnl_dlgHos_addPet_container3" max="32767" attributes="0"/>
-                                                  <Component id="jScrollPane3" pref="0" max="32767" attributes="0"/>
+                                                  <Component id="scrl_dc_tblPet" pref="0" max="32767" attributes="0"/>
                                               </Group>
                                           </Group>
                                       </Group>
@@ -7545,11 +7545,11 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="pnlDayCareSearch" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="jScrollPane3" pref="238" max="32767" attributes="0"/>
-                                          <Component id="jScrollPane1" pref="0" max="32767" attributes="0"/>
+                                          <Component id="scrl_dc_tblPet" pref="238" max="32767" attributes="0"/>
+                                          <Component id="scrl_dc_tblCustomer" pref="0" max="32767" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
@@ -7562,7 +7562,7 @@
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel3">
+                            <Container class="javax.swing.JPanel" name="pnlDayCareSearch">
                               <Properties>
                                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -7576,13 +7576,13 @@
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_dc_SeachName" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextField2" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Component id="text_dc_SearchByName" min="-2" pref="188" max="-2" attributes="0"/>
                                           <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="label_dc_SeachID" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                          <Component id="jTextField1" min="-2" pref="188" max="-2" attributes="0"/>
+                                          <Component id="text_dc_SearchByID" min="-2" pref="188" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
@@ -7592,10 +7592,10 @@
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jTextField1" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                              <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                              <Component id="jTextField2" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
-                                              <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="text_dc_SearchByID" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                              <Component id="label_dc_SeachName" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="text_dc_SearchByName" alignment="3" min="-2" pref="29" max="-2" attributes="0"/>
+                                              <Component id="label_dc_SeachID" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace pref="12" max="32767" attributes="0"/>
                                       </Group>
@@ -7603,23 +7603,23 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Component class="javax.swing.JTextField" name="jTextField1">
+                                <Component class="javax.swing.JTextField" name="text_dc_SearchByID">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel2">
+                                <Component class="javax.swing.JLabel" name="label_dc_SeachName">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Search Name"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JTextField" name="jTextField2">
+                                <Component class="javax.swing.JTextField" name="text_dc_SearchByName">
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel3">
+                                <Component class="javax.swing.JLabel" name="label_dc_SeachID">
                                   <Properties>
                                     <Property name="text" type="java.lang.String" value="Search ID"/>
                                   </Properties>
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                            <Container class="javax.swing.JScrollPane" name="scrl_dc_tblCustomer">
                               <AuxValues>
                                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                               </AuxValues>
@@ -7670,7 +7670,7 @@
                                 </Component>
                               </SubComponents>
                             </Container>
-                            <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+                            <Container class="javax.swing.JScrollPane" name="scrl_dc_tblPet">
                               <AuxValues>
                                 <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                               </AuxValues>
@@ -7756,7 +7756,7 @@
                                               </Group>
                                               <Component id="lbl_dlgHos_addPet_breed2" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="85" max="32767" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
                                       </Group>
                                   </Group>
                                 </DimensionLayout>
@@ -8185,7 +8185,7 @@
                             </Container>
                           </SubComponents>
                         </Container>
-                        <Container class="javax.swing.JPanel" name="jPanel2">
+                        <Container class="javax.swing.JPanel" name="pnlDayCareDayCare">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
                               <JTabbedPaneConstraints tabName="Day Care">
@@ -8197,40 +8197,45 @@
                           <Layout>
                             <DimensionLayout dim="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_dc_mainContainer" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                             <DimensionLayout dim="1">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="pnl_dc_mainContainer" alignment="0" max="32767" attributes="0"/>
                               </Group>
                             </DimensionLayout>
                           </Layout>
                           <SubComponents>
-                            <Container class="javax.swing.JPanel" name="jPanel4">
+                            <Container class="javax.swing.JPanel" name="pnl_dc_mainContainer">
 
                               <Layout>
                                 <DimensionLayout dim="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jPanel5" max="32767" attributes="0"/>
+                                          <Component id="pnl_dc_PetsInCare" max="32767" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                              <Component id="jPanel7" max="32767" attributes="0"/>
-                                              <Component id="jPanel9" max="32767" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
-                                                  <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox1" min="-2" pref="173" max="-2" attributes="0"/>
-                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                  <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox2" min="-2" pref="173" max="-2" attributes="0"/>
-                                                  <EmptySpace pref="35" max="32767" attributes="0"/>
-                                                  <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                                  <Component id="jComboBox3" min="-2" pref="173" max="-2" attributes="0"/>
+                                              <Component id="pnlDayCareSummary" max="32767" attributes="0"/>
+                                              <Component id="pnlDCMealMenuImage" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="1" attributes="0">
+                                                  <Group type="103" groupAlignment="1" attributes="0">
+                                                      <Component id="button_dc_apply" min="-2" max="-2" attributes="0"/>
+                                                      <Group type="102" attributes="0">
+                                                          <Component id="label_dc_menuType" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="combo_dc_meal" min="-2" pref="173" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="label_dc_comfortType" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="combo_dc_comfort" min="-2" pref="173" max="-2" attributes="0"/>
+                                                          <EmptySpace pref="55" max="32767" attributes="0"/>
+                                                          <Component id="label_dc_Cage" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                          <Component id="combo_dc_cage" min="-2" pref="173" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
                                                   <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                               </Group>
                                           </Group>
@@ -8244,20 +8249,22 @@
                                           <EmptySpace max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="1" attributes="0">
                                               <Group type="102" attributes="0">
-                                                  <Component id="jPanel9" min="-2" max="-2" attributes="0"/>
-                                                  <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                                                  <Component id="pnlDCMealMenuImage" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
                                                   <Group type="103" groupAlignment="3" attributes="0">
-                                                      <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_menuType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="combo_dc_meal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_comfortType" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="combo_dc_comfort" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_Cage" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="combo_dc_cage" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   </Group>
-                                                  <EmptySpace pref="36" max="32767" attributes="0"/>
-                                                  <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Component id="button_dc_apply" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace pref="12" max="32767" attributes="0"/>
+                                                  <Component id="pnlDayCareSummary" min="-2" max="-2" attributes="0"/>
                                               </Group>
-                                              <Component id="jPanel5" max="32767" attributes="0"/>
+                                              <Component id="pnl_dc_PetsInCare" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
                                       </Group>
@@ -8265,7 +8272,7 @@
                                 </DimensionLayout>
                               </Layout>
                               <SubComponents>
-                                <Container class="javax.swing.JPanel" name="jPanel5">
+                                <Container class="javax.swing.JPanel" name="pnl_dc_PetsInCare">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -8282,9 +8289,9 @@
                                           <Group type="102" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                                                  <Component id="scrlDayCarePetsList" pref="187" max="32767" attributes="0"/>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_PetsInCare" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                   </Group>
                                               </Group>
@@ -8296,16 +8303,16 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                                              <Component id="label_PetsInCare" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                              <Component id="jScrollPane2" max="32767" attributes="0"/>
+                                              <Component id="scrlDayCarePetsList" max="32767" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+                                    <Container class="javax.swing.JScrollPane" name="scrlDayCarePetsList">
                                       <AuxValues>
                                         <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
                                       </AuxValues>
@@ -8330,7 +8337,7 @@
                                         </Component>
                                       </SubComponents>
                                     </Container>
-                                    <Component class="javax.swing.JLabel" name="jLabel4">
+                                    <Component class="javax.swing.JLabel" name="label_PetsInCare">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="14" style="0"/>
@@ -8340,7 +8347,7 @@
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel7">
+                                <Container class="javax.swing.JPanel" name="pnlDayCareSummary">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -8359,52 +8366,24 @@
                                                   <Group type="102" attributes="0">
                                                       <EmptySpace max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jSeparator1" max="32767" attributes="0"/>
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                                                              <Component id="jButton2" min="-2" pref="135" max="-2" attributes="0"/>
-                                                          </Group>
+                                                          <Component id="seperator_dc_Summary" max="32767" attributes="0"/>
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jLabel6" min="-2" pref="100" max="-2" attributes="0"/>
+                                                              <Component id="label_dc_Summary" min="-2" pref="100" max="-2" attributes="0"/>
                                                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                   </Group>
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="pnl_dc_PetDetails" max="32767" attributes="0"/>
+                                                          <Component id="pnlDCFacilities" max="32767" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="label_dc_petname" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="label_dc_owner" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="button_dc_TakeOut" alignment="1" min="-2" pref="135" max="-2" attributes="0"/>
+                                                          <Component id="pnlDCAssignedDates" alignment="1" min="-2" max="-2" attributes="0"/>
                                                       </Group>
-                                                      <EmptySpace max="32767" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="0" attributes="0">
-                                                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                                              <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="0" attributes="0">
-                                                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                               <EmptySpace max="-2" attributes="0"/>
@@ -8415,59 +8394,28 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="jLabel6" min="-2" pref="36" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                                              <Component id="jSeparator1" min="-2" pref="10" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="1" attributes="0">
+                                                  <Component id="button_dc_TakeOut" min="-2" pref="35" max="-2" attributes="0"/>
                                                   <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                                  <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="label_dc_petname" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                                  <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="label_dc_owner" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                          </Group>
-                                                          <Group type="102" attributes="0">
-                                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                                  <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="jLabel12" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                                  <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                              </Group>
-                                                          </Group>
+                                                      <Component id="label_dc_Summary" min="-2" pref="36" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                      <Component id="seperator_dc_Summary" min="-2" pref="10" max="-2" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                          <Component id="pnlDCAssignedDates" max="32767" attributes="0"/>
+                                                          <Component id="pnl_dc_PetDetails" max="32767" attributes="0"/>
                                                       </Group>
-                                                      <EmptySpace pref="47" max="32767" attributes="0"/>
-                                                      <Component id="jButton2" min="-2" pref="35" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" attributes="0">
-                                                      <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                                      <Group type="103" groupAlignment="3" attributes="0">
-                                                          <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                          <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
-                                                      </Group>
-                                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                      <Component id="pnlDCFacilities" min="-2" pref="105" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
-                                              <EmptySpace max="-2" attributes="0"/>
+                                              <EmptySpace pref="28" max="32767" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JLabel" name="jLabel6">
+                                    <Component class="javax.swing.JLabel" name="label_dc_Summary">
                                       <Properties>
                                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                           <Font name="Tahoma" size="18" style="1"/>
@@ -8475,7 +8423,7 @@
                                         <Property name="text" type="java.lang.String" value="Summary"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JButton" name="jButton2">
+                                    <Component class="javax.swing.JButton" name="button_dc_TakeOut">
                                       <Properties>
                                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                           <Color blue="0" green="0" red="99" type="rgb"/>
@@ -8486,107 +8434,277 @@
                                         <Property name="text" type="java.lang.String" value="Take Out"/>
                                       </Properties>
                                     </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel5">
+                                    <Component class="javax.swing.JSeparator" name="seperator_dc_Summary">
+                                    </Component>
+                                    <Container class="javax.swing.JPanel" name="pnl_dc_PetDetails">
                                       <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="16" style="0"/>
+                                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                            <LineBorder/>
+                                          </Border>
                                         </Property>
-                                        <Property name="text" type="java.lang.String" value="Pet Name :"/>
                                       </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JSeparator" name="jSeparator1">
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="label_dc_petname">
+
+                                      <Layout>
+                                        <DimensionLayout dim="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="label_dc_PetNameLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_ownerLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="label_dc_petname" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_owner" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                        <DimensionLayout dim="1">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_PetNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_petname" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_ownerLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_owner" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                      </Layout>
+                                      <SubComponents>
+                                        <Component class="javax.swing.JLabel" name="label_dc_PetNameLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Pet Name :"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_petname">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Pet name here"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_owner">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Owner name here"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_ownerLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Owner     :"/>
+                                          </Properties>
+                                        </Component>
+                                      </SubComponents>
+                                    </Container>
+                                    <Container class="javax.swing.JPanel" name="pnlDCAssignedDates">
                                       <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="12" style="0"/>
+                                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                            <LineBorder/>
+                                          </Border>
                                         </Property>
-                                        <Property name="text" type="java.lang.String" value="Pet name here"/>
                                       </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel8">
+
+                                      <Layout>
+                                        <DimensionLayout dim="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="label_dc_adateLabel" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="label_dc_adate" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                      <Group type="102" alignment="0" attributes="0">
+                                                          <Component id="label_dc_TookCareFor" min="-2" max="-2" attributes="0"/>
+                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <Component id="label_dc_noDays" min="-2" max="-2" attributes="0"/>
+                                                      </Group>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                        <DimensionLayout dim="1">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_adateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_adate" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_TookCareFor" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_noDays" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                      </Layout>
+                                      <SubComponents>
+                                        <Component class="javax.swing.JLabel" name="label_dc_noDays">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="no of date here"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_adateLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Assigned Date"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_adate">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="assignd date "/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_TookCareFor">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Took Care For"/>
+                                          </Properties>
+                                        </Component>
+                                      </SubComponents>
+                                    </Container>
+                                    <Container class="javax.swing.JPanel" name="pnlDCFacilities">
                                       <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="16" style="0"/>
+                                        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                                          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                                            <LineBorder/>
+                                          </Border>
                                         </Property>
-                                        <Property name="text" type="java.lang.String" value="Owner :"/>
                                       </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="label_dc_owner">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="12" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="Owner name here"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel10">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="16" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="Assigned Date"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel12">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="12" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="assignd date here"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel13">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="16" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="Took Care For"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel14">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="12" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="no of date here"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel15">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="16" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="Meal"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel16">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="16" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="Comfort"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel17">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="12" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="meal type"/>
-                                      </Properties>
-                                    </Component>
-                                    <Component class="javax.swing.JLabel" name="jLabel18">
-                                      <Properties>
-                                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                                          <Font name="Tahoma" size="12" style="0"/>
-                                        </Property>
-                                        <Property name="text" type="java.lang.String" value="comfort type"/>
-                                      </Properties>
-                                    </Component>
+
+                                      <Layout>
+                                        <DimensionLayout dim="0">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="label_dc_ComfortLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_cageLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_mealLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="0" attributes="0">
+                                                      <Component id="label_dc_meal" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_cage" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_comfort" min="-2" pref="107" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                        <DimensionLayout dim="1">
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_mealLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_meal" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_ComfortLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_comfort" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                                  <Group type="103" groupAlignment="3" attributes="0">
+                                                      <Component id="label_dc_cage" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                      <Component id="label_dc_cageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  </Group>
+                                                  <EmptySpace max="32767" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                        </DimensionLayout>
+                                      </Layout>
+                                      <SubComponents>
+                                        <Component class="javax.swing.JLabel" name="label_dc_mealLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Meal        :"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_ComfortLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Comfort   :"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_comfort">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="N/A"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_meal">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="N/A"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_cage">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="14" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="N/A"/>
+                                          </Properties>
+                                        </Component>
+                                        <Component class="javax.swing.JLabel" name="label_dc_cageLabel">
+                                          <Properties>
+                                            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                                              <Font name="Tahoma" size="16" style="0"/>
+                                            </Property>
+                                            <Property name="text" type="java.lang.String" value="Cage       :"/>
+                                          </Properties>
+                                        </Component>
+                                      </SubComponents>
+                                    </Container>
                                   </SubComponents>
                                 </Container>
-                                <Container class="javax.swing.JPanel" name="jPanel9">
+                                <Container class="javax.swing.JPanel" name="pnlDCMealMenuImage">
                                   <Properties>
                                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -8600,24 +8718,24 @@
                                   <Layout>
                                     <DimensionLayout dim="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel19" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="label_menu_image" alignment="0" max="32767" attributes="0"/>
                                       </Group>
                                     </DimensionLayout>
                                     <DimensionLayout dim="1">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel19" alignment="0" pref="247" max="32767" attributes="0"/>
+                                          <Component id="label_menu_image" alignment="0" pref="215" max="32767" attributes="0"/>
                                       </Group>
                                     </DimensionLayout>
                                   </Layout>
                                   <SubComponents>
-                                    <Component class="javax.swing.JLabel" name="jLabel19">
+                                    <Component class="javax.swing.JLabel" name="label_menu_image">
                                       <Properties>
                                         <Property name="text" type="java.lang.String" value="jLabel19"/>
                                       </Properties>
                                     </Component>
                                   </SubComponents>
                                 </Container>
-                                <Component class="javax.swing.JLabel" name="jLabel20">
+                                <Component class="javax.swing.JLabel" name="label_dc_menuType">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
@@ -8625,7 +8743,7 @@
                                     <Property name="text" type="java.lang.String" value="Meal Type"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox1">
+                                <Component class="javax.swing.JComboBox" name="combo_dc_meal">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8644,7 +8762,7 @@
                                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                   </AuxValues>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel21">
+                                <Component class="javax.swing.JLabel" name="label_dc_comfortType">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
@@ -8652,7 +8770,7 @@
                                     <Property name="text" type="java.lang.String" value="Comfort"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox2">
+                                <Component class="javax.swing.JComboBox" name="combo_dc_comfort">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8669,7 +8787,7 @@
                                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                   </AuxValues>
                                 </Component>
-                                <Component class="javax.swing.JLabel" name="jLabel22">
+                                <Component class="javax.swing.JLabel" name="label_dc_Cage">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="14" style="0"/>
@@ -8677,7 +8795,7 @@
                                     <Property name="text" type="java.lang.String" value="Cage"/>
                                   </Properties>
                                 </Component>
-                                <Component class="javax.swing.JComboBox" name="jComboBox3">
+                                <Component class="javax.swing.JComboBox" name="combo_dc_cage">
                                   <Properties>
                                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                                       <Font name="Tahoma" size="12" style="0"/>
@@ -8699,6 +8817,14 @@
                                   <AuxValues>
                                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
                                   </AuxValues>
+                                </Component>
+                                <Component class="javax.swing.JButton" name="button_dc_apply">
+                                  <Properties>
+                                    <Property name="text" type="java.lang.String" value="Apply"/>
+                                  </Properties>
+                                  <Events>
+                                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="button_dc_applyActionPerformed"/>
+                                  </Events>
                                 </Component>
                               </SubComponents>
                             </Container>
