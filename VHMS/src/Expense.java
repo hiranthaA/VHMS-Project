@@ -114,20 +114,39 @@ public class Expense {
         }
     }
     
-    public void addClientInvoice(String date, String desc, String TAmount, Component comp){
+    public void addClientInvoice(String date, String desc, String netAmount, Component comp){
         try{
             String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
             PreparedStatement pst = dbcon.prepareStatement(SQL);
             pst.setString(1, generateExpenseID("EXP/CI/",comp));
             pst.setString(2, date);
             pst.setString(3, desc);
-            pst.setString(4, TAmount);
+            pst.setString(4, netAmount);
             pst.execute();
             increaseNoExpenseByOne(comp);
             JOptionPane.showMessageDialog(comp, "Client Invoice added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
         }
         catch(Exception e){
+            e.printStackTrace();
             JOptionPane.showMessageDialog(comp, "Client Invoice adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
+    public void addOtherPayment(String date, String desc, String totAmount, Component comp){
+        try{
+            String SQL = "insert into finance_expense(expenseID,date,description,amount) values(?,?,?,?)";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, generateExpenseID("EXP/OB/",comp));
+            pst.setString(2, date);
+            pst.setString(3, desc);
+            pst.setString(4, totAmount);
+            pst.execute();
+            increaseNoExpenseByOne(comp);
+            JOptionPane.showMessageDialog(comp, "Payment added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            //e.printStackTrace();
+            JOptionPane.showMessageDialog(comp, "Payment adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
         }
     }
     
