@@ -381,6 +381,7 @@ public class MainWindow extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -3517,6 +3518,8 @@ public class MainWindow extends javax.swing.JFrame {
 
         jButton10.setText("jButton2");
 
+        jButton11.setText("jButton11");
+
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
@@ -3536,10 +3539,15 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(163, 163, 163))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton10)
-                .addGap(18, 18, 18)
-                .addComponent(jButton9)
-                .addContainerGap())
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jButton10)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton9)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(jButton11)
+                        .addGap(78, 78, 78))))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3552,7 +3560,9 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addGap(41, 41, 41)
+                .addComponent(jButton11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton9)
                     .addComponent(jButton10))
@@ -13072,6 +13082,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JDialog dlgpha_updateItem;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
+    private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
