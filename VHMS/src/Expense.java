@@ -114,6 +114,23 @@ public class Expense {
         }
     }
     
+    public void addClientInvoice(String date, String desc, String TAmount, Component comp){
+        try{
+            String SQL = "insert into finance_expense (expenseID,date,description,amount) values(?,?,?,?)";
+            PreparedStatement pst = dbcon.prepareStatement(SQL);
+            pst.setString(1, generateExpenseID("EXP/CI/",comp));
+            pst.setString(2, date);
+            pst.setString(3, desc);
+            pst.setString(4, TAmount);
+            pst.execute();
+            increaseNoExpenseByOne(comp);
+            JOptionPane.showMessageDialog(comp, "Client Invoice added Successfully!","Expense Details",JOptionPane.INFORMATION_MESSAGE);
+        }
+        catch(Exception e){
+            JOptionPane.showMessageDialog(comp, "Client Invoice adding failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        }
+    }
+    
     public double calcNetExp(String from,String to,boolean CI, boolean SP, boolean EB, boolean WB, boolean TP, boolean OB, Component comp){
         String sql = "select sum(amount) from finance_expense where date between ? and ? and (expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ? or expenseID like ?)";
         String CInvoice,ElecBill,SalPay,WaterBill,TPBill,OtherBill;

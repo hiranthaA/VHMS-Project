@@ -387,6 +387,20 @@ public class MainWindow extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         DC_report = new javax.swing.JDialog();
         jPanel9 = new javax.swing.JPanel();
+        dlgFin_addClientInvoice1 = new javax.swing.JDialog();
+        pnlFinAddTeleBill5 = new javax.swing.JPanel();
+        FinjLabel22 = new javax.swing.JLabel();
+        dlgFin_addtelejSeparator6 = new javax.swing.JSeparator();
+        txt_dlgFin_addCInvoice_invoiceNo1 = new javax.swing.JTextField();
+        FinjLabel9000003 = new javax.swing.JLabel();
+        dc_dlgFin_addCInvoice_paymentDate1 = new com.toedter.calendar.JDateChooser();
+        FinjLabel1000004 = new javax.swing.JLabel();
+        txt_dlgFin_addCInvoice_netAmount1 = new javax.swing.JTextField();
+        FinjLabel10billamount5 = new javax.swing.JLabel();
+        btn_dlgFin_addCInvoice_addPay = new javax.swing.JButton();
+        btn_dlgFin_addCInvoice_Cancel = new javax.swing.JButton();
+        FinjLabel9000004 = new javax.swing.JLabel();
+        txt_dlgFin_addCInvoice_Client1 = new javax.swing.JTextField();
         Main = new javax.swing.JPanel();
         ButtonMenu = new javax.swing.JPanel();
         btnHospital = new javax.swing.JButton();
@@ -3547,6 +3561,134 @@ public class MainWindow extends javax.swing.JFrame {
             .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
+        dlgFin_addClientInvoice1.setModalExclusionType(java.awt.Dialog.ModalExclusionType.TOOLKIT_EXCLUDE);
+        dlgFin_addClientInvoice1.setModalityType(java.awt.Dialog.ModalityType.TOOLKIT_MODAL);
+        dlgFin_addClientInvoice1.setResizable(false);
+
+        pnlFinAddTeleBill5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 5));
+
+        FinjLabel22.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel22.setText("Client Invoice");
+
+        txt_dlgFin_addCInvoice_invoiceNo1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addCInvoice_invoiceNo1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addCInvoice_invoiceNo1KeyTyped(evt);
+            }
+        });
+
+        FinjLabel9000003.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel9000003.setText("Invoice No");
+
+        FinjLabel1000004.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel1000004.setText("Payment Date");
+
+        txt_dlgFin_addCInvoice_netAmount1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+
+        FinjLabel10billamount5.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel10billamount5.setText("Net Amount");
+
+        btn_dlgFin_addCInvoice_addPay.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
+        btn_dlgFin_addCInvoice_addPay.setText("Add");
+        btn_dlgFin_addCInvoice_addPay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addCInvoice_addPayActionPerformed(evt);
+            }
+        });
+
+        btn_dlgFin_addCInvoice_Cancel.setText("Cancel");
+        btn_dlgFin_addCInvoice_Cancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dlgFin_addCInvoice_CancelActionPerformed(evt);
+            }
+        });
+
+        FinjLabel9000004.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        FinjLabel9000004.setText("Client");
+
+        txt_dlgFin_addCInvoice_Client1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addCInvoice_Client1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addCInvoice_Client1KeyTyped(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlFinAddTeleBill5Layout = new javax.swing.GroupLayout(pnlFinAddTeleBill5);
+        pnlFinAddTeleBill5.setLayout(pnlFinAddTeleBill5Layout);
+        pnlFinAddTeleBill5Layout.setHorizontalGroup(
+            pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                        .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(FinjLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(FinjLabel1000004)
+                                    .addComponent(FinjLabel9000004)
+                                    .addComponent(FinjLabel9000003)
+                                    .addComponent(FinjLabel10billamount5))
+                                .addGap(18, 18, 18)
+                                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(dc_dlgFin_addCInvoice_paymentDate1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                                        .addGap(136, 136, 136)
+                                        .addComponent(btn_dlgFin_addCInvoice_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(btn_dlgFin_addCInvoice_addPay, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txt_dlgFin_addCInvoice_invoiceNo1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txt_dlgFin_addCInvoice_netAmount1, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txt_dlgFin_addCInvoice_Client1, javax.swing.GroupLayout.PREFERRED_SIZE, 265, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(0, 40, Short.MAX_VALUE))
+                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(dlgFin_addtelejSeparator6)))
+                .addContainerGap())
+        );
+        pnlFinAddTeleBill5Layout.setVerticalGroup(
+            pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(FinjLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dlgFin_addtelejSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(dc_dlgFin_addCInvoice_paymentDate1, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                    .addComponent(FinjLabel1000004, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addCInvoice_Client1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel9000004))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addCInvoice_invoiceNo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel9000003))
+                .addGap(33, 33, 33)
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txt_dlgFin_addCInvoice_netAmount1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FinjLabel10billamount5))
+                .addGap(34, 34, 34)
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_dlgFin_addCInvoice_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn_dlgFin_addCInvoice_addPay, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout dlgFin_addClientInvoice1Layout = new javax.swing.GroupLayout(dlgFin_addClientInvoice1.getContentPane());
+        dlgFin_addClientInvoice1.getContentPane().setLayout(dlgFin_addClientInvoice1Layout);
+        dlgFin_addClientInvoice1Layout.setHorizontalGroup(
+            dlgFin_addClientInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        dlgFin_addClientInvoice1Layout.setVerticalGroup(
+            dlgFin_addClientInvoice1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlFinAddTeleBill5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Veterinary Hospital Management System");
 
@@ -6544,8 +6686,8 @@ public class MainWindow extends javax.swing.JFrame {
                     .addComponent(lbl_Hos_CustomersLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(scrl_Hos_Customers1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE)
-                    .addComponent(scrl_Hos_Pets1, javax.swing.GroupLayout.DEFAULT_SIZE, 438, Short.MAX_VALUE))
+                    .addComponent(scrl_Hos_Customers1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE)
+                    .addComponent(scrl_Hos_Pets1, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btn_Hos_editCustomer1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
@@ -12501,6 +12643,45 @@ public class MainWindow extends javax.swing.JFrame {
         this.DC_editPet.setLocationRelativeTo(Container);
         this.DC_editPet.setVisible(true);
     }//GEN-LAST:event_btn_Hos_editPet1ActionPerformed
+
+    private void txt_dlgFin_addCInvoice_invoiceNo1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addCInvoice_invoiceNo1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dlgFin_addCInvoice_invoiceNo1KeyTyped
+
+    private void btn_dlgFin_addCInvoice_addPayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addCInvoice_addPayActionPerformed
+        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addClientInvoice,"Are You sure the details are correct?","Add Client Invoice",JOptionPane.YES_NO_OPTION);
+        if(userChoice==0){
+            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+            String date = df.format(this.dc_dlgFin_addCInvoice_paymentDate.getDate());
+            String from = df.format(this.dc_Fin_Expense_From.getDate());
+            String to = df.format(this.dc_Fin_Expense_to.getDate());
+            String client = this.txt_dlgFin_addCInvoice_Client.getText();
+            String desc = "Invoice Payment |"+client+"| Invoice No. "+this.txt_dlgFin_addCInvoice_invoiceNo.getText();
+            String TAmount = this.txt_dlgFin_addCInvoice_netAmount.getText();
+            Expense ex = new Expense();
+            //-add a Salary Payment---------------------------------------------
+            ex.addClientInvoice(date, desc, TAmount, dlgFin_addClientInvoice);
+            //-update expense table-----------------------------------------
+            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+            //-update net expense-------------------------------------------
+            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+            //-update #expenses-------------------------------------------
+            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+            //--------------------------------------------------------------
+            this.dlgFin_addClientInvoice.dispose();
+        }
+    }//GEN-LAST:event_btn_dlgFin_addCInvoice_addPayActionPerformed
+
+    private void btn_dlgFin_addCInvoice_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addCInvoice_CancelActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_dlgFin_addCInvoice_CancelActionPerformed
+
+    private void txt_dlgFin_addCInvoice_Client1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addCInvoice_Client1KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dlgFin_addCInvoice_Client1KeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -12777,11 +12958,13 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel1000001;
     private javax.swing.JLabel FinjLabel1000002;
     private javax.swing.JLabel FinjLabel1000003;
+    private javax.swing.JLabel FinjLabel1000004;
     private javax.swing.JLabel FinjLabel10billamount;
     private javax.swing.JLabel FinjLabel10billamount1;
     private javax.swing.JLabel FinjLabel10billamount2;
     private javax.swing.JLabel FinjLabel10billamount3;
     private javax.swing.JLabel FinjLabel10billamount4;
+    private javax.swing.JLabel FinjLabel10billamount5;
     private javax.swing.JLabel FinjLabel11;
     private javax.swing.JLabel FinjLabel12;
     private javax.swing.JLabel FinjLabel13;
@@ -12792,6 +12975,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel19;
     private javax.swing.JLabel FinjLabel20;
     private javax.swing.JLabel FinjLabel21;
+    private javax.swing.JLabel FinjLabel22;
     private javax.swing.JLabel FinjLabel23;
     private javax.swing.JLabel FinjLabel24;
     private javax.swing.JLabel FinjLabel25;
@@ -12806,6 +12990,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel9000000;
     private javax.swing.JLabel FinjLabel9000001;
     private javax.swing.JLabel FinjLabel9000002;
+    private javax.swing.JLabel FinjLabel9000003;
+    private javax.swing.JLabel FinjLabel9000004;
     private javax.swing.JLabel FinjLabel999999;
     private javax.swing.JSeparator FinjSeparator1;
     private javax.swing.JSeparator FinjSeparator12;
@@ -12956,6 +13142,8 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton btn_Hos_editCustomer1;
     private javax.swing.JButton btn_Hos_editPet;
     private javax.swing.JButton btn_Hos_editPet1;
+    private javax.swing.JButton btn_dlgFin_addCInvoice_Cancel;
+    private javax.swing.JButton btn_dlgFin_addCInvoice_addPay;
     private javax.swing.JButton btn_dlgFin_addProduct_Add;
     private javax.swing.JButton btn_dlgFin_addProduct_Cancel;
     private javax.swing.JButton btn_dlgFin_addSalPay_Add;
@@ -13035,6 +13223,7 @@ public class MainWindow extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser dc_Fin_Income_From;
     private com.toedter.calendar.JDateChooser dc_Fin_Income_To;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addCInvoice_paymentDate;
+    private com.toedter.calendar.JDateChooser dc_dlgFin_addCInvoice_paymentDate1;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addSalPay_paymentDate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addelecbill_billdate;
     private com.toedter.calendar.JDateChooser dc_dlgFin_addtelebill_billdate;
@@ -13043,6 +13232,7 @@ public class MainWindow extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser dc_pha_edit_expdate;
     private javax.swing.JDialog dlgFin_addClient;
     private javax.swing.JDialog dlgFin_addClientInvoice;
+    private javax.swing.JDialog dlgFin_addClientInvoice1;
     private javax.swing.JDialog dlgFin_addProduct;
     private javax.swing.JDialog dlgFin_addSalaryPayment;
     private javax.swing.JDialog dlgFin_addelecbill;
@@ -13052,6 +13242,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JSeparator dlgFin_addtelejSeparator3;
     private javax.swing.JSeparator dlgFin_addtelejSeparator4;
     private javax.swing.JSeparator dlgFin_addtelejSeparator5;
+    private javax.swing.JSeparator dlgFin_addtelejSeparator6;
     private javax.swing.JDialog dlgFin_addwaterbill;
     private javax.swing.JDialog dlgFin_editClient;
     private javax.swing.JDialog dlgHos_Clinic;
@@ -13292,6 +13483,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFinAddTeleBill2;
     private javax.swing.JPanel pnlFinAddTeleBill3;
     private javax.swing.JPanel pnlFinAddTeleBill4;
+    private javax.swing.JPanel pnlFinAddTeleBill5;
     private javax.swing.JPanel pnlFinAddproduct;
     private javax.swing.JPanel pnlFinEditClient;
     private javax.swing.JPanel pnlFinance;
@@ -13445,8 +13637,11 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_Hos_SearchPetName1;
     private javax.swing.JTextField txt_dlgFin_AddProduct_Product;
     private javax.swing.JTextField txt_dlgFin_addCInvoice_Client;
+    private javax.swing.JTextField txt_dlgFin_addCInvoice_Client1;
     private javax.swing.JTextField txt_dlgFin_addCInvoice_invoiceNo;
+    private javax.swing.JTextField txt_dlgFin_addCInvoice_invoiceNo1;
     private javax.swing.JTextField txt_dlgFin_addCInvoice_netAmount;
+    private javax.swing.JTextField txt_dlgFin_addCInvoice_netAmount1;
     private javax.swing.JTextArea txt_dlgFin_addClient_Address;
     private javax.swing.JTextField txt_dlgFin_addClient_Company;
     private javax.swing.JTextField txt_dlgFin_addClient_email;
