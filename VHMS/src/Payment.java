@@ -13,7 +13,6 @@ import java.sql.Connection;
  */
 public class Payment {
     private Connection dbcon;
-    
     Payment(){
         dbConnectr conn = new dbConnectr();
         dbcon = conn.Connect();
