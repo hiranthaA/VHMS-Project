@@ -672,9 +672,9 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="FinjLabel8999999" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="FinjLabel999999" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="FinjLabel10billamount" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_dlgFin_addteleBill_tele" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_dlgFin_addteleBill_date" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_dlgFin_addteleBill_amount" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -685,7 +685,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="30" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -706,17 +706,17 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dc_dlgFin_addtelebill_billdate" pref="28" max="32767" attributes="0"/>
-                          <Component id="FinjLabel999999" max="32767" attributes="0"/>
+                          <Component id="lbl_dlgFin_addteleBill_date" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addtelebill_teleNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel8999999" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addteleBill_tele" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addtelebill_billAmount" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel10billamount" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addteleBill_amount" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -749,7 +749,7 @@
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addtelebill_teleNoKeyTyped"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel8999999">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addteleBill_tele">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -759,7 +759,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addtelebill_billdate">
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel999999">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addteleBill_date">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -773,13 +773,16 @@
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addtelebill_billAmountKeyTyped"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel10billamount">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addteleBill_amount">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Bill Amount"/>
+                <Property name="text" type="java.lang.String" value="Bill Amount (Rs.)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dlgFin_addtelebill_Add">
@@ -852,8 +855,8 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="FinjLabel1000000" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="FinjLabel10billamount1" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_dlgFin_addWaterBill_billDate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_dlgFin_addWaterBill_billAmnt" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -870,7 +873,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -891,12 +894,12 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dc_dlgFin_addwaterbill_billdate" alignment="0" pref="28" max="32767" attributes="0"/>
-                          <Component id="FinjLabel1000000" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbl_dlgFin_addWaterBill_billDate" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addwaterbill_billAmount" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel10billamount1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addWaterBill_billAmnt" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -921,7 +924,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addwaterbill_billdate">
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel1000000">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addWaterBill_billDate">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -935,13 +938,16 @@
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addwaterbill_billAmountKeyTyped"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel10billamount1">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addWaterBill_billAmnt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Bill Amount"/>
+                <Property name="text" type="java.lang.String" value="Bill Amount (Rs.)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dlgFin_addwaterbill_Add">
@@ -1014,8 +1020,8 @@
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="1" attributes="0">
                                               <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Component id="FinjLabel1000001" alignment="0" min="-2" max="-2" attributes="0"/>
-                                                  <Component id="FinjLabel10billamount2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_dlgFin_addelecbill_billdate" alignment="0" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="lbl_dlgFin_addelecbill_billAmnt" alignment="0" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1032,7 +1038,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -1053,12 +1059,12 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dc_dlgFin_addelecbill_billdate" alignment="0" pref="28" max="32767" attributes="0"/>
-                          <Component id="FinjLabel1000001" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbl_dlgFin_addelecbill_billdate" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addelecbill_billAmount" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel10billamount2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addelecbill_billAmnt" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1083,7 +1089,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addelecbill_billdate">
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel1000001">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addelecbill_billdate">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -1097,13 +1103,16 @@
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addelecbill_billAmountKeyTyped"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel10billamount2">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addelecbill_billAmnt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Bill Amount"/>
+                <Property name="text" type="java.lang.String" value="Bill Amount (Rs.)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dlgFin_addelecbill_Add">
@@ -1181,9 +1190,9 @@
                                       <Group type="102" alignment="1" attributes="0">
                                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="FinjLabel9000000" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="FinjLabel1000002" alignment="0" min="-2" max="-2" attributes="0"/>
-                                              <Component id="FinjLabel10billamount3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_dlgFin_addsalpay_refno" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_dlgFin_addsalpay_date" alignment="0" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lbl_dlgFin_addsalpay_totAmnt" alignment="0" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -1194,7 +1203,7 @@
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="48" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
@@ -1215,17 +1224,17 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dc_dlgFin_addSalPay_paymentDate" alignment="0" pref="28" max="32767" attributes="0"/>
-                          <Component id="FinjLabel1000002" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbl_dlgFin_addsalpay_date" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addSalPay_RefNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel9000000" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addsalpay_refno" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addSalPay_TAmount" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel10billamount3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addsalpay_totAmnt" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -1258,7 +1267,7 @@
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addSalPay_RefNoKeyTyped"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel9000000">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addsalpay_refno">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -1268,7 +1277,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addSalPay_paymentDate">
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel1000002">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addsalpay_date">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -1282,13 +1291,16 @@
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addSalPay_TAmountKeyTyped"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel10billamount3">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addsalpay_totAmnt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Total Amount"/>
+                <Property name="text" type="java.lang.String" value="Total Amount (Rs.)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dlgFin_addSalPay_Add">
@@ -3974,10 +3986,10 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="FinjLabel9000001" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="FinjLabel1000003" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="FinjLabel10billamount4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="FinjLabel9000002" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addCInvoice_InvNo" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addCInvoice_date" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addCInvoice_netAmount" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addCInvoice_client" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -4005,22 +4017,22 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dc_dlgFin_addCInvoice_paymentDate" alignment="0" pref="28" max="32767" attributes="0"/>
-                          <Component id="FinjLabel1000003" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbl_dlgFin_addCInvoice_date" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addCInvoice_InvoiceNo" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel9000001" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addCInvoice_InvNo" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addCInvoice_Client" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel9000002" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addCInvoice_client" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="21" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addCInvoice_NetAmount" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel10billamount4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addCInvoice_netAmount" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -4053,7 +4065,7 @@
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addCInvoice_InvoiceNoKeyTyped"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel9000001">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addCInvoice_InvNo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -4063,7 +4075,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addCInvoice_paymentDate">
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel1000003">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addCInvoice_date">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -4077,13 +4089,16 @@
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addCInvoice_NetAmountKeyTyped"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel10billamount4">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addCInvoice_netAmount">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Net Amount"/>
+                <Property name="text" type="java.lang.String" value="Net Amount (Rs.)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dlgFin_addCInvoice_Add">
@@ -4105,7 +4120,7 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_dlgFin_addCInvoice_CancelActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel9000002">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addCInvoice_client">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -4138,7 +4153,7 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Component id="pnlFinAddTeleBill5" alignment="0" min="-2" max="-2" attributes="0"/>
+              <Component id="pnlFinAddTeleBill5" min="-2" max="-2" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -4162,8 +4177,8 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="dlgFin_addtelejSeparator6" max="32767" attributes="0"/>
@@ -4182,19 +4197,19 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="FinjLabel1000004" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="FinjLabel10billamount5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="FinjLabel9000003" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addOthrpay_date" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addOthrpay_tAmnt" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lbl_dlgFin_addOthrpay_desc" alignment="0" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="txt_dlgFin_addOtherPay_Description" max="32767" attributes="0"/>
-                                  <Component id="dc_dlgFin_addOtherPay_paymentDate" alignment="0" pref="285" max="32767" attributes="0"/>
+                                  <Component id="dc_dlgFin_addOtherPay_paymentDate" alignment="0" pref="254" max="32767" attributes="0"/>
                                   <Component id="txt_dlgFin_addOtherPay_totAmount" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                      <EmptySpace min="51" pref="51" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -4208,17 +4223,17 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="dc_dlgFin_addOtherPay_paymentDate" alignment="0" pref="28" max="32767" attributes="0"/>
-                          <Component id="FinjLabel1000004" alignment="0" max="32767" attributes="0"/>
+                          <Component id="lbl_dlgFin_addOthrpay_date" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addOtherPay_Description" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel9000003" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addOthrpay_desc" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="txt_dlgFin_addOtherPay_totAmount" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="FinjLabel10billamount5" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_dlgFin_addOthrpay_tAmnt" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
@@ -4251,7 +4266,7 @@
                 <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addOtherPay_DescriptionKeyTyped"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel9000003">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addOthrpay_desc">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -4261,7 +4276,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="dc_dlgFin_addOtherPay_paymentDate">
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel1000004">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addOthrpay_date">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
@@ -4275,13 +4290,16 @@
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txt_dlgFin_addOtherPay_totAmountKeyTyped"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="FinjLabel10billamount5">
+            <Component class="javax.swing.JLabel" name="lbl_dlgFin_addOthrpay_tAmnt">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Calibri" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Total Amount"/>
+                <Property name="text" type="java.lang.String" value="Total Amount (Rs.)"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="btn_dlgFin_addOtherPay_Add">
@@ -7149,7 +7167,7 @@
                                           <Color blue="0" green="0" red="99" type="rgb"/>
                                         </Property>
                                         <Property name="horizontalAlignment" type="int" value="4"/>
-                                        <Property name="text" type="java.lang.String" value="000000.00"/>
+                                        <Property name="text" type="java.lang.String" value="0.0"/>
                                         <Property name="horizontalTextPosition" type="int" value="4"/>
                                       </Properties>
                                     </Component>

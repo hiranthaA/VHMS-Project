@@ -290,6 +290,12 @@ public class PetShop {
         if(m==0 && y==0){
             return false;
         }
+        else if(y>20){
+            return false;
+        }
+        else if(m>11){
+            return false;
+        }
         else{
             return true;
         }

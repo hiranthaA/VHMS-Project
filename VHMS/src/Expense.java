@@ -408,4 +408,69 @@ public class Expense {
         }
     }
     
+    public boolean validateTelephone(String tp){
+        if(tp.equals("")){
+            return false;
+        }
+        else if(tp.length()==10){
+            if(tp.charAt(0)=='0'){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public boolean validatePayAmount(String amt){
+        if(amt.equals("")){
+            return false;
+        }
+        else if(amt.length()==0){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateRefNo(String ref){
+        if(ref.equals("")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateInvNo(String inv){
+        if(inv.equals("")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateClient(String client){
+        if(client.equals("")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    public boolean validateDesc(String dsc){
+        if(dsc.equals("")){
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
 }

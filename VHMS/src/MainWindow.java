@@ -119,11 +119,11 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel8 = new javax.swing.JLabel();
         dlgFin_addtelejSeparator1 = new javax.swing.JSeparator();
         txt_dlgFin_addtelebill_teleNo = new javax.swing.JTextField();
-        FinjLabel8999999 = new javax.swing.JLabel();
+        lbl_dlgFin_addteleBill_tele = new javax.swing.JLabel();
         dc_dlgFin_addtelebill_billdate = new com.toedter.calendar.JDateChooser();
-        FinjLabel999999 = new javax.swing.JLabel();
+        lbl_dlgFin_addteleBill_date = new javax.swing.JLabel();
         txt_dlgFin_addtelebill_billAmount = new javax.swing.JTextField();
-        FinjLabel10billamount = new javax.swing.JLabel();
+        lbl_dlgFin_addteleBill_amount = new javax.swing.JLabel();
         btn_dlgFin_addtelebill_Add = new javax.swing.JButton();
         btn_dlgFin_addtelebill_Cancel = new javax.swing.JButton();
         dlgFin_addwaterbill = new javax.swing.JDialog();
@@ -131,9 +131,9 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel9 = new javax.swing.JLabel();
         dlgFin_addtelejSeparator2 = new javax.swing.JSeparator();
         dc_dlgFin_addwaterbill_billdate = new com.toedter.calendar.JDateChooser();
-        FinjLabel1000000 = new javax.swing.JLabel();
+        lbl_dlgFin_addWaterBill_billDate = new javax.swing.JLabel();
         txt_dlgFin_addwaterbill_billAmount = new javax.swing.JTextField();
-        FinjLabel10billamount1 = new javax.swing.JLabel();
+        lbl_dlgFin_addWaterBill_billAmnt = new javax.swing.JLabel();
         btn_dlgFin_addwaterbill_Add = new javax.swing.JButton();
         btn_dlgFin_addwaterbill_Cancel = new javax.swing.JButton();
         dlgFin_addelecbill = new javax.swing.JDialog();
@@ -141,9 +141,9 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel10 = new javax.swing.JLabel();
         dlgFin_addtelejSeparator3 = new javax.swing.JSeparator();
         dc_dlgFin_addelecbill_billdate = new com.toedter.calendar.JDateChooser();
-        FinjLabel1000001 = new javax.swing.JLabel();
+        lbl_dlgFin_addelecbill_billdate = new javax.swing.JLabel();
         txt_dlgFin_addelecbill_billAmount = new javax.swing.JTextField();
-        FinjLabel10billamount2 = new javax.swing.JLabel();
+        lbl_dlgFin_addelecbill_billAmnt = new javax.swing.JLabel();
         btn_dlgFin_addelecbill_Add = new javax.swing.JButton();
         btn_dlgFin_addelecbill_Cancel = new javax.swing.JButton();
         dlgFin_addSalaryPayment = new javax.swing.JDialog();
@@ -151,11 +151,11 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel19 = new javax.swing.JLabel();
         dlgFin_addtelejSeparator4 = new javax.swing.JSeparator();
         txt_dlgFin_addSalPay_RefNo = new javax.swing.JTextField();
-        FinjLabel9000000 = new javax.swing.JLabel();
+        lbl_dlgFin_addsalpay_refno = new javax.swing.JLabel();
         dc_dlgFin_addSalPay_paymentDate = new com.toedter.calendar.JDateChooser();
-        FinjLabel1000002 = new javax.swing.JLabel();
+        lbl_dlgFin_addsalpay_date = new javax.swing.JLabel();
         txt_dlgFin_addSalPay_TAmount = new javax.swing.JTextField();
-        FinjLabel10billamount3 = new javax.swing.JLabel();
+        lbl_dlgFin_addsalpay_totAmnt = new javax.swing.JLabel();
         btn_dlgFin_addSalPay_Add = new javax.swing.JButton();
         btn_dlgFin_addSalPay_Cancel = new javax.swing.JButton();
         dlgUserAccounts = new javax.swing.JDialog();
@@ -332,25 +332,25 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel20 = new javax.swing.JLabel();
         dlgFin_addtelejSeparator5 = new javax.swing.JSeparator();
         txt_dlgFin_addCInvoice_InvoiceNo = new javax.swing.JTextField();
-        FinjLabel9000001 = new javax.swing.JLabel();
+        lbl_dlgFin_addCInvoice_InvNo = new javax.swing.JLabel();
         dc_dlgFin_addCInvoice_paymentDate = new com.toedter.calendar.JDateChooser();
-        FinjLabel1000003 = new javax.swing.JLabel();
+        lbl_dlgFin_addCInvoice_date = new javax.swing.JLabel();
         txt_dlgFin_addCInvoice_NetAmount = new javax.swing.JTextField();
-        FinjLabel10billamount4 = new javax.swing.JLabel();
+        lbl_dlgFin_addCInvoice_netAmount = new javax.swing.JLabel();
         btn_dlgFin_addCInvoice_Add = new javax.swing.JButton();
         btn_dlgFin_addCInvoice_Cancel = new javax.swing.JButton();
-        FinjLabel9000002 = new javax.swing.JLabel();
+        lbl_dlgFin_addCInvoice_client = new javax.swing.JLabel();
         txt_dlgFin_addCInvoice_Client = new javax.swing.JTextField();
         dlgFin_addOtherPayments = new javax.swing.JDialog();
         pnlFinAddTeleBill5 = new javax.swing.JPanel();
         FinjLabel22 = new javax.swing.JLabel();
         dlgFin_addtelejSeparator6 = new javax.swing.JSeparator();
         txt_dlgFin_addOtherPay_Description = new javax.swing.JTextField();
-        FinjLabel9000003 = new javax.swing.JLabel();
+        lbl_dlgFin_addOthrpay_desc = new javax.swing.JLabel();
         dc_dlgFin_addOtherPay_paymentDate = new com.toedter.calendar.JDateChooser();
-        FinjLabel1000004 = new javax.swing.JLabel();
+        lbl_dlgFin_addOthrpay_date = new javax.swing.JLabel();
         txt_dlgFin_addOtherPay_totAmount = new javax.swing.JTextField();
-        FinjLabel10billamount5 = new javax.swing.JLabel();
+        lbl_dlgFin_addOthrpay_tAmnt = new javax.swing.JLabel();
         btn_dlgFin_addOtherPay_Add = new javax.swing.JButton();
         btn_dlgFin_addOtherPay_Cancel = new javax.swing.JButton();
         Main = new javax.swing.JPanel();
@@ -1207,16 +1207,21 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        FinjLabel8999999.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel8999999.setText("Telephone No");
+        lbl_dlgFin_addteleBill_tele.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addteleBill_tele.setText("Telephone No");
 
-        FinjLabel999999.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel999999.setText("Bill Date");
+        lbl_dlgFin_addteleBill_date.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addteleBill_date.setText("Bill Date");
 
         txt_dlgFin_addtelebill_billAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addtelebill_billAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addtelebill_billAmountKeyTyped(evt);
+            }
+        });
 
-        FinjLabel10billamount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel10billamount.setText("Bill Amount");
+        lbl_dlgFin_addteleBill_amount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addteleBill_amount.setText("Bill Amount (Rs.)");
 
         btn_dlgFin_addtelebill_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_dlgFin_addtelebill_Add.setText("Add");
@@ -1253,15 +1258,15 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBillLayout.createSequentialGroup()
                                     .addGap(26, 26, 26)
                                     .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(FinjLabel8999999)
-                                        .addComponent(FinjLabel999999)
-                                        .addComponent(FinjLabel10billamount))
+                                        .addComponent(lbl_dlgFin_addteleBill_tele)
+                                        .addComponent(lbl_dlgFin_addteleBill_date)
+                                        .addComponent(lbl_dlgFin_addteleBill_amount))
                                     .addGap(18, 18, 18)
                                     .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(dc_dlgFin_addtelebill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                                         .addComponent(txt_dlgFin_addtelebill_teleNo)
                                         .addComponent(txt_dlgFin_addtelebill_billAmount)))))
-                        .addGap(0, 49, Short.MAX_VALUE))
+                        .addGap(0, 30, Short.MAX_VALUE))
                     .addGroup(pnlFinAddTeleBillLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(dlgFin_addtelejSeparator1)))
@@ -1277,15 +1282,15 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dc_dlgFin_addtelebill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(FinjLabel999999, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbl_dlgFin_addteleBill_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addtelebill_teleNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel8999999))
+                    .addComponent(lbl_dlgFin_addteleBill_tele))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addtelebill_billAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel10billamount))
+                    .addComponent(lbl_dlgFin_addteleBill_amount))
                 .addGap(34, 34, 34)
                 .addGroup(pnlFinAddTeleBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dlgFin_addtelebill_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1311,13 +1316,18 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel9.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
         FinjLabel9.setText("Water Bill");
 
-        FinjLabel1000000.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel1000000.setText("Bill Date");
+        lbl_dlgFin_addWaterBill_billDate.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addWaterBill_billDate.setText("Bill Date");
 
         txt_dlgFin_addwaterbill_billAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addwaterbill_billAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addwaterbill_billAmountKeyTyped(evt);
+            }
+        });
 
-        FinjLabel10billamount1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel10billamount1.setText("Bill Amount");
+        lbl_dlgFin_addWaterBill_billAmnt.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addWaterBill_billAmnt.setText("Bill Amount (Rs.)");
 
         btn_dlgFin_addwaterbill_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_dlgFin_addwaterbill_Add.setText("Add");
@@ -1350,8 +1360,8 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill1Layout.createSequentialGroup()
                                         .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(FinjLabel1000000)
-                                            .addComponent(FinjLabel10billamount1))
+                                            .addComponent(lbl_dlgFin_addWaterBill_billDate)
+                                            .addComponent(lbl_dlgFin_addWaterBill_billAmnt))
                                         .addGap(31, 31, 31)
                                         .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(dc_dlgFin_addwaterbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
@@ -1361,7 +1371,7 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btn_dlgFin_addwaterbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(4, 4, 4)))))
-                        .addGap(0, 49, Short.MAX_VALUE))
+                        .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(pnlFinAddTeleBill1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(dlgFin_addtelejSeparator2)))
@@ -1377,11 +1387,11 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dc_dlgFin_addwaterbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(FinjLabel1000000, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbl_dlgFin_addWaterBill_billDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addwaterbill_billAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel10billamount1))
+                    .addComponent(lbl_dlgFin_addWaterBill_billAmnt))
                 .addGap(31, 31, 31)
                 .addGroup(pnlFinAddTeleBill1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dlgFin_addwaterbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1407,13 +1417,18 @@ public class MainWindow extends javax.swing.JFrame {
         FinjLabel10.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
         FinjLabel10.setText("Electricity Bill");
 
-        FinjLabel1000001.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel1000001.setText("Bill Date");
+        lbl_dlgFin_addelecbill_billdate.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addelecbill_billdate.setText("Bill Date");
 
         txt_dlgFin_addelecbill_billAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addelecbill_billAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addelecbill_billAmountKeyTyped(evt);
+            }
+        });
 
-        FinjLabel10billamount2.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel10billamount2.setText("Bill Amount");
+        lbl_dlgFin_addelecbill_billAmnt.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addelecbill_billAmnt.setText("Bill Amount (Rs.)");
 
         btn_dlgFin_addelecbill_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_dlgFin_addelecbill_Add.setText("Add");
@@ -1446,8 +1461,8 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill2Layout.createSequentialGroup()
                                         .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(FinjLabel1000001)
-                                            .addComponent(FinjLabel10billamount2))
+                                            .addComponent(lbl_dlgFin_addelecbill_billdate)
+                                            .addComponent(lbl_dlgFin_addelecbill_billAmnt))
                                         .addGap(31, 31, 31)
                                         .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(dc_dlgFin_addelecbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
@@ -1457,7 +1472,7 @@ public class MainWindow extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(btn_dlgFin_addelecbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(4, 4, 4)))))
-                        .addGap(0, 49, Short.MAX_VALUE))
+                        .addGap(0, 15, Short.MAX_VALUE))
                     .addGroup(pnlFinAddTeleBill2Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(dlgFin_addtelejSeparator3)))
@@ -1473,11 +1488,11 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dc_dlgFin_addelecbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(FinjLabel1000001, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbl_dlgFin_addelecbill_billdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addelecbill_billAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel10billamount2))
+                    .addComponent(lbl_dlgFin_addelecbill_billAmnt))
                 .addGap(31, 31, 31)
                 .addGroup(pnlFinAddTeleBill2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dlgFin_addelecbill_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1510,16 +1525,21 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        FinjLabel9000000.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel9000000.setText("Reference No");
+        lbl_dlgFin_addsalpay_refno.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addsalpay_refno.setText("Reference No");
 
-        FinjLabel1000002.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel1000002.setText("Payment Date");
+        lbl_dlgFin_addsalpay_date.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addsalpay_date.setText("Payment Date");
 
         txt_dlgFin_addSalPay_TAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addSalPay_TAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addSalPay_TAmountKeyTyped(evt);
+            }
+        });
 
-        FinjLabel10billamount3.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel10billamount3.setText("Total Amount");
+        lbl_dlgFin_addsalpay_totAmnt.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addsalpay_totAmnt.setText("Total Amount (Rs.)");
 
         btn_dlgFin_addSalPay_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_dlgFin_addSalPay_Add.setText("Add");
@@ -1556,15 +1576,15 @@ public class MainWindow extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill3Layout.createSequentialGroup()
                                     .addGap(26, 26, 26)
                                     .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(FinjLabel9000000)
-                                        .addComponent(FinjLabel1000002)
-                                        .addComponent(FinjLabel10billamount3))
+                                        .addComponent(lbl_dlgFin_addsalpay_refno)
+                                        .addComponent(lbl_dlgFin_addsalpay_date)
+                                        .addComponent(lbl_dlgFin_addsalpay_totAmnt))
                                     .addGap(18, 18, 18)
                                     .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                         .addComponent(dc_dlgFin_addSalPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 214, Short.MAX_VALUE)
                                         .addComponent(txt_dlgFin_addSalPay_RefNo)
                                         .addComponent(txt_dlgFin_addSalPay_TAmount)))))
-                        .addGap(0, 48, Short.MAX_VALUE))
+                        .addGap(0, 18, Short.MAX_VALUE))
                     .addGroup(pnlFinAddTeleBill3Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(dlgFin_addtelejSeparator4)))
@@ -1580,15 +1600,15 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dc_dlgFin_addSalPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(FinjLabel1000002, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbl_dlgFin_addsalpay_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addSalPay_RefNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel9000000))
+                    .addComponent(lbl_dlgFin_addsalpay_refno))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addSalPay_TAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel10billamount3))
+                    .addComponent(lbl_dlgFin_addsalpay_totAmnt))
                 .addGap(34, 34, 34)
                 .addGroup(pnlFinAddTeleBill3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dlgFin_addSalPay_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3081,16 +3101,21 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        FinjLabel9000001.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel9000001.setText("Invoice No");
+        lbl_dlgFin_addCInvoice_InvNo.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addCInvoice_InvNo.setText("Invoice No");
 
-        FinjLabel1000003.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel1000003.setText("Payment Date");
+        lbl_dlgFin_addCInvoice_date.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addCInvoice_date.setText("Payment Date");
 
         txt_dlgFin_addCInvoice_NetAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addCInvoice_NetAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addCInvoice_NetAmountKeyTyped(evt);
+            }
+        });
 
-        FinjLabel10billamount4.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel10billamount4.setText("Net Amount");
+        lbl_dlgFin_addCInvoice_netAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addCInvoice_netAmount.setText("Net Amount (Rs.)");
 
         btn_dlgFin_addCInvoice_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_dlgFin_addCInvoice_Add.setText("Add");
@@ -3107,8 +3132,8 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        FinjLabel9000002.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel9000002.setText("Client");
+        lbl_dlgFin_addCInvoice_client.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addCInvoice_client.setText("Client");
 
         txt_dlgFin_addCInvoice_Client.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
         txt_dlgFin_addCInvoice_Client.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -3138,10 +3163,10 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlFinAddTeleBill4Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FinjLabel9000001)
-                            .addComponent(FinjLabel1000003)
-                            .addComponent(FinjLabel10billamount4)
-                            .addComponent(FinjLabel9000002))
+                            .addComponent(lbl_dlgFin_addCInvoice_InvNo)
+                            .addComponent(lbl_dlgFin_addCInvoice_date)
+                            .addComponent(lbl_dlgFin_addCInvoice_netAmount)
+                            .addComponent(lbl_dlgFin_addCInvoice_client))
                         .addGap(18, 18, 18)
                         .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(dc_dlgFin_addCInvoice_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -3162,19 +3187,19 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dc_dlgFin_addCInvoice_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(FinjLabel1000003, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbl_dlgFin_addCInvoice_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addCInvoice_InvoiceNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel9000001))
+                    .addComponent(lbl_dlgFin_addCInvoice_InvNo))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addCInvoice_Client, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel9000002))
+                    .addComponent(lbl_dlgFin_addCInvoice_client))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
                 .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addCInvoice_NetAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel10billamount4))
+                    .addComponent(lbl_dlgFin_addCInvoice_netAmount))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dlgFin_addCInvoice_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3208,16 +3233,21 @@ public class MainWindow extends javax.swing.JFrame {
             }
         });
 
-        FinjLabel9000003.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel9000003.setText("Description");
+        lbl_dlgFin_addOthrpay_desc.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addOthrpay_desc.setText("Description");
 
-        FinjLabel1000004.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel1000004.setText("Payment Date");
+        lbl_dlgFin_addOthrpay_date.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addOthrpay_date.setText("Payment Date");
 
         txt_dlgFin_addOtherPay_totAmount.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_dlgFin_addOtherPay_totAmount.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_dlgFin_addOtherPay_totAmountKeyTyped(evt);
+            }
+        });
 
-        FinjLabel10billamount5.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        FinjLabel10billamount5.setText("Total Amount");
+        lbl_dlgFin_addOthrpay_tAmnt.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        lbl_dlgFin_addOthrpay_tAmnt.setText("Total Amount (Rs.)");
 
         btn_dlgFin_addOtherPay_Add.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/IconAdd.png"))); // NOI18N
         btn_dlgFin_addOtherPay_Add.setText("Add");
@@ -3238,30 +3268,30 @@ public class MainWindow extends javax.swing.JFrame {
         pnlFinAddTeleBill5.setLayout(pnlFinAddTeleBill5Layout);
         pnlFinAddTeleBill5Layout.setHorizontalGroup(
             pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill5Layout.createSequentialGroup()
-                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlFinAddTeleBill5Layout.createSequentialGroup()
+            .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(dlgFin_addtelejSeparator6))
-                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFinAddTeleBill5Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(btn_dlgFin_addOtherPay_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btn_dlgFin_addOtherPay_Add, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlFinAddTeleBill5Layout.createSequentialGroup()
+                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(FinjLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlFinAddTeleBill5Layout.createSequentialGroup()
+                    .addGroup(pnlFinAddTeleBill5Layout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(FinjLabel1000004)
-                            .addComponent(FinjLabel10billamount5)
-                            .addComponent(FinjLabel9000003))
+                            .addComponent(lbl_dlgFin_addOthrpay_date)
+                            .addComponent(lbl_dlgFin_addOthrpay_tAmnt)
+                            .addComponent(lbl_dlgFin_addOthrpay_desc))
                         .addGap(18, 18, 18)
                         .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_dlgFin_addOtherPay_Description)
-                            .addComponent(dc_dlgFin_addOtherPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 285, Short.MAX_VALUE)
+                            .addComponent(dc_dlgFin_addOtherPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
                             .addComponent(txt_dlgFin_addOtherPay_totAmount))))
                 .addGap(51, 51, 51))
         );
@@ -3275,15 +3305,15 @@ public class MainWindow extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(dc_dlgFin_addOtherPay_paymentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                    .addComponent(FinjLabel1000004, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbl_dlgFin_addOthrpay_date, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(27, 27, 27)
                 .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addOtherPay_Description, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel9000003))
+                    .addComponent(lbl_dlgFin_addOthrpay_desc))
                 .addGap(26, 26, 26)
                 .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txt_dlgFin_addOtherPay_totAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FinjLabel10billamount5))
+                    .addComponent(lbl_dlgFin_addOthrpay_tAmnt))
                 .addGap(18, 18, 18)
                 .addGroup(pnlFinAddTeleBill5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dlgFin_addOtherPay_Cancel, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -4793,7 +4823,7 @@ public class MainWindow extends javax.swing.JFrame {
         PS_Sell_LabelNetAmount.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         PS_Sell_LabelNetAmount.setForeground(new java.awt.Color(153, 0, 0));
         PS_Sell_LabelNetAmount.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        PS_Sell_LabelNetAmount.setText("000000.00");
+        PS_Sell_LabelNetAmount.setText("0.0");
         PS_Sell_LabelNetAmount.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
 
         PS_Sell_ButtonSell.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -8518,6 +8548,10 @@ public class MainWindow extends javax.swing.JFrame {
         this.txt_dlgFin_addtelebill_billAmount.setText("");
         this.txt_dlgFin_addtelebill_teleNo.setText("");
         //---------------------------------------------------
+        this.lbl_dlgFin_addteleBill_amount.setForeground(Color.black);
+        this.lbl_dlgFin_addteleBill_date.setForeground(Color.black);
+        this.lbl_dlgFin_addteleBill_tele.setForeground(Color.black);
+        //---------------------------------------------------
         this.dlgFin_addtelebill.setSize(417,320);
         this.dlgFin_addtelebill.setTitle("Add New");
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
@@ -8528,31 +8562,64 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Fin_AddTeleBillActionPerformed
 
     private void btn_dlgFin_addtelebill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addtelebill_AddActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addtelebill,"Are You sure the details are correct?","Add Telephone Bill",JOptionPane.YES_NO_OPTION);
-        if(userChoice==0){
-            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-            String date = df.format(this.dc_dlgFin_addtelebill_billdate.getDate());
-            String from = df.format(this.dc_Fin_Expense_From.getDate());
-            String to = df.format(this.dc_Fin_Expense_to.getDate());
-            String teleNo = this.txt_dlgFin_addtelebill_teleNo.getText();
-            String desc = "Telephone Bill | "+teleNo;
-            String billAmount = this.txt_dlgFin_addtelebill_billAmount.getText();
-            Expense ex = new Expense();
-            //-add a telephone bill-----------------------------------------
-            ex.addTelephoneBill(date, desc, billAmount, dlgFin_addtelebill);
-            //-update expense table-----------------------------------------
-            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
-            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-            //--------------------------------------------------------------
-            //-update net expense-------------------------------------------
-            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
-            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
-            //--------------------------------------------------------------
-            //-update #expenses-------------------------------------------
-            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
-            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
-            //--------------------------------------------------------------
-            this.dlgFin_addtelebill.dispose();
+        Expense exp = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date="";
+        try{
+            date = df.format(this.dc_dlgFin_addtelebill_billdate.getDate());
+            lbl_dlgFin_addteleBill_date.setForeground(Color.black);
+            lbl_dlgFin_addteleBill_date.setToolTipText(null);
+        }
+        catch(Exception e){
+            getToolkit().beep();
+            lbl_dlgFin_addteleBill_date.setForeground(Color.red);
+            lbl_dlgFin_addteleBill_date.setToolTipText("Invalid Date");
+        }
+        String billAmount = this.txt_dlgFin_addtelebill_billAmount.getText();
+        String teleNo = this.txt_dlgFin_addtelebill_teleNo.getText();
+        if(exp.validateTelephone(teleNo) & exp.validatePayAmount(billAmount)){
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addtelebill,"Are You sure the details are correct?","Add Telephone Bill",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){            
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
+                String desc = "Telephone Bill | "+teleNo;
+
+                Expense ex = new Expense();
+                //-add a telephone bill-----------------------------------------
+                ex.addTelephoneBill(date, desc, billAmount, dlgFin_addtelebill);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                //--------------------------------------------------------------
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //--------------------------------------------------------------
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addtelebill);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+                this.dlgFin_addtelebill.dispose();
+            }
+        }
+        else{
+            getToolkit().beep();
+            if(exp.validateTelephone(teleNo)){
+                this.lbl_dlgFin_addteleBill_tele.setForeground(Color.black);
+                this.lbl_dlgFin_addteleBill_tele.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addteleBill_tele.setForeground(Color.red);
+                this.lbl_dlgFin_addteleBill_tele.setToolTipText("Invalid Telephone Number");
+            }
+            if(exp.validatePayAmount(billAmount)){
+                this.lbl_dlgFin_addteleBill_amount.setForeground(Color.black);
+                this.lbl_dlgFin_addteleBill_amount.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addteleBill_amount.setForeground(Color.red);
+                this.lbl_dlgFin_addteleBill_amount.setToolTipText("Invalid Amount");
+            }
         }
     }//GEN-LAST:event_btn_dlgFin_addtelebill_AddActionPerformed
 
@@ -8601,30 +8668,54 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_dlgFin_addtelebill_teleNoKeyTyped
 
     private void btn_dlgFin_addwaterbill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addwaterbill_AddActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addwaterbill,"Are You sure the details are correct?","Add Water Bill",JOptionPane.YES_NO_OPTION);
+        Expense exp = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date="";
+        try{
+            date = df.format(this.dc_dlgFin_addwaterbill_billdate.getDate());
+            lbl_dlgFin_addWaterBill_billDate.setForeground(Color.black);
+            lbl_dlgFin_addWaterBill_billDate.setToolTipText(null);
+        }
+        catch(Exception e){
+            getToolkit().beep();
+            lbl_dlgFin_addWaterBill_billDate.setForeground(Color.red);
+            lbl_dlgFin_addWaterBill_billDate.setToolTipText("Invalid Date");
+        }
+        String billAmount = this.txt_dlgFin_addwaterbill_billAmount.getText();
+        if(exp.validatePayAmount(billAmount)){    
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addwaterbill,"Are You sure the details are correct?","Add Water Bill",JOptionPane.YES_NO_OPTION);
             if(userChoice==0){
-                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-                String date = df.format(this.dc_dlgFin_addwaterbill_billdate.getDate());
                 String from = df.format(this.dc_Fin_Expense_From.getDate());
                 String to = df.format(this.dc_Fin_Expense_to.getDate());
                 String desc = "Water Bill";
-                String billAmount = this.txt_dlgFin_addwaterbill_billAmount.getText();
-                Expense ex = new Expense();
+                
                 //-add a water bill-----------------------------------------
-                ex.addWaterBill(date, desc, billAmount, dlgFin_addwaterbill);
+                exp.addWaterBill(date, desc, billAmount, dlgFin_addwaterbill);
                 //-update expense table-----------------------------------------
-                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
+                ResultSet rs = exp.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
                 this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
                 //-update net expense-------------------------------------------
-                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
+                double netExpense = exp.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
                 this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
                 //--------------------------------------------------------------
                 //-update #expenses-------------------------------------------
-                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
+                int noExp = exp.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addwaterbill);
                 this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
                 //--------------------------------------------------------------
                 this.dlgFin_addwaterbill.dispose();
             }
+        }
+        else{
+            getToolkit().beep();
+            if(exp.validatePayAmount(billAmount)){
+                this.lbl_dlgFin_addWaterBill_billAmnt.setForeground(Color.black);
+                this.lbl_dlgFin_addWaterBill_billAmnt.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addWaterBill_billAmnt.setForeground(Color.red);
+                this.lbl_dlgFin_addWaterBill_billAmnt.setToolTipText("Invalid Amount");
+            }
+        }
     }//GEN-LAST:event_btn_dlgFin_addwaterbill_AddActionPerformed
 
     private void btn_dlgFin_addwaterbill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addwaterbill_CancelActionPerformed
@@ -8634,6 +8725,9 @@ public class MainWindow extends javax.swing.JFrame {
     private void btn_Fin_AddWaterBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_AddWaterBillActionPerformed
         //----Clear textfields-------------------------------
         this.txt_dlgFin_addwaterbill_billAmount.setText("");
+        //---------------------------------------------------
+        this.lbl_dlgFin_addWaterBill_billAmnt.setForeground(Color.black);
+        this.lbl_dlgFin_addWaterBill_billDate.setForeground(Color.black);
         //---------------------------------------------------
         this.dlgFin_addwaterbill.setSize(417,280);
         this.dlgFin_addwaterbill.setTitle("Add New");
@@ -8645,16 +8739,30 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_Fin_AddWaterBillActionPerformed
 
     private void btn_dlgFin_addelecbill_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addelecbill_AddActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addelecbill,"Are You sure the details are correct?","Add Electricity Bill",JOptionPane.YES_NO_OPTION);
+        Expense exp = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date="";
+        try{
+            date = df.format(this.dc_dlgFin_addelecbill_billdate.getDate());
+            lbl_dlgFin_addelecbill_billdate.setForeground(Color.black);
+            lbl_dlgFin_addelecbill_billdate.setToolTipText(null);
+        }
+        catch(Exception e){
+            getToolkit().beep();
+            lbl_dlgFin_addelecbill_billdate.setForeground(Color.red);
+            lbl_dlgFin_addelecbill_billdate.setToolTipText("Invalid Date");
+        }
+        String billAmount = this.txt_dlgFin_addelecbill_billAmount.getText();
+        if(exp.validatePayAmount(billAmount)){  
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addelecbill,"Are You sure the details are correct?","Add Electricity Bill",JOptionPane.YES_NO_OPTION);
             if(userChoice==0){
-                DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-                String date = df.format(this.dc_dlgFin_addelecbill_billdate.getDate());
+                date = df.format(this.dc_dlgFin_addelecbill_billdate.getDate());
                 String from = df.format(this.dc_Fin_Expense_From.getDate());
                 String to = df.format(this.dc_Fin_Expense_to.getDate());
                 String desc = "Electricity Bill";
-                String billAmount = this.txt_dlgFin_addelecbill_billAmount.getText();
+                
                 Expense ex = new Expense();
-                //-add a water bill-----------------------------------------
+                //-add a elec bill-----------------------------------------
                 ex.addElectricityBill(date, desc, billAmount, dlgFin_addelecbill);
                 //-update expense table-----------------------------------------
                 ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addelecbill);
@@ -8668,6 +8776,18 @@ public class MainWindow extends javax.swing.JFrame {
                 //--------------------------------------------------------------
                 this.dlgFin_addelecbill.dispose();
             }
+        }
+        else{
+            getToolkit().beep();
+            if(exp.validatePayAmount(billAmount)){
+                this.lbl_dlgFin_addelecbill_billAmnt.setForeground(Color.black);
+                this.lbl_dlgFin_addelecbill_billAmnt.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addelecbill_billAmnt.setForeground(Color.red);
+                this.lbl_dlgFin_addelecbill_billAmnt.setToolTipText("Invalid Amount");
+            }
+        }
     }//GEN-LAST:event_btn_dlgFin_addelecbill_AddActionPerformed
 
     private void btn_dlgFin_addelecbill_CancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addelecbill_CancelActionPerformed
@@ -8677,6 +8797,9 @@ public class MainWindow extends javax.swing.JFrame {
     private void btn_Fin_AddElecBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Fin_AddElecBillActionPerformed
         //----Clear textfields-------------------------------
         this.txt_dlgFin_addelecbill_billAmount.setText("");
+        //---------------------------------------------------
+        this.lbl_dlgFin_addelecbill_billAmnt.setForeground(Color.black);
+        this.lbl_dlgFin_addelecbill_billdate.setForeground(Color.black);
         //---------------------------------------------------
         this.dlgFin_addelecbill.setSize(417,280);
         this.dlgFin_addelecbill.setTitle("Add New");
@@ -8692,28 +8815,61 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_dlgFin_addSalPay_RefNoKeyTyped
 
     private void btn_dlgFin_addSalPay_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addSalPay_AddActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addSalaryPayment,"Are You sure the details are correct?","Add Salary Payment",JOptionPane.YES_NO_OPTION);
-        if(userChoice==0){
-            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-            String date = df.format(this.dc_dlgFin_addSalPay_paymentDate.getDate());
-            String from = df.format(this.dc_Fin_Expense_From.getDate());
-            String to = df.format(this.dc_Fin_Expense_to.getDate());
-            String desc = "Salary Payment | Reference No. "+this.txt_dlgFin_addSalPay_RefNo.getText();
-            String TAmount = this.txt_dlgFin_addSalPay_TAmount.getText();
-            Expense ex = new Expense();
-            //-add a Salary Payment---------------------------------------------
-            ex.addSalaryPayment(date, desc, TAmount, dlgFin_addSalaryPayment);
-            //-update expense table-----------------------------------------
-            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-            //-update net expense-------------------------------------------
-            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
-            //-update #expenses-------------------------------------------
-            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
-            //--------------------------------------------------------------
-            this.dlgFin_addSalaryPayment.dispose();
+        Expense exp = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date="";
+        try{
+            date = df.format(this.dc_dlgFin_addSalPay_paymentDate.getDate());
+            lbl_dlgFin_addsalpay_date.setForeground(Color.black);
+            lbl_dlgFin_addsalpay_date.setToolTipText(null);
+        }
+        catch(Exception e){
+            getToolkit().beep();
+            lbl_dlgFin_addsalpay_date.setForeground(Color.red);
+            lbl_dlgFin_addsalpay_date.setToolTipText("Invalid Date");
+        }
+        String netAmount = this.txt_dlgFin_addSalPay_TAmount.getText();
+        String refNo = this.txt_dlgFin_addSalPay_RefNo.getText();
+        if(exp.validatePayAmount(netAmount) & exp.validateRefNo(refNo)){    
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addSalaryPayment,"Are You sure the details are correct?","Add Salary Payment",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
+                String desc = "Salary Payment | Reference No. "+refNo;
+                Expense ex = new Expense();
+                //-add a Salary Payment---------------------------------------------
+                ex.addSalaryPayment(date, desc, netAmount, dlgFin_addSalaryPayment);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+                this.dlgFin_addSalaryPayment.dispose();
+            }
+        }
+        else{
+            getToolkit().beep();
+            if(exp.validatePayAmount(netAmount)){
+                this.lbl_dlgFin_addsalpay_totAmnt.setForeground(Color.black);
+                this.lbl_dlgFin_addsalpay_totAmnt.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addsalpay_totAmnt.setForeground(Color.red);
+                this.lbl_dlgFin_addsalpay_totAmnt.setToolTipText("Invalid Amount");
+            }
+            if(exp.validateRefNo(refNo)){
+                this.lbl_dlgFin_addsalpay_refno.setForeground(Color.black);
+                this.lbl_dlgFin_addsalpay_refno.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addsalpay_refno.setForeground(Color.red);
+                this.lbl_dlgFin_addsalpay_refno.setToolTipText("Invalid Reference Number");
+            }
         }
     }//GEN-LAST:event_btn_dlgFin_addSalPay_AddActionPerformed
 
@@ -8728,7 +8884,11 @@ public class MainWindow extends javax.swing.JFrame {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date = new Date();
         this.dc_dlgFin_addSalPay_paymentDate.setDate(date);
-        //---------------------------------------------------
+        //--Clear label colors--------------------------------------------------
+        this.lbl_dlgFin_addsalpay_date.setForeground(Color.black);
+        this.lbl_dlgFin_addsalpay_refno.setForeground(Color.black);
+        this.lbl_dlgFin_addsalpay_totAmnt.setForeground(Color.black);
+        //----------------------------------------------------------------------
         this.dlgFin_addSalaryPayment.setSize(417,320);
         this.dlgFin_addSalaryPayment.setTitle("Add New");
         this.dlgFin_addSalaryPayment.setLocationRelativeTo(this);
@@ -11152,6 +11312,7 @@ public class MainWindow extends javax.swing.JFrame {
                         DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
                         String today = df.format(date);
                         i.addNewIncome("PS", today, netAmount, this);
+                        PS_Sell_LabelNetAmount.setText("0.0");
                     }
                     catch(Exception e){
                         e.printStackTrace();
@@ -11948,29 +12109,71 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_dlgFin_addCInvoice_InvoiceNoKeyTyped
 
     private void btn_dlgFin_addCInvoice_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addCInvoice_AddActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addCInvoice,"Are You sure the details are correct?","Add Client Invoice",JOptionPane.YES_NO_OPTION);
-        if(userChoice==0){
-            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-            String date = df.format(this.dc_dlgFin_addCInvoice_paymentDate.getDate());
-            String from = df.format(this.dc_Fin_Expense_From.getDate());
-            String to = df.format(this.dc_Fin_Expense_to.getDate());
-            String Client = this.txt_dlgFin_addCInvoice_Client.getText();
-            String desc = "Client Invoice | "+Client+" | Invoice No. "+this.txt_dlgFin_addCInvoice_InvoiceNo.getText();
-            String netAmount = this.txt_dlgFin_addCInvoice_NetAmount.getText();
-            Expense ex = new Expense();
-            //-add a Salary Payment---------------------------------------------
-            ex.addClientInvoice(date, desc, netAmount, dlgFin_addCInvoice);
-            //-update expense table-----------------------------------------
-            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-            //-update net expense-------------------------------------------
-            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
-            //-update #expenses-------------------------------------------
-            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
-            //--------------------------------------------------------------
-            this.dlgFin_addCInvoice.dispose();
+        Expense exp = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date="";
+        try{
+            date = df.format(this.dc_dlgFin_addCInvoice_paymentDate.getDate());
+            lbl_dlgFin_addCInvoice_date.setForeground(Color.black);
+            lbl_dlgFin_addsalpay_date.setToolTipText(null);
+        }
+        catch(Exception e){
+            getToolkit().beep();
+            lbl_dlgFin_addCInvoice_date.setForeground(Color.red);
+            lbl_dlgFin_addCInvoice_date.setToolTipText("Invalid Date");
+        }
+        String netAmount = this.txt_dlgFin_addCInvoice_NetAmount.getText();
+        String invNo = this.txt_dlgFin_addCInvoice_InvoiceNo.getText();
+        String client = this.txt_dlgFin_addCInvoice_Client.getText();
+        if(exp.validatePayAmount(netAmount) & exp.validateInvNo(invNo) & exp.validateClient(client)){  
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addCInvoice,"Are You sure the details are correct?","Add Client Invoice",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
+                String Client = this.txt_dlgFin_addCInvoice_Client.getText();
+                String desc = "Client Invoice | "+Client+" | Invoice No. "+this.txt_dlgFin_addCInvoice_InvoiceNo.getText();
+                Expense ex = new Expense();
+                //-add a Invoice Payment---------------------------------------------
+                ex.addClientInvoice(date, desc, netAmount, dlgFin_addCInvoice);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+                this.dlgFin_addCInvoice.dispose();
+            }
+        }
+        else{
+            getToolkit().beep();
+            if(exp.validatePayAmount(netAmount)){
+                this.lbl_dlgFin_addCInvoice_netAmount.setForeground(Color.black);
+                this.lbl_dlgFin_addCInvoice_netAmount.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addCInvoice_netAmount.setForeground(Color.red);
+                this.lbl_dlgFin_addCInvoice_netAmount.setToolTipText("Invalid Amount");
+            }
+            if(exp.validateInvNo(invNo)){
+                this.lbl_dlgFin_addCInvoice_InvNo.setForeground(Color.black);
+                this.lbl_dlgFin_addCInvoice_InvNo.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addCInvoice_InvNo.setForeground(Color.red);
+                this.lbl_dlgFin_addCInvoice_InvNo.setToolTipText("Invalid Invoice Number");
+            }
+            if(exp.validateClient(client)){
+                this.lbl_dlgFin_addCInvoice_client.setForeground(Color.black);
+                this.lbl_dlgFin_addCInvoice_client.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addCInvoice_client.setForeground(Color.red);
+                this.lbl_dlgFin_addCInvoice_client.setToolTipText("Invalid Client");
+            }
         }
     }//GEN-LAST:event_btn_dlgFin_addCInvoice_AddActionPerformed
 
@@ -11990,8 +12193,13 @@ public class MainWindow extends javax.swing.JFrame {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
         Date date = new Date();
         this.dc_dlgFin_addCInvoice_paymentDate.setDate(date);
+        //--Clear label colors
+        this.lbl_dlgFin_addCInvoice_date.setForeground(Color.black);
+        this.lbl_dlgFin_addCInvoice_InvNo.setForeground(Color.black);
+        this.lbl_dlgFin_addCInvoice_client.setForeground(Color.black);
+        this.lbl_dlgFin_addCInvoice_netAmount.setForeground(Color.black);
         //---------------------------------------------------
-        this.dlgFin_addCInvoice.setSize(487,335);
+        this.dlgFin_addCInvoice.setSize(507,335);
         this.dlgFin_addCInvoice.setTitle("Add New");
         this.dlgFin_addCInvoice.setLocationRelativeTo(this);
         this.dlgFin_addCInvoice.setVisible(true);
@@ -12002,28 +12210,61 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_dlgFin_addOtherPay_DescriptionKeyTyped
 
     private void btn_dlgFin_addOtherPay_AddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dlgFin_addOtherPay_AddActionPerformed
-        int userChoice = JOptionPane.showConfirmDialog(dlgFin_addOtherPayments,"Are You sure the details are correct?","Add Other Payments",JOptionPane.YES_NO_OPTION);
-        if(userChoice==0){
-            DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
-            String date = df.format(this.dc_dlgFin_addOtherPay_paymentDate.getDate());
-            String from = df.format(this.dc_Fin_Expense_From.getDate());
-            String to = df.format(this.dc_Fin_Expense_to.getDate());
-            String desc = txt_dlgFin_addOtherPay_Description.getText();
-            String totAmount = this.txt_dlgFin_addOtherPay_totAmount.getText();
-            Expense ex = new Expense();
-            //-add a Salary Payment---------------------------------------------
-            ex.addOtherPayment(date, desc, totAmount, dlgFin_addOtherPayments);
-            //-update expense table-----------------------------------------
-            ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
-            //-update net expense-------------------------------------------
-            double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
-            //-update #expenses-------------------------------------------
-            int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
-            this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
-            //--------------------------------------------------------------
-            this.dlgFin_addOtherPayments.dispose();
+        Expense exp = new Expense();
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        String date="";
+        try{
+            date = date = df.format(this.dc_dlgFin_addOtherPay_paymentDate.getDate());
+            lbl_dlgFin_addOthrpay_date.setForeground(Color.black);
+            lbl_dlgFin_addOthrpay_date.setToolTipText(null);
+        }
+        catch(Exception e){
+            getToolkit().beep();
+            lbl_dlgFin_addOthrpay_date.setForeground(Color.red);
+            lbl_dlgFin_addOthrpay_date.setToolTipText("Invalid Date");
+        }
+        String totAmount = this.txt_dlgFin_addOtherPay_totAmount.getText();
+        String desc = this.txt_dlgFin_addOtherPay_Description.getText();
+        if(exp.validatePayAmount(totAmount) & exp.validateDesc(desc)){ 
+            int userChoice = JOptionPane.showConfirmDialog(dlgFin_addOtherPayments,"Are You sure the details are correct?","Add Other Payments",JOptionPane.YES_NO_OPTION);
+            if(userChoice==0){
+                String from = df.format(this.dc_Fin_Expense_From.getDate());
+                String to = df.format(this.dc_Fin_Expense_to.getDate());
+                
+                Expense ex = new Expense();
+                //-add a Other Payment---------------------------------------------
+                ex.addOtherPayment(date, desc, totAmount, dlgFin_addOtherPayments);
+                //-update expense table-----------------------------------------
+                ResultSet rs = ex.updateExpenseTable(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.tbl_Fin_ExpenseDetails.setModel(DbUtils.resultSetToTableModel(rs));
+                //-update net expense-------------------------------------------
+                double netExpense = ex.calcNetExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.lbl_Fin_NetExpense.setText(Double.toString(netExpense));
+                //-update #expenses-------------------------------------------
+                int noExp = ex.countNoExp(from,to,this.ckbx_Fin_ClientInvoice.isSelected(),this.ckbx_Fin_SalaryPayment.isSelected(),this.ckbx_Fin_Ebill.isSelected(),this.ckbx_Fin_waterbill.isSelected(),this.ckbx_Fin_telebill.isSelected(),this.ckbx_Fin_other.isSelected(),dlgFin_addSalaryPayment);
+                this.lbl_Fin_Expenses_noExp.setText(Integer.toString(noExp));
+                //--------------------------------------------------------------
+                this.dlgFin_addOtherPayments.dispose();
+            }
+        }
+        else{
+            getToolkit().beep();
+            if(exp.validatePayAmount(totAmount)){
+                this.lbl_dlgFin_addOthrpay_tAmnt.setForeground(Color.black);
+                this.lbl_dlgFin_addOthrpay_tAmnt.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addOthrpay_tAmnt.setForeground(Color.red);
+                this.lbl_dlgFin_addOthrpay_tAmnt.setToolTipText("Invalid Amount");
+            }
+            if(exp.validateRefNo(desc)){
+                this.lbl_dlgFin_addOthrpay_desc.setForeground(Color.black);
+                this.lbl_dlgFin_addOthrpay_desc.setToolTipText(null);
+            }
+            else{
+                this.lbl_dlgFin_addOthrpay_desc.setForeground(Color.red);
+                this.lbl_dlgFin_addOthrpay_desc.setToolTipText("Invalid Description");
+            }
         }
     }//GEN-LAST:event_btn_dlgFin_addOtherPay_AddActionPerformed
 
@@ -12039,11 +12280,57 @@ public class MainWindow extends javax.swing.JFrame {
         Date date = new Date();
         this.dc_dlgFin_addOtherPay_paymentDate.setDate(date);
         //---------------------------------------------------
+        this.lbl_dlgFin_addOthrpay_date.setForeground(Color.black);
+        this.lbl_dlgFin_addOthrpay_desc.setForeground(Color.black);
+        this.lbl_dlgFin_addOthrpay_tAmnt.setForeground(Color.black);
+        //---------------------------------------------------
         this.dlgFin_addOtherPayments.setSize(487,335);
         this.dlgFin_addOtherPayments.setTitle("Add New");
         this.dlgFin_addOtherPayments.setLocationRelativeTo(this);
         this.dlgFin_addOtherPayments.setVisible(true);
     }//GEN-LAST:event_btn_Fin_AddOtherActionPerformed
+
+    private void txt_dlgFin_addtelebill_billAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addtelebill_billAmountKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addtelebill_billAmountKeyTyped
+
+    private void txt_dlgFin_addwaterbill_billAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addwaterbill_billAmountKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addwaterbill_billAmountKeyTyped
+
+    private void txt_dlgFin_addelecbill_billAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addelecbill_billAmountKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addelecbill_billAmountKeyTyped
+
+    private void txt_dlgFin_addSalPay_TAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addSalPay_TAmountKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addSalPay_TAmountKeyTyped
+
+    private void txt_dlgFin_addCInvoice_NetAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addCInvoice_NetAmountKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addCInvoice_NetAmountKeyTyped
+
+    private void txt_dlgFin_addOtherPay_totAmountKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_dlgFin_addOtherPay_totAmountKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txt_dlgFin_addOtherPay_totAmountKeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -12311,17 +12598,6 @@ public class MainWindow extends javax.swing.JFrame {
     private com.toedter.calendar.JDateChooser FinjDateChooser7;
     private com.toedter.calendar.JDateChooser FinjDateChooser8;
     private javax.swing.JLabel FinjLabel10;
-    private javax.swing.JLabel FinjLabel1000000;
-    private javax.swing.JLabel FinjLabel1000001;
-    private javax.swing.JLabel FinjLabel1000002;
-    private javax.swing.JLabel FinjLabel1000003;
-    private javax.swing.JLabel FinjLabel1000004;
-    private javax.swing.JLabel FinjLabel10billamount;
-    private javax.swing.JLabel FinjLabel10billamount1;
-    private javax.swing.JLabel FinjLabel10billamount2;
-    private javax.swing.JLabel FinjLabel10billamount3;
-    private javax.swing.JLabel FinjLabel10billamount4;
-    private javax.swing.JLabel FinjLabel10billamount5;
     private javax.swing.JLabel FinjLabel11;
     private javax.swing.JLabel FinjLabel12;
     private javax.swing.JLabel FinjLabel13;
@@ -12342,13 +12618,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel FinjLabel32;
     private javax.swing.JLabel FinjLabel35;
     private javax.swing.JLabel FinjLabel8;
-    private javax.swing.JLabel FinjLabel8999999;
     private javax.swing.JLabel FinjLabel9;
-    private javax.swing.JLabel FinjLabel9000000;
-    private javax.swing.JLabel FinjLabel9000001;
-    private javax.swing.JLabel FinjLabel9000002;
-    private javax.swing.JLabel FinjLabel9000003;
-    private javax.swing.JLabel FinjLabel999999;
     private javax.swing.JSeparator FinjSeparator1;
     private javax.swing.JSeparator FinjSeparator12;
     private javax.swing.JSeparator FinjSeparator13;
@@ -12677,11 +12947,28 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_SearchClientCompany;
     private javax.swing.JLabel lbl_SearchClientProduct;
     private javax.swing.JLabel lbl_dlgFin_AddProduct_Product;
+    private javax.swing.JLabel lbl_dlgFin_addCInvoice_InvNo;
+    private javax.swing.JLabel lbl_dlgFin_addCInvoice_client;
+    private javax.swing.JLabel lbl_dlgFin_addCInvoice_date;
+    private javax.swing.JLabel lbl_dlgFin_addCInvoice_netAmount;
     private javax.swing.JLabel lbl_dlgFin_addClient_Address;
     private javax.swing.JLabel lbl_dlgFin_addClient_Company;
     private javax.swing.JLabel lbl_dlgFin_addClient_Email;
     private javax.swing.JLabel lbl_dlgFin_addClient_tele1;
     private javax.swing.JLabel lbl_dlgFin_addClient_tele2;
+    private javax.swing.JLabel lbl_dlgFin_addOthrpay_date;
+    private javax.swing.JLabel lbl_dlgFin_addOthrpay_desc;
+    private javax.swing.JLabel lbl_dlgFin_addOthrpay_tAmnt;
+    private javax.swing.JLabel lbl_dlgFin_addWaterBill_billAmnt;
+    private javax.swing.JLabel lbl_dlgFin_addWaterBill_billDate;
+    private javax.swing.JLabel lbl_dlgFin_addelecbill_billAmnt;
+    private javax.swing.JLabel lbl_dlgFin_addelecbill_billdate;
+    private javax.swing.JLabel lbl_dlgFin_addsalpay_date;
+    private javax.swing.JLabel lbl_dlgFin_addsalpay_refno;
+    private javax.swing.JLabel lbl_dlgFin_addsalpay_totAmnt;
+    private javax.swing.JLabel lbl_dlgFin_addteleBill_amount;
+    private javax.swing.JLabel lbl_dlgFin_addteleBill_date;
+    private javax.swing.JLabel lbl_dlgFin_addteleBill_tele;
     private javax.swing.JLabel lbl_dlgFin_editClient_Address;
     private javax.swing.JLabel lbl_dlgFin_editClient_Company;
     private javax.swing.JLabel lbl_dlgFin_editClient_Email;
