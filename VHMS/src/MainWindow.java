@@ -3562,6 +3562,11 @@ public class MainWindow extends javax.swing.JFrame {
         BtnAdd_to_bill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addItem_32x25.png"))); // NOI18N
         BtnAdd_to_bill.setToolTipText("Add to List");
         BtnAdd_to_bill.setActionCommand("<<     Add");
+        BtnAdd_to_bill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAdd_to_billActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnl_Ph_AddItemLayout = new javax.swing.GroupLayout(pnl_Ph_AddItem);
         pnl_Ph_AddItem.setLayout(pnl_Ph_AddItemLayout);
@@ -12552,6 +12557,65 @@ public class MainWindow extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txtBillQuantityKeyTyped
+
+    private void BtnAdd_to_billActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAdd_to_billActionPerformed
+        if(txtBillItemcode.getText().equals("") && txtBillQuantity.getText().equals("")){
+            this.txtBillItemcode.requestFocus();
+        }
+        else if(txtBillQuantity.getText().equals("")){
+            this.txtBillQuantity.requestFocus();
+        }
+        else{
+            String item = txtBillItemcode.getText();
+            int nItemsInCart = this.tblPharmacyBillItems.getRowCount();
+            int Quantity = Integer.parseInt(this.txtBillQuantity.getText());
+            String desc = null;
+            int inStock = 0;
+            double uPrice = 0;
+            Pharmacy p = new Pharmacy();
+            ResultSet r = p.getItemDetails(item);
+            try {
+                while(r.next()){
+                    desc = r.getString("Item_Name");
+                    inStock = r.getInt("Quantity");
+                    uPrice = r.getDouble("Selling_Price");
+                }
+            } 
+            catch (SQLException ex) {
+                JOptionPane.showMessageDialog(this, "Cannot Retrieve Data!", "Database Error", JOptionPane.ERROR_MESSAGE);
+            }
+
+            if(Quantity==0){
+                this.txtBillItemcode.setText("");
+                this.txtBillQuantity.setText("");
+                this.txtBillItemcode.requestFocus();
+            }
+            else if(inStock>=Quantity){
+                //-add items to cart------------------------------------------------------
+                    Object[] newItem = new Object[6];
+                    newItem[0] = nItemsInCart+1;
+                    newItem[1] = item;
+                    newItem[2] = desc;
+                    newItem[3] = uPrice;
+                    newItem[4] = Quantity;
+                    newItem[5] = uPrice*Quantity;
+                    phaCartModel.addRow(newItem);
+                //---------------------------------------------------------
+                this.txtBillItemcode.setText("");
+                this.txtBillQuantity.setText("");
+                this.txtBillItemcode.requestFocus();
+                this.lbl_Ph_IDescription_Name.setText("");
+                this.lbl_Ph_IDescription_InStockQuantity.setText("");
+                this.lbl_Ph_IDescription_Company.setText("");
+
+                Double total = getTotal();
+                lblPharmacy_Total.setText(total.toString());
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Item Out of Stock!", "Error", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+    }//GEN-LAST:event_BtnAdd_to_billActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
