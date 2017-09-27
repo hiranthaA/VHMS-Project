@@ -39,8 +39,12 @@ public class MainWindow extends javax.swing.JFrame {
     DefaultListModel dlmCart = new DefaultListModel();
     DefaultListModel dlmAvailable = new DefaultListModel();
     DefaultListModel dlmDayCare = new DefaultListModel();
+    DefaultTableModel phaCartModel = new DefaultTableModel();
     public MainWindow() {
         initComponents();
+        Object[] columns = {"#","Item Code","Description","Unit Price","Quantity","Net Value"};
+        phaCartModel.setColumnIdentifiers(columns);
+        tblPharmacyBillItems.setModel(phaCartModel);
         setExtendedState(java.awt.Frame.MAXIMIZED_BOTH);
         showPanels();
         dbConnectr conn = new dbConnectr();
@@ -309,11 +313,11 @@ public class MainWindow extends javax.swing.JFrame {
         dc_pha_add_expdate = new com.toedter.calendar.JDateChooser();
         dlgpha_updateItem = new javax.swing.JDialog();
         pnl_dlg_addItemMain1 = new javax.swing.JPanel();
-        txt_pha_additemcode1 = new javax.swing.JTextField();
+        txt_pha_editItemcode = new javax.swing.JTextField();
         txt_pha_editCompany = new javax.swing.JTextField();
-        txt_pha_addItemName1 = new javax.swing.JTextField();
-        txt_pha_addquantity1 = new javax.swing.JTextField();
-        txt_pha_addStockprice1 = new javax.swing.JTextField();
+        txt_pha_editItemname = new javax.swing.JTextField();
+        txt_pha_editquantity = new javax.swing.JTextField();
+        txt_pha_editStockprice = new javax.swing.JTextField();
         txt_pha_editSellingprice = new javax.swing.JTextField();
         lbl_pha_editItemcode = new javax.swing.JLabel();
         lbl_pha_edit_itemname = new javax.swing.JLabel();
@@ -386,6 +390,13 @@ public class MainWindow extends javax.swing.JFrame {
         lblPharmacy_Total = new javax.swing.JLabel();
         Btn_PrintBill = new javax.swing.JButton();
         pnl_Ph_ItemDetails = new javax.swing.JPanel();
+        PhajLabel2 = new javax.swing.JLabel();
+        PhajLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        lbl_Ph_IDescription_Name = new javax.swing.JLabel();
+        lbl_Ph_IDescription_InStockQuantity = new javax.swing.JLabel();
+        PhajLabel7 = new javax.swing.JLabel();
+        lbl_Ph_IDescription_Company = new javax.swing.JLabel();
         pnlPharmacyStock = new javax.swing.JPanel();
         pnlStock = new javax.swing.JPanel();
         jscroll_pha_stock = new javax.swing.JScrollPane();
@@ -2954,20 +2965,20 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnl_dlg_addItemMain1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Update Item", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Calibri", 1, 24), new java.awt.Color(0, 51, 51))); // NOI18N
 
-        txt_pha_additemcode1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
-        txt_pha_additemcode1.addActionListener(new java.awt.event.ActionListener() {
+        txt_pha_editItemcode.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_pha_editItemcode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_pha_additemcode1ActionPerformed(evt);
+                txt_pha_editItemcodeActionPerformed(evt);
             }
         });
 
         txt_pha_editCompany.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_addItemName1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_pha_editItemname.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_addquantity1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_pha_editquantity.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
-        txt_pha_addStockprice1.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
+        txt_pha_editStockprice.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
         txt_pha_editSellingprice.setFont(new java.awt.Font("Calibri", 0, 16)); // NOI18N
 
@@ -3013,7 +3024,7 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_dlg_addItemMain1Layout.createSequentialGroup()
                         .addComponent(lbl_pha_edit_itemname)
                         .addGap(49, 49, 49)
-                        .addComponent(txt_pha_addItemName1))
+                        .addComponent(txt_pha_editItemname))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnl_dlg_addItemMain1Layout.createSequentialGroup()
                         .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_pha_editItemcode, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3024,18 +3035,18 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txt_pha_editCompany)
                             .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
-                                .addComponent(txt_pha_addStockprice1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_pha_editStockprice, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                                 .addComponent(lbl_pha_editSellingprice)
                                 .addGap(18, 18, 18)
                                 .addComponent(txt_pha_editSellingprice, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
-                                .addComponent(txt_pha_addquantity1, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_pha_editquantity, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lbl_pha_editExpireDate)
                                 .addGap(18, 18, 18)
                                 .addComponent(dc_pha_edit_expdate, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txt_pha_additemcode1))))
+                            .addComponent(txt_pha_editItemcode))))
                 .addGap(28, 28, 28))
         );
         pnl_dlg_addItemMain1Layout.setVerticalGroup(
@@ -3046,16 +3057,16 @@ public class MainWindow extends javax.swing.JFrame {
                     .addGroup(pnl_dlg_addItemMain1Layout.createSequentialGroup()
                         .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl_pha_edit_itemname, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txt_pha_addItemName1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txt_pha_editItemname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txt_pha_additemcode1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_pha_editItemcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_pha_editItemcode, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(dc_pha_edit_expdate, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txt_pha_addquantity1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(txt_pha_editquantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(lbl_pha_editQuantity)
                                 .addComponent(lbl_pha_editExpireDate)))
                         .addGap(18, 18, 18)
@@ -3064,7 +3075,7 @@ public class MainWindow extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbl_pha_editSellingprice)
-                            .addComponent(txt_pha_addStockprice1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_pha_editStockprice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lbl_pha_editStockPrice))))
                 .addGap(18, 18, 18)
                 .addGroup(pnl_dlg_addItemMain1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -3543,9 +3554,12 @@ public class MainWindow extends javax.swing.JFrame {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 txtBillQuantityKeyPressed(evt);
             }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtBillQuantityKeyTyped(evt);
+            }
         });
 
-        BtnAdd_to_bill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/leftarrow_x32.png"))); // NOI18N
+        BtnAdd_to_bill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/addItem_32x25.png"))); // NOI18N
         BtnAdd_to_bill.setToolTipText("Add to List");
         BtnAdd_to_bill.setActionCommand("<<     Add");
 
@@ -3554,7 +3568,7 @@ public class MainWindow extends javax.swing.JFrame {
         pnl_Ph_AddItemLayout.setHorizontalGroup(
             pnl_Ph_AddItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_Ph_AddItemLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(25, 25, 25)
                 .addComponent(Lbl_BillItemcode)
                 .addGap(18, 18, 18)
                 .addComponent(txtBillItemcode, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -3562,35 +3576,40 @@ public class MainWindow extends javax.swing.JFrame {
                 .addComponent(Lbl_BillQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtBillQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(101, 101, 101)
-                .addComponent(BtnAdd_to_bill, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(BtnAdd_to_bill)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnl_Ph_AddItemLayout.setVerticalGroup(
             pnl_Ph_AddItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Ph_AddItemLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(pnl_Ph_AddItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(BtnAdd_to_bill, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BtnAdd_to_bill, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pnl_Ph_AddItemLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(Lbl_BillItemcode)
                         .addComponent(txtBillItemcode, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(Lbl_BillQuantity)
                         .addComponent(txtBillQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(30, 30, 30))
+                .addGap(20, 20, 20))
         );
 
         tblPharmacyBillItems.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Items", "Item Code", "Description", "Unit Price", "Quantity", "Net Value"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         scrlPharmacyBillItemtbl.setViewportView(tblPharmacyBillItems);
 
         Btn_DeleteBillItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trash_x32.png"))); // NOI18N
@@ -3640,15 +3659,67 @@ public class MainWindow extends javax.swing.JFrame {
 
         pnl_Ph_ItemDetails.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120)));
 
+        PhajLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PhajLabel2.setText("Item Name");
+
+        PhajLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PhajLabel3.setText("In Stock");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jLabel4.setText("Item Description");
+
+        lbl_Ph_IDescription_Name.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbl_Ph_IDescription_Name.setText("N/A");
+
+        lbl_Ph_IDescription_InStockQuantity.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbl_Ph_IDescription_InStockQuantity.setText("N/A");
+
+        PhajLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        PhajLabel7.setText("Company");
+
+        lbl_Ph_IDescription_Company.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        lbl_Ph_IDescription_Company.setText("N/A");
+
         javax.swing.GroupLayout pnl_Ph_ItemDetailsLayout = new javax.swing.GroupLayout(pnl_Ph_ItemDetails);
         pnl_Ph_ItemDetails.setLayout(pnl_Ph_ItemDetailsLayout);
         pnl_Ph_ItemDetailsLayout.setHorizontalGroup(
             pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(pnl_Ph_ItemDetailsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_Ph_ItemDetailsLayout.createSequentialGroup()
+                        .addComponent(jLabel4)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnl_Ph_ItemDetailsLayout.createSequentialGroup()
+                        .addGroup(pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PhajLabel2)
+                            .addComponent(PhajLabel3)
+                            .addComponent(PhajLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lbl_Ph_IDescription_Name, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_Ph_IDescription_InStockQuantity, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lbl_Ph_IDescription_Company, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pnl_Ph_ItemDetailsLayout.setVerticalGroup(
             pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(pnl_Ph_ItemDetailsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addGap(47, 47, 47)
+                .addGroup(pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PhajLabel2)
+                    .addComponent(lbl_Ph_IDescription_Name))
+                .addGap(36, 36, 36)
+                .addGroup(pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PhajLabel3)
+                    .addComponent(lbl_Ph_IDescription_InStockQuantity))
+                .addGap(36, 36, 36)
+                .addGroup(pnl_Ph_ItemDetailsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PhajLabel7)
+                    .addComponent(lbl_Ph_IDescription_Company))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlPharmacyIssueBillLayout = new javax.swing.GroupLayout(pnlPharmacyIssueBill);
@@ -3676,7 +3747,7 @@ public class MainWindow extends javax.swing.JFrame {
             pnlPharmacyIssueBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlPharmacyIssueBillLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pnl_Ph_AddItem, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pnl_Ph_AddItem, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(pnlPharmacyIssueBillLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlPharmacyIssueBillLayout.createSequentialGroup()
@@ -3909,7 +3980,15 @@ public class MainWindow extends javax.swing.JFrame {
             new String [] {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tbl_Hos_Customers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tbl_Hos_CustomersMouseClicked(evt);
@@ -10152,18 +10231,105 @@ public class MainWindow extends javax.swing.JFrame {
 
     private void txtBillItemcodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBillItemcodeKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            this.txtBillQuantity.requestFocus();
+            String item = txtBillItemcode.getText();
+            String iName = null;
+            int iQuan = 0;
+            String iCom = null;
+            Pharmacy p = new Pharmacy();
+            if(p.checkItemCode(item)){
+                ResultSet r = p.getItemDetails(item);
+                try {
+                    while(r.next()){
+                        iName = r.getString("Item_Name");
+                        iQuan = r.getInt("Quantity");
+                        iCom = r.getString("Company");
+                    }
+                } catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(this, "Cannot Retrieve Data!", "Database Error", JOptionPane.ERROR_MESSAGE);
+                }
+                this.lbl_Ph_IDescription_Name.setText(iName);
+                this.lbl_Ph_IDescription_InStockQuantity.setText(Integer.toString(iQuan));
+                this.lbl_Ph_IDescription_Company.setText(iCom);
+                this.txtBillQuantity.requestFocus();
+            }
+            else{
+                JOptionPane.showMessageDialog(this, "Invalid Item Code!", "Item Not Found", JOptionPane.ERROR_MESSAGE);
+            }
         }
     }//GEN-LAST:event_txtBillItemcodeKeyPressed
 
     private void txtBillQuantityKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBillQuantityKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            this.txtBillItemcode.setText("");
-            this.txtBillQuantity.setText("");
-            this.txtBillItemcode.requestFocus();
+            if(txtBillItemcode.getText().equals("") && txtBillQuantity.getText().equals("")){
+                this.txtBillItemcode.requestFocus();
+            }
+            else if(txtBillQuantity.getText().equals("")){
+                this.txtBillQuantity.requestFocus();
+            }
+            else{
+                String item = txtBillItemcode.getText();
+                int nItemsInCart = this.tblPharmacyBillItems.getRowCount();
+                int Quantity = Integer.parseInt(this.txtBillQuantity.getText());
+                String desc = null;
+                int inStock = 0;
+                double uPrice = 0;
+                Pharmacy p = new Pharmacy();
+                ResultSet r = p.getItemDetails(item);
+                try {
+                    while(r.next()){
+                        desc = r.getString("Item_Name");
+                        inStock = r.getInt("Quantity");
+                        uPrice = r.getDouble("Selling_Price");
+                    }
+                } 
+                catch (SQLException ex) {
+                    JOptionPane.showMessageDialog(this, "Cannot Retrieve Data!", "Database Error", JOptionPane.ERROR_MESSAGE);
+                }
+
+                if(Quantity==0){
+                    this.txtBillItemcode.setText("");
+                    this.txtBillQuantity.setText("");
+                    this.txtBillItemcode.requestFocus();
+                }
+                else if(inStock>=Quantity){
+                    //-add items to cart------------------------------------------------------
+                        Object[] newItem = new Object[6];
+                        newItem[0] = nItemsInCart+1;
+                        newItem[1] = item;
+                        newItem[2] = desc;
+                        newItem[3] = uPrice;
+                        newItem[4] = Quantity;
+                        newItem[5] = uPrice*Quantity;
+                        phaCartModel.addRow(newItem);
+                    //---------------------------------------------------------
+                    this.txtBillItemcode.setText("");
+                    this.txtBillQuantity.setText("");
+                    this.txtBillItemcode.requestFocus();
+                    this.lbl_Ph_IDescription_Name.setText("");
+                    this.lbl_Ph_IDescription_InStockQuantity.setText("");
+                    this.lbl_Ph_IDescription_Company.setText("");
+                    
+                    Double total = getTotal();
+                    lblPharmacy_Total.setText(total.toString());
+                }
+                else{
+                    JOptionPane.showMessageDialog(this, "Item Out of Stock!", "Error", JOptionPane.WARNING_MESSAGE);
+                }
+            }
         }
     }//GEN-LAST:event_txtBillQuantityKeyPressed
 
+    public double getTotal(){
+        int nItems = phaCartModel.getRowCount();
+        double sum=0;
+        for(int x = 0; x<nItems; x++){
+            String netVal = phaCartModel.getValueAt(x, 5).toString();
+            sum = sum + Double.parseDouble(netVal);
+        }
+        return sum;
+    }
+    
+    
     private void btnStockAdditemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockAdditemActionPerformed
         // TODO add your handling code here:
         this.txt_pha_additemcode.setText("");
@@ -10209,10 +10375,32 @@ public class MainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_btnStockDeleteitemActionPerformed
 
     private void btnStockUpdateitemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStockUpdateitemActionPerformed
-        this.dlgpha_updateItem.setSize(845,400);
-        this.dlgpha_updateItem.setTitle("Update Item");
-        this.dlgpha_updateItem.setLocationRelativeTo(this.pnlPharmacy);
-        this.dlgpha_updateItem.setVisible(true);
+        int selectedRow = this.tbl_stock.getSelectedRow();
+        if(selectedRow==-1){
+                JOptionPane.showMessageDialog(this, "Select an Item to edit details!","Error",JOptionPane.ERROR_MESSAGE);
+        }
+        else
+        {
+            
+            String date = this.tbl_stock.getModel().getValueAt(selectedRow, 3).toString();
+            try {
+                Date expDate = new SimpleDateFormat("yyyy-MM-DD").parse(date);
+                dc_pha_edit_expdate.setDate(expDate);
+            } catch (Exception ex) {
+                Logger.getLogger(MainWindow.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            txt_pha_editItemcode.setText(this.tbl_stock.getModel().getValueAt(selectedRow, 0).toString());
+            txt_pha_editItemname.setText(this.tbl_stock.getModel().getValueAt(selectedRow, 1).toString());
+            txt_pha_editquantity.setText(this.tbl_stock.getModel().getValueAt(selectedRow, 2).toString());
+            txt_pha_editStockprice.setText(this.tbl_stock.getModel().getValueAt(selectedRow, 4).toString());
+            txt_pha_editSellingprice.setText(this.tbl_stock.getModel().getValueAt(selectedRow, 5).toString());
+            txt_pha_editCompany.setText(this.tbl_stock.getModel().getValueAt(selectedRow, 6).toString());
+            
+            this.dlgpha_updateItem.setSize(845,400);
+            this.dlgpha_updateItem.setTitle("Update Item");
+            this.dlgpha_updateItem.setLocationRelativeTo(this.pnlPharmacy);
+            this.dlgpha_updateItem.setVisible(true);
+        }
     }//GEN-LAST:event_btnStockUpdateitemActionPerformed
 
     private void txt_pha_additemcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_additemcodeActionPerformed
@@ -10225,12 +10413,38 @@ public class MainWindow extends javax.swing.JFrame {
 
     }//GEN-LAST:event_btn_phaAddActionPerformed
 
-    private void txt_pha_additemcode1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_additemcode1ActionPerformed
+    private void txt_pha_editItemcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_pha_editItemcodeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_pha_additemcode1ActionPerformed
+    }//GEN-LAST:event_txt_pha_editItemcodeActionPerformed
 
     private void btn_phaupdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_phaupdateActionPerformed
-        // TODO add your handling code here:
+        Pharmacy p = new Pharmacy();
+        
+        DateFormat df= new SimpleDateFormat ("yyyy-MM-dd");
+        String expiryDate = df.format(this.dc_pha_edit_expdate.getDate());
+       
+        String itemname = this.txt_pha_editItemname.getText();
+        String quantity = this.txt_pha_editquantity.getText();
+        String stockPrice = this.txt_pha_editStockprice.getText();
+        String sellingPrice =this.txt_pha_editSellingprice.getText();
+        String company = this.txt_pha_editCompany.getText();
+        
+        int selectedRow = this.tbl_stock.getSelectedRow();
+        
+        String itemcode = this.tbl_stock.getModel().getValueAt(selectedRow, 0).toString();
+        
+        if(p.edit_Item(itemcode, itemname, quantity, expiryDate, stockPrice, sellingPrice, company))
+        {
+            JOptionPane.showMessageDialog(dlgpha_updateItem, "item editing Successfully!","item details",JOptionPane.INFORMATION_MESSAGE);
+            
+            this.tbl_stock.setModel(DbUtils.resultSetToTableModel(p.update_stock_table()));
+            this.dlgpha_updateItem.dispose();
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(dlgpha_updateItem, "item editing failed!","Database Error",JOptionPane.ERROR_MESSAGE);
+        
+        }
     }//GEN-LAST:event_btn_phaupdateActionPerformed
 
     private void PS_Sell_TextEmailKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PS_Sell_TextEmailKeyTyped
@@ -12331,6 +12545,13 @@ public class MainWindow extends javax.swing.JFrame {
             evt.consume();
         }
     }//GEN-LAST:event_txt_dlgFin_addOtherPay_totAmountKeyTyped
+
+    private void txtBillQuantityKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBillQuantityKeyTyped
+        char key = evt.getKeyChar();
+        if(!((key>='0' && key<='9') || key==KeyEvent.VK_BACK_SPACE || key==KeyEvent.VK_DELETE || key==KeyEvent.VK_ENTER)){
+            evt.consume();
+        }
+    }//GEN-LAST:event_txtBillQuantityKeyTyped
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
@@ -12728,6 +12949,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField PS_Shop_TextSearchPetSpecies;
     private javax.swing.JTextField PS_Shop_TextSpecies;
     private javax.swing.JTextField PS_Shop_TextYears;
+    private javax.swing.JLabel PhajLabel2;
+    private javax.swing.JLabel PhajLabel3;
+    private javax.swing.JLabel PhajLabel7;
     private javax.swing.JButton btnDaycare;
     private javax.swing.JButton btnEmployee;
     private javax.swing.JButton btnFin_AddClient;
@@ -12877,6 +13101,7 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JButton jButton12;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
@@ -12944,6 +13169,9 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_Hos_SearchPetID;
     private javax.swing.JLabel lbl_Hos_SearchPetName;
     private javax.swing.JLabel lbl_IncomeTotalLabel;
+    private javax.swing.JLabel lbl_Ph_IDescription_Company;
+    private javax.swing.JLabel lbl_Ph_IDescription_InStockQuantity;
+    private javax.swing.JLabel lbl_Ph_IDescription_Name;
     private javax.swing.JLabel lbl_SearchClientCompany;
     private javax.swing.JLabel lbl_SearchClientProduct;
     private javax.swing.JLabel lbl_dlgFin_AddProduct_Product;
@@ -13255,16 +13483,16 @@ public class MainWindow extends javax.swing.JFrame {
     private javax.swing.JTextField txt_dlgHos_editPet_name;
     private javax.swing.JTextField txt_pha_addCompany;
     private javax.swing.JTextField txt_pha_addItemName;
-    private javax.swing.JTextField txt_pha_addItemName1;
     private javax.swing.JTextField txt_pha_addSellingprice;
     private javax.swing.JTextField txt_pha_addStockprice;
-    private javax.swing.JTextField txt_pha_addStockprice1;
     private javax.swing.JTextField txt_pha_additemcode;
-    private javax.swing.JTextField txt_pha_additemcode1;
     private javax.swing.JTextField txt_pha_addquantity;
-    private javax.swing.JTextField txt_pha_addquantity1;
     private javax.swing.JTextField txt_pha_editCompany;
+    private javax.swing.JTextField txt_pha_editItemcode;
+    private javax.swing.JTextField txt_pha_editItemname;
     private javax.swing.JTextField txt_pha_editSellingprice;
+    private javax.swing.JTextField txt_pha_editStockprice;
+    private javax.swing.JTextField txt_pha_editquantity;
     private javax.swing.JTextField txt_usrAcc_LoginName;
     private javax.swing.JPasswordField txt_usrAcc_Password;
     private javax.swing.JPasswordField txt_usrAcc_cPassword;
