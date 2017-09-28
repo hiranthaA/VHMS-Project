@@ -3619,6 +3619,11 @@ public class MainWindow extends javax.swing.JFrame {
 
         Btn_DeleteBillItem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/trash_x32.png"))); // NOI18N
         Btn_DeleteBillItem.setToolTipText("Remove Selected Item");
+        Btn_DeleteBillItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_DeleteBillItemActionPerformed(evt);
+            }
+        });
 
         pnlPharmacyTotalBill.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(57, 93, 120), 2));
 
@@ -12616,6 +12621,12 @@ public class MainWindow extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_BtnAdd_to_billActionPerformed
+
+    private void Btn_DeleteBillItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_DeleteBillItemActionPerformed
+        phaCartModel.removeRow(tblPharmacyBillItems.getSelectedRow());
+        Double total = getTotal();
+        lblPharmacy_Total.setText(total.toString());
+    }//GEN-LAST:event_Btn_DeleteBillItemActionPerformed
     
     public void showPanels(){
         this.pnlHome.setVisible(true);
